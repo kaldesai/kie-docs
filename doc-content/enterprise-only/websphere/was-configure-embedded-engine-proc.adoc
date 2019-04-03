@@ -7,12 +7,12 @@ ifdef::DM[]
 = Configuring an embedded {DECISION_ENGINE} in {WEBSPHERE}
 endif::[]
 
-An embedded engine is a light-weight work-flow engine and rule engine which executes your decisions and business processes. They can be embedded as part of your application or deployed as a service possibly in the cloud.
-
 ifdef::PAM[]
+An embedded engine is a light-weight work-flow engine and rule engine that allows you to execute your decisions and business processes. They can be embedded as part of your application or deployed as a service.
 This section describes how to setup an embedded {PROCESS_ENGINE} and {DECISION_ENGINE} in {WEBSPHERE}.
 endif::[]
 ifdef::DM[]
+A {DECISION_ENGINE} is a light-weight rule engine that allows you to execute your decisions. It can be embedded as part of your application or deployed as a service.
 This section describes how to setup an embedded {DECISION_ENGINE} in {WEBSPHERE}.
 endif::[]
 
