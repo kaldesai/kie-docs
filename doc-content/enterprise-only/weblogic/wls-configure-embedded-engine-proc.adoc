@@ -1,4 +1,4 @@
-[id='was-configure-embedded-engine-proc']
+[id='wls-configure-embedded-engine-proc']
 ifdef::PAM[]
 = Configuring an embedded {PROCESS_ENGINE} and {DECISION_ENGINE} in {WEBLOGIC}
 endif::[]
@@ -8,20 +8,17 @@ ifdef::DM[]
 endif::[]
 
 ifdef::PAM[]
-An embedded engine is a light-weight work flow engine and rule engine that allows you to execute your decisions and business processes. An embedded engine can be part of your {PRODUCT_PAM} application or they can be deployed as a service, for example in the cloud. This section describes how to setup an embedded {PROCESS_ENGINE} or {DECISION_ENGINE} in {WEBLOGIC}.
+An embedded engine is a light-weight work flow and rule engine that enables you to execute your decisions and business processes. An embedded engine can be part of a {PRODUCT_PAM} application or it can be deployed as a service, for example in the cloud like OpenShift, Kubernetes, and Docker. You can embed an engine in a {PRODUCT_PAM} application through the API or as a set of contexts and dependency injection (CDI) services.
 endif::[]
 ifdef::DM[]
-A {DECISION_ENGINE} is a light-weight rule engine that allows you to execute your decisions. A {DECISION_ENGINE} can be part of your {PRODUCT_DM} application or they can be deployed as a service, for example in the cloud. This section describes how to setup an embedded {DECISION_ENGINE} in {WEBLOGIC}.
+A {DECISION_ENGINE} is a light-weight rule engine that enables you to execute your decisions and business processes. A decision engine can be part of a {PRODUCT_DM} application or it can be deployed as a service, for example in the cloud like OpenShift, Kubernetes, and Docker. You can embed {DECISION_ENGINE} in a {PRODUCT_DM} application through the API or as a set of contexts and dependency injection (CDI) services.
 endif::[]
 
-To use the correct Maven dependencies in your {PRODUCT} project, add the {PRODUCT_BA} bill of materials (BOM) files to the project's `pom.xml` file. The {PRODUCT_BA} BOM applies to both {PRODUCT_DM} and {PRODUCT_PAM}. When you add the BOM files, the correct versions of transitive dependencies from the provided Maven repositories are included in the project.
-
-For more information about the {PRODUCT_BA} BOM, see
 ifdef::PAM[]
-https://access.redhat.com/solutions/3405361[What is the mapping between Red Hat Process Automation Manager and the Maven library version?].
+If you intend to use an embedded engines with your {PRODUCT_PAM} application, you must add Maven dependencies to your project by adding the {PRODUCT_BA} bill of materials (BOM) files to the project’s `pom.xml` file. The {PRODUCT_BA} BOM applies to both {PRODUCT_DM} and {PRODUCT_PAM}. For more information about the {PRODUCT_BA} BOM, see https://access.redhat.com/solutions/3405361[What is the mapping between Red Hat Process Automation Manager and the Maven library version?].
 endif::[]
 ifdef::DM[]
-https://access.redhat.com/solutions/3363991[What is the mapping between Red Hat Decision Manager and the Maven library version?].
+If you intend to use an embedded engines with your {PRODUCT_DM} application, you must add Maven dependencies to your project by adding the {PRODUCT_BA} bill of materials (BOM) files to the project’s `pom.xml` file. The {PRODUCT_BA} BOM applies to both {PRODUCT_DM} and {PRODUCT_PAM}. For more information about the {PRODUCT_BA} BOM, see https://access.redhat.com/solutions/3363991[What is the mapping between Red Hat Decision Manager and the Maven library version?].
 endif::[]
 
 .Procedure
@@ -225,9 +222,9 @@ endif::[]
 </build>
 ----
 
-
++
 ifdef::PAM[]
-. If you use a {PROCESS_ENGINE} or {DECISION_ENGINE} with persistence support in your project, you must declare the following hibernate dependencies in the `dependencyManagement` secion of your `pom.xml` file.
+. If you use a {PROCESS_ENGINE} or {DECISION_ENGINE} with persistence support in your project, you must declare the following hibernate dependencies in the `dependencyManagement` secion of your `pom.xml` file by copying the `version.org.hibernate-4ee7` property from the {PRODUCT_BA} BOM file:
 +
 [id='hibernate_dependencies_with_process_engine_and_decision_engine']
 .Hibernate dependencies
@@ -253,7 +250,7 @@ ifdef::PAM[]
 endif::[]
 +
 ifdef::DM[]
-. If you use a {DECISION_ENGINE} with persistence support in your project, you must declare the following hibernate dependencies in the `dependencyManagement` secion of your `pom.xml` file.
+. If you use a {DECISION_ENGINE} with persistence support in your project, you must declare the following hibernate dependencies in the `dependencyManagement` secion of your `pom.xml` file by copying the `version.org.hibernate-4ee7` property from the {PRODUCT_BA} BOM file:
 +
 [id='hibernate_dependencies_with_decision_engine']
 .Hibernate dependencies in {DECISION_ENGINE} with persistence
@@ -277,8 +274,3 @@ ifdef::DM[]
 </dependencyManagement>
 ----
 endif::[]
-+
-[NOTE]
-====
-Copy the current version of the `version.org.hibernate-4ee7` property from the {PRODUCT_BA} bill of materials (BOM) Parent file to the project’s `pom.xml` file.
-====
