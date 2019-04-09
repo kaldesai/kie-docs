@@ -1,0 +1,26 @@
+[id='assembly_creating-custom-tasks-with-business-processes']
+
+include::_artifacts/document-attributes.adoc[]
+
+= Creating custom tasks and work item handlers for business processes
+// Context attribute is assembly specific and enables module reuse between assemblies.
+:doctype: book
+:imagesdir: _images
+:context: creating-custom-tasks-with-business-processes
+include::_artifacts/author-group.adoc[]
+
+// Purpose statement for the assembly
+As a business process developer, you can create custom tasks which enable you to extend the operations available for use in {PRODUCT}. Creating a custom task allows you to execute custom code within your process flows in a reusable and configurable fashion. Custom tasks are a concept that both {CENTRAL} and KIE Servers can take advantage of.
+
+.Prerequisites
+* {PRODUCT} is installed. For installation options, see {URL_PLANNING_INSTALL}[_{PLANNING_INSTALL}_].
+* Maven is installed. For more information about Maven, see http://maven.apache.org/[_Welcome to Apache Maven_].
+* You can configure the Red Hat Maven repositories locally or online. For more information, see https://access.redhat.com/jbossnetwork/restricted/softwareDetail.html?softwareId=62591&product=rhpam&version=7.1.1&downloadType=distributions[_Access to the Red Hat Maven repositories locally_] or https://maven.repository.redhat.com/ga/[_Access to the Maven online repositories_]
+* Any Text editor or IDE is installed.
+
+// Modules - concepts, procedures, refs, etc.
+include::{enterprise-dir}/custom-tasks/understanding-custom-tasks-con.adoc[leveloffset=+1]
+include::{enterprise-dir}/admin-and-config/manage-service-tasks-proc.adoc[leveloffset=+1]
+
+// Versioning info
+include::_artifacts/versioning-information.adoc[]

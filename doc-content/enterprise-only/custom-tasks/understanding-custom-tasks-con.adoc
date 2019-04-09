@@ -1,0 +1,4 @@
+[id='understanding-custom-tasks-con']
+= Understanding Custom Tasks
+
+Custom Tasks are a way to develop operations that {PRODUCT} does not provide directly and include them in process diagrams as if they were already part of {PRODUCT}. When the custom tasks are implemented according to this guide, you will be able to create Java classes of your own and the {PRODUCT}  will execute the {PRODUCT} engine within process diagrams.
