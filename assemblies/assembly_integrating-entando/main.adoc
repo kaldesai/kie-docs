@@ -10,7 +10,7 @@ include::_artifacts/document-attributes.adoc[]
 include::_artifacts/author-group.adoc[]
 
 // Purpose statement for the assembly
-As a business processes developer, you can integrate the business assets you have created in {PRODUCT} with Entando App Builder. The App Builder provides an open-source, low-code Digital Experience Platform (DXP) for building modern web, mobile, and IoT applications. With the App Builder, you can create a custom user experience around your {PRODUCT} business assets and expand your application development strategy.
+As a business processes developer, you can integrate the business assets you have created in {PRODUCT} with Entando App Builder. App Builder provides an open-source, low-code Digital Experience Platform (DXP) for building modern web, mobile, and IoT applications. With App Builder, you can create a custom user experience around your {PRODUCT} business assets and expand your application development strategy.
 
 .Prerequisites
 * {PRODUCT} {PRODUCT_VERSION} is installed. For installation options, see {URL_PLANNING_INSTALL}[_{PLANNING_INSTALL}_].
@@ -20,7 +20,7 @@ As a business processes developer, you can integrate the business assets you hav
 // Modules - concepts, procedures, refs, etc.
 include::{enterprise-dir}/integration/entando-con.adoc[leveloffset=+1]
 
-include::{enterprise-dir}/integration/entando-integrating-proc.adoc[leveloffset=+1]
+include::{enterprise-dir}/integration/entando-integrating-con.adoc[leveloffset=+1]
 
 ////
 == Next steps

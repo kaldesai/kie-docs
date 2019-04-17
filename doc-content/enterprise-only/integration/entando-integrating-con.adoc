@@ -1,10 +1,10 @@
-[id='entando-integrating-proc_{context}']
+[id='entando-integrating-con_{context}']
 
-= Configuring {PRODUCT} with Entando App Builder
+= {PRODUCT} configuration with App Builder
 
 In order to integrate your {PRODUCT} data in App Builder, you must first configure one or more {KIE_SERVERS} in App Builder. The configured {KIE_SERVERS} must be the servers to which you deployed the projects that you created in {PRODUCT}.
 
-You can use the following links to configure Red Hat Process Automation Manager with App Builder:
+For instructions on getting started with App Builder and for configuring {PRODUCT} with App Builder, see the following links:
 
 * http://docs.entando.com/#installation[_Installing Entando App Builder_]
 * http://docs.entando.com/#getting-started-app-builder[_Getting Started with Entando_]
