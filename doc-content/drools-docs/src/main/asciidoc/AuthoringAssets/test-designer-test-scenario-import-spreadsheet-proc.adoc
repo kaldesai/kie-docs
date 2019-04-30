@@ -5,12 +5,12 @@ Follow the procedure below to import a test scenarios spreadsheet data using the
 
 .Procedure
 . From the Test Scenario designer toolbar on the upper-right, click *Import* image:AuthoringAssets/test-scenarios-import-button.png[] button.
-. From *Select file to Import* prompt, click *Choose File...* to browse to test scenario spreadsheet file.
+. From the *Select file to Import* prompt, click *Choose File...* and select the `.csv` file you would like to import from your local file system.
 . Click *Import*.
 
 The `.csv` file is imported to the Test Scenario designer.
 
-[NOTE]
+[WARNING]
 ====
-The headers in the selected `.csv` file should not be modified. Otherwise, the spreadsheet may not be successfully imported.
+You must not modify the headers in the selected `.csv` file. Otherwise, the spreadsheet may not be successfully imported.
 ====

@@ -5,6 +5,6 @@ Follow the procedure below to export a test scenarios spreadsheet data using the
 
 .Procedure
 . From the Test Scenario designer toolbar on the upper-right, click *Export* image:AuthoringAssets/test-scenarios-export-button.png[] button.
-. Click *OK* to save the `.csv` file generated from the Test Scenario designer.
+. Select a destination for the file in your local file system and confirm the choice to save the `.csv` file generated from the Test Scenario designer.
 
 The `.csv` file is exported to your local machine.
