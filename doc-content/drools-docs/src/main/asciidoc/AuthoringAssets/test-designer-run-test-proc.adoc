@@ -1,11 +1,16 @@
 [id='test-designer-run-test-proc']
-= Running a test scenario
+= Running the test scenarios
 
 After creating a test scenario template and defining the test scenarios, you can run the tests to validate your business rules and data.
 
 .Procedure
-. In the upper-right corner of the project page of your space, click *Test* image:AuthoringAssets/test-scenarios-run-all-tests-button.png[] button to execute all the test scenarios from the project view.
-. At the top of the test scenarios designer, click *Run Test* image:AuthoringAssets/test-scenarios-run-test-icon.png[Run Test icon] icon.
+. In the upper-right corner of your project page, click *Test* button to execute all the test scenarios available in your project inside multiple assets.
++
+.Run all the test scenarios from the project view
+image:AuthoringAssets/test-scenarios-run-all-tests-button.png[Run all the test scenarios from the project view]
++
+. At the top of the test scenarios designer, click *Run Test* image:AuthoringAssets/test-scenarios-run-test-icon.png[Run Test icon] icon to execute all the test scenarios defined inside a single `.scesim` file.
+. In the test scenarios designer, right click on the row that you want to execute and select *Run scenario* to run a single test scenario defined inside a single `.scesim` file.
 . The *Test Report* panel pops out from the right of the designer and displays the test result overview and the scenario status.
 . After the tests are executed, click *View Alerts* to open the *Alerts* panel at the bottom of the designer for the error messages.
 . In case the tests fails, review the error messages. Messages with a red cross indicate test failures where as those with a green check mark indicate successful tests.
