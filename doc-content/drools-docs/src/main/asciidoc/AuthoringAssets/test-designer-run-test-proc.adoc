@@ -4,14 +4,14 @@
 After creating a test scenario template and defining the test scenarios, you can run the tests to validate your business rules and data.
 
 .Procedure
-. To run the defined test scenarios, choose one of the following methods:
-* In the upper-right corner of your project page, click *Test* button to execute all the test scenarios available in your project inside multiple assets.
+. To run defined test scenarios, do one of the following tasks:
+* To execute all the available test scenarios in your project inside multiple assets, in the upper-right corner of your project page, click *Test*.
 +
 .Run all the test scenarios from the project view
 image:AuthoringAssets/test-scenarios-run-all-tests-button.png[Run all the test scenarios from the project view]
 +
-* At the top of the test scenarios designer, click *Run Test* image:AuthoringAssets/test-scenarios-run-test-icon.png[Run Test icon] icon to execute all the test scenarios defined inside a single `.scesim` file.
-* To run a single test scenario defined inside a single `.scesim` file, right click on the row that you want to execute and select *Run scenario*.
+* To execute all the available test scenarios defined in a single `.scesim` file, at the top of the Test Scenario designer, click *Run Test* image:AuthoringAssets/test-scenarios-run-test-icon.png[Run Test icon] icon.
+* To run a single test scenario defined in a single `.scesim` file, right-click the row of the test scenario you want to run and select *Run scenario*.
 . The *Test Report* panel pops out from the right of the designer or the project view and displays the test result overview and the scenario status.
 +
 [NOTE]
@@ -21,4 +21,4 @@ If the values entered into the test scenario table do not match the expected val
 +
 . After the tests are executed, click *View Alerts* to open the *Alerts* panel at the bottom of the designer or the project view for the error messages.
 +
-. Make the necessary changes and run the test again till the scenario passes.
+. Make the necessary changes and run the test again until the scenario passes.
