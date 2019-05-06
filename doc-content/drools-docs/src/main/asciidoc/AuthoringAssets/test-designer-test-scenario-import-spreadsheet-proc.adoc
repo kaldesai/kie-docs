@@ -1,7 +1,7 @@
 [id='test-designer-test-scenario-import-spreadsheet-proc']
 = Importing a test scenario spreadsheet
 
-Follow the procedure below to import a test scenarios spreadsheet data using the Test Scenario designer.
+Follow the procedure below to import a test scenario spreadsheet using the Test Scenario designer.
 
 .Procedure
 . From the Test Scenario designer toolbar on the upper-right, click *Import* image:AuthoringAssets/test-scenarios-import-button.png[] button.

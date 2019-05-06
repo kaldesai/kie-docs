@@ -1,4 +1,4 @@
 [id='test-designer-test-scenario-export-import-spreadsheet-con']
-= Exporting and Importing a test scenario spreadsheet
+= Exporting and importing test scenario spreadsheets
 
-This sections will help you understand how to export and import a spreadsheet of test scenario using the Test Scenario designer. The export and import functions of the Test Scenario designer currently supports the `.csv` file format. These spreadsheets can be managed by software such as Microsoft Excel or LibreOffice Calc. This will help you to analyze and maintain the spreadsheet data.
+These sections show how to export and import test scenario spreadsheets in the Test Scenario designer. Test Scenario designer supports the `.csv` file format. You can analyze and manage test scenario spreadsheets with software such as Microsoft Excel or LibreOffice Calc.
