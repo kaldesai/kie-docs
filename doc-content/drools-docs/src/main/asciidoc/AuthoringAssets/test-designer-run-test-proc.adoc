@@ -12,13 +12,18 @@ image:AuthoringAssets/test-scenarios-run-all-tests-button.png[Run all the test s
 +
 * To execute all the available test scenarios defined in a single `.scesim` file, at the top of the Test Scenario designer, click *Run Test* image:AuthoringAssets/test-scenarios-run-test-icon.png[Run Test icon] icon.
 * To run a single test scenario defined in a single `.scesim` file, right-click the row of the test scenario you want to run and select *Run scenario*.
-. The *Test Report* panel pops out from the right of the designer or the project view and displays the test result overview and the scenario status.
+. The *Test Report* panel displays the overview of the tests and the scenario status.
 +
-[NOTE]
-====
-If the values entered into the test scenario table do not match the expected values, corresponding cells are highlighted in red.
-====
+After the tests are executed, if the values entered in the test scenario table do not match, the expected values in the corresponding cells are highlighted.
 +
-. After the tests are executed, click *View Alerts* to open the *Alerts* panel at the bottom of the designer or the project view for the error messages.
+.Visual test results in Test Scenario
+image:AuthoringAssets/test-scenarios-visual-test-results.png[Visual test results in Test Scenario]
++
+
+. To review the the error message in the pop-up window, hover your mouse cursor over the highlighted cell.
++
+* To update the highlighted cell with the expected value, click `Apply`.
+* If you do not want to apply any changes to the highlighted cell, click `Keep`.
+. To open the *Alerts* panel at the bottom of the designer or the project view for the error messages, click *View Alerts*.
 +
 . Make the necessary changes and run the test again until the scenario passes.
