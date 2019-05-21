@@ -49,6 +49,8 @@ include::{drools-dir}/AuthoringAssets/test-designer-expressions-syntax-rule-base
 include::{drools-dir}/AuthoringAssets/test-designer-expressions-syntax-dmn-based-ref.adoc[leveloffset=+2]
 include::{drools-dir}/AuthoringAssets/test-designer-run-test-proc.adoc[leveloffset=+1]
 include::{drools-dir}/AuthoringAssets/test-scenarios-running-locally-proc.adoc[leveloffset=+1]
+include::{drools-dir}/AuthoringAssets/test-scenarios-coverage-report-con.adoc[leveloffset=+1]
+include::{drools-dir}/AuthoringAssets/test-scenarios-coverage-report-dmn-based-proc.adoc[leveloffset=+2]
 include::{drools-dir}/AuthoringAssets/test-designer-create-mortgages-example-proc.adoc[leveloffset=+1]
 
 // Test Scenarios (Legacy) designer files
