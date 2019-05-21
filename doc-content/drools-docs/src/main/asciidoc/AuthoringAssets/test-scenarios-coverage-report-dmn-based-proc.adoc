@@ -1,0 +1,16 @@
+[id='test-scenarios-coverage-report-dmn-based-proc']
+= Coverage report for DMN-based test scenarios
+
+Review a coverage report for DMN-based test scenario by following the procedure below to validate your DMN models.
+
+.Prerequisites
+* The DMN-based test scenario template has been created for the selected test scenario.For more information about creating DMN-based test scenarios, see xref:test-designer-create-test-template-dmn-based-proc[].
+
+.Procedure
+. Open the DMN-based test scenario in the test scenario designer.
+. Click `Coverage Report` on the right of the test scenario designer to display the overview of the tests and the scenario status.
+
+[NOTE]
+=====
+The coverage report is currently not supported for rule-based test scenario.
+=====
