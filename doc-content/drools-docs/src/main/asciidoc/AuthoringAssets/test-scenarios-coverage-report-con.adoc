@@ -1,11 +1,14 @@
 [id='test-scenarios-coverage-report-con']
 = Coverage report for test scenarios
 
-The test scenario designer provides a clear and coherent way of displaying the generated test results using the `Coverage Report` tab from the right side of the test scenario designer.
+The test scenario designer provides a clear and coherent way of displaying the test coverage statistics using the `Coverage Report` tab from the right side of the test scenario designer.
 
-The `Coverage Report` tab contains the detailed information about available decisions, tested decisions, percentage of tested decisions, how many times each decision has been evaluated, and which decisions are evaluated for the test scenario. You can also view the pie chart with the percentage representation of the ratio between the successful and failed tests.
+In DMN-based test scenarios, the `Coverage Report` tab contains the detailed information about the number of available decisions, number of tested decisions, percentage of tested decisions, how many times each decision has been evaluated, and which decisions are evaluated for each defined test scenario in the table. The percentage of the tested decisions is also represented as a pie chart in the `Coverage Report` tab.
 
-You can view the coverage reports from the test Scenario designer for both DMN-based scenarios as well as rule-based scenarios.
+[NOTE]
+=====
+The coverage report is currently not supported for rule-based test scenario.
+=====
 
 .Coverage report for test scenarios
 image:AuthoringAssets/test-scenarios-coverage-report.png[Coverage report for test scenarios]
