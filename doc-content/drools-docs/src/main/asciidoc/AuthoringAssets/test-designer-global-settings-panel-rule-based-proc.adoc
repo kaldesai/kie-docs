@@ -6,8 +6,8 @@ Follow the procedure below to view and edit the global settings of the rule-base
 .Procedure
 . Click `Settings` tab on the right side of the test scenario designer to display the attributes.
 . Configure the following attributes in the `Settings` panel.
-* `Name`: This is the name of the test scenario.
-* `Type`: This attribute is read-only.
+* `Name`: You can change the name of the existing test scenarios by using the by using the `Rename` option from the upper-right toolbar in the designer.
+* `Type`: This attribute specifies it is a rule-based test scenario and it is read-only.
 * `KieSession`: (Optinal) Enter the KieSession for the test scenario.
 * `RuleFlowGroup/AgendaGroup`: (Optinal) Enter the RuleFlowGroup or AgendaGroup for the test scenario.
 . To skip the simulation during the test, select the check box.
