@@ -1,4 +1,4 @@
 [id='test-designer-global-settings-panel-con']
-= Global settings for test scenarios
+= Configuring global settings for test scenarios
 
-The test scenario designer provides the global `Settings` tab on the right side of the test scenario designer. You can use the `Settings` tab to set and modify the additional properties of the assets.
+You can use the global *Settings* tab on the right side of the test scenarios designer to set and modify the additional properties of assets.
