@@ -18,8 +18,11 @@ The test scenarios designer provides contextual menu options, which enables you 
 |INSTANCE 1, INSTANCE 2 & PROPERTY 1, PROPERTY 2
 |Insert column left, Insert column right, Delete column, Duplicate Instance, Insert row below
 
-|Rows
-|
+.2+|Rows
+|cells with row numbers & cells with test scenarios description
+|Insert row above, Insert row below, Duplicate row, Delete row, Run scenario
+
+|cells with test scenarios definition
 |Insert column left, Insert column right, Delete column, Duplicate Instance, Insert row above, Insert row below, Duplicate row, Delete row, Run scenario
 |===
 
