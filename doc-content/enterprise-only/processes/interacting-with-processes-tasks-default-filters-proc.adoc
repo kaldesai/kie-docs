@@ -1,0 +1,13 @@
+[id='interacting-with-processes-tasks-default-filters-proc']
+= Filtering tasks using default filters
+
+You can set a task filter as a default filter using the *Saved Filter* option in {CENTRAL}.
+
+.Procedure
+. In {CENTRAL}, go to *Menu* -> *Track* -> *Task Inbox* or go to *Menu* -> *Manage* -> *Tasks*
+. On the *Task Inbox* page or the *Manage Tasks* page, click the saved filters icon on the left of the page to expand the *Saved Filters* panel.
+In the *Saved Filters* panel, you can view the saved advanced filters.
+. In the *Saved Filters* panel, set a saved task filter as the default filter.
+.Default filter selection for Tasks or Task Inbox
+image:processes/task-default-filters.png[Default filter selection for Tasks or Task Inbox]
+. Click the *Restore default filters* icon from the Saved Filters panel to remove the default filter.
