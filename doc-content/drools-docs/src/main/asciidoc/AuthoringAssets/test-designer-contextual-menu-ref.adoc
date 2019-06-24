@@ -6,7 +6,7 @@ The test scenarios designer provides contextual menu options, which enables you 
 .Contextual menu options
 [width="",cols="2,3,5"]
 |===
-|Table element | Cell label | Available context menu options
+|Table element  |Cell label  |Available context menu options
 
 .3+|Header
 |# & Scenario description
@@ -18,13 +18,12 @@ The test scenarios designer provides contextual menu options, which enables you 
 |INSTANCE 1, INSTANCE 2 & PROPERTY 1, PROPERTY 2
 |Insert column left, Insert column right, Delete column, Duplicate Instance, Insert row below
 
-.2+|Rows
-|cells with row numbers & cells with test scenarios description
+.1+|Rows
+|All the cells with row numbers, test scenarios description or test scenarios definition
 |Insert row above, Insert row below, Duplicate row, Delete row, Run scenario
 
-|cells with test scenarios definition
-|Insert column left, Insert column right, Delete column, Duplicate Instance, Insert row above, Insert row below, Duplicate row, Delete row, Run scenario
 |===
+
 
 .Description of table interactions
 [width="",cols="4,12"]
