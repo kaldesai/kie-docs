@@ -13,5 +13,5 @@ All task related comments are displayed in a tabular form in the *Work* as well 
 
 [NOTE]
 ====
-To select or clear the *Show task comments at work tab* check box, go to the {CENTRAL} home page, click the *Settings* icon and select the *Process Administration* option. Only users with the `Admin` role have access to enable or disable this feature.
+To select or clear the *Show task comments at work tab* check box, go to the {CENTRAL} home page, click the *Settings* icon and select the *Process Administration* option. Only users with the `admin` role have access to enable or disable this feature.
 ====
