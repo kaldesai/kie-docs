@@ -11,7 +11,7 @@ Users with the `process-admin` role can view and manage all user tasks from the 
 
 You can open, view, and modify the details of a task, such as the due date, the priority, or the task description, by clicking a task in the list. The following tabs are available in the task page:
 
-//image::admin-and-config/task-details.png[Task details]
+image::admin-and-config/task-details.png[Task details]
 
 * *Work*: Displays basic details about the task and the task owner.
 * *Details*: Displays information such as task description, status, and due date.
