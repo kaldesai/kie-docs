@@ -6,4 +6,4 @@ Digital Experience Platform (DXP) is a low-code, component-based platform for bu
 
 The basic components for building applications in AppBuilder are page models that define page layout and application widgets that define page data and functionality.
 
-For more information about creating AppBuilder page models,pages and application widgets, see link:http://docs.entando.com/[_Getting Started with AppBuilder_].
+For more information about creating AppBuilder page models,pages and application widgets, see link:http://docs.entando.com/#getting-started-app-builder[_Getting Started with AppBuilder_].
