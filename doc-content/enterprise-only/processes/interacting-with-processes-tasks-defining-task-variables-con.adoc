@@ -1,0 +1,4 @@
+[id='interacting-with-processes-tasks-defining-task-variables-con']
+= Defining task variables
+
+You can use the basic filters or advanced filters option in {CENTRAL} to define task variables.

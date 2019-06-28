@@ -1,0 +1,4 @@
+[id='interacting-with-processes-process-instances-defining-process-variables-con']
+= Defining process instance variables
+
+You can use the basic filters or advanced filters option in {CENTRAL} to define process instance variables.
