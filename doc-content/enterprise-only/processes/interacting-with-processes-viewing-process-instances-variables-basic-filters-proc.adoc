@@ -1,7 +1,7 @@
-[id='interacting-with-processes-defining-process-instances-variables-basic-filters-proc']
-= Defining process instance variables using basic filters
+[id='interacting-with-processes-viewing-process-instances-variables-basic-filters-proc']
+= Viewing process instance variables using basic filters
 
-{CENTRAL} provides basic filters to define process instance variables. You can view the process instance variables of the process as columns using *Show/hide columns*.
+{CENTRAL} provides basic filters to view process instance variables. You can view the process instance variables of the process as columns using *Show/hide columns*.
 
 .Procedure
 . In {CENTRAL}, go to *Menu* -> *Manage* -> *Process Instances*.

@@ -1,7 +1,7 @@
-[id='interacting-with-processes-defining-task-variables-advanced-filters-proc']
-= Defining task variables using advanced filters
+[id='interacting-with-processes-viewing-task-variables-advanced-filters-proc']
+= Viewing task variables using advanced filters
 
-You can use the *Advanced Filters* option in {CENTRAL} to define task variables in *Manage Tasks* and *Task Inbox*. When you create a filter with the task defined, you can view the task variables of the task as columns using *Show/hide columns*.
+You can use the *Advanced Filters* option in {CENTRAL} to view task variables in *Manage Tasks* and *Task Inbox*. When you create a filter with the task defined, you can view the task variables of the task as columns using *Show/hide columns*.
 
 .Procedure
 . In {CENTRAL}, go to *Menu* -> *Manage* -> *Tasks* or  go to *Menu* -> *Track* -> *Task Inbox*.

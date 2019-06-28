@@ -1,7 +1,7 @@
-[id='interacting-with-processes-defining-process-instances-variables-advanced-filters-proc']
-= Defining process instance variables using advanced filters
+[id='interacting-with-processes-viewing-process-instances-variables-advanced-filters-proc']
+= Viewing process instance variables using advanced filters
 
-You can use the *Advanced Filters* option in {CENTRAL} to define process instance variables. When you create a filter over the column `processId`, you can view the process instance variables of the process as columns using *Show/hide columns*.
+You can use the *Advanced Filters* option in {CENTRAL} to view process instance variables. When you create a filter over the column `processId`, you can view the process instance variables of the process as columns using *Show/hide columns*.
 
 .Procedure
 . In {CENTRAL}, go to *Menu* -> *Manage* -> *Process Instances*.
