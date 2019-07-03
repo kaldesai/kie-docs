@@ -13,7 +13,7 @@ You can open, view, and modify the details of a task, such as the due date, the 
 
 image::admin-and-config/task-details.png[Task details]
 
-* *Work*: Displays basic details about the task and the task owner.
+* *Work*: Displays basic details about the task and the task owner. You can click the *Claim* button to claim the task. To undo the claim process, click the *Release* button. 
 * *Details*: Displays information such as task description, status, and due date.
 * *Assignments*: Displays the current owner of the task and enables you to delegate the task to another person or group.
 * *Comments*: Displays comments added by task user(s). You can delete an existing comment and add a new comment.
