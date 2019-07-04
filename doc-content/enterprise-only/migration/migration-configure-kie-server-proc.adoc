@@ -80,10 +80,10 @@ System.setProperty("org.kie.server.xstream.enabled.packages", "org.example.**");
 ----
 -Dorg.kie.server.xstream.enabled.packages=org.example.**
 ----
-It is expected that you do not configure the classes that exits in KJAR using these system property. Ensure that only known classes are used in the system property to avoid any vulnerabilities.
+It is expected that you do not configure the classes that exists in KJAR using these system property. Ensure that only known classes are used in the system property to avoid any vulnerabilities.
 
-The `org.example` package is mandatory. You can specify multiple packages separated by comma , for example,
+The `org.example` is an example package, you can define any package that you want to use. You can specify multiple packages separated by comma , for example,
 `org.example1.* * , org.example2.* * , org.example3.* *`.
 
-You can also add specific classes , for example, `org.example1.* * , org.example2.Mydata2`.
+You can also add specific classes , for example, `org.example1.Mydata1, org.example2.Mydata2`.
 ====
