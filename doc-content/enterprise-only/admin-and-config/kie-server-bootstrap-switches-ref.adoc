@@ -16,25 +16,47 @@ The {KIE_SERVER} accepts a number of bootstrap switches (system properties) to c
 |`false`
 |If set to `true`, disables the {PRODUCT_DM} support (for example rules support).
 
+ifdef::PAM[]
 |`org.jbpm.server.ext.disabled`
 |`true`, `false`
 |`false`
 |If set to `true`, disables the {PRODUCT_PAM} support (for example processes support).
-
-|`org.optaplanner.server.ext.disabled`
-|`true`, `false`
-|`false`
-|If set to `true`, disables the {PLANNER} support.
 
 |`org.jbpm.ui.server.ext.disabled`
 |`true`, `false`
 |`false`
 |If set to `true`, disables the {KIE_SERVER} UI extension.
 
+|`org.jbpm.case.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {PRODUCT} case management extension.
+endif::PAM[]
+
+|`org.optaplanner.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {PLANNER} support.
+
 |`org.kie.executor.disabled`
 |`true`, `false`
 |`false`
 |Disables the {PRODUCT} executor.
+
+|`org.kie.prometheus.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the Prometheus Server extension.
+
+|`org.kie.dmn.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {PRODUCT} DMN support.
+
+|`org.kie.swagger.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {PRODUCT} swagger documentation support
 |===
 
 NOTE: Some {CONTROLLER} properties listed below are marked as required. Set these properties when you handle {KIE_SERVER} container creation and removal in {CENTRAL}.  If you use the {KIE_SERVER} separately without any interaction with {CENTRAL}, the properties do not have to be set.
@@ -99,7 +121,7 @@ NOTE: Some {CONTROLLER} properties listed below are marked as required. Set thes
 |===
 
 ifdef::PAM[]
-.Bootstrap Switches for Persistence Properties
+.Bootstrap switches for persistence properties
 [cols="2,1,1,3", options="header"]
 |===
 |Property
@@ -129,7 +151,7 @@ ifdef::PAM[]
 |===
 endif::PAM[]
 
-.Bootstrap Switches for Executor Properties
+.Bootstrap switches for executor properties
 [cols="2,1,1,3", options="header"]
 |===
 |Property
@@ -156,10 +178,15 @@ endif::PAM[]
 |Integer
 |`3`
 |The number of retries the {PRODUCT} executor attempts on a failed job.
+
+|`org.kie.executor.jms.queue`
+|String
+|`queue/KIE.SERVER.EXECUTOR`
+|Job executor JMS queue for {KIE_SERVER}.
 |===
 
 ifdef::PAM[]
-.Callback Bootstrap Switches
+.Human task bootstrap switches
 [cols="2,1a,1,3a", options="header"]
 |===
 |Property
@@ -193,10 +220,30 @@ ifdef::PAM[]
 |Fully qualified name
 |N/A
 |A custom implementation of the `UserGroupCallback` interface in case the `org.jbpm.ht.callback` property is set to `custom`.
+
+|`org.jbpm.task.cleanup.enabled`
+|`true`, `false`
+|`true`
+|Enables task cleanup job listener to remove tasks once the process instance is completed.
+
+|`org.jbpm.task.bam.enabled`
+|`true`, `false`
+|`true`
+|Enables task BAM module to store task related information.
+
+|`org.jbpm.ht.admin.user`
+|String
+|`Administrator`
+|Users with process administrator (*process-admin*) or administrator (*admin*) roles are able to access all the tasks from {KIE_SERVER}.
+
+|`org.jbpm.ht.admin.group`
+|String
+|`Administrators`
+|In order to display all the tasks from {KIE_SERVER}, users with process administrator (*process-admin*) or administrator (*admin*) roles must belong to the `Administrators` group.
 |===
 endif::PAM[]
 
-.Other Bootstrap Switches
+.Other bootstrap switches
 [cols="2,1,1,3a", options="header"]
 |===
 |Property
@@ -243,4 +290,24 @@ endif::PAM[]
 
 * `false`; the connection to the {CONTROLLER} is asynchronous. The application starts, connects to the {CONTROLLER}, and once successful, deploys the containers. The application accepts requests even before the containers are available.
 * `true`; the deployment of the server application joins the {CONTROLLER} connection thread with the main deployment and awaits its completion. This option can lead to a potential deadlock in case more applications are on the same server instance. It is recommended that you use only one application (the server) on one server instance.
+
+|`org.kie.server.startup.strategy`
+|`ControllerBasedStartupStrategy`, `LocalContainersStartupStrategy`
+|`ControllerBasedStartupStrategy`
+|The Startup strategy of {KIE_SERVER} is used to control the KIE containers that are deployed and the order in which they are deployed.
+
+|`org.kie.server.mgmt.api.disabled`
+|`true`, `false`
+|`false`
+|When set to `true`, disables {KIE_SERVER} management API.
+
+|`org.kie.server.xstream.enabled.packages`
+|Java packages like `org.kie.example`. You can also specify wildcard expressions like `org.kie.example.*`.
+|N/A
+|A property that specifies additional packages to whitelist for marshalling using XStream.
+
+|`org.jbpm.rule.task.firelimit`
+|Integer
+|`10000`
+|A property that specifies maximum number of fired rules to avoid situation where rules run into infinite loop and make server completely unresponsive.
 |===
