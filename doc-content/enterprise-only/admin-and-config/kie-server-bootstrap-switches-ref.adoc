@@ -306,8 +306,10 @@ endif::PAM[]
 |N/A
 |A property that specifies additional packages to whitelist for marshalling using XStream.
 
+ifdef::PAM[]
 |`org.jbpm.rule.task.firelimit`
 |Integer
 |`10000`
 |A property that specifies maximum number of fired rules to avoid situation where rules run into infinite loop and make server completely unresponsive.
+endif::PAM[]
 |===
