@@ -1,0 +1,15 @@
+[id='test-scenarios-coverage-report-rule-based-proc']
+= Generating coverage reports for rule-based test scenarios
+
+In rule-based test scenarios, the *Coverage Report* tab contains the detailed information about the number of available rules, number of fired rules, percentage of fired rules, how many times each rule has been fired, and which rules are evaluated for each defined test scenario in the table. The percentage of the executed rules is also represented as a pie chart in the same *Coverage Report* tab.
+
+Follow the procedure below to generate a coverage report for rule-based test scenarios:
+
+.Prerequisites
+* The rule-based test scenario template has been created for the selected test scenario. For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
+* The individual test scenarios have been defined. For more information about defining a test scenario, see xref:test-designer-test-scenario-definition-proc[].
+
+.Procedure
+. Open the rule-based test scenarios in the test scenario designer.
+. Run the defined test scenarios.
+. Click *Coverage Report* on the right of the test scenario designer to display the test coverage statistics.
