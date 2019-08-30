@@ -1,4 +1,5 @@
-
+[id='Install-section']
+ifdef::JBPM,DROOLS[]
 = Installing the KIE Server
 
 
@@ -84,193 +85,372 @@ container. The Web container version of the WAR contains only the REST interface
 . Verify the server is running. Go to `http://SERVER:PORT/CONTEXT/services/rest/server/` and type the specified username and password. You should see simple XML message with basic information about the server.
 +
 image::KieServer/kie-server-info.png[]
+endif::[]
+
+= {KIE_SERVER} system properties
+
+The {KIE_SERVER} accepts a number of system properties (bootstrap switches) to configure the behavior of the server.
 
 
-== Bootstrap switches
-
-
-The Kie Server accepts a number of bootstrap switches (system properties) to configure the behaviour of the server.
-The following is a table of all the supported switches.
-
-
-
-.Kie Server bootstrap switches
-[cols="1,1,1,1", frame="all", options="header"]
+.System properties for disabling {KIE_SERVER} extensions
+[cols="2,1,1,3", options="header"]
 |===
-| Property
-| Value
-| Description
-| Required
+|Property
+|Values
+|Default
+|Description
 
-|**org.drools.server.ext.disabled**
-|boolean (default is "false")
-|If true, disables the BRM support (i.e. rules support).
-|No
+|`org.drools.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the Business Rule Management (BRM) support (for example rules support).
 
-|**org.jbpm.server.ext.disabled**
-|boolean (default is "false")
-|If true, disables the BPM support (i.e. processes support)
-|No
+ifdef::PAM,JBPM[]
+|`org.jbpm.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {PRODUCT} support (for example processes support).
 
-|**org.jbpm.ui.server.ext.disabled**
-|boolean (default is "false")
-|If true, disables the BPM UI support (i.e. processes image support)
-|No
+|`org.jbpm.ui.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {PRODUCT} UI extension.
 
-|**org.optaplanner.server.ext.disabled**
-|boolean (default is "false")
-|If true, disables the BRP support (i.e. planner support)
-|No
+|`org.jbpm.case.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {PRODUCT} case management extension.
 
-|**org.kie.executor.disabled**
-|boolean (default is "false")
-|If true, disables the BPM job executor support
-|No
+|`org.kie.executor.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {KIE_SERVER} executor.
+endif::[]
 
-|**org.kie.server.id**
-|string
-|An arbitrary ID to be assigned to this server. If a {HEADLESS_CONTROLLER} is
-                configured, this is the ID under which the server will connect to the {HEADLESS_CONTROLLER} to
-                fetch the kie container configurations.
-|No. If not provided, an ID is automatically generated.
+|`org.optaplanner.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {PLANNER} support.
 
-|**org.kie.server.user**
-|string (default is "kieserver")
-|User name used to connect with the kieserver from the {CONTROLLER}, required when
-                running in managed mode
-|No
+|`org.kie.prometheus.server.ext.disabled`
+|`true`, `false`
+|`true`
+|If set to `true`, disables the Prometheus Server extension.
 
-|**org.kie.server.pwd**
-|string (default is "kieserver1!")
-|Password used to connect with the kieserver from the {CONTROLLER}, required when
-                running in managed mode
-|No
+|`org.kie.dmn.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {KIE_SERVER} DMN support.
 
-|**org.kie.server.controller**
-|comma separated list of urls
-|List of urls to {CONTROLLER} REST endpoint. E.g.:
-                  `http://localhost:8080/{URL_COMPONENT_CENTRAL}/rest/controller`
-|Yes when using a {CONTROLLER}
-
-|**org.kie.server.controller.user**
-|string (default is "kieserver")
-|Username used to connect to the {CONTROLLER} REST api
-|Yes when using a {CONTROLLER}
-
-|**org.kie.server.controller.pwd**
-|string (default is "kieserver1!")
-|Password used to connect to the {CONTROLLER} REST api
-|Yes when using a {CONTROLLER}
-
-|**org.kie.server.location**
-|URL location of kie server instance
-|The URL used by the {CONTROLLER} to call back on this server. E.g.:
-                  `http://localhost:8230/kie-server/services/rest/server`
-|Yes when using a {CONTROLLER}
-
-|**org.kie.server.domain**
-|string
-|JAAS LoginContext domain that shall be used to authenticate users when using
-                JMS
-|No
-
-|**org.kie.server.bypass.auth.user**
-|boolean (default is "false")
-|Allows to bypass the authenticated user for task related operations e.g.
-                queries
-|No
-
-|**org.kie.server.repo**
-|valid file system path (default is ".")
-|Location on local file system where kie server state files will be
-                stored
-|No
-
-|**org.kie.server.persistence.ds**
-|string
-|Datasource JNDI name
-|Yes when BPM support enabled
-
-|**org.kie.server.persistence.tm**
-|string
-|Transaction manager platform for Hibernate properties set
-|Yes when BPM support enabled
-
-|**org.kie.server.persistence.dialect**
-|string
-|Hibernate dialect to be used
-|Yes when BPM support enabled
-
-|**org.jbpm.ht.callback**
-|string
-|One of supported callbacks for Task Service (default jaas)
-|No
-
-|**org.jbpm.ht.custom.callback**
-|string
-|Custom implementation of UserGroupCallback in case org.jbpm.ht.callback was set
-                to '`custom`'
-|No
-
-|**kie.maven.settings.custom**
-|valid file system path
-|Location of custom settings.xml for maven configuration
-|No
-
-|**org.kie.executor.interval**
-|integer (default is 0)
-|Number of time units between polls by executor
-|No
-
-|**org.kie.executor.pool.size**
-|integer (default is 1)
-|Number of threads in the pool for async work
-|No
-
-|**org.kie.executor.retry.count**
-|integer (default is 3)
-|Number of retries to handle errors
-|No
-
-|**org.kie.executor.timeunit**
-|TimeUnit (default is "SECONDS")
-|TimeUnit representing interval
-|No
-
-|**org.kie.executor.disabled**
-|boolean (default is "false")
-|Disables executor completely
-|No
-
-|**kie.server.jms.queues.response**
-|string (default is "queue/KIE.SERVER.RESPONSE")
-|JNDI name of response queue for JMS
-|No
-
-|**org.kie.server.controller.connect**
-|long (default is 10000)
-|Waiting time in milliseconds between repeated attempts to connect kie server to
-                {CONTROLLER} when kie server starts up
-|No
-
-|**org.drools.server.filter.classes**
-|boolean (default is "false")
-|If true, accept only classes which are annotated with @org.kie.api.remote.Remotable
-                or @javax.xml.bind.annotation.XmlRootElement as extra JAXB classes
-|No
-
-|
-|
-|
-|
+|`org.kie.swagger.server.ext.disabled`
+|`true`, `false`
+|`false`
+|If set to `true`, disables the {KIE_SERVER} swagger documentation support
 |===
 
-[IMPORTANT]
-====
-If you are running both {KIE_SERVER} and {CENTRAL} you must configure KIE Server to use a different Data Source to {CENTRAL} using the  *org.kie.server.persistence.ds* property.
-{CENTRAL} uses a jBPM Executor Service that can conflict with {KIE_SERVER} if they share the same Data Source.
-====
+NOTE: Some {CONTROLLER} properties listed below are marked as required. Set these properties when you handle {KIE_SERVER} container creation and removal in {CENTRAL}.  If you use the {KIE_SERVER} separately without any interaction with {CENTRAL}, the properties do not have to be set.
 
+.System properties required for using a {CONTROLLER}
+[cols="2,1,1,3", options="header"]
+|===
+|Property
+|Values
+|Default
+|Description
+
+|`org.kie.server.id`
+|String
+|N/A
+|An arbitrary ID to be assigned to the server. If a {HEADLESS_CONTROLLER} is configured outside of {CENTRAL}, this is the ID under which the server will connect to the {HEADLESS_CONTROLLER} to fetch the KIE container configurations. If not provided, the ID is automatically generated.
+
+|`org.kie.server.user`
+|String
+|`kieserver`
+|The user name used to connect with the {KIE_SERVER} from the {CONTROLLER}, required when running in managed mode. Set this property in {CENTRAL} system properties. Set this property when using a {CONTROLLER}.
+
+|`org.kie.server.pwd`
+|String
+|`kieserver1!`
+|The password used to connect with the {KIE_SERVER} from the {CONTROLLER}, required when running in managed mode. Set this property in {CENTRAL} system properties. Set this property when using a {CONTROLLER}.
+
+|`org.kie.server.token`
+|String
+|N/A
+|A property that enables you to use token-based authentication between the {CONTROLLER} and the {KIE_SERVER} instead of the basic user name/password authentication. The {CONTROLLER} sends the token as a parameter in the request header. The server requires long-lived access tokens as the tokens are not refreshed.
+
+|`org.kie.server.location`
+|URL
+|N/A
+|The URL of the {KIE_SERVER} instance used by the {CONTROLLER} to call back on this server, for example: `http://localhost:8230/kie-server/services/rest/server`. Setting this property is required when using a {CONTROLLER}.
+
+|`org.kie.server.controller`
+|Comma-separated list
+|N/A
+|A comma-separated list of URLs to the {CONTROLLER} REST endpoints, for example `http://localhost:8080/{URL_COMPONENT_CENTRAL}/rest/controller`. Setting this property is required when using a {CONTROLLER}.
+
+|`org.kie.server.controller.user`
+|String
+|`kieserver`
+|The user name to connect to the {CONTROLLER} REST API. Setting this property is required when using a {CONTROLLER}.
+
+|`org.kie.server.controller.pwd`
+|String
+|`kieserver1!`
+|The password to connect to the {CONTROLLER} REST API. Setting this property is required when using a {CONTROLLER}.
+
+|`org.kie.server.controller.token`
+|String
+|N/A
+|A property that enables you to use token-based authentication between the {KIE_SERVER} and the {CONTROLLER} instead of the basic user name/password authentication. The server sends the token as a parameter in the request header. Note that long-lived access tokens are required as the tokens are not refreshed.
+
+|`org.kie.server.controller.connect`
+|Long
+|`10000`
+|The waiting time in milliseconds between repeated attempts to connect the {KIE_SERVER} to the {CONTROLLER} when the server starts.
+|===
+
+ifdef::PAM,JBPM[]
+.System properties for persistence properties
+[cols="2,1,1,3", options="header"]
+|===
+|Property
+|Values
+|Default
+|Description
+
+|`org.kie.server.persistence.ds`
+|String
+|N/A
+|A data source JNDI name. Set this property when enabling the BPM support.
+
+|`org.kie.server.persistence.tm`
+|String
+|N/A
+|A transaction manager platform for Hibernate properties set. Set this property when enabling the BPM support.
+
+|`org.kie.server.persistence.dialect`
+|String
+|N/A
+|The Hibernate dialect to be used. Set this property when enabling the BPM support.
+
+|`org.kie.server.persistence.schema`
+|String
+|N/A
+|The database schema to be used.
+|===
+endif::[]
+
+.System properties for executor properties
+[cols="2,1,1,3", options="header"]
+|===
+|Property
+|Values
+|Default
+|Description
+
+|`org.kie.executor.interval`
+|Integer
+|`0`
+|The time between the moment the {PRODUCT} executor finishes a job and the moment it starts a new one, in a time unit specified in the `org.kie.executor.timeunit` property.
+
+|`org.kie.executor.timeunit`
+| https://docs.oracle.com/javase/8/docs/api/index.html?java/util/concurrent/TimeUnit.html[`java.util.concurrent.TimeUnit`] constant
+|`SECONDS`
+|The time unit in which the `org.kie.executor.interval` property is specified.
+
+|`org.kie.executor.pool.size`
+|Integer
+|`1`
+|The number of threads used by the {PRODUCT} executor.
+
+|`org.kie.executor.retry.count`
+|Integer
+|`3`
+|The number of retries the {PRODUCT} executor attempts on a failed job.
+
+|`org.kie.executor.jms.queue`
+|String
+|`queue/KIE.SERVER.EXECUTOR`
+|Job executor JMS queue for {KIE_SERVER}.
+|===
+
+ifdef::PAM,JBPM[]
+.Human task system properties
+[cols="2,1a,1,3a", options="header"]
+|===
+|Property
+|Values
+|Default
+|Description
+
+|`org.jbpm.ht.callback`
+|`mvel`
+
+`ldap`
+
+`db`
+
+`jaas`
+
+`props`
+
+`custom`
+|`jaas`
+|A property that specifies the implementation of user group callback to be used:
+
+* `mvel`: Default; mostly used for testing.
+* `ldap`: LDAP; requires additional configuration in the `jbpm.usergroup.callback.properties` file.
+* `db`: Database; requires additional configuration in the `jbpm.usergroup.callback.properties` file.
+* `jaas`: JAAS; delegates to the container to fetch information about user data.
+* `props`: A simple property file; requires additional file that will keep all information (users and groups).
+* `custom`: A custom implementation; specify the fully qualified name of the class in the `org.jbpm.ht.custom.callback` property.
+
+|`org.jbpm.ht.custom.callback`
+|Fully qualified name
+|N/A
+|A custom implementation of the `UserGroupCallback` interface in case the `org.jbpm.ht.callback` property is set to `custom`.
+
+|`org.jbpm.task.cleanup.enabled`
+|`true`, `false`
+|`true`
+|Enables task cleanup job listener to remove tasks once the process instance is completed.
+
+|`org.jbpm.task.bam.enabled`
+|`true`, `false`
+|`true`
+|Enables task BAM module to store task related information.
+
+|`org.jbpm.ht.admin.user`
+|String
+|`Administrator`
+|User who can access all the tasks from {KIE_SERVER}.
+
+|`org.jbpm.ht.admin.group`
+|String
+|`Administrators`
+|In order to display all the tasks from {KIE_SERVER}, users must belong to the `Administrators` group.
+|===
+endif::[]
+
+.System properties for loading keystore
+[cols="2,1,1,3", options="header"]
+|===
+|Property
+|Values
+|Default
+|Description
+
+|`kie.keystore.keyStoreURL`
+|URL
+|N/A
+|URL is used to load a keystore.
+
+|`kie.keystore.keyStorePwd`
+|String
+|`serverpwd`
+|The password used to connect to a keystore.
+
+|`kie.keystore.key.server.alias`
+|String
+|`restKey`
+|The alias name of the key for REST services.
+
+|`kie.keystore.key.server.pwd`
+|String
+|`keypwd`
+|The password of an alias for REST services.
+
+|`kie.keystore.key.ctrl.alias`
+|String
+|`droolsKey`
+|The alias of the key for default REST controller.
+
+|`kie.keystore.key.ctrl.pwd`
+|String
+|`keypwd`
+|The password of an alias for default REST controller.
+|===
+
+.Other system properties
+[cols="2,1,1,3a", options="header"]
+|===
+|Property
+|Values
+|Default
+|Description
+
+|`kie.maven.settings.custom`
+|Path
+|N/A
+|The location of a custom `settings.xml` file for Maven configuration.
+
+|`kie.server.jms.queues.response`
+|String
+|`queue/KIE.SERVER.RESPONSE`
+|The response queue JNDI name for JMS.
+
+|`org.drools.server.filter.classes`
+|`true`, `false`
+|`false`
+|When set to `true`, the Drools {KIE_SERVER} extension accepts custom classes annotated by the `XmlRootElement` or `Remotable` annotations only.
+
+ifdef::PAM,JBPM[]
+|`org.kie.server.bypass.auth.user`
+|`true`, `false`
+|`false`
+|A property that enables you to bypass the authenticated user for task-related operations, for example queries.
+
+|`org.jbpm.rule.task.firelimit`
+|Integer
+|`10000`
+|A property that specifies maximum number of fired rules to avoid situation where rules run into infinite loop and make server completely unresponsive.
+
+|`org.jbpm.ejb.timer.local.cache`
+|`true`, `false`
+|`true`
+|This property turns off the EJB Timers local cache.
+endif::[]
+
+|`org.kie.server.domain`
+|String
+|N/A
+|The JAAS `LoginContext` domain used to authenticate users when using JMS.
+
+|`org.kie.server.repo`
+|Path
+|`.`
+|The location where {KIE_SERVER} state files will be stored.
+
+|`org.kie.server.sync.deploy`
+|`true`, `false`
+|`false`
+|A property that instructs the {KIE_SERVER} to hold the deployment until the {CONTROLLER} provides the containers deployment configuration. This property only affects servers running in managed mode. The options are as follows:
+
+* `false`; the connection to the {CONTROLLER} is asynchronous. The application starts, connects to the {CONTROLLER}, and once successful, deploys the containers. The application accepts requests even before the containers are available.
+* `true`; the deployment of the server application joins the {CONTROLLER} connection thread with the main deployment and awaits its completion. This option can lead to a potential deadlock in case more applications are on the same server instance. It is recommended that you use only one application (the server) on one server instance.
+
+|`org.kie.server.startup.strategy`
+|`ControllerBasedStartupStrategy`, `LocalContainersStartupStrategy`
+|`ControllerBasedStartupStrategy`
+|The Startup strategy of {KIE_SERVER} is used to control the KIE containers that are deployed and the order in which they are deployed.
+
+|`org.kie.server.mgmt.api.disabled`
+|`true`, `false`
+|`false`
+|When set to `true`, disables {KIE_SERVER} management API.
+
+|`org.kie.server.xstream.enabled.packages`
+|Java packages like `org.kie.example`. You can also specify wildcard expressions like `org.kie.example.*`.
+|N/A
+|A property that specifies additional packages to whitelist for marshalling using XStream.
+
+|`org.kie.store.services.class`
+|String
+|`org.drools.persistence.jpa.KnowledgeStoreServiceImpl`
+|Fully qualified name of the class that implements `KieStoreServices` which are responsible for bootstraping KieSession instances.
+|===
+
+ifdef::JBPM,DROOLS[]
 include::kie-server-extensions-con.adoc[leveloffset=+1]
 
 include::kie-server-extensions-endpoint-proc.adoc[leveloffset=+2]
@@ -278,3 +458,4 @@ include::kie-server-extensions-endpoint-proc.adoc[leveloffset=+2]
 include::kie-server-extensions-transport-proc.adoc[leveloffset=+2]
 
 include::kie-server-extensions-client-proc.adoc[leveloffset=+2]
+endif::[]
