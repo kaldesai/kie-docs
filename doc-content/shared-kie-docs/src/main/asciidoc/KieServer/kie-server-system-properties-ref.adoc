@@ -253,17 +253,17 @@ endif::[]
 |`kie.keystore.keyStoreURL`
 |URL
 |N/A
-|URL is used to load a keystore.
+|URL is used to load a Java Cryptography Extension KeyStore (JCEKS). For example, `file:///home/kie/keystores/keystore.jceks`.
 
 |`kie.keystore.keyStorePwd`
 |String
 |N/A
-|The password used to connect to a keystore.
+|The password is used for the JCEKS.
 
 |`kie.keystore.key.server.alias`
 |String
 |N/A
-|The alias name of the key for REST services.
+|The alias name of the key for REST services where the password is stored.
 
 |`kie.keystore.key.server.pwd`
 |String
@@ -273,12 +273,12 @@ endif::[]
 |`kie.keystore.key.ctrl.alias`
 |String
 |N/A
-|The alias of the key for default REST controller.
+|The alias of the key for default REST {CONTROLLER}.
 
 |`kie.keystore.key.ctrl.pwd`
 |String
 |N/A
-|The password of an alias for default REST controller.
+|The password of an alias for default REST {CONTROLLER}.
 |===
 
 .Other system properties
