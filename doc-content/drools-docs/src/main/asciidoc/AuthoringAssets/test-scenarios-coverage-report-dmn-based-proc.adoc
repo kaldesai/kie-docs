@@ -1,7 +1,7 @@
 [id='test-scenarios-coverage-report-dmn-based-proc']
 = Generating coverage reports for DMN-based test scenarios
 
-In DMN-based test scenarios, the *Coverage Report* tab contains the detailed information about the number of available decisions, number of executed decisions, percentage of executed decisions, how many times each decision has been evaluated, and which decisions are evaluated for each defined test scenario in the table. The percentage of the executed decisions is also represented as a pie chart in the same *Coverage Report* tab.
+In DMN-based test scenarios, the *Coverage Report* tab contains the detailed information about the number of available decisions, number of executed decisions, percentage of executed decisions, how many times each decision has been executed, and which decisions are executed for each defined test scenario in the table. The percentage of the executed decisions is also represented as a pie chart in the same *Coverage Report* tab.
 
 Follow the procedure below to generate a coverage report for DMN-based test scenarios:
 
@@ -13,3 +13,4 @@ Follow the procedure below to generate a coverage report for DMN-based test scen
 . Open the DMN-based test scenarios in the test scenario designer.
 . Run the defined test scenarios.
 . Click *Coverage Report* on the right of the test scenario designer to display the test coverage statistics.
+. Optional: Click *Download report* to download the test scenario coverage report.
