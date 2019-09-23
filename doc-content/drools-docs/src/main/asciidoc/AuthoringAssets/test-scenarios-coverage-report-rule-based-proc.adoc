@@ -1,16 +1,23 @@
 [id='test-scenarios-coverage-report-rule-based-proc']
 = Generating coverage reports for rule-based test scenarios
 
-In rule-based test scenarios, the *Coverage Report* tab contains the detailed information about the number of available rules, number of fired rules, percentage of fired rules, how many times each rule has been fired, and which rules are executed for each defined test scenario in the table. The percentage of the executed rules is also represented as a pie chart in the same *Coverage Report* tab.
+In rule-based test scenarios, the *Coverage Report* tab contains the detailed information about the following:
 
-Follow the procedure below to generate a coverage report for rule-based test scenarios:
+* Number of available rules
+* Number of fired rules
+* Percentage of fired rules
+* Percentage of executed rules represented as a pie chart
+* Number of times each rule has executed
+* The rules that are executed for each defined test scenario
+
+Follow the procedure to generate a coverage report for rule-based test scenarios:
 
 .Prerequisites
-* The rule-based test scenario template has been created for the selected test scenario. For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
-* The individual test scenarios have been defined. For more information about defining a test scenario, see xref:test-designer-test-scenario-definition-proc[].
+* The rule-based test scenario template are created for the selected test scenario. For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
+* The individual test scenarios are defined. For more information about defining a test scenario, see xref:test-designer-test-scenario-definition-proc[].
 
 .Procedure
 . Open the rule-based test scenarios in the test scenario designer.
 . Run the defined test scenarios.
 . Click *Coverage Report* on the right of the test scenario designer to display the test coverage statistics.
-. Optional: Click *Download report* to download the test scenario coverage report.
+. Optional: To download the test scenario coverage report, Click *Download report*.
