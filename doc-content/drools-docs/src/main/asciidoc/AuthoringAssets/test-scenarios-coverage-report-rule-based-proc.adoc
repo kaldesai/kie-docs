@@ -15,6 +15,8 @@ Follow the procedure to generate a coverage report for rule-based test scenarios
 .Prerequisites
 * The rule-based test scenario template are created for the selected test scenario. For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
 * The individual test scenarios are defined. For more information about defining a test scenario, see xref:test-designer-test-scenario-definition-proc[].
++
+NOTE: To generate the coverage report for rule-based test scenario, you must create at least one rule.
 
 .Procedure
 . Open the rule-based test scenarios in the test scenario designer.
