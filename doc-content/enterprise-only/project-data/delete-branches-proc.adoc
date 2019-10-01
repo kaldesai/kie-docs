@@ -7,6 +7,6 @@ You can delete any branch except for the *master* branch. {CENTRAL} does not all
 . Click image:project-data/dots.png[] in the upper-right corner of the screen and select *Delete Branch*.
 +
 .Deleting a branch menu
-image::getting-started/delete-branch-menu.png[Delete a branch menu]
+image::getting-started/delete-branch-option.png[Delete a branch menu]
 
 . Input the branch name to be deleted in the *Delete Branch* window and click *Delete Branch*.
