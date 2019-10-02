@@ -5,7 +5,7 @@ In DMN-based test scenarios, the *Coverage Report* tab contains the detailed inf
 
 * Number of available decisions
 * Number of executed decisions
-* Percentage of executed decisions,
+* Percentage of executed decisions
 * Percentage of executed decisions represented as a pie chart
 * Number of times each decision has executed
 * Decisions that are executed for each defined test scenario
