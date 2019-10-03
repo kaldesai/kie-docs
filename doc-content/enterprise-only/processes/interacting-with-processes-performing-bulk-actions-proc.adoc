@@ -1,0 +1,17 @@
+[id='interacting-with-processes-performing-bulk-actions-proc']
+= Performing bulk actions on tasks
+
+In the *Tasks* and *Task Inbox* pages in {CENTRAL}, you can now perform bulk actions over multiple tasks in a single operation.
+
+.Procedure
+Use the following options to perform the relevant bulk actions on the tasks:
+
+* *Bulk Claim*: To claim the tasks in bulk, select two or more tasks. From the *Bulk Actions* drop-down, select *Bulk Claim* and click *Claim* on the *Claim selected tasks* window.
+* *Bulk Release*: To release the tasks in bulk, select two or more tasks. From the *Bulk Actions* drop-down, select *Bulk Release* and click *Release* on the *Release selected tasks* window.
+* *Bulk Resume*: To resume the tasks in bulk, select two or more tasks from the *Task* column. From the *Bulk Actions* drop-down, select *Bulk Resume* and click *Resume* on the *Resume selected tasks* window.
+* *Bulk Suspend*: To suspend the tasks in bulk, select two or more tasks from the *Task* column. From the *Bulk Actions* drop-down, select *Bulk Suspend* and click *Suspend* on the *Suspend selected tasks* window.
+* *Bulk Reassign*: To reassign the tasks in bulk, select two or more tasks from the *Task* column. From the *Bulk Actions* drop-down, select *Bulk Reassign*. In the *Tasks reassignment* window, enter the user identifier of the user to reassign the tasks, and click *Delegate*.
++
+For each task selected, a notification is displayed showing the reassignment result.
+
+If a specified bulk action is not permitted based on the task status, a notification is displayed and the operation is not executed on tasks.

@@ -25,12 +25,12 @@ include::{enterprise-dir}/processes/interacting-with-processes-stopping-tasks-pr
 include::{enterprise-dir}/processes/interacting-with-processes-delegating-tasks-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-claiming-tasks-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-releasing-tasks-proc.adoc[leveloffset=+2]
+include::{enterprise-dir}/processes/interacting-with-processes-performing-bulk-actions-proc.adoc[leveloffset=+2]
 
 include::{enterprise-dir}/processes/interacting-with-processes-filter-tasks-con.adoc[leveloffset=+1]
 include::{enterprise-dir}/processes/interacting-with-processes-tasks-basic-filters-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-tasks-advanced-filters-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-tasks-default-filters-proc.adoc[leveloffset=+2]
-//include::{enterprise-dir}/processes/interacting-with-processes-tasks-viewing-task-variables-con.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-viewing-task-variables-basic-filters-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-viewing-task-variables-advanced-filters-proc.adoc[leveloffset=+2]
 
@@ -38,7 +38,6 @@ include::{enterprise-dir}/processes/interacting-with-processes-process-instances
 include::{enterprise-dir}/processes/interacting-with-processes-process-instances-basic-filters-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-process-instances-advanced-filters-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-process-instances-default-filters-proc.adoc[leveloffset=+2]
-//include::{enterprise-dir}/processes/interacting-with-processes-process-instances-viewing-process-variables-con.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-viewing-process-instances-variables-basic-filters-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/processes/interacting-with-processes-viewing-process-instances-variables-advanced-filters-proc.adoc[leveloffset=+2]
 
