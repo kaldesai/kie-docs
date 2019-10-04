@@ -1,0 +1,14 @@
+[id='managing-business-processes-reassigning-tasks-in-bulk-proc']
+
+= Reassigning tasks in bulk
+
+After tasks are created in {CENTRAL}, you can reassign your tasks in bulk and delegate them to others.
+
+.Procedure
+. In {CENTRAL}, go to *Menu* -> *Track* -> *Task Inbox* or go to *Menu* -> *Manage* -> *Tasks*.
+. On the *Task Inbox* page or the *Manage Tasks* page, select two or more tasks from the *Task* table to reassign the tasks in bulk.
+. From the *Bulk Actions* drop-down list, select *Bulk Reassign*.
+. In the *Tasks reassignment* window, enter the user identifier of the user to reassign the tasks.
+. Click *Delegate*.
+
+For each task selected, a notification is displayed showing the updated result.

@@ -1,0 +1,13 @@
+[id='managing-business-processes-claiming-tasks-in-bulk-proc']
+
+= Claiming tasks in bulk
+
+After tasks are created in {CENTRAL}, you can claim the released tasks in bulk.
+
+.Procedure
+. In {CENTRAL}, go to *Menu* -> *Track* -> *Task Inbox* or go to *Menu* -> *Manage* -> *Tasks*.
+. On the *Task Inbox* page or the *Manage Tasks* page, select two or more tasks from the *Task* table to claim the tasks in bulk.
+. From the *Bulk Actions* drop-down list, select *Bulk Claim*.
+. Click *Claim* on the *Claim selected tasks* window to confirm.
+
+For each task selected, a notification is displayed showing the updated result.
