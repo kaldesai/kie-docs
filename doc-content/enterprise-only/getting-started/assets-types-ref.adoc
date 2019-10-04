@@ -6,7 +6,7 @@ The following image shows the available assets in {PRODUCT} {PRODUCT_VERSION}.
 
 image::getting-started/types-of-assets.png[]
 
-NOTE: Case Definition asset type is only available in Case projects.
+NOTE: Case Definition asset type is only available in case projects.
 
 The following sections describe each asset type in {PRODUCT} {PRODUCT_VERSION}.
 
