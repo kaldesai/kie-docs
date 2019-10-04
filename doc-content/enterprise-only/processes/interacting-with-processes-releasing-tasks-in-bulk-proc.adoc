@@ -1,7 +1,7 @@
 [id='interacting-with-processes-releasing-tasks-in-bulk-proc']
 = Releasing tasks in bulk
 
-After tasks are created in {CENTRAL}, you can release your tasks in bulk for others to claim.
+You can release your owned tasks in bulk for others to claim.
 
 .Procedure
 . In {CENTRAL}, go to *Menu* -> *Track* -> *Task Inbox* or go to *Menu* -> *Manage* -> *Tasks*.
@@ -9,4 +9,4 @@ After tasks are created in {CENTRAL}, you can release your tasks in bulk for oth
 . From the *Bulk Actions* drop-down list, select *Bulk Release*.
 . Click *Release* on the *Release selected tasks* window to confirm.
 
-For each task selected, a notification is displayed showing the updated result.
+For each task selected, a notification is displayed showing the result.

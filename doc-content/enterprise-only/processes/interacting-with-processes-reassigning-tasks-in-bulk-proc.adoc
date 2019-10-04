@@ -10,4 +10,4 @@ After tasks are created in {CENTRAL}, you can reassign your tasks in bulk and de
 . In the *Tasks reassignment* window, enter the user identifier of the user to reassign the tasks.
 . Click *Delegate*.
 
-For each task selected, a notification is displayed showing the updated result.
+For each task selected, a notification is displayed showing the result.

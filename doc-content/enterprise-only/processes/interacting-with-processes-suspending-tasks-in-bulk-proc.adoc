@@ -9,4 +9,4 @@ After tasks are created in {CENTRAL}, you can suspend your tasks in bulk.
 . From the *Bulk Actions* drop-down list, select *Bulk Suspend*.
 . Click *Suspend* on the *Suspend selected tasks* window to confirm.
 
-For each task selected, a notification is displayed showing the updated result.
+For each task selected, a notification is displayed showing the result.
