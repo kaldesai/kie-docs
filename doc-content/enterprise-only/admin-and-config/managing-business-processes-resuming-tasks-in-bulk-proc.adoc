@@ -2,7 +2,7 @@
 
 = Resuming tasks in bulk
 
-After tasks are created in {CENTRAL}, you can resume your tasks in bulk.
+After tasks are suspended in {CENTRAL}, you can resume your tasks in bulk.
 
 .Procedure
 . In {CENTRAL}, go to *Menu* -> *Track* -> *Task Inbox* or go to *Menu* -> *Manage* -> *Tasks*.
@@ -10,4 +10,4 @@ After tasks are created in {CENTRAL}, you can resume your tasks in bulk.
 . From the *Bulk Actions* drop-down list, select *Bulk Resume*.
 . Click *Resume* on the *Resume selected tasks* window to confirm.
 
-For each task selected, a notification is displayed showing the updated result.
+For each task selected, a notification is displayed showing the result.
