@@ -2,12 +2,14 @@
 
 = Suspending tasks in bulk
 
-After tasks are created in {CENTRAL}, you can suspend your tasks in bulk.
+After you create tasks in {CENTRAL}, you can suspend the tasks in bulk.
 
 .Procedure
-. In {CENTRAL}, go to *Menu* -> *Track* -> *Task Inbox* or go to *Menu* -> *Manage* -> *Tasks*.
-. On the *Task Inbox* page or the *Manage Tasks* page, select two or more tasks from the *Task* table to resume the tasks in bulk.
+. In {CENTRAL}, complete one of the following steps:
+* To view the *Task Inbox* page, select *Menu* -> *Track* -> *Task Inbox*.
+* To view the *Tasks* page, select *Menu* -> *Manage* -> *Tasks*.
+. To resume the tasks in bulk, on the *Task Inbox* page or the *Manage Tasks* page, select two or more tasks from the *Task* table.
 . From the *Bulk Actions* drop-down list, select *Bulk Suspend*.
-. Click *Suspend* on the *Suspend selected tasks* window to confirm.
+. To confirm, click *Suspend* on the *Suspend selected tasks* window .
 
 For each task selected, a notification is displayed showing the result.
