@@ -55,7 +55,7 @@ NOTE: If you plan to use RSA or any algorithm other than DSA, make sure you set 
 * `org.uberfire.sys.repo.monitor.disabled`: Disables the configuration monitor. Do not disable unless you are sure. Default value: `false`.
 * `org.uberfire.secure.key`: Password used by password encryption. Default value: `org.uberfire.admin`.
 * `org.uberfire.secure.alg`: Crypto algorithm used by password encryption. Default value: `PBEWithMD5AndDES`.
-* `org.uberfire.domain`:  Security-domain name used by uberfire. Default value: `ApplicationRealm`.
+* `org.uberfire.domain`: Security-domain name used by uberfire. Default value: `ApplicationRealm`.
 * `org.guvnor.m2repo.dir`: Place where the Maven repository folder is stored. Default value: `<working-directory>/repositories/kie`.
 * `org.guvnor.project.gav.check.disabled`: Disables group ID, artifact ID, and version (GAV) checks. Default value: `false`.
 * `org.kie.build.disable-project-explorer`: Disables automatic build of a selected project in Project Explorer. Default value: `false`.
