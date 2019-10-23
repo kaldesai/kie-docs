@@ -7,15 +7,18 @@ A user task can be assigned to a particular user, multiple users, or to a group.
 
 image::admin-and-config/task-inbox.png[Task inbox]
 
-Users with the `process-admin` role can view and manage all user tasks from the *Tasks* page in {CENTRAL}, located under *Menu* -> *Manage* -> *Tasks*. Users with the `admin` role can access the *Tasks* page but do not have access rights to view and manage tasks by default.
+Process administrators can view and manage all user tasks from the *Tasks* page in {CENTRAL}, located under *Menu* -> *Manage* -> *Tasks*. Users with the `admin` role can access the *Tasks* page but do not have access rights to view and manage tasks by default.
 
-[NOTE]
-=====
+The tasks which are displayed on the *Menu* → *Manage* → *Tasks* page or *Menu* → *Track* → *Task Inbox* page are determined by the current user permissions.
 
-The tasks which are displayed on the *Menu* → *Manage* → *Tasks* page or *Menu* → *Track* → *Task Inbox* page are determined by the current user permissions. To display all the tasks in the *Menu* → *Manage* → *Tasks* page, users with `process-admin` role or `admin` role must belong to `Administrators` group.
+To manage all the tasks, user must be specified as a process administrator by defining any of the this conditions:
 
-To assign users to `Administrators` group, open `standalone-full.xml` from the {PRODUCT} installation directory, set the following property under the <system-properties> tag:
+* User is specified as `task admin user`. The default value is `Administrator`.
+* User must belong to the task administrators group. The default value is `Administrators`.
 
+Both the values can be configured via `org.jbpm.ht.admin.user` and `org.jbpm.ht.admin.group` system properties.
+
+To change the default value, open `standalone-full.xml` from the {PRODUCT} installation directory, set the following property under the <system-properties> tag:
 [source]
 ----
 <system-properties>
@@ -23,7 +26,7 @@ To assign users to `Administrators` group, open `standalone-full.xml` from the {
         <property name="org.jbpm.ht.admin.group" value="admin"/>
     </system-properties>
 ----
-=====
+
 
 You can open, view, and modify the details of a task, such as the due date, the priority, or the task description, by clicking a task in the list. The following tabs are available in the task page:
 
