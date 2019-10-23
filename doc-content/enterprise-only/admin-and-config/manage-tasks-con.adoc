@@ -11,7 +11,7 @@ Process administrators can view and manage all user tasks from the *Tasks* page 
 
 The tasks which are displayed on the *Menu* → *Manage* → *Tasks* page or *Menu* → *Track* → *Task Inbox* page are determined by the current user permissions.
 
-To manage all the tasks, user must be specified as a process administrator by defining any of the this conditions:
+To manage all the tasks, user must be specified as a process administrator by defining any of the following conditions:
 
 * User is specified as `task admin user`. The default value is `Administrator`.
 * User must belong to the task administrators group. The default value is `Administrators`.
