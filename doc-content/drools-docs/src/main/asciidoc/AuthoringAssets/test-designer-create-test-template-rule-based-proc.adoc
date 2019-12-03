@@ -12,20 +12,22 @@ Create a test scenario template for rule-based test scenarios by following the p
 . To map the *GIVEN* column header to a data object,
 .. Click an instance header in the *GIVEN* section.
 .. Select the data object from the *Test Tools* tab.
-.. Click *Add*.
-. To insert more properties of the data object, right-click the property header and select *Insert column right* or *Insert column left* as required.
-. To map a data object field to a property cell,
-.. Click a property cell.
-.. Select the data object field from the *Test Tools* tab.
-.. Click *Add*.
+.. Click *Insert Data Object*.
 . To map the *EXPECT* column header to a data object,
 .. Click an instance header in the *EXPECT* section.
 .. Select the data object from the *Test Tools* tab.
-.. Click *Add*.
-. To insert more properties of the data object, right-click the property header and select *Insert column right* or *Insert column left* as required.
+.. Click *Insert Data Object*.
 . To map a data object field to a property cell,
 .. Click a property cell.
 .. Select the data object field from the *Test Tools* tab.
-.. Click *Add*.
-+
-Use the contextual menu to add or remove columns as needed.
+.. Click *Insert Data Object*.
+. To insert more properties of the data object, right-click the property header and select *Insert column right* or *Insert column left* as required.
+. To call a java method to a property cell during test scenarios execution,
+.. Click a property cell.
+.. Select the data object field from the *Test Tools* tab.
+.. Click *Insert Data Object*.
+.. Optional: Click *Clear selection* to remove the selected data objects.
+.. To insert more properties of the data object, right-click the property header and select *Insert column right* or *Insert column left* as required.
+. Use the contextual menu to add or remove columns and rows as needed.
+
+For more details about the expression syntax in rule-based scenarios, see xref:test-designer-expressions-syntax-rule-based-ref[].

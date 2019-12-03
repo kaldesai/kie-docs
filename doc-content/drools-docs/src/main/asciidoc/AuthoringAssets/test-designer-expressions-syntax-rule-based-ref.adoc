@@ -23,6 +23,9 @@ The following rule-based test scenario definition expressions are supported by t
 |expression1; expression2; expression3
 |Specifies a list of expressions. If all expressions are valid, the scenario definition is evaluated as true.
 
+|#
+|This operator is used to set the java expression value to a property cell which can be executed as a java method.
+
 |===
 
 [NOTE]
