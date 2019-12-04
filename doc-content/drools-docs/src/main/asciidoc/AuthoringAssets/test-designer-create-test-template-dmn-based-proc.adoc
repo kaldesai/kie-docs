@@ -17,7 +17,7 @@ The template is automatically generated and you can modify it as per your needs.
 .. Click a property cell.
 .. Select the data object field from the *Test Tools* tab.
 .. Click *Insert Data Object*.
-.. Optional: Click *Clear selection* to remove the selected data objects.
+.. Optional: Click *Clear selection* to remove the selected data object.
 .. To insert more properties of the data object, right-click the property header and select *Insert column right* or *Insert column left* as required.
 . Use the contextual menu to add or remove columns and rows as needed.
 

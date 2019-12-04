@@ -13,14 +13,17 @@ Create a test scenario template for rule-based test scenarios by following the p
 .. Click an instance header in the *GIVEN* section.
 .. Select the data object from the *Test Tools* tab.
 .. Click *Insert Data Object*.
+.. Optional: Click *Clear selection* to remove the selected data object.
 . To map the *EXPECT* column header to a data object,
 .. Click an instance header in the *EXPECT* section.
 .. Select the data object from the *Test Tools* tab.
 .. Click *Insert Data Object*.
+.. Optional: Click *Clear selection* to remove the selected data object.
 . To map a data object field to a property cell,
 .. Click a property cell.
 .. Select the data object field from the *Test Tools* tab.
 .. Click *Insert Data Object*.
+.. Optional: Click *Clear selection* to remove the selected data object.
 . To insert more properties of the data object, right-click the property header and select *Insert column right* or *Insert column left* as required.
 . To call a java method to a property cell during test scenarios execution,
 .. Click a property cell.
