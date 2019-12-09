@@ -10,13 +10,13 @@ Follow the procedure below to add and set a background data in rule-based test s
 .Procedure
 . Open the rule-based test scenarios in the test scenario designer.
 . Click the *Background* tab of the test scenarios designer.
-. Click an instance header in the *GIVEN* section to add a background data object field.
+. Click an instance header cell in the *GIVEN* section to add a background data object field.
 . Select the data object from the *Test Tools* tab.
 . Click *Insert Data Object*.
-. Click a property cell to add a background data object field.
+. Click a property header cell to add a background data object field.
 . Select the data object from the *Test Tools* tab.
 . Click *Insert Data Object*.
 . Optional: Click *Clear selection* to remove the selected data object.
-. To insert more properties of the data object, right-click the property header and select *Insert column right* or *Insert column left* as required.
+. To insert more properties of the data object, right-click the property header cell and select *Insert column right* or *Insert column left* as required.
 . Use the contextual menu to add or remove columns and rows as needed.
 . Run the defined test scenarios.

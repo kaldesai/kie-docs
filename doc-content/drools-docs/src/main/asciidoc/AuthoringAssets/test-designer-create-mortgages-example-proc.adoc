@@ -30,18 +30,18 @@ image:project-data/test-scenarios-blank-preview-editor.png[]
 .. From *Test Tools* panel, select *LoanApplication* data object.
 .. Click *Insert Data Object*.
 .. Optional: Click *Clear selection* to remove the selected data object.
-. To create properties of the data object, right-click the property cell and select *Insert column right* or *Insert column left* as required. For this example, you need to create two more property cells under the *GIVEN* column.
-. Click the first property cell,
+. To create properties of the data object, right-click the property header cell and select *Insert column right* or *Insert column left* as required. For this example, you need to create two more property cells under the *GIVEN* column.
+. Click the first property header cell,
 .. From *Test Tools* panel, select and expand the *LoanApplication* data object.
 .. Click *amount*.
-.. Click *Insert Data Object* to map the data object field to the property cell.
+.. Click *Insert Data Object* to map the data object field to the property header cell.
 .. Optional: Click *Clear selection* to remove the selected data object.
-. Click the second property cell,
+. Click the second property header cell,
 .. From *Test Tools* panel, select and expand the *LoanApplication* data object.
 .. Click *deposit*.
 .. Click *Insert Data Object*.
 .. Optional: Click *Clear selection* to remove the selected data object.
-. Click the third property cell,
+. Click the third property header cell,
 .. From *Test Tools* panel, select and expand the *LoanApplication* data object.
 .. Click *lengthYears*
 .. Click *Insert Data Object*.
@@ -50,10 +50,10 @@ image:project-data/test-scenarios-blank-preview-editor.png[]
 . Click the new header cell,
 .. From *Test Tools* panel, select the *IncomeSource* data object.
 .. Click *Insert Data Object* to map the data object to the header cell.
-. Click the property cell below *IncomeSource*,
+. Click the property header cell below *IncomeSource*,
 .. From *Test Tools* panel, select and expand the *IncomeSource* data object.
 .. Click *type*.
-.. Click *Insert Data Object* to map the data object field to the property cell.
+.. Click *Insert Data Object* to map the data object field to the property header cell.
 .. Optional: Click *Clear selection* to remove the selected data object.
 +
 You have now defined all the *GIVEN* column cells.
@@ -63,21 +63,21 @@ You have now defined all the *GIVEN* column cells.
 .. From *Test Tools* panel, select *LoanApplication* data object.
 .. Click *Insert Data Object*.
 .. Optional: Click *Clear selection* to remove the selected data object.
-. To create properties of the data object, right-click the property cell and select *Insert column right* or *Insert column left* as required. Create two more property cells under the *EXPECT* column.
-. Click the first property cell,
+. To create properties of the data object, right-click the property header cell and select *Insert column right* or *Insert column left* as required. Create two more property cells under the *EXPECT* column.
+. Click the first property header cell,
 .. From *Test Tools* panel, select and expand the *LoanApplication* data object.
 .. Click *approved*.
-.. Click *Insert Data Object* to map the data object field to the property cell.
+.. Click *Insert Data Object* to map the data object field to the property header cell.
 .. Optional: Click *Clear selection* to remove the selected data object.
-. Click the second property cell,
+. Click the second header property cell,
 .. From *Test Tools* panel, select and expand the *LoanApplication* data object.
 .. Click *insuranceCost*.
-.. Click *Insert Data Object* to map the data object field to the property cell.
+.. Click *Insert Data Object* to map the data object field to the property header cell.
 .. Optional: Click *Clear selection* to remove the selected data object.
-. Click the third property cell,
+. Click the third property header cell,
 .. From *Test Tools* panel, select and expand the *LoanApplication* data object.
 .. Click *approvedRate*.
-.. Click *Insert Data Object* to map the data object field to the property cell.
+.. Click *Insert Data Object* to map the data object field to the property header cell.
 .. Optional: Click *Clear selection* to remove the selected data object.
 . Now for defining the test scenario, enter the following data in the first row:
 * Enter `Row 1 test scenario` as the *Scenario Description*, `150000` as the *amount*, `19000` as the *deposit*, `30` as the *lengthYears*, and `Asset` as the *type* for the *GIVEN* column values.
