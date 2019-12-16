@@ -1,6 +1,21 @@
 [id='test-designer-expressions-syntax-rule-based-ref']
 = Expression syntax in rule-based test scenarios
 
+Rule-based test scenario supports the following built-in data types:
+
+* String
+* Boolean
+* Integer
+* Long
+* Double
+* Float
+* Character
+* Byte
+* Short
+* LocalDate
+
+For any other data types, use the MVEL expression with the prefix `#`.
+
 The following rule-based test scenario definition expressions are supported by the test scenarios designer:
 
 .Description of expressions syntax
@@ -24,7 +39,7 @@ The following rule-based test scenario definition expressions are supported by t
 |Specifies a list of expressions. If all expressions are valid, the scenario definition is evaluated as true.
 
 |#
-|This operator is used to set the java expression value to a property cell which can be executed as a java method.
+|This operator is used to set the java expression value to a property header cell which can be executed as a java method.
 
 |===
 
