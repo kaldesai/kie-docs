@@ -14,7 +14,17 @@ Rule-based test scenario supports the following built-in data types:
 * Short
 * LocalDate
 
+[NOTE]
+====
 For any other data types, use the MVEL expression with the prefix `#`.
+====
+
+Follow the BigDecimal example in the test scenario designer to use the `#` prefix to set the java expression:
+
+* Enter `# java.math.BigDecimal.valueOf(10)` for the *GIVEN* column value.
+* Enter `# actualValue.intValue() > 10` for the *EXPECT* column value.
+
+You can refer to the actual value of the *EXPECT* column in the java expression to execute a condition.
 
 The following rule-based test scenario definition expressions are supported by the test scenarios designer:
 
