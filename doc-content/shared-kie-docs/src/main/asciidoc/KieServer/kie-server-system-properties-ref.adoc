@@ -358,4 +358,9 @@ endif::[]
 |String
 |`org.drools.persistence.jpa.KnowledgeStoreServiceImpl`
 |Fully qualified name of the class that implements `KieStoreServices` that are responsible for bootstrapping KieSession instances.
+
+|`org.kie.server.strict.id.format`
+|`true`, `false`
+|`false`
+|While using JSON marshalling, if the property is set to `true`, the JSON response is wrapped. It will return a response in the proper JSON format. For example, *{"value" : 1}*.
 |===
