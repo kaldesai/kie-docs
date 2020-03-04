@@ -5,7 +5,7 @@ You can delete, set a default, and validate the archetypes from the *Archetypes*
 
 .Prerequisites
 
-* You have created an archetype and listed in the {CENTRAL} *Settings* from the maven repository.
+* You have created an archetype and listed in the {CENTRAL} *Settings* from the Maven repository.
 
 .Procedure
 

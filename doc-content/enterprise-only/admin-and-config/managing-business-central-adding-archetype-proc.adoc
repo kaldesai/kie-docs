@@ -5,7 +5,7 @@ You can add a new archetype to {CENTRAL}.
 
 .Prerequisites
 
-* You have installed an archetype in the maven repository.
+* You have installed an archetype in the Maven repository.
 
 .Procedure
 

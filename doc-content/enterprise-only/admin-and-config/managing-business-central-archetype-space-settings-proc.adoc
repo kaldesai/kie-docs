@@ -5,14 +5,14 @@ When you add the archetypes to {CENTRAL}, they can be used as a templates in all
 
 .Prerequisites
 
-* You have installed an archetype in the maven repository.
-* You have created an archetype and listed in the {CENTRAL} *Settings* from the maven repository.
+* You have installed an archetype in the Maven repository.
+* You have created an archetype and listed in the {CENTRAL} *Settings* from the Maven repository.
 
 .Procedure
 
 . In {CENTRAL}, go to *Menu* -> *Design* -> *Projects*.
 . Select or create the space into which you want to manage the archetypes. The default space is *MySpace*.
 . Click *Settings*.
-. To include or exclude the archetypes in the space, enable or disable the *Include* check box.
+. To include or exclude the archetypes in the space, select the *Include* check box.
 . From the *Actions* column, click the image:project-data/dots.png[] icon on the right side of an archetype and select *Set as default* from the drop-down menu to set an archetype as a default for the space.
 . Click *Save*.
