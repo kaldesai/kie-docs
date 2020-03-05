@@ -74,12 +74,14 @@ The RH-SSO server converts the user names to lower case. Therefore, after integr
 +
 . To enable the JACC manually in the `standalone.xml` or in the file where Elytron is installed, do any of the following tasks:
 
-* Elytron subsystem provides a built-in policy provider based on JACC specification. To create the policy provider, enter the following command in the management command-line interface (CLI) of {EAP}:
+* Elytron subsystem provides a built-in policy provider based on JACC specification. To create the policy provider and enable the JACC manually, enter the following commands in the management command-line interface (CLI) of {EAP}:
 +
 --
 [source]
 ----
 /subsystem=elytron/policy=jacc:add(jacc-policy={})
+/subsystem=undertow/application-security-domain=other:remove
+/subsystem=undertow/application-security-domain=other:add(http-authentication-factory=keycloak-http-authentication,enable-jacc=true)
 ----
 --
 +
