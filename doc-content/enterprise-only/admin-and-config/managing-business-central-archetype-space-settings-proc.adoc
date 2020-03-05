@@ -6,7 +6,7 @@ When you add the archetypes to {CENTRAL}, they can be used as a templates in all
 .Prerequisites
 
 * You have installed an archetype in the Maven repository.
-* You have created an archetype and listed in the {CENTRAL} *Settings* from the Maven repository.
+* You have created an archetype and listed it in the {CENTRAL} *Settings* from the Maven repository.
 
 .Procedure
 
