@@ -1,0 +1,94 @@
+[id='test-scenarios-execution-rest-api-proc']
+
+= Executing a test scenario using the {KIE_SERVER} REST API
+
+Directly interacting with the REST endpoints of {KIE_SERVER} provides the most separation between the calling code and the decision logic definition.
+You can use the {KIE_SERVER} REST API to execute the test scenarios externally. It executes the test scenarios against the deployed project.
+
+[NOTE]
+====
+This functionality is disabled by default, use `org.kie.scenariosimulation.server.ext.disabled` system property to enable it.
+====
+
+For more information about the {KIE_SERVER} REST API, see
+ifdef::DM,PAM[]
+{URL_KIE_APIS}[_{KIE_APIS}_].
+endif::[]
+ifdef::DROOLS,JBPM,OP[]
+xref:kie-server-rest-api-con_kie-apis[].
+endif::[]
+
+.Prerequisites
+
+* {KIE_SERVER} is installed and configured, including a known user name and credentials for a user with the `kie-server` role. For installation options, see
+ifdef::DM,PAM[]
+{URL_PLANNING_INSTALL}[_{PLANNING_INSTALL}_].
+endif::[]
+ifdef::DROOLS,JBPM,OP[]
+<<_installationandsetup>>.
+endif::[]
+
+* You have built the test scenario project as a KJAR artifact and deployed it to {KIE_SERVER}.
+* You have the ID of the KIE container.
+
+.Procedure
+
+. Determine the base URL for accessing the {KIE_SERVER} REST API endpoints. This requires knowing the following values (with the default local deployment values as an example):
++
+--
+* Host (`localhost`)
+* Port (`8080`)
+* Root context (`kie-server`)
+* Base REST path (`services/rest/`)
+
+Example base URL in local deployment for the traffic violations project:
+
+`\http://localhost:8080/kie-server/services/rest/server/containers/traffic-violation_1.0.0`
+--
+
+. Determine user authentication requirements.
++
+When users are defined directly in the {KIE_SERVER} configuration, HTTP Basic authentication is used and requires the user name and password. Successful requests require that the user have the `kie-server` role.
++
+The following example demonstrates how to add credentials to a curl request:
++
+[source]
+----
+curl -u username:password <request>
+----
++
+If {KIE_SERVER} is configured with Red Hat Single Sign-On, the request must include a bearer token:
++
+[source,java]
+----
+curl -H "Authorization: bearer $TOKEN" <request>
+----
+
+. Specify the format of the request and response. The REST API endpoints work with both JSON and XML formats and are set using request headers:
++
+.JSON
+[source]
+----
+curl -H "accept: application/json" -H "content-type: application/json"
+----
++
+.XML
+[source]
+----
+curl -H "accept: application/xml" -H "content-type: application/xml"
+----
+
+. Execute the test scenario:
+
+*[POST]* `server/containers/{containerId}/scesim`
+
+Example curl request:
+
+[source]
+----
+curl -u 'testadmin:admin1234;' -H "accept: application/xml" -X POST "http://localhost:8080/kie-server/services/rest/server/containers/traffic_1.0.0-SNAPSHOT/scesim" --data '<ScenarioSimulationModel version="1.7">
+----
+
+Example JSON request:
+
+Example XML request:
