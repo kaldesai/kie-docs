@@ -8,6 +8,8 @@ The test scenarios designer supports list and map collections for both DMN-based
 For map entries, an entry key must be a `String` data type.
 ====
 
+To pass the parameter in the *EXPECT* column of Rule-based collection editor use the `actualValue` keyword whereas use the `?` keyword in DMN-based test scenario.
+
 .Procedure
 . Set the column type first (use a field whose type is a list or a map).
 . Double click a cell in the column to input a value.
@@ -23,6 +25,8 @@ For map entries, an entry key must be a `String` data type.
 . To define the list values for the data objects in the collection editor popup:
 .. Select *Define List*.
 .. Use the MVEL or FEEL expression to define a list values in the text field.
++
+Rule-based test scenario uses MVEL expression language and DMN-based test scenario uses FEEL expression language.
 .. Click *Save*.
 
 . To create the map values for the data objects in the collection editor popup:
@@ -37,5 +41,15 @@ For map entries, an entry key must be a `String` data type.
 . To define the map values for the data objects in the collection editor popup:
 .. Select *Define Map*.
 .. Use the MVEL or FEEL expression to define a map values in the text field.
++
+Rule-based test scenario uses MVEL expression language and DMN-based test scenario uses FEEL expression language.
 .. Click *Save*.
++
+[NOTE]
+====
+You can not use collection editor to define the map values for DMN-based test scenario. To define the map values, do the following:
+
+* Add a fact.
+* Use the expression with the prefix `#`.
+====
 . Click *Remove* to delete the collection itself.
