@@ -72,7 +72,7 @@ In this example:
 The RH-SSO server converts the user names to lower case. Therefore, after integration with RH-SSO, your user name will appear in lower case in {PRODUCT}. If you have user names in upper case hard coded in business processes, the application might not be able to identify the upper case user.
 ====
 +
-. Elytron subsystem provides a built-in policy provider based on JACC specification. To enable the JACC manually in the `standalone.xml` or in the file where Elytron is installed, do any of the following tasks:
+. The Elytron subsystem provides a built-in policy provider based on JACC specification. To enable the JACC manually in the `standalone.xml` or in the file where Elytron is installed, do any of the following tasks:
 
 * To create the policy provider, enter the following commands in the management command-line interface (CLI) of {EAP}:
 +
