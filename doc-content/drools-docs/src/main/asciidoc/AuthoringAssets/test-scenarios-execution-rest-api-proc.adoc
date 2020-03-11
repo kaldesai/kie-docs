@@ -80,7 +80,7 @@ Example curl request:
 +
 [source]
 ----
-curl -X POST "http://localhost:8080/kie-server/services/rest/server/containers/traffic_1.0.0-SNAPSHOT/scesim"\ -u 'testadmin:admin1234;' \ -H "accept: application/xml" -H "content-type: application/xml"\ -d @Violation.scesim
+curl -X POST "http://localhost:8080/kie-server/services/rest/server/containers/traffic_1.0.0-SNAPSHOT/scesim"\ -u 'wbadmin:wbadmin;' \ -H "accept: application/xml" -H "content-type: application/xml"\ -d @Violation.scesim
 ----
 +
 Example XML request:

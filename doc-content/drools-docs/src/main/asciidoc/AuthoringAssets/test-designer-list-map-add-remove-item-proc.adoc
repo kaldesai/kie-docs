@@ -47,6 +47,6 @@ Rule-based test scenario uses MVEL expression language and DMN-based test scenar
 +
 [NOTE]
 ====
-To define the map values for DMN-based test scenario, you can add a fact and use the expression with the prefix `#`, instead of using the collection editor.
+To define the map values for DMN-based test scenario, you can add a fact and use the FEEL expression, instead of using the collection editor. For example, `{ even : false, x : 5, type : "integer number"}`.
 ====
 . Click *Remove* to delete the entire collection.
