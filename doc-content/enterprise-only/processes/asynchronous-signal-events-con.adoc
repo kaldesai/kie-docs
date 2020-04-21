@@ -2,9 +2,9 @@
 
 = Asynchronous signal events
 
-In some cases where several process instances from different process definitions are waiting for the same signal. They are generally executed sequentially in the same single thread. But, if one of those process instances throws a runtime exception, all the other process instances are affecte and usually result in a rolled back transaction. To avoid this situation, {PRODUCT} supports using asynchronous signals events for:
+In some cases where several process instances from different process definitions are waiting for the same signal. They are generally executed sequentially in the same single thread. But, if one of those process instances throws a runtime exception, all the other process instances are affected and usually result in a rolled back transaction. To avoid this situation, {PRODUCT} supports using asynchronous signals events for:
 
 * Throwing intermediate signal events
 * End events
 
-In {CENTRAL}, set the *Data Input* value of the throw event to *async* to automatically set the executor service on each session. This ensures that each process instance is signaled in a different transaction.
+In the process designer of {CENTRAL}, set the data input value of the throw event to *async* in the *Data assignments* section of *Properties* panel leaving other values blank. It will automatically set the executor service on each session. This ensures that each process instance is signaled in a different transaction.
