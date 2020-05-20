@@ -1,0 +1,6 @@
+[id='rn-771-known-issues-ref']
+= Known issues in {PRODUCT} 7.7.1
+
+This section lists known issues with {PRODUCT} 7.7.1.
+
+== {OPENSHIFT}

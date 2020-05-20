@@ -1,5 +1,5 @@
-[id='rn-known-issues-con']
-= Known issues
+[id='rn-known-issues-ref']
+= Known issues in {PRODUCT} 7.7.0
 
 This section lists known issues with {PRODUCT} {PRODUCT_VERSION}.
 
