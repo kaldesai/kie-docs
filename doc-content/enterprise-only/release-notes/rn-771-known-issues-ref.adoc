@@ -12,7 +12,7 @@ Issue: Immutable {KIE_SERVER} environments are unable to deploy on {OPENSHIFT} u
 Steps to reproduce:
 
 . In the {PRODUCT} environment on {OPENSHIFT} using Operators, create a KIE application.
-. Try to deploy immutable {KIE_SERVER} environments with the following YAML file.
+. Try to deploy immutable {KIE_SERVER} environments with the following YAML file:
 
 ----
 apiVersion: app.kiegroup.org/v2
@@ -49,14 +49,19 @@ Issue: It is not possible to build a custom extension image for database.
 Steps to reproduce:
 
 . Download the following templates.zip file.
++
 ----
 curl --insecure --output templates.zip http://rcm-guest.app.eng.bos.redhat.com/rcm-guest/staging/rhpam/RHPAM-7.7.1.CR1/rhpam-7.7.1-openshift-templates.zip
 ----
+
 . Unzip the templates.zip file content.
++
 ----
 unzip -q templates.zip
 ----
+
 . For an example, make the image build for MySQL database.
++
 ----
 cd templates/contrib/jdbc
 make build mysql
