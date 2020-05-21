@@ -214,32 +214,7 @@ Workaround:
 
 endif::[]
 
-== Installer
-
-.In the {PRODUCT} installer, {JWS} 5.1 is referenced in the installation path step [https://issues.redhat.com/browse/RHPAM-2745[RHPAM-2745]]
-
-Issue: When you run the {PRODUCT} installer the installation path step references {JWS} 5.1 instead of {JWS} {JWS_VERSION}.
-
 == DMN Designer
-
-.The node data type is lost after you drag and drop in the data type editor [https://issues.redhat.com/browse/RHDM-1269[RHDM-1269]]
-
-Issue: In a DMN diagram, nodes are referenced to a custom DMN data type, and when this custom data type is edited, the reference in the node diagram is lost and the node refers to the `<Undefined>` data type.
-
-Steps to reproduce:
-
-. Create a new DMN diagram.
-. Add two custom data types.
-. Add one node to the DMN diagram.
-. Set the node output type to one of created custom data types.
-. Drag and drop to reorder the custom defined data types.
-. Return to node definition.
-
-Expected result: The type is one of the custom data types.
-
-Actual result: The node refers to `<Undefined>` data type.
-
-Workaround: Set the data type of the node after reordering custom data types.
 
 .In the DMN Designer, you cannot convert a Java class with that contains an invalid DMN identifier [https://issues.redhat.com/browse/RHDM-1231[RHDM-1231]]
 
