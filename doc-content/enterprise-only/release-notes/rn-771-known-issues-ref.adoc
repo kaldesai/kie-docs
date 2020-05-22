@@ -11,8 +11,36 @@ Issue: Immutable {KIE_SERVER} environments are unable to deploy on {OPENSHIFT} u
 
 Steps to reproduce:
 
-. In the {PRODUCT} environment on {OPENSHIFT} using Operators, create a KIE application.
-. Try to deploy immutable {KIE_SERVER} environments with the following YAML file:
+. Create a KIE application in the {PRODUCT} environment on {OPENSHIFT} using Operators.
+. To deploy immutable {KIE_SERVER} environments, use the following YAML file:
+
+ifdef::PAM[]
+
+----
+apiVersion: app.kiegroup.org/v2
+kind: KieApp
+metadata:
+  name: rhpam-production-immutable
+  annotations:
+    consoleName: rhpam-production-immutable
+    consoleTitle: PAM Production Immutable
+    consoleDesc: Deploys a PAM Production Immutable environment
+spec:
+  environment: rhpam-production-immutable
+  useImageTags: true
+  objects:
+    servers:
+      - build:
+          kieServerContainerDeployment: rhpam-kieserver-library=org.openshift.quickstarts:rhpam-kieserver-library:1.6.0-SNAPSHOT
+          gitSource:
+            uri: https://github.com/jboss-container-images/rhpam-7-openshift-image.git
+            reference: master
+            contextDir: quickstarts/library-process
+----
+
+endif::[]
+
+ifdef::DM[]
 
 ----
 apiVersion: app.kiegroup.org/v2
@@ -35,7 +63,9 @@ spec:
             contextDir: quickstarts/hello-rules/hellorules
 ----
 
-Expected result: Immutable {KIE_SERVER} deployment errors should not be present in the generated YAML file.
+endif::[]
+
+Expected result: Immutable {KIE_SERVER} deployment errors must not be present in the generated YAML file.
 
 Actual result: The generated YAML file fails with the immutable {KIE_SERVER} deployment errors.
 
@@ -48,13 +78,13 @@ Issue: It is not possible to build a custom extension image for database.
 
 Steps to reproduce:
 
-. Download the following templates.zip file.
+. Download the following `templates.zip` file.
 +
 ----
 curl --insecure --output templates.zip http://rcm-guest.app.eng.bos.redhat.com/rcm-guest/staging/rhpam/RHPAM-7.7.1.CR1/rhpam-7.7.1-openshift-templates.zip
 ----
 
-. Unzip the templates.zip file content.
+. Unzip the `templates.zip` file content.
 +
 ----
 unzip -q templates.zip
@@ -71,7 +101,7 @@ Expected result: You can create and build a custom extension image for database.
 
 Actual result: You can not build a custom extension image for database.
 
-Workaround: Specify the following repository in the `base-db-overrides.yaml` file and start the image build again.
+Workaround: Specify the following repository in the `base-db-overrides.yaml` file and restart the image build.
 ----
 name: "quay.io/kiegroup/jboss-kie-${DATABASE_TYPE}-extension-openshift-image"
 ----
