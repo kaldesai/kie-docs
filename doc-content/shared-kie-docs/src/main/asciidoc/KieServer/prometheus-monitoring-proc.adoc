@@ -68,9 +68,9 @@ scrape_configs:
 ----
 scrape_configs:
   - job_name: 'kie'
-  metrics_path: /rest/metrics
-  static_configs:
-    - targets: ["HOST:PORT"]
+    metrics_path: /rest/metrics
+    static_configs:
+      - targets: ["HOST:PORT"]
 ----
 
 Replace the values according to your {KIE_SERVER} location and settings.
