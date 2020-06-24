@@ -1,0 +1,41 @@
+[id='managing-business-central-using-DB-usergroupcallback-ref']
+= Using database UserGroupCallback implementation
+
+You can use the database `UserGroupCallback` implementation by configuring the respective database properties in one of the following ways:
+
+* Programmatically: build a properties object with the respective `DBUserGroupCallbackImpl` properties and create `DBUserGroupCallbackImpl` with the properties object as its parameter.
++
+For example:
++
+[source]
+----
+import static org.jbpm.services.task.identity.DBUserGroupCallbackImpl.DS_JNDI_NAME;
+import static org.jbpm.services.task.identity.DBUserGroupCallbackImpl.PRINCIPAL_QUERY;
+import static org.jbpm.services.task.identity.DBUserGroupCallbackImpl.ROLES_QUERY;
+import static org.jbpm.services.task.identity.DBUserGroupCallbackImpl.USER_ROLES_QUERY;
+...
+props = new Properties();
+props.setProperty(DS_JNDI_NAME, "jdbc/jbpm-ds");
+props.setProperty(PRINCIPAL_QUERY, "select userId from Users where userId = ?");
+props.setProperty(ROLES_QUERY, "select groupId from UserGroups where groupId = ?");
+props.setProperty(USER_ROLES_QUERY, "select groupId from UserGroups where userId = ?");
+
+callback = new DBUserGroupCallbackImpl(props);
+----
+
+* Declaratively: create the `jbpm.usergroup.callback.properties` file in the root of your application or specify the file location as a system property.
++
+Ensure that you register the database callback when starting the user task server.
++
+For example:
++
+[source]
+----
+System.setProperty("jbpm.usergroup.callback.properties", "/jbpm.usergroup.callback.db.properties");
+callback = new DBUserGroupCallbackImpl(true);
+----
+
+[float]
+== Additional resources
+
+* {URL_INSTALLING_ON_EAP}#roles-users-con[_Roles and users_]

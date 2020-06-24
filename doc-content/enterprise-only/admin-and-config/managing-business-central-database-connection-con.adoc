@@ -1,0 +1,23 @@
+[id='managing-business-central-database-connection-con']
+= Database connection
+
+{CENTRAL} provides a dedicated `UserGroupCallback` implementation for database server with {PRODUCT} to enable the user task service to retrieve information on users, groups, and roles directly from databases.
+
+You can configure the following database `UserGroupCallback` implementation properties:
+
+[caption="Table 1. "]
+.LDAP UserGroupCallback properties
+[%header,cols=2]
+[%autowidth]
+|===
+|Property |Description
+
+|`*db.ds.jndi.name*` |JNDI name of the data source used for connections.
+
+|`*db.user.query*` |This property is used to verify the user existence.
+
+|`*db.user.roles.query*` |This property is used to verify the group existence.
+
+|`*db.roles.query*` |This property is used to collect group for given user.
+
+|===
