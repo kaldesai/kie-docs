@@ -6,7 +6,7 @@
 You can configure the following database `UserGroupCallback` implementation properties:
 
 [caption="Table 1. "]
-.LDAP UserGroupCallback properties
+.Database UserGroupCallback properties
 [%header,cols=2]
 [%autowidth]
 |===
