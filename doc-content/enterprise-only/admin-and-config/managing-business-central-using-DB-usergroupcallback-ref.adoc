@@ -1,7 +1,7 @@
 [id='managing-business-central-using-DB-usergroupcallback-ref']
-= Using database UserGroupCallback implementation
+= Database UserGroupCallback implementation
 
-You can use the database `UserGroupCallback` implementation by configuring the respective database properties in one of the following ways:
+In database `UserGroupCallback` implementation, you must create the required database. You can use this implementation by configuring the respective database properties in one of the following ways:
 
 * Programmatically: build a properties object with the respective `DBUserGroupCallbackImpl` properties and create `DBUserGroupCallbackImpl` with the properties object as its parameter.
 +
@@ -25,6 +25,10 @@ callback = new DBUserGroupCallbackImpl(props);
 
 * Declaratively: create the `jbpm.usergroup.callback.properties` file in the root of your application or specify the file location as a system property.
 +
+For example:
++
+`-Djbpm.usergroup.callback.properties=FILE_LOCATION_ON_CLASSPATH`
++
 Ensure that you register the database callback when starting the user task server.
 +
 For example:
@@ -33,6 +37,11 @@ For example:
 ----
 System.setProperty("jbpm.usergroup.callback.properties", "/jbpm.usergroup.callback.db.properties");
 callback = new DBUserGroupCallbackImpl(true);
+...
+db.ds.jndi.name = jdbc/jbpm-ds
+db.user.query = select userId from Users where userId = ?
+db.roles.query = select groupId from UserGroups where groupId = ?
+db.user.roles.query = select groupId from UserGroups where userId = ?
 ----
 
 [float]

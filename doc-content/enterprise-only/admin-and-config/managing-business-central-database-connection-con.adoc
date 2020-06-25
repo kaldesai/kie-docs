@@ -16,8 +16,8 @@ You can configure the following database `UserGroupCallback` implementation prop
 
 |`*db.user.query*` |This property is used to verify the user existence.
 
-|`*db.user.roles.query*` |This property is used to verify the group existence.
+|`*db.user.roles.query*` |This property is used to collect the groups for a given user.
 
-|`*db.roles.query*` |This property is used to collect group for given user.
+|`*db.roles.query*` |This property is used to verify the group existence.
 
 |===

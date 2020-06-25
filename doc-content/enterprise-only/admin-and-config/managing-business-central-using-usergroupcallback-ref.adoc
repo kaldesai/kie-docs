@@ -1,5 +1,5 @@
 [id='managing-business-central-using-usergroupcallback-ref']
-= Using LDAP UserGroupCallback implementation
+= LDAP UserGroupCallback implementation
 
 You can use the LDAP `UserGroupCallback` implementation by configuring the respective LDAP properties in one of the following ways:
 
