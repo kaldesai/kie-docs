@@ -3,7 +3,7 @@
 
 In database `UserGroupCallback` implementation, you must create the required database. You can use this implementation by configuring the respective database properties in one of the following ways:
 
-* Programmatically: build a properties object with the respective `DBUserGroupCallbackImpl` properties and create `DBUserGroupCallbackImpl` with the properties object as its parameter.
+* Programmatically: Build a properties object with the respective `DBUserGroupCallbackImpl` properties and create `DBUserGroupCallbackImpl` using the same properties object as its parameter.
 +
 For example:
 +
@@ -23,7 +23,7 @@ props.setProperty(USER_ROLES_QUERY, "select groupId from UserGroups where userId
 callback = new DBUserGroupCallbackImpl(props);
 ----
 
-* Declaratively: create the `jbpm.usergroup.callback.properties` file in the root of your application or specify the file location as a system property.
+* Declaratively: Create the `jbpm.usergroup.callback.properties` file in the root of your application or specify the file location as a system property.
 +
 For example:
 +
