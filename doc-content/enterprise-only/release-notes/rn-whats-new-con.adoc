@@ -184,7 +184,14 @@ You can now start a business process from a specific node after the business pro
 
 endif::PAM[]
 
-== Integration
+== Support for {EAP_LONG} {EAP_VERSION}
+You can now install {PRODUCT} on {EAP_LONG} {EAP_VERSION}. For more information about installing {PRODUCT} on {EAP_LONG} {EAP_VERSION}, see {URL_INSTALLING_ON_EAP}[_{INSTALLING_ON_EAP}_].
+
+== Support for {JWS} {JWS_VERSION}
+You can now install {PRODUCT} on {JWS} {JWS_VERSION}. For more information about installing {PRODUCT} on {JWS} {JWS_VERSION}, see {URL_INSTALLING_ON_JWS}[_{INSTALLING_ON_JWS}_].
+
+== Support for MySQL 8.0
+You can now deploy {PRODUCT} with a MySQL 8.0 data source. For more information, see {URL_INSTALLING_ON_EAP}/index#eap-data-source-add-proc[Configuring JDBC data sources for KIE Server] in the {URL_INSTALLING_ON_EAP}[_{INSTALLING_ON_EAP}_] guide.
 
 == {PLANNER}
 
