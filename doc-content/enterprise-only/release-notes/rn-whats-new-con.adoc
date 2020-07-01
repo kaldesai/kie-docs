@@ -218,6 +218,9 @@ You can now deploy {PRODUCT} with a MySQL 8.0 data source. For more information,
 === {PLANNER} Constraint Streams API
 The Constraint Streams API is now fully supported.
 
+=== {KIE_SERVER} Task Assigning
+{KIE_SERVER} optimization and business process management capabilities are integrated so human tasks that belong to a process can be assigned to users as part of an optimized plan.
+
 === Vehicle Routing Planner
 The Vehicle Routing Planner includes user interface improvements, server error reporting, and a new run script. For more information , see the
 
@@ -227,11 +230,12 @@ The Vehicle Routing Planner includes user interface improvements, server error r
 You can now deploy {PRODUCT} on {OPENSHIFT} 4.5.
 
 === Custom image creation for {KIE_SERVER} on {OPENSHIFT}
-You can now create and use custom {KIE_SERVER} images with additional JAR or RPM packages. For more information about creating custom images, see {DEPLOYING_OPENSHIFT_OPERATOR_URL}/customimage-con_openshift-operator#customimage-con_openshift-operator[Creating custom images for {KIE_SERVER}] in _{DEPLOYING_OPENSHIFT_OPERATOR}_.
+You can now create and use custom {KIE_SERVER} images with additional JAR or RPM packages.
+For more information about creating custom images, see {URL_DEPLOYING_OPENSHIFT_OPERATOR}/customimage-con_openshift-operator#customimage-con_openshift-operator[Creating custom images for {KIE_SERVER}] in _{DEPLOYING_OPENSHIFT_OPERATOR}_.
 
 === SSH authentication for Git hooks on {OPENSHIFT} 4.x
 When configuring Git hooks for {CENTRAL} on {OPENSHIFT} 4.x, you can now configure SSH authentication for access to custom Git repositories.
-For more information about preparing Git hooks for deployment, see {DEPLOYING_OPENSHIFT_OPERATOR_URL}/dm-openshift-prepare-con#githooks-prepare-proc-openshift-operator[Preparing Git hooks] in _{DEPLOYING_OPENSHIFT_OPERATOR}_.
+For more information about preparing Git hooks for deployment, see {URL_DEPLOYING_OPENSHIFT_OPERATOR}/dm-openshift-prepare-con#githooks-prepare-proc-openshift-operator[Preparing Git hooks] in _{DEPLOYING_OPENSHIFT_OPERATOR}_.
 
 ifdef::PAM[]
 
@@ -245,10 +249,10 @@ ifdef::PAM[]
 
 === Support for deploying production {PRODUCT} environments on {OPENSHIFT} 4.x without ReadWriteMany access to a persistent volume
 You can now deploy a production environment for {PRODUCT} on {OPENSHIFT} 4.x with a simplified version of {CENTRAL} monitoring that does not require ReadWriteMany access to a persistent volume.
-For more information about deploying {PRODUCT} on {OPENSHIFT} 4.x, see {DEPLOYING_OPENSHIFT_OPERATOR_URL}/operator-con#operator-environment-deploy-assy [Deploying a {PRODUCT} environment using the operator] in _{DEPLOYING_OPENSHIFT_OPERATOR}_.
+For more information about deploying {PRODUCT} on {OPENSHIFT} 4.x, see {URL_DEPLOYING_OPENSHIFT_OPERATOR}/operator-con#operator-environment-deploy-assy[Deploying a {PRODUCT} environment using the operator] in _{DEPLOYING_OPENSHIFT_OPERATOR}_.
 
 === Process instance migration service on {OPENSHIFT} 4.x
 You can now deploy the Process Instance Migration (PIM) service on {OPENSHIFT} 4.x. You can use the PIM service to define the migration between two different process definitions, known as a migration plan. You can then apply the migration plan to the running process instances in a specific {KIE_SERVER}.
-For more information about deploying {PRODUCT} on {OPENSHIFT} 4.x, see {DEPLOYING_OPENSHIFT_OPERATOR_URL}/operator-con#operator-environment-deploy-assy [Deploying a {PRODUCT} environment using the operator] in _{DEPLOYING_OPENSHIFT_OPERATOR}_.
+For more information about deploying {PRODUCT} on {OPENSHIFT} 4.x, see {URL_DEPLOYING_OPENSHIFT_OPERATOR}/operator-con#operator-environment-deploy-assy[Deploying a {PRODUCT} environment using the operator] in _{DEPLOYING_OPENSHIFT_OPERATOR}_.
 
 endif::PAM[]
