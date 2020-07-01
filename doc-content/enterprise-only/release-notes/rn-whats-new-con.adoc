@@ -24,6 +24,9 @@ ifdef::PAM[]
 === Support for variable tagging in processes
 The {PRODUCT} process designer now supports variable tagging for the business processes.
 
+=== Business Keys for case management
+{PRODUCT} {ENTERPRISE_VERSION} includes additional support for further customizing the case identifier generation. For more information, see {URL_DESIGNING_CASES}[_{DESIGNING_CASES}_].
+
 endif::PAM[]
 
 === Support for Security Management actions and updating space components using the REST API
@@ -165,6 +168,17 @@ Dashbuilder runtime is a new add-on standalone web application and it is distrib
 === Test Scenarios
 The test scenarios designer in {CENTRAL} now supports the enumeration data type in rule-based test scenarios.
 
+=== Prediction service for task augmentation
+The prediction service for task augmentation is integrated with Open Data Hub Artificial intelligence (AI) and Machine learning (ML) services. There is a proof of concept (POC) available for Fraud Detection.
+
+=== Full support for process instance migration
+Users can apply their migration plan to the running process instance in a specific KIE Server. For more information, see {URL_MANAGING_PROCESSES}[_{MANAGING_PROCESSES}_].
+
+=== Viewing reusable subprocess from the parent process
+{PRODUCT}
+{ENTERPRISE_VERSION} provides support for viewing a subprocess by clicking on the parent process diagram. Users can easily view and explore pending tasks within the subprocess.
+For more information, see {URL_DESIGNING_BUSINESS_PROCESSES}[_{DESIGNING_BUSINESS_PROCESSES}_].
+
 == {DECISION_ENGINE_CAP}
 
 === Executable model lambda externalization optimization
@@ -181,6 +195,12 @@ ifdef::PAM[]
 
 === Start a business process from a specific node
 You can now start a business process from a specific node after the business process is terminated.
+
+=== New notification listener properties
+{PRODUCT} {ENTERPRISE_VERSION} includes two new jBPM properties that are used to enable and disable notification listeners.
+
+=== OR operator for custom queries
+{PRODUCT} {ENTERPRISE_VERSION} includes an OR operator to define query filters.
 
 endif::PAM[]
 
