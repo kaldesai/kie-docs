@@ -45,9 +45,9 @@ VERSION
 ----
 
 
-If you want to export specific dashbuilder data as a ZIP file, do the following tasks:
+If you want to export customized user created dashbuilder data as a ZIP file, do the following tasks:
 
-.. On the *Dashbuilder Data Transfer* page, click *custom export*.
+.. On the *Dashbuilder Data Transfer* page, click *Custom export*.
 .. In *Export Wizard* panel, select the datasets which you want to be present in the ZIP file and click *Next*.
 .. Select the Pages which you want to be present in the ZIP file and click *Next*.
 +
@@ -59,7 +59,7 @@ NOTE: By default, Navigation is always exported.
 +
 An `export.zip` file containing customized dashbuilder data is downloaded.
 +
-NOTE: You must select the pages and the datasets associated with those pages in the *Export Wizard* panel. If you fail to select both datasets and pages, an export error is generated and you can not download the `export.zip` file.
+NOTE: You must select the pages and the datasets associated with those pages in the *Export Wizard* panel. You must select at least one page. If you fail to select both datasets and pages, an export error is generated and you can not download the `export.zip` file.
 
 .. Click *Finish*.
 .. Optional: Click *Cancel* to return to the *Dashbuilder Data Transfer* page.
