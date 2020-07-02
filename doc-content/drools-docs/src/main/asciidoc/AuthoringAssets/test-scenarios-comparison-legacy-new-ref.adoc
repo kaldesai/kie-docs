@@ -1,0 +1,39 @@
+[id='test-scenarios-comparison-legacy-new-ref']
+
+== Feature comparison of legacy and new test scenario designer
+
+{PRODUCT} currently supports both the new *Test Scenarios* designer and the former *Test Scenarios (Legacy)* designer.
+
+The default designer is the new test scenarios designer, which supports testing of both rules and DMN models and provides an enhanced overall user experience with test scenarios. If required, you can continue to use the legacy test scenarios designer, which supports rule-based test scenarios only.
+
+IMPORTANT: The legacy Test Scenarios tool was deprecated with {PRODUCT} 7.3.0. It will be removed in a future {PRODUCT} release. Use the new Test Scenarios designer instead.
+
+The following table highlights the main features of legacy and new test scenario designer which are supported in {PRODUCT} to help you decide the suitable test scenarios designer in your project.
+
+* `+` indicates that the feature is present in the test scenario designer.
+* `-` indicates that the feature is not present in the test scenario designer.
+
+.Main features of legacy and new test scenario designer
+[cols="30%,30%,30%,30%", options="header"]
+|===
+|Feature & highlights
+|New test scenario designer
+|Legacy test scenario designer
+|Documentation
+
+a|*Creating and running a test scenario*
+
+* You can create test scenarios in {CENTRAL} to test the functionality of business rule data before deployment.
+* A basic test scenario must have at least a related data objects, *GIVEN* facts or *EXPECT* results.
+* You can run the tests to validate your business rules and data.
+
+|`+`
+|`+`
+
+a|
+
+* For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
+* For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
+* For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
+
+|===
