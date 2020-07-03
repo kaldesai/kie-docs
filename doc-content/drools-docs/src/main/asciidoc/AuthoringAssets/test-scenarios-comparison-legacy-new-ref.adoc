@@ -103,7 +103,7 @@ a|
 a|*Globals*
 
 * Global variables are named objects that are visible to the decision engine but are different from the objects for facts.
-* Global variables are deprecated for new test scenarios.
+* Setting global variables for new test scenario is deprecated .
 * In case you want to reuse data sets for different scenarios, you can use the *Background* instance.
 
 |`-`
@@ -124,7 +124,7 @@ a|*CALL METHOD*
 
 a|
 
-* For more information about using list and map collections in new test scenarios, see xref:test-designer-list-map-add-remove-item-proc[].
+* For more information about calling a method in new test scenarios, see xref:test-designer-expressions-syntax-intro-ref[].
 * For more information about calling a method in test scenarios(legacy), see xref:test-scenarios-legacy-create-proc[].
 
 a|*Modify an existing fact*
