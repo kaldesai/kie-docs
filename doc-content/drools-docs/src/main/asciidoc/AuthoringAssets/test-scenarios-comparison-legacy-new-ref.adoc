@@ -1,6 +1,6 @@
 [id='test-scenarios-comparison-legacy-new-ref']
 
-== Feature comparison of legacy and new test scenario designer
+= Feature comparison of legacy and new test scenario designer
 
 {PRODUCT} currently supports both the new *Test Scenarios* designer and the former *Test Scenarios (Legacy)* designer.
 
