@@ -32,8 +32,104 @@ a|*Creating and running a test scenario*
 
 a|
 
-* For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
-* For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
-* For more information about creating rule-based test scenarios, see xref:test-designer-create-test-template-rule-based-proc[].
+* For more information about creating rule and DMN-based test scenarios, see xref:test-designer-create-test-scenario-template-con[].
+* For more information about running the test scenarios, see xref:test-designer-run-test-proc[].
+* For more information about creating and running test scenarios(legacy), see xref:test-scenarios-legacy-create-proc[].
+
+a|*Adding GIVEN facts in test scenarios*
+
+You can insert and verify the *GIVEN* facts for the test.
+
+|`+`
+|`+`
+
+a|
+
+* For more information about adding GIVEN facts in new test scenarios designer, see xref:test-designer-create-test-scenario-template-con[].
+* For more information about adding GIVEN facts in test scenarios(legacy), see xref:test-scenarios-legacy-GIVEN-proc[].
+
+a|*Adding EXPECT results in test scenarios*
+
+* It represents the objects and their fields whose exact values are checked based on the given information.
+* The *EXPECT* section defines the expected results based on the *GIVEN* input facts.
+
+|`+`
+|`+`
+
+a|
+
+* For more information about adding EXPECT results in new test scenarios designer, see xref:test-designer-create-test-scenario-template-con[].
+* For more information about adding EXPECT results in test scenarios(legacy), see xref:test-scenarios-legacy-EXPECT-proc[].
+
+a|*KIE session & KIE base for testing*
+
+* KIE session can be set on test scenario level settings.
+* KIE base can be set on project level settings.
+
+|`+`
+|`+`
+|-
+
+|*Simulated date and time*
+|`-`
+|`+`
+|-
+
+a|*Rule flow group*
+
+You can specify a rule flow group to be activated so that all rules within that group can be tested.
+
+|`+`
+|`+`
+
+a|
+
+* For more information about setting rule flow group in new test scenarios, see xref:test-designer-global-settings-panel-rule-based-proc[].
+* For more information about setting rule flow group in test scenarios(legacy), xref:test-scenarios-legacy-GIVEN-proc[].
+
+a|*Globals*
+
+* Global variables are named objects that are visible to the decision engine but are different from the objects for facts.
+* Global variables are deprecated for new test scenarios.
+* In case you want to reuse data sets for different scenarios, you can use the *Background* instance.
+
+|`-`
+|`+`
+
+a|
+
+* For more information about *Background* instance in new test scenarios, see xref:test-scenarios-background-instance-con[].
+* For more information about global variables in test scenarios(legacy), see xref:test-scenarios-legacy-create-proc[].
+
+a|*CALL METHOD*
+
+* You can use this to invoke a method from another fact when the rule execution is initiated.
+* You can invoke any Java class methods from the Java library or from a JAR that was imported for the project.
+
+|`+`
+|`+`
+
+a|
+
+* For more information about using list and map collections in new test scenarios, see xref:test-designer-list-map-add-remove-item-proc[].
+* For more information about calling a method in test scenarios(legacy), see xref:test-scenarios-legacy-create-proc[].
+
+a|*Modify an existing fact*
+
+* You can modify a previously inserted fact in the decision engine between executions of the scenario.
+
+|`-`
+|`+`
+
+|For more information about modifying an existing fact in test scenarios(legacy), see xref:test-scenarios-legacy-GIVEN-proc[].
+
+a|*Bound variable*
+
+* Sets the value of the field to the fact bound to a selected variable.
+* In new test scenario designer, you can not define a variable inside test scenario grid and reuse it inside *GIVEN* or *EXPECTED* cells
+
+|`-`
+|`+`
+|For more information about how to set bound variables in test scenarios(legacy), see xref:test-scenarios-legacy-GIVEN-proc[].
 
 |===
