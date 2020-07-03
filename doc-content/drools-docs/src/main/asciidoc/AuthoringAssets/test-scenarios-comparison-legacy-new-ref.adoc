@@ -14,17 +14,17 @@ The following table highlights the main features of legacy and new test scenario
 * `-` indicates that the feature is not present in the test scenario designer.
 
 .Main features of legacy and new test scenario designer
-[cols="30%,30%,30%,30%", options="header"]
+[cols="40%,30%,30%,40%", options="header"]
 |===
 |Feature & highlights
-|New test scenario designer
-|Legacy test scenario designer
+|New designer
+|Legacy designer
 |Documentation
 
 a|*Creating and running a test scenario*
 
 * You can create test scenarios in {CENTRAL} to test the functionality of business rule data before deployment.
-* A basic test scenario must have at least a related data objects, *GIVEN* facts or *EXPECT* results.
+* A basic test scenario must have at least a related data objects, *GIVEN* facts, and *EXPECT* results.
 * You can run the tests to validate your business rules and data.
 
 |`+`
@@ -50,7 +50,7 @@ a|
 
 a|*Adding EXPECT results in test scenarios*
 
-* It represents the objects and their fields whose exact values are checked based on the given information.
+* It represents the objects and their fields whose exact values are checked based on the provided information.
 * The *EXPECT* section defines the expected results based on the *GIVEN* input facts.
 
 |`+`
@@ -61,11 +61,24 @@ a|
 * For more information about adding EXPECT results in new test scenarios designer, see xref:test-designer-create-test-scenario-template-con[].
 * For more information about adding EXPECT results in test scenarios(legacy), see xref:test-scenarios-legacy-EXPECT-proc[].
 
-a|*KIE session & KIE base for testing*
+|*KIE session*
 
-* KIE session can be set on test scenario level settings.
-* KIE base can be set on project level settings.
+KIE session can be set on test scenario level settings.
 
+|`+`
+|`+`
+|-
+
+a|*KIE base on test scenario level*
+
+You can set KIE base on test scenario level settings.
+|`-`
+|`+`
+|-
+
+a|*KIE base on project level*
+
+You can set KIE base on project level settings.
 |`+`
 |`+`
 |-
