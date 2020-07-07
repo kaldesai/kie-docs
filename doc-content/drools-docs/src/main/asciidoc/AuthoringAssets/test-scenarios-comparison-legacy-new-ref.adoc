@@ -95,7 +95,7 @@ a|*Simulated date and time*
 
 a|*Rule flow group*
 
-* You can specify a rule flow group to be activated to test all the rules in within that group.
+* You can specify a rule flow group to be activated to test all the rules within that group.
 
 |`+`
 |`+`
