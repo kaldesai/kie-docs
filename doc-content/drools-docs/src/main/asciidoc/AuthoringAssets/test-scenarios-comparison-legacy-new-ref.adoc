@@ -79,14 +79,15 @@ a|*KIE base on test scenario level*
 
 a|*KIE base on project level*
 
-You can set KIE base on project level settings.
+* You can set KIE base on project level settings.
+
 |`+`
 |`+`
 |NA
 
 a|*Simulated date and time*
 
-* You can set a simulated date and time for the legacy test scenario designer. 
+* You can set a simulated date and time for the legacy test scenario designer.
 
 |`-`
 |`+`
