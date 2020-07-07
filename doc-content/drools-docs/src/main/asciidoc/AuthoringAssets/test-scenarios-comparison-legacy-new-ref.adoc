@@ -144,7 +144,7 @@ a|*Modify an existing fact*
 a|*Bound variable*
 
 * You can set the value of a field to the fact bound to a selected variable.
-* In the new test scenario designer, you can not define a variable inside a test scenario grid and reuse it inside *GIVEN* or *EXPECTED* cells
+* In the new test scenario designer, you can not define a variable inside a test scenario grid and reuse it inside *GIVEN* or *EXPECTED* cells.
 
 |`-`
 |`+`
