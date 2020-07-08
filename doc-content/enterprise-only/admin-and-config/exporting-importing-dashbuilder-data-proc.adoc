@@ -1,6 +1,8 @@
 [id='exporting-importing-dashbuilder-data-proc-{context}']
 = Exporting and importing Dashbuilder data
 
+ifdef::PAM[]
+
 Dashbuilder is a dashboard and reporting tool integrated in {CENTRAL} and is used by the Datasets editor and Content Manager page. There are three data types:
 
 * Datasets
@@ -14,8 +16,6 @@ IMPORTANT: This feature is only accessible by administrator users.
 == Exporting Dashbuilder data
 
 You can export the dashbuilder related data such as datasets, pages, and navigation from {CENTRAL} as a ZIP file.
-
-ifdef::PAM[]
 
 .Procedure
 . In {CENTRAL}, select the *Admin* icon in the top-right corner of the screen and select *Dashbuilder Data Transfer*.
@@ -70,6 +70,14 @@ NOTE: You must select the pages and the datasets associated with those pages in 
 endif::PAM[]
 
 ifdef::DM[]
+
+Dashbuilder is a dashboard and reporting tool integrated in {CENTRAL} and is used by the Datasets editor. You can import and export Dashbuilder data as ZIP files in {CENTRAL}.
+
+IMPORTANT: This feature is only accessible by administrator users.
+
+== Exporting Dashbuilder data
+
+You can export all the dashbuilder related data such as datasets from {CENTRAL} as a ZIP file.
 
 .Procedure
 . In {CENTRAL}, select the *Admin* icon in the top-right corner of the screen and select *Dashbuilder Data Transfer*.
