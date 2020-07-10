@@ -2,7 +2,7 @@
 
 = Digital Experience Platform (DXP) and AppBuilder
 
-WARNING: {PRODUCT} will no longer include an entitlements for the Entando AppBuilder in 7.8.0 release. The support for Entando AppBuilder is deprecated and it will be removed in a future 7.9.0 release.
+WARNING: Starting with release {ENTERPRISE_VERSION_LONG}, {PRODUCT} no longer includes entitlements for Entando AppBuilder. Support for Entando AppBuilder is deprecated and it will be removed in a future release.
 
 Digital Experience Platform (DXP) is a low-code, component-based platform for building modern web, mobile, and IoT applications. AppBuilder is an application that provides features to help you configure and customize, with or without programming skills, any kind of modern web application built with AppBuilder. AppBuilder is a web-based administration console that you can use to build and configure your web application, manage your page data and activities, and integrate with other application tools, such as {PRODUCT}.
 
