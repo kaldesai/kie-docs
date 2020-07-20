@@ -165,7 +165,27 @@ Actual result: You can not include a PMML 4.4 model into a DMN model.
 
 Workaround: None
 
+.When you try to invoke a Business Knowledge Model (BKM) function from included DMN model, the validation fails [https://issues.redhat.com/browse/RHDM-1395[RHDM-1395]]
+
+Issue: You can not call the BKM function imported from another DMN model, which is aliased with the name containing `.` characters. If you try to invoke that function, the validation fails.
+
+Steps to reproduce:
+
+* Create an empty `Salary.dmn` DMN model.
+* Create an another empty `WorkingHours.dmn` DMN model.
+* Import `WorkingHours.dmn` DMN model into `Salary.dmn` DMN model.
+* Set an alias for `WorkingHours.dmn` model by including `.` character. For example, `working.hours.model`.
+* Validate the model. You receive an error message.
+
+Workaround: None
+
 == {PLANNER}
+
+.In Constraint Streams API, the performance of incremental score calculations is degraded using `groupBy()` method [https://issues.redhat.com/browse/RHDM-1385[RHDM-1385]]
+
+Issue: When you use the `groupBy()` method in Constraint Streams API, the the performance of incremental score calculations is degraded on high level.
+
+Workaround: You can use the DRL score calculations.
 
 == {OPENSHIFT}
 
