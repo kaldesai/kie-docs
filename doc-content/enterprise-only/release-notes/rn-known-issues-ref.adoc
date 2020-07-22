@@ -143,6 +143,14 @@ Actual result: You can not delete the connected nodes, sequence flow. Also, you 
 Workaround: Change a gateway type back to its previous gateway type using morphing toolbox menu. For example, try to change the event gateway back to parallel gateway.
 endif::[]
 
+== Installer
+
+.The {PRODUCT} installer contains references to {JWS} 5.2 [https://issues.redhat.com/browse/RHPAM-3077[RHPAM-3077]]
+
+Issue: When you run the {PRODUCT} installer, the installation path step references to {JWS} 5.2 instead of {JWS} {JWS_VERSION}.
+
+Workaround: None.
+
 == DMN Designer
 
 .When you include a PMML 4.4 model into a DMN model and then save or validate the model, DMN throws an error [https://issues.redhat.com/browse/RHDM-1400[RHDM-1400]]
