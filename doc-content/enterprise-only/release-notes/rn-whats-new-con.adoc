@@ -39,7 +39,7 @@ Users can apply their migration plan to the running process instance in a specif
 
 === Viewing reusable subprocess from the parent process
 {PRODUCT}{ENTERPRISE_VERSION} provides support for viewing reusable subprocess from the parent process. Reusable subprocesses appear collapsed within the parent process. You can double-click on the reusable subprocess node to open its diagram from the parent process diagram.
-For more information, see {URL_MANAGING_PROCESSES}[_{URL_MANAGING_PROCESSES}_].
+For more information, see {URL_MANAGING_PROCESSES}[_{MANAGING_PROCESSES}_].
 
 endif::PAM[]
 

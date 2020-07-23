@@ -42,7 +42,7 @@ Issue: In Guided decision table, the verifier feature throws an error when you o
 
 Workaround: None.
 
-.You can not select the cell of the guided decision table [https://issues.redhat.com/browse/RHDM-1398]
+.You can not select the cell of the guided decision table [https://issues.redhat.com/browse/RHDM-1398[RHDM-1398]]
 
 Issue: You can not select the data cell of the guided decision table with the help of a mouse.
 
@@ -205,11 +205,11 @@ ifdef::PAM[]
 
 .You can not create custom database image for PostgreSQL using PostgreSQL enterprise instance [https://issues.redhat.com/browse/RHPAM-3005[RHPAM-3005]]
 
-Issue: When you create a custom database for PostgreSQL and push the image using PostgreSQL enterprise instance, {KIE_SERVR} fails to start.
+Issue: When you create a custom database for PostgreSQL and push the image using PostgreSQL enterprise instance, {KIE_SERVER} fails to start.
 
 Steps to reproduce:
 
-* Create a custom database for PostgreSQL.
+* Create a custom database and make the image build for PostgreSQL.
 +
 ----
 make build postgresql
@@ -227,7 +227,7 @@ hibernate.connection.schema=public
 datasource.class.xa=com.edb.xa.PGXADataSource
 ----
 
-* Deploy the {KIE_SERVR} using S2I.
+* Deploy the {KIE_SERVER} using S2I.
 
 Expected result: You can create custom database image for PostgreSQL using PostgreSQL enterprise instance.
 
