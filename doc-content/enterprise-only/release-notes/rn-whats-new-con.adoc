@@ -27,6 +27,20 @@ The {PRODUCT} process designer now supports variable tagging for the business pr
 === Business Keys for case management
 {PRODUCT} {ENTERPRISE_VERSION} includes additional support for further customizing the case identifier generation. For more information, see {URL_DESIGNING_CASES}[_{DESIGNING_CASES}_].
 
+=== Support for dashbuilder runtime
+Dashbuilder runtime is a new add-on standalone web application and it is distributed as a `WAR` to run the dashboards on {EAP}. If you have access to dashbuilder runtime, you can explore the dashboards created in {CENTRAL}. The following list provides a summary of dashbuilder runtime:
+
+* After creating dashboards using datasets and pages, you can export these dashboards from {CENTRAL} using custom export.
+* You can import, access, and run the dashboards which are exported from {CENTRAL} in a dashbuilder runtime.
+* Dashbuilder runtime accesses the {KIE_SERVER} REST API to run the queries from imported {KIE_SERVER} datasets.
+
+=== Full support for process instance migration
+Users can apply their migration plan to the running process instance in a specific KIE Server. For more information, see {URL_MANAGING_PROCESSES}[_{MANAGING_PROCESSES}_].
+
+=== Viewing reusable subprocess from the parent process
+{PRODUCT}{ENTERPRISE_VERSION} provides support for viewing reusable subprocess from the parent process. Reusable subprocesses appear collapsed within the parent process. You can double-click on the reusable subprocess node to open its diagram from the parent process diagram.
+For more information, see {URL_MANAGING_PROCESSES}[_{URL_MANAGING_PROCESSES}_].
+
 endif::PAM[]
 
 === Support for Security Management actions and updating space components using the REST API
@@ -158,26 +172,11 @@ You can now perform *Security Management* actions and update space components us
 [Post] /roles/{roleName}/permissions
 ----
 
-=== Support for dashbuilder runtime
-Dashbuilder runtime is a new add-on standalone web application and it is distributed as a `WAR` to run the dashboards on {EAP}. If you have access to dashbuilder runtime, you can explore the dashboards created in {CENTRAL}. The following list provides a summary of dashbuilder runtime:
-
-* After creating dashboards using datasets and pages, you can export these dashboards from {CENTRAL} using custom export.
-* You can import, access, and run the dashboards which are exported from {CENTRAL} in a dashbuilder runtime.
-* Dashbuilder runtime accesses the {KIE_SERVER} REST API to run the queries from imported {KIE_SERVER} datasets.
-
 === Test Scenarios
 The test scenarios designer in {CENTRAL} now supports the enumeration data type in rule-based test scenarios.
 
 === Prediction service for task augmentation
 The prediction service for task augmentation is integrated with Open Data Hub Artificial intelligence (AI) and Machine learning (ML) services. There is a proof of concept (POC) available for Fraud Detection.
-
-=== Full support for process instance migration
-Users can apply their migration plan to the running process instance in a specific KIE Server. For more information, see {URL_MANAGING_PROCESSES}[_{MANAGING_PROCESSES}_].
-
-=== Viewing reusable subprocess from the parent process
-{PRODUCT}
-{ENTERPRISE_VERSION} provides support for viewing a subprocess by clicking on the parent process diagram. Users can easily view and explore pending tasks within the subprocess.
-For more information, see {URL_DESIGNING_BUSINESS_PROCESSES}[_{DESIGNING_BUSINESS_PROCESSES}_].
 
 == {DECISION_ENGINE_CAP}
 
@@ -197,21 +196,12 @@ ifdef::PAM[]
 You can now start a business process from a specific node after the business process is terminated.
 
 === New notification listener properties
-{PRODUCT} {ENTERPRISE_VERSION} includes two new jBPM properties that are used to enable and disable notification listeners.
+{PRODUCT} {ENTERPRISE_VERSION} includes two new jBPM properties. These `org.kie.jpbm.notification_listeners.include` and `org.kie.jpbm.notification_listeners.exclude` properties are used to enable and disable notification listeners.
 
 === OR operator for custom queries
 {PRODUCT} {ENTERPRISE_VERSION} includes an OR operator to define query filters.
 
 endif::PAM[]
-
-== Support for {EAP_LONG} {EAP_VERSION}
-You can now install {PRODUCT} on {EAP_LONG} {EAP_VERSION}. For more information about installing {PRODUCT} on {EAP_LONG} {EAP_VERSION}, see {URL_INSTALLING_ON_EAP}[_{INSTALLING_ON_EAP}_].
-
-== Support for {JWS} {JWS_VERSION}
-You can now install {PRODUCT} on {JWS} {JWS_VERSION}. For more information about installing {PRODUCT} on {JWS} {JWS_VERSION}, see {URL_INSTALLING_ON_JWS}[_{INSTALLING_ON_JWS}_].
-
-== Support for MySQL 8.0
-You can now deploy {PRODUCT} with a MySQL 8.0 data source. For more information, see {URL_INSTALLING_ON_EAP}/index#eap-data-source-add-proc[Configuring JDBC data sources for KIE Server] in the {URL_INSTALLING_ON_EAP}[_{INSTALLING_ON_EAP}_] guide.
 
 == {PLANNER}
 
@@ -244,9 +234,8 @@ ifdef::PAM[]
 
 === New database server versions supported on {OPENSHIFT}
 
-* When deploying {PRODUCT} on {OPENSHIFT}, you can now use MySQL version 8 as a part of the deployment.
 * {PRODUCT} deployments on {OPENSHIFT} now support MySQL version 8 as an external database server.
-* {PRODUCT} deployments on {OPENSHIFT} now support PostgreSQL 11 and EnterpriseDB Postgres Advanced Server 11 as external database servers for the {KIE_SERVER}.
+* {PRODUCT} deployments on {OPENSHIFT} now support PostgreSQL 11 and EnterpriseDB Postgres Advanced Server 11 as an external database servers for the {KIE_SERVER}.
 * {PRODUCT} deployments on {OPENSHIFT} now support Oracle Database 19c as an external database server for the {KIE_SERVER}.
 * {PRODUCT} deployment on {OPENSHIFT} now supports Microsoft SQL Server 2017 as an external database server for the {KIE_SERVER}.
 

@@ -5,6 +5,8 @@ This section lists known issues with {PRODUCT} {PRODUCT_VERSION}.
 
 == {CENTRAL}
 
+ifdef::PAM[]
+
 .An error message about missing {KIE_SERVER} configuration on dashbuilder runtime must be improved [https://issues.redhat.com/browse/RHPAM-3058[RHPAM-3058]]
 
 Issue: The dashbuilder runtime user interface currently throwing a wrong error message about missing {KIE_SERVER} configuration.
@@ -31,6 +33,8 @@ Workaround: Update zip file by adding `dashbuilder-runtime.war.dodeploy` file as
 Issue: When you export the dashbuilder related data, gradual export displays internal data sources for user selection. In fact, it should display the public data sets only.
 
 Workaround: None.
+
+endif::[]
 
 .In Guided decision table, the verifier feature does not work properly for columns with the `Date` data type [https://issues.redhat.com/browse/RHDM-1399[RHDM-1399]]
 
@@ -99,7 +103,7 @@ Workaround: None.
 
 ifdef::DM[]
 
-.Custom export functionality is not supported in the {PRODUCT}
+.Custom export functionality is not supported in the {PRODUCT} [https://issues.redhat.com/browse/RHDM-1402[RHDM-1402]]
 
 Issue: Custom export functionality requires at least one page to export the dashbuilder related data. In {PRODUCT}, you can not create any custom pages.
 
@@ -196,6 +200,42 @@ Issue: When you use the `groupBy()` method in Constraint Streams API, the the pe
 Workaround: You can use the DRL score calculations.
 
 == {OPENSHIFT}
+
+ifdef::PAM[]
+
+.You can not create custom database image for PostgreSQL using PostgreSQL enterprise instance [https://issues.redhat.com/browse/RHPAM-3005[RHPAM-3005]]
+
+Issue: When you create a custom database for PostgreSQL and push the image using PostgreSQL enterprise instance, {KIE_SERVR} fails to start.
+
+Steps to reproduce:
+
+* Create a custom database for PostgreSQL.
++
+----
+make build postgresql
+----
+
+* Push the custom database image using PostgreSQL enterprise instance.
++
+----
+db.primary_label=postgresplus116
+db.port=5432
+server_label_primary=postgresplus116
+hibernate.dialect=org.hibernate.dialect.PostgresPlusDialect
+hibernate.connection.url=jdbc\:edb\://edb-as11.mwqe.upshift.rdu2.redhat.com\:5432/dballo06
+hibernate.connection.schema=public
+datasource.class.xa=com.edb.xa.PGXADataSource
+----
+
+* Deploy the {KIE_SERVR} using S2I.
+
+Expected result: You can create custom database image for PostgreSQL using PostgreSQL enterprise instance.
+
+Actual result: You can not create custom database image for PostgreSQL using PostgreSQL enterprise instance.
+
+Workaround: None.
+
+endif::[]
 
 .The {CENTRAL} pod fails to start when the `known_host` file is missing from the githook secret [https://issues.redhat.com/browse/RHPAM-3056[RHPAM-3056]]
 

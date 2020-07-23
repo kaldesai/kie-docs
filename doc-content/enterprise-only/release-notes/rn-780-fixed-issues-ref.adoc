@@ -3,16 +3,14 @@
 
 {PRODUCT} {ENTERPRISE_VERSION_LONG} provides increased stability and fixed issues listed in this section.
 
-ifdef::PAM[]
-[NOTE]
-====
-{PRODUCT_DM} fixed issues apply to {PRODUCT_PAM} as well. For a list of {PRODUCT_DM} {ENTERPRISE_VERSION_LONG} fixed issues, see the https://access.redhat.com/documentation/en-us/red_hat_decision_manager/7.8/html-single/release_notes_for_red_hat_decision_manager_7.8/index[_Release Notes for Red Hat Decision Manager 7.8_]
-====
-endif::[]
-
 == {CENTRAL}
 
+ifdef::PAM[]
+
 * Dashbuilder data transfer feature does not work on Windows [https://issues.redhat.com/browse/RHPAM-2751[RHPAM-2751]]
+
+endif::[]
+
 * In {CENTRAL}, you can not re-enable the clone project using http [https://issues.redhat.com/browse/RHPAM-2721[RHPAM-2721]]
 * An unexpected conflicting rows error occurs when you try to modify guided decision table [https://issues.redhat.com/browse/RHPAM-2673[RHPAM-2673]]
 
@@ -40,7 +38,13 @@ endif::[]
 == {OPENSHIFT}
 
 * You can not deploy immutable {KIE_SERVER} environments on {OPENSHIFT} using Operators [https://issues.redhat.com/browse/RHPAM-2942[RHPAM-2942]]
+
+ifdef::PAM[]
+
 * You can not create custom extension image for database [https://issues.redhat.com/browse/RHPAM-2948[RHPAM-2948]]
+
+endif::[]
+
 * Product environment fails to deploy on Amazon Web Services (AWS) with AWS Elastic Block Storage (EBS) because of AWS EBS volume plugin lack of support for `ReadWriteMany` (`RWX`) persistent volume access mode [https://issues.redhat.com/browse/RHPAM-2480[RHPAM-2480]]
 
 == DMN designer
