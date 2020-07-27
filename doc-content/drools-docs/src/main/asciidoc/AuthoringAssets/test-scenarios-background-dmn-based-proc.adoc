@@ -1,5 +1,5 @@
 [id='test-scenarios-background-dmn-based-proc']
-= Adding a background data in DMN based test scenarios
+= Adding a background data in DMN-based test scenarios
 
 Follow the procedure below to add and set a background data in DMN based test scenarios.
 
@@ -8,7 +8,7 @@ Follow the procedure below to add and set a background data in DMN based test sc
 * The individual test scenarios are defined. For more information about defining a test scenario, see xref:test-designer-test-scenario-definition-proc[].
 
 .Procedure
-. Open the rule-based test scenarios in the test scenario designer.
+. Open the DMN-based test scenarios in the test scenario designer.
 . Click the *Background* tab of the test scenarios designer.
 . Select an instance header cell in the *GIVEN* section to add a background data object field.
 . From the *Test Tools* panel, select the data object.
