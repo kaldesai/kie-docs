@@ -24,6 +24,14 @@ endif::DM[]
 You can deploy a high-availability {PRODUCT} authoring environment on {OPENSHIFT} 4.x using the operator.
 
 ifdef::PAM[]
+
+== Dashbuilder runtime
+Dashbuilder runtime is a new add-on standalone web application and it is distributed as a `WAR` to run the dashboards on {EAP}. If you have access to dashbuilder runtime, you can explore the dashboards created in {CENTRAL}. The following list provides a summary of dashbuilder runtime:
+
+* After creating dashboards using datasets and pages, you can export these dashboards from {CENTRAL} using custom export.
+* You can import, access, and run the dashboards which are exported from {CENTRAL} in a dashbuilder runtime.
+* Dashbuilder runtime accesses the {KIE_SERVER} REST API to run the queries from imported {KIE_SERVER} datasets.
+
 == Case modeler
 Case modeler in {CENTRAL} now includes the new process designer. It provides the option to model a case as a sequence of stages so it is simple to define a case model at high-level. Case modeling supports three types of tasks: human tasks, sub-processes, and sub-cases.
 

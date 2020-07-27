@@ -12,7 +12,7 @@ ifdef::PAM[]
 endif::[]
 
 * In {CENTRAL}, you can not re-enable the clone project using http [https://issues.redhat.com/browse/RHPAM-2721[RHPAM-2721]]
-* An unexpected conflicting rows error occurs when you try to modify guided decision table [https://issues.redhat.com/browse/RHPAM-2673[RHPAM-2673]]
+* An unexpected conflicting row error occurs when you try to modify guided decision table [https://issues.redhat.com/browse/RHPAM-2673[RHPAM-2673]]
 
 ifdef::PAM[]
 == Process engine
@@ -27,21 +27,16 @@ ifdef::PAM[]
 
 endif::[]
 
-
-ifdef::DM[]
-
 == Decision engine
 * In DMN model, you can generate a strongly typed code for DMNContext and DMNResult with the help of codegen facility [https://issues.redhat.com/browse/RHDM-1323[RHDM-1323]]
 
-endif::[]
-
 == {OPENSHIFT}
 
-* You can not deploy immutable {KIE_SERVER} environments on {OPENSHIFT} using Operators [https://issues.redhat.com/browse/RHPAM-2942[RHPAM-2942]]
+* You cannot deploy immutable {KIE_SERVER} environments on {OPENSHIFT} using Operators [https://issues.redhat.com/browse/RHPAM-2942[RHPAM-2942]]
 
 ifdef::PAM[]
 
-* You can not create custom extension image for database [https://issues.redhat.com/browse/RHPAM-2948[RHPAM-2948]]
+* You cannot create a custom extension image for database [https://issues.redhat.com/browse/RHPAM-2948[RHPAM-2948]]
 
 endif::[]
 
