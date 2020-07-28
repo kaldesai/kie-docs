@@ -13,7 +13,7 @@ Create a test scenario template for rule-based test scenarios by following the p
 +
 
 .Test scenario GIVEN header cells
-image::project-data/test_scenario_GIVEN_header_cells_Arrow.png[]
+image::project-data/test_scenario_GIVEN_header_cells.png[]
 +
 .. Select an instance header cell in the *GIVEN* section.
 .. Select the data object from the *Test Tools* tab.
@@ -22,7 +22,7 @@ image::project-data/test_scenario_GIVEN_header_cells_Arrow.png[]
 +
 
 .Test scenario EXPECT header cells
-image::project-data/test_scenario_EXPECT_header_cells_Arrow.png[]
+image::project-data/test_scenario_EXPECT_header_cells.png[]
 +
 .. Select an instance header cell in the *EXPECT* section.
 .. Select the data object from the *Test Tools* tab.
