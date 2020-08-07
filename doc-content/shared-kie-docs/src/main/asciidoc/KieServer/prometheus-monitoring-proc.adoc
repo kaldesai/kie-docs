@@ -83,7 +83,7 @@ For REST client:
 * *HTTP Headers*: Set the following header:
 ** `Accept`: `application/json`
 * *HTTP method*: Set to `GET`.
-* *URL*: Enter the {KIE_SERVER} REST API base URL and metrics endpoint, such as `\http://localhost:8080/services/rest/metrics` (or on Spring Boot, `\http://localhost:8080/rest/metrics`).
+* *URL*: Enter the {KIE_SERVER} REST API base URL and metrics endpoint, such as `\http://localhost:8080/kie-server/services/rest/metrics` (or on Spring Boot, `\http://localhost:8080/rest/metrics`).
 
 
 For curl utility:
@@ -92,11 +92,11 @@ For curl utility:
 * `-H`: Set the following header:
 ** `accept`: `application/json`
 * `-X`: Set to `GET`.
-* *URL*: Enter the {KIE_SERVER} REST API base URL and metrics endpoint, such as `\http://localhost:8080/services/rest/metrics` (or on Spring Boot, `\http://localhost:8080/rest/metrics`).
+* *URL*: Enter the {KIE_SERVER} REST API base URL and metrics endpoint, such as `\http://localhost:8080/kie-server/services/rest/metrics` (or on Spring Boot, `\http://localhost:8080/rest/metrics`).
 
 [source]
 ----
-curl -u 'baAdmin:password@1' -H "Content-Type: application/json" -X GET "http://localhost:8080/services/rest/metrics"
+curl -u 'baAdmin:password@1' -X GET "http://localhost:8080/kie-server/services/rest/metrics"
 ----
 
 .Example server response
