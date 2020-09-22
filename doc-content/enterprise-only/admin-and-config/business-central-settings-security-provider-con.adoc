@@ -1,0 +1,13 @@
+[id='business-central-settings-security-provider-con']
+= Security provider
+
+A security environment is usually provided by the use of a realm. Realms are used to restrict access to the different application’s resources. So realms contains the information about the users, groups, roles, permissions and any other related information.
+
+In most typical scenarios the application’s security is delegated to the container’s security mechanism, which consumes a given realm at the same time. It’s important to consider that there exist several realm implementations, for example Wildfly provides a realm based on the `application-users.properties` or `application-roles.properties` files.
+Tomcat provides a realm based on the `tomcat-users.xml` file, etc. So there is no single security realm to rely on, it can be different in each installation.
+
+Due to the potential different security environments that have to be supported, the security module provides a well defined API with some default built-in security providers. A security provider is the formal name given to a concrete user and group management service implementation for a given realm.
+
+The user & group management features available will depend on the security provider configured. If the built-in providers do not fit with the application’s security realm, it is easy to build and register your own provider.
+
+NOTE: If the security provider is not installed, there will be no available user interface for managing the security realm. Once a security provider is installed and setup, the user and group management features are automatically enabled in the security management user interface.
