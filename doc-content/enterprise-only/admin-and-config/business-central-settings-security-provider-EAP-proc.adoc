@@ -4,7 +4,7 @@
 This security provider supports realm types based on `application-users.properties` or `application-roles.properties` properties files.
 
 * The user, group and role implementations are provided by `org.uberfire.ext.security.management.wildfly.properties.WildflyUserManagementService` property.
-* The concrete user manager implementation is `org.uberfire.ext.security.management.wildfly.properties.WildflyUserPropertiesManager` which maps the Wildfly or {EAP} users for the given realm to application users
+* The concrete user manager implementation is `org.uberfire.ext.security.management.wildfly.properties.WildflyUserPropertiesManager` which maps the Wildfly or {EAP} users for the given realm to application users.
 * The concrete group manager implementation is provided by `org.uberfire.ext.security.management.wildfly.properties.WildflyGroupPropertiesManager` property.
 
 .Prerequisites
@@ -13,5 +13,26 @@ This security provider supports realm types based on `application-users.properti
 
 .Procedure
 
-If you want to use Wildfly or {EAP} security provider based on property files, do the following tasks:
-If you want to use Wildfly or {EAP} security provider based on property files and CLI, do the following tasks:
+. To configure Wildfly or {EAP} Security provider do any of the following tasks:
+
+--
+If you want to use Wildfly or {EAP} security provider based on property files, do any of the following tasks:
+
+... Create the `security-management.properties` file in the root of your application. For example, `src/main/resources/security-management.properties`.
+... Enter the following keys and provider name as a value:
++
+[source]
+----
+org.uberfire.ext.security.management.api.userManagementServices=WildflyUserManagementService
+----
+
+If you want to use Wildfly or {EAP} security provider based on property files and CLI, do any of the following tasks:
+
+... Create the `security-management.properties` file in the root of your application. For example, `src/main/resources/security-management.properties`.
+... Enter the following keys and provider name as a value:
++
+[source]
+----
+org.uberfire.ext.security.management.api.userManagementServices=WildflyCLIUserManagementService
+----
+--

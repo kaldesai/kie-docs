@@ -1,9 +1,9 @@
 [id='business-central-settings-security-policy-con']
 = Security policy
 
-Every application contains a single security policy which is used every time the system checks a permission. The set of permissions assigned to every role and/or group is called the security policy.
+Every application contains a single security policy which is used every time the system checks a permission. In security policy, the set of permissions are assigned to every role and a group.
 
-The security policy file is stored in the `WEB-INF/classes/security-policy.properties` under the application's `WAR` file structure.
+The security policy file is stored in the `WEB-INF/classes/security-policy.properties` under your application `WAR` file structure.
 
 NOTE: If the security policy is not defined then the security management feature is disabled and the application as if all the resources and features are granted by default.
 
@@ -21,4 +21,4 @@ role.user.permission.perspective.read.Home=true
 role.user.permission.perspective.read.Dashboard=true
 ----
 
-Every entry defines a single permission which is assigned to a role or group. When an application starts, the policy file is loaded and stored into memory.
+Every entry defines a single permission which is assigned to a role or group. When an application starts, the security policy file is loaded and stored in the memory.

@@ -10,6 +10,9 @@ You cannot change permissions for an individual user. However, you can change pe
 . Set the *Home Page* or *Priority* under the *Settings* section.
 . Set the {CENTRAL}, page, editor, space, and project permissions under the *Permissions* section.
 +
+.Setting the permissions
+image::admin-and-config/set-permissions.png[Setting the permissions]
+
 You can expand the resource type whose permissions you want to change.
 . Optional: To add an item not listed, click *Add Exception* and then set the permissions as required.
 +
