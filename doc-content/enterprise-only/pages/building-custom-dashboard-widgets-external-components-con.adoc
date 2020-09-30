@@ -1,10 +1,10 @@
 [id='building-custom-dashboard-widgets-external-components-con']
 = External components
 
-In {CENTRAL}, a page can have external components. The components are disabled by default. To enable the external components, change the value of `dashbuilder.components.enable` system property to `true`.
+In {CENTRAL}, you can add external components to a page. The components are disabled by default. To enable the external components, change the value of `dashbuilder.components.enable` system property to `true`.
 
 The external component location is set and configured with the `dashbuilder.components.dir` system property. The default value of this system property is `/tmp/dashbuilder/components`.
-You must set the component under components directory with a parent directory, that will be the component's ID. For example, if the component ID is `mycomp` and the component directory is `/tmp/dashbuilder/components`, then the component base directory is `/tmp/dashbuilder/components/mycomp`.
+You must set the component under the components directory with a parent directory, which is used as the component ID. For example, if the component ID is `mycomp` and the component directory is `/tmp/dashbuilder/components`, then the component base directory is `/tmp/dashbuilder/components/mycomp`.
 
 {CENTRAL} checks the `manifest.json` file in the components directory. The `manifest.json` must contain at least one `name` text parameter.
 
@@ -24,7 +24,7 @@ You must set the component under components directory with a parent directory, t
 |A flag that indicates that the component does not require a data set.
 
 |`parameters`
-|The list of parameters supported by the component uses `ComponentParameter` type. Supported parameter types are `name`, `type`, `category`, `defaultValue`, `label`, and `comboValues`.
+|The list of parameters are using `ComponentParameter` type. Supported parameter types include `name`, `type`, `category`, `defaultValue`, `label`, and `comboValues`.
 
 |===
 
