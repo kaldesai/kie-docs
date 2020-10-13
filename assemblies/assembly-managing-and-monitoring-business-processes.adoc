@@ -47,7 +47,6 @@ include::{enterprise-dir}/admin-and-config/tasks-default-filters-proc.adoc[level
 include::{enterprise-dir}/admin-and-config/viewing-task-variables-basic-filters-in-bc-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/viewing-task-variables-advanced-filters-in-bc-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/manage-service-tasks-proc.adoc[leveloffset=+2]
-include::{enterprise-dir}/processes/configuring-emails-in-task-notification-proc.adoc[leveloffset=+2]
 include::{jbpm-dir}/BPMN2/user-task-admin-con.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/managing-business-processes-bulk-actions-on-tasks-con.adoc[leveloffset=+2]
 include::{enterprise-dir}/admin-and-config/managing-business-processes-claiming-tasks-in-bulk-proc.adoc[leveloffset=+3]
