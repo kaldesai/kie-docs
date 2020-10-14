@@ -2,7 +2,7 @@
 
 = Configuring emails in task notification
 
-You can directly add any email addresses to send task notification emails to the users and groups.
+Earlier it was possible to send notifications only to users or group of users. But now you can directly add any email addresses to send task notification emails to the users and groups.
 
 .Prerequisites
 
