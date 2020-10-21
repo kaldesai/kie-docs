@@ -4,7 +4,18 @@ Anything that can be versioned in the {CENTRAL} repository is an asset. A projec
 
 The following image shows the available assets in {PRODUCT} {PRODUCT_VERSION}.
 
-image::getting-started/types-of-assets.png[]
+ifdef::PAM[]
+
+image::getting-started/types-of-assets-PAM.png[]
+
+endif::[]
+
+ifdef::DM[]
+
+image::getting-started/types-of-assets-DM.png[]
+
+endif::[]
+
 
 NOTE: Case Management (Preview) and Case Definition asset types are only available in case projects.
 
@@ -53,9 +64,13 @@ Domain Specific Languages (DSLs) are a way of creating a rule language that is d
 +
 Data enumerations are an optional asset type that can be configured to provide drop-down lists for the guided designer. They are stored and edited just like any other asset, and apply to the package that they belong to.
 
+ifdef::PAM[]
+
 * Form
 +
 Forms are used for collecting user data for business process. {CENTRAL} provides the option to automatically generate forms, which can then be edited to meet specific business process requirements.
+
+endif::[]
 
 * Global Variable(s)
 +
@@ -97,6 +112,10 @@ Test scenarios in {PRODUCT} enable you to validate the functionality of rules, m
 +
 {PRODUCT} {PRODUCT_VERSION} includes support for the legacy Test Scenario because the default Test Scenario asset is still in development.
 
+ifdef::PAM[]
+
 * Work Item definition
 +
 A work item definition defines how a custom task is presented. For example, the task name, icon, parameters, and similar attributes.
+
+endif::[]
