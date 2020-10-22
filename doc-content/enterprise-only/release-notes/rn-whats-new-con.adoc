@@ -113,7 +113,7 @@ The rotation pattern on the Employee Rostering Rotation window has been redesign
 
 You can now replicate {KIE_SERVER} audit data to a Java Message Service (JMS) message broker, for example activeMQ or Artemis, and then dump the data in an external database schema so that you can improve the performance of your Spring Boot application by deleting the audit data from your application schema.
 
-For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[{CREATING_SPRING_BOOT_APPLICATIONS}].
+For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[_{CREATING_SPRING_BOOT_APPLICATIONS}_].
 
 === Self-contained {PRODUCT} Spring Boot JAR file
 
@@ -128,3 +128,44 @@ You can now create a PostgreSQL schema that uses the `bytea` column type instead
 For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[{CREATING_SPRING_BOOT_APPLICATIONS}].
 
 == {OPENSHIFT}
+
+=== Support for {OPENSHIFT} version 4.6
+
+{PRODUCT} now supports {OPENSHIFT} version 4.6. In order to support this version, necessary changes in the operator bundle format were made.
+
+=== Support for LDAP failover
+
+When using LDAP authentication, {PRODUCT} on {OPENSHIFT} now supports failover to a different LDAP server if a server becomes unavailable.
+
+For more information, see {URL_DEPLOYING_ON_OPENSHIFT}#operator-deploy-security-proc_openshift-operator[_{DEPLOYING_OPENSHIFT_OPERATOR}_] and {URL_DEPLOYING_ON_OPENSHIFT}#template-deploy-ldap-openshift-templates-authoring-proc[_{DEPLOYING_OPENSHIFT_TEMPLATES}_].
+
+=== Integration with new versions of products
+
+{PRODUCT} on {OPENSHIFT} now supports integration with the following new product versions:
+
+* Red Hat AMQ version 7.7
+* {AMQ_BROKER_LONG} 7.7
+* Red Hat Single Sign-On 7.4.1
+* {DATAGRID} {DATAGRID_VERSION}
+
+ifdef::PAM[]
+
+=== Support for a customized Smart Router image
+
+{PRODUCT} on {OPENSHIFT} now supports customized Smart Router images. You can extend Smart Router to provide routing specific to the needs of your environment.
+
+For more information, see {URL_DEPLOYING_ON_OPENSHIFT}#customimage-smartrouter-proc_openshift-operator[_{DEPLOYING_OPENSHIFT_OPERATOR}_].
+
+=== Support for deploying an unmanaged {KIE_SERVER} on {OPENSHIFT} using the operator
+
+You can now deploy {PRODUCT} on {OPENSHIFT} using the operator with a {KIE_SERVER} that is not managed by {CENTRAL} monitoring.
+
+For more information, see {URL_DEPLOYING_ON_OPENSHIFT}#operator-deploy-central-proc_openshift-operator[_{DEPLOYING_OPENSHIFT_OPERATOR}_].
+
+=== Logging level configuration for Smart Router
+
+You can now configure the logging level for Smart Router when deploying {PRODUCT} on {OPENSHIFT}.
+
+For more information, see {URL_DEPLOYING_ON_OPENSHIFT}#operator-deploy-smartrouter-proc_openshift-operator[_{DEPLOYING_OPENSHIFT_OPERATOR}_].
+
+endif::PAM[]
