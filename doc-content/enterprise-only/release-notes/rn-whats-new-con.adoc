@@ -60,7 +60,7 @@ endif::PAM[]
 
 The traits functionality and its specific implementation code is moved to an individual module named `drools-traits`. To use traits, you can import the `drools-traits` module to Maven. The existing implementation is not supported in the executable rule model.
 
-=== New `drools-metric` module for {Decision Engine} performance analysis
+=== New `drools-metric` module for {DECISION_ENGINE} performance analysis
 
 A new module named `drools-metric` is added, which can assist in the performance analysis of the {DECISION_ENGINE}.
 
@@ -119,7 +119,7 @@ For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[_{
 
 You can create a self-contained {PRODUCT} Spring Boot JAR file that contains multiple versions of the same KJAR file.
 
-For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[{CREATING_SPRING_BOOT_APPLICATIONS}].
+For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[_{CREATING_SPRING_BOOT_APPLICATIONS}_].
 
 === Support for `bytea` column type
 
