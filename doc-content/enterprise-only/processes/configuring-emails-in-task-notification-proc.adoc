@@ -6,7 +6,7 @@ Earlier it was possible to send notifications only to users or group of users in
 
 .Prerequisites
 
-You have created a project in {CENTRAL}, containing a business process asset.
+You have created a project in {CENTRAL}.
 
 .Procedure
 
