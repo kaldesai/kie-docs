@@ -6,23 +6,26 @@ Earlier it was possible to send notifications only to users or group of users in
 
 .Prerequisites
 
-You have created a project in {CENTRAL} and it contains at least one business process asset.
+You have created a project in {CENTRAL}, containing at least one business process asset.
 
 .Procedure
 
 . Create a business process.
-. In the process designer, select the *Activities* tool from the tool palette.
-. Select *User*.
-. Drag and drop a user task onto the process designer canvas.
++
+For more information about creating a business process in {CENTRAL}, see <<design-bus-proc_business-processes>>.
+
+. Create a user task.
++
+For more information about creating a user task in {CENTRAL}, see <<create-user-task-proc_business-processes>>.
+
 . In the upper-right corner of the screen, click the *Properties* icon.
-. Expand *Implementation/Execution* and next to *Notifications*, click image:getting-started/btn_assign.png[] to open the *Notifications* window.
+. Expand *Implementation/Execution* and click image:getting-started/btn_assign.png[] next to *Notifications*, to open the *Notifications* window.
 . Click *Add*.
-. In the *Notifications* window, enter an email address in the *To: email(s)* field to send task notification emails.
+. In the *Notifications* window, enter an email address in the *To: email(s)* field to set the recipients of the task notification emails.
 +
 You can add multiple email addresses separated by comma.
-. Enter the subject of an email.
-. Enter the body of an email.
-. Click *OK*.
+. Enter the subject and body of the email.
+. Click *Ok*.
 +
-In the *Notifications* window, you can see the newly added email addresses in the *To: email(s)* column.
-. Click *OK*.
+You can see the added email addresses in the *To: email(s)* column in the *Notifications* window.
+. Click *Ok*.
