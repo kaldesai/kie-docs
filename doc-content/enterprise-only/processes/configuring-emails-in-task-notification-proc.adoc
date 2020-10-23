@@ -12,11 +12,11 @@ You have created a project in {CENTRAL}, containing at least one business proces
 
 . Create a business process.
 +
-For more information about creating a business process in {CENTRAL}, see <<design-bus-proc_business-processes>>.
+For more information about creating a business process in {CENTRAL}, see <<design-bus-proc>>.
 
 . Create a user task.
 +
-For more information about creating a user task in {CENTRAL}, see <<create-user-task-proc_business-processes>>.
+For more information about creating a user task in {CENTRAL}, see <<create-user-task-proc>>.
 
 . In the upper-right corner of the screen, click the *Properties* icon.
 . Expand *Implementation/Execution* and click image:getting-started/btn_assign.png[] next to *Notifications*, to open the *Notifications* window.
