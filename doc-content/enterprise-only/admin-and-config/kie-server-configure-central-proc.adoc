@@ -11,8 +11,37 @@ If you are deploying {KIE_SERVER} on {OPENSHIFT}, see the following documents fo
 * {URL_DEPLOYING_ON_OPENSHIFT}#assembly-openshift-templates[_{DEPLOYING_OPENSHIFT_TEMPLATES}_]
 ====
 
+ifeval::["{context}" == "execution-server"]
+{KIE_SERVER} can be managed or it can be unmanaged. If {KIE_SERVER} is unmanaged, you must manually create and maintain KIE containers (deployment units). If {KIE_SERVER} is managed, the {CONTROLLER} manages the {KIE_SERVER} configuration and you interact with the {CONTROLLER} to create and maintain KIE containers.
++
+[NOTE]
+====
+Only make the changes described in this section if {KIE_SERVER} will be managed by {CENTRAL} and you installed {PRODUCT} from the ZIP files.
+If you did not install {CENTRAL}, you can use the {HEADLESS_CONTROLLER} to manage {KIE_SERVER}, as described in xref:controller-con_{context}[].
+====
+endif::[]
+
 .Prerequisites
-* {KIE_SERVER} is installed. For installation options, see {URL_INSTALLING_AND_CONFIGURING}#assembly-planning[_{PLANNING_INSTALL}_].
+ifeval::["{context}" == "install-on-eap"]
+* {CENTRAL} and {KIE_SERVER} are installed in the base directory of the {EAP} installation (`__EAP_HOME__`) as described in the following sections:
++
+** <<eap-dm-install-proc_install-on-eap>>
+** <<eap_execution_server_download_install_proc_install-on-eap>>
+endif::[]
+
+* {CENTRAL} and {KIE_SERVER} are installed in the base directory of the {EAP} installation (`__EAP_HOME__`).
+
++
+[NOTE]
+====
+You should install {CENTRAL} and {KIE_SERVER} on different servers in production environments. However, if you install {KIE_SERVER} and {CENTRAL} on the same server, for example in a development environment, make the changes described in this section in the shared `standalone-full.xml` file.
+====
+
+* On {CENTRAL} server nodes, a user with the `rest-all` role exists.
++
+ifeval::["{context}" == "install-on-eap"]
+For more information, see <<eap-users-create-proc_install-on-eap>>.
+endif::[]
 
 .Procedure
 . In your {PRODUCT} installation directory, navigate to the `standalone-full.xml` file. For example, if you use a {EAP} installation for {PRODUCT}, go to `$EAP_HOME/standalone/configuration/standalone-full.xml`.
@@ -22,9 +51,9 @@ If you are deploying {KIE_SERVER} on {OPENSHIFT}, see the following documents fo
 * *org.kie.server.controller.user:* The user name of a user who can log in to the {CENTRAL}.
 * *org.kie.server.controller.pwd:* The password of the user who can log in to the {CENTRAL}.
 * *org.kie.server.controller:* The URL for connecting to the API of {CENTRAL}. Normally, the URL is `\http://<centralhost>:<centralport>/{URL_COMPONENT_CENTRAL}/rest/controller`, where `<centralhost>` and `<centralport>` are the host name and port for {CENTRAL}. If {CENTRAL} is deployed on OpenShift, remove `{URL_COMPONENT_CENTRAL}/` from the URL.
-* *org.kie.server.location:* The URL for connecting to the API of {KIE_SERVER}. Normally, the URL is `\http://<serverhost>:<serverport>/kie-server/services/rest/server`, where `<serverhost>` and `<serverport>` are the host name and port for {KIE_SERVER}.
+* *org.kie.server.location:* The URL for connecting to the API of {KIE_SERVER}. This property specifies the location of {KIE_SERVER}. Normally, the URL is `\http://<serverhost>:<serverport>/kie-server/services/rest/server`, where `<serverhost>` and `<serverport>` are the host name and port for {KIE_SERVER}.
 * *org.kie.server.id:* The name of a server configuration. If this server configuration does not exist in {CENTRAL}, it is created automatically when {KIE_SERVER} connects to {CENTRAL}.
-
++
 Example:
 
 [source,xml,subs="attributes+"]
