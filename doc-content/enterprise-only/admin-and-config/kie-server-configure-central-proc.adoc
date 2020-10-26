@@ -31,7 +31,6 @@ endif::[]
 
 * {CENTRAL} and {KIE_SERVER} are installed in the base directory of the {EAP} installation (`__EAP_HOME__`).
 
-+
 [NOTE]
 ====
 You should install {CENTRAL} and {KIE_SERVER} on different servers in production environments. However, if you install {KIE_SERVER} and {CENTRAL} on the same server, for example in a development environment, make the changes described in this section in the shared `standalone-full.xml` file.
