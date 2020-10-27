@@ -1,5 +1,7 @@
 [id='kie-server-configure-central-proc_{context}']
-= Configuring a {KIE_SERVER} to connect to {CENTRAL}
+= Configuring {KIE_SERVER} to connect to {CENTRAL}
+
+WARNING: This section provides a sample setup that you can use for testing purposes. Some of the values are unsuitable for a production environment, and are marked as such.
 
 If a {KIE_SERVER} is not already configured in your {PRODUCT} environment, or if you require additional {KIE_SERVERS} in your {PRODUCT} environment, you must configure a {KIE_SERVER} to connect to {CENTRAL}.
 
@@ -24,41 +26,147 @@ ifeval::["{context}" == "install-on-eap"]
 +
 ** <<eap-dm-install-proc_install-on-eap>>
 ** <<eap_execution_server_download_install_proc_install-on-eap>>
+
+* Users with the following roles exist:
+** In {CENTRAL}, a user with the role `rest-all`
+** On the {KIE_SERVER}, a user with the role `kie-server`
+
+For more information, see <<eap-users-create-proc_install-on-eap>>.
 endif::[]
 
+ifeval::["{context}" == "execution-server"]
 * {CENTRAL} and {KIE_SERVER} are installed in the base directory of the {EAP} installation (`__EAP_HOME__`).
 
 [NOTE]
 ====
-You should install {CENTRAL} and {KIE_SERVER} on different servers in production environments. However, if you install {KIE_SERVER} and {CENTRAL} on the same server, for example in a development environment, make the changes described in this section in the shared `standalone-full.xml` file.
+You should install {CENTRAL} and {KIE_SERVER} on different servers in production environments. In this sample situation, we use only one user named `controllerUser` that has both the `rest-all` and the `kie-server` roles. However, if you install {KIE_SERVER} and {CENTRAL} on the same server, for example in a development environment, make the changes described in this section in the shared `standalone-full.xml` file.
 ====
 
-* On {CENTRAL} server nodes, a user with the `rest-all` role exists.
-+
-ifeval::["{context}" == "install-on-eap"]
-For more information, see <<eap-users-create-proc_install-on-eap>>.
+* Users with the following roles exist:
+** In {CENTRAL}, a user with the role `rest-all`
+** On the {KIE_SERVER}, a user with the role `kie-server`
+
+endif::[]
+
+ifeval::["{context}" == "packaging-deploying"]
+* {CENTRAL} and {KIE_SERVER} are installed in the base directory of the {EAP} installation (`__EAP_HOME__`).
+
+[NOTE]
+====
+You should install {CENTRAL} and {KIE_SERVER} on different servers in production environments. In this sample situation, we use only one user named `controllerUser` that has both the `rest-all` and the `kie-server` roles. However, if you install {KIE_SERVER} and {CENTRAL} on the same server, for example in a development environment, make the changes described in this section in the shared `standalone-full.xml` file.
+====
+
+* Users with the following roles exist:
+** In {CENTRAL}, a user with the role `rest-all`
+** On the {KIE_SERVER}, a user with the role `kie-server`
+
 endif::[]
 
 .Procedure
 . In your {PRODUCT} installation directory, navigate to the `standalone-full.xml` file. For example, if you use a {EAP} installation for {PRODUCT}, go to `$EAP_HOME/standalone/configuration/standalone-full.xml`.
-. Open `standalone-full.xml` and under the `<system-properties>` tag, set the following properties:
+. Open `standalone-full.xml` and under the `<system-properties>` tag, set the following JVM properties:
+* `_EAP_HOME_/standalone/configuration/standalone-full.xml` for standalone mode.
+* `_EAP_HOME_/domain/configuration/domain.xml` for domain mode.
 +
 --
-* *org.kie.server.controller.user:* The user name of a user who can log in to the {CENTRAL}.
-* *org.kie.server.controller.pwd:* The password of the user who can log in to the {CENTRAL}.
-* *org.kie.server.controller:* The URL for connecting to the API of {CENTRAL}. Normally, the URL is `\http://<centralhost>:<centralport>/{URL_COMPONENT_CENTRAL}/rest/controller`, where `<centralhost>` and `<centralport>` are the host name and port for {CENTRAL}. If {CENTRAL} is deployed on OpenShift, remove `{URL_COMPONENT_CENTRAL}/` from the URL.
-* *org.kie.server.location:* The URL for connecting to the API of {KIE_SERVER}. This property specifies the location of {KIE_SERVER}. Normally, the URL is `\http://<serverhost>:<serverport>/kie-server/services/rest/server`, where `<serverhost>` and `<serverport>` are the host name and port for {KIE_SERVER}.
-* *org.kie.server.id:* The name of a server configuration. If this server configuration does not exist in {CENTRAL}, it is created automatically when {KIE_SERVER} connects to {CENTRAL}.
-+
-Example:
+ifdef::PAM[.JVM Properties for {KIE_SERVER} Instance]
+ifdef::DM[.JVM Properties for Managed {KIE_SERVER} Instance]
+[cols="1,1,1a", options="header"]
+|===
+| Property
+| Value
+| Note
+
+| `org.kie.server.id`
+| `default-kie-server`
+| The {KIE_SERVER} ID.
+
+| `org.kie.server.controller`
+| `\http://localhost:8080/{URL_COMPONENT_CENTRAL}/rest/controller`
+| The location of {CENTRAL}. The URL for connecting to the API of {CENTRAL}.
+
+| `org.kie.server.controller.user`
+| `controllerUser`
+| The user name with the role `rest-all` who can log in to the {CENTRAL}.
+
+| `org.kie.server.controller.pwd`
+| `controllerUser1234;`
+| The password of the user who can log in to the {CENTRAL}.
+
+| `org.kie.server.location`
+| `\http://localhost:8080/kie-server/services/rest/server`
+| The location of the {KIE_SERVER}. The URL for connecting to the API of {KIE_SERVER}.
+
+|===
+
+.JVM Properties for {CENTRAL} Instance
+[cols="1,1,1a", options="header"]
+|===
+| Property
+| Value
+| Note
+
+| `org.kie.server.user`
+| `controllerUser`
+| The user name with the role `kie-server`.
+
+| `org.kie.server.pwd`
+| `controllerUser1234;`
+| The password of the user.
+
+|===
+
+Example for {KIE_SERVER} Instance:
 
 [source,xml,subs="attributes+"]
 ----
-<property name="org.kie.server.controller.user" value="central_user"/>
-<property name="org.kie.server.controller.pwd" value="central_password"/>
-<property name="org.kie.server.controller" value="http://central.example.com:8080/{URL_COMPONENT_CENTRAL}/rest/controller"/>
-<property name="org.kie.server.location" value="http://kieserver.example.com:8080/kie-server/services/rest/server"/>
-<property name="org.kie.server.id" value="production-servers"/>
+<property name="org.kie.server.id" value="default-kie-server"/>
+<property name="org.kie.server.controller" value="http://localhost:8080/{URL_COMPONENT_CENTRAL}/rest/controller"/>
+<property name="org.kie.server.controller.user" value="controllerUser"/>
+<property name="org.kie.server.controller.pwd" value="controllerUser1234;"/>
+<property name="org.kie.server.location" value="http://localhost:8080/kie-server/services/rest/server"/>
 ----
+
+Example for {CENTRAL} Instance:
+
+[source,xml,subs="attributes+"]
+----
+<property name="org.kie.server.user" value="controllerUser"/>
+<property name="org.kie.server.pwd" value="controllerUser1234;"/>
+----
+
 --
-. Start or restart the {KIE_SERVER}.
++
+. Verify the successful start of the {KIE_SERVER} by sending a GET request to `http://_SERVER:PORT_/kie-server/services/rest/server/`.
+Once authenticated, you get an XML response similar to this:
++
+[source,xml]
+----
+<response type="SUCCESS" msg="Kie Server info">
+    <kie-server-info>
+        <capabilities>KieServer</capabilities>
+        <capabilities>BRM</capabilities>
+        <capabilities>BPM</capabilities>
+        <capabilities>CaseMgmt</capabilities>
+        <capabilities>BPM-UI</capabilities>
+        <capabilities>BRP</capabilities>
+        <capabilities>DMN</capabilities>
+        <capabilities>Swagger</capabilities>
+        <location>http://localhost:8230/kie-server/services/rest/server</location>
+        <messages>
+            <content>Server KieServerInfo{serverId='first-kie-server', version='7.5.1.Final-redhat-1', location='http://localhost:8230/kie-server/services/rest/server', capabilities=[KieServer, BRM, BPM, CaseMgmt, BPM-UI, BRP, DMN, Swagger]}started successfully at Mon Feb 05 15:44:35 AEST 2018</content>
+            <severity>INFO</severity>
+            <timestamp>2018-02-05T15:44:35.355+10:00</timestamp>
+        </messages>
+        <name>first-kie-server</name>
+        <id>first-kie-server</id>
+        <version>7.5.1.Final-redhat-1</version>
+    </kie-server-info>
+</response>
+----
+
+. Verify the successful registration:
+.. Log in to {CENTRAL}.
+.. Click *Menu* -> *Deploy* -> *Execution Servers*.
++
+If registration is successful, you can see the registered server ID.
