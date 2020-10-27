@@ -30,7 +30,7 @@ ifeval::["{context}" == "install-on-eap"]
 * Users with the following roles exist:
 ** In {CENTRAL}, a user with the role `rest-all`
 ** On the {KIE_SERVER}, a user with the role `kie-server`
-
++
 For more information, see <<eap-users-create-proc_install-on-eap>>.
 endif::[]
 
@@ -64,9 +64,7 @@ endif::[]
 
 .Procedure
 . In your {PRODUCT} installation directory, navigate to the `standalone-full.xml` file. For example, if you use a {EAP} installation for {PRODUCT}, go to `$EAP_HOME/standalone/configuration/standalone-full.xml`.
-. Open `standalone-full.xml` and under the `<system-properties>` tag, set the following JVM properties:
-* `_EAP_HOME_/standalone/configuration/standalone-full.xml` for standalone mode.
-* `_EAP_HOME_/domain/configuration/domain.xml` for domain mode.
+. Open `standalone-full.xml` file and under the `<system-properties>` tag, set the following JVM properties:
 +
 --
 ifdef::PAM[.JVM Properties for {KIE_SERVER} Instance]
