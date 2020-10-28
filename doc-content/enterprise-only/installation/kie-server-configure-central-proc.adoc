@@ -3,7 +3,7 @@
 
 WARNING: This section provides a sample setup that you can use for testing purposes. Some of the values are unsuitable for a production environment, and are marked as such.
 
-If a {KIE_SERVER} is not already configured in your {PRODUCT} environment, or if you require additional {KIE_SERVERS} in your {PRODUCT} environment, you must configure a {KIE_SERVER} to connect to {CENTRAL}.
+If a {KIE_SERVER} is not configured in your {PRODUCT} environment, or if you require additional {KIE_SERVERS} in your {PRODUCT} environment, you must configure a {KIE_SERVER} to connect to {CENTRAL}.
 
 [NOTE]
 ====
@@ -11,12 +11,12 @@ If you are deploying {KIE_SERVER} on {OPENSHIFT}, see the {URL_DEPLOYING_ON_OPEN
 ====
 
 ifeval::["{context}" == "execution-server"]
-{KIE_SERVER} can be managed or it can be unmanaged. If {KIE_SERVER} is unmanaged, you must manually create and maintain KIE containers (deployment units). If {KIE_SERVER} is managed, the {CONTROLLER} manages the {KIE_SERVER} configuration and you interact with the {CONTROLLER} to create and maintain KIE containers.
+{KIE_SERVER} can be managed or unmanaged. If {KIE_SERVER} is unmanaged, you must manually create and maintain KIE containers (deployment units). If {KIE_SERVER} is managed, the {CONTROLLER} manages the {KIE_SERVER} configuration and you interact with the {CONTROLLER} to create and maintain the KIE containers.
 
 [NOTE]
 ====
-Only make the changes described in this section if {KIE_SERVER} will be managed by {CENTRAL} and you installed {PRODUCT} from the ZIP files.
-If you did not install {CENTRAL}, you can use the {HEADLESS_CONTROLLER} to manage {KIE_SERVER}, as described in xref:controller-con_{context}[].
+Make the changes described in this section if {KIE_SERVER} is managed by {CENTRAL} and you have installed {PRODUCT} from the ZIP files.
+If you have installed {CENTRAL}, you can use the {HEADLESS_CONTROLLER} to manage {KIE_SERVER}, as described in xref:controller-con_{context}[].
 ====
 endif::[]
 
@@ -39,7 +39,7 @@ ifeval::["{context}" == "execution-server"]
 
 [NOTE]
 ====
-You should install {CENTRAL} and {KIE_SERVER} on different servers in production environments. In this sample situation, we use only one user named `controllerUser` that has both the `rest-all` and the `kie-server` roles. However, if you install {KIE_SERVER} and {CENTRAL} on the same server, for example in a development environment, make the changes described in this section in the shared `standalone-full.xml` file.
+You must install {CENTRAL} and {KIE_SERVER} on different servers in production environments. In this sample situation, we use only one user named `controllerUser`, containing both `rest-all` and the `kie-server` roles. However, if you install {KIE_SERVER} and {CENTRAL} on the same server, for example in a development environment, make the changes in the shared `standalone-full.xml` file as described in this section.
 ====
 
 * Users with the following roles exist:
@@ -53,7 +53,7 @@ ifeval::["{context}" == "packaging-deploying"]
 
 [NOTE]
 ====
-You should install {CENTRAL} and {KIE_SERVER} on different servers in production environments. In this sample situation, we use only one user named `controllerUser` that has both the `rest-all` and the `kie-server` roles. However, if you install {KIE_SERVER} and {CENTRAL} on the same server, for example in a development environment, make the changes described in this section in the shared `standalone-full.xml` file.
+You must install {CENTRAL} and {KIE_SERVER} on different servers in production environments. In this sample situation, we use only one user named `controllerUser`, containing both `rest-all` and the `kie-server` roles. However, if you install {KIE_SERVER} and {CENTRAL} on the same server, for example in a development environment, make the changes in the shared `standalone-full.xml` file as described in this section.
 ====
 
 * Users with the following roles exist:
@@ -135,8 +135,8 @@ Example for {CENTRAL} Instance:
 
 --
 +
-. Verify the successful start of the {KIE_SERVER} by sending a GET request to `http://_SERVER:PORT_/kie-server/services/rest/server/`.
-Once authenticated, you get an XML response similar to this:
+. Send a GET request to `http://_SERVER:PORT_/kie-server/services/rest/server/` and verify the successful start of the {KIE_SERVER}.
+Once authenticated, you receive an XML response similar to the following example:
 +
 [source,xml]
 ----
