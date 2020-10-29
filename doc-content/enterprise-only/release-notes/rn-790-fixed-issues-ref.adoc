@@ -14,11 +14,9 @@ ifdef::PAM[]
 * An error message about missing {KIE_SERVER} configuration on dashbuilder runtime must be improved [https://issues.redhat.com/browse/RHPAM-3058[RHPAM-3058]]
 endif::[]
 
-ifdef::DM[]
 * Package list is not populating correctly for imported projects [https://issues.redhat.com/browse/RHDM-1377[RHDM-1377]]
 * `java.lang.Number` import remains in the list of imports even after deletion [https://issues.redhat.com/browse/RHDM-247[RHDM-247]]
 * If the project contains DRL files with the queries, the test scenarios designer displays queries in the coverage report [https://issues.redhat.com/browse/RHDM-1448[RHDM-1448]]
-endif::[]
 
 ifdef::PAM[]
 
