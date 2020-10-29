@@ -134,12 +134,4 @@ Actual result: The text is visible over the *Properties* panel.
 
 Workaround: None.
 
-
-
-== Process engine
-
 endif::[]
-
-== DMN Designer
-
-== {PLANNER}
