@@ -29,7 +29,7 @@ Dashbuilder runtime is a new add-on standalone web application and it is distrib
 === Ability to configure emails in the task notification
 You can now directly add email addresses to send task notification emails.
 
-=== Entando AppBuilder
+== Entando AppBuilder
 Entando AppBuilder is now officially removed from the {PRODUCT} 7.9. {PRODUCT} will no longer include entitlements for Entando AppBuilder. The feature references and documentation will not be available from 7.9 release.
 
 endif::PAM[]
@@ -105,7 +105,7 @@ You can follow the example in {URL_DEVELOPING_SOLVERS}#assembly-business-optimiz
 
 === Employee Rostering rotation pattern redesign
 
-The rotation pattern on the Employee Rostering Rotation window has been redesigned for ease of use. For more information, see {URL_DEVELOPING_SOLVERS}#assembly-optimizer-modifying-ER-template-IDE[{Running and modifying the employee rostering starter application for {PLANNER} using an IDE]}
+The rotation pattern on the Employee Rostering Rotation window has been redesigned for ease of use. For more information, see {URL_DEVELOPING_SOLVERS}#assembly-optimizer-modifying-ER-template-IDE[_{RUNNING_ROSTER_FOR_PLANNER_IDE}_].
 
 == Spring Boot
 

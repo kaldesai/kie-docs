@@ -1,0 +1,37 @@
+[id='rn-790-fixed-issues-ref']
+= Fixed issues in {PRODUCT} {ENTERPRISE_VERSION_LONG}
+
+{PRODUCT} {ENTERPRISE_VERSION_LONG} provides increased stability and fixed issues listed in this section.
+
+== {CENTRAL}
+
+* You cannot save a file when you try to rename the package from the source code [https://issues.redhat.com/browse/RHPAM-3119[RHPAM-3119]]
+* The wait spinner is not present when you add a deployment unit, manually enter GAV values, and confirm the alert window [https://issues.redhat.com/browse/RHPAM-3114[RHPAM-3114]]
+* Assets are not properly indexed for clustered {CENTRAL} environment [https://issues.redhat.com/browse/RHPAM-3089[RHPAM-3089]]
+* When you try to add a new deployment unit, you receive multiple error notifications [https://issues.redhat.com/browse/RHPAM-3112[RHPAM-3112]]
+
+ifdef::PAM[]
+* An error message about missing {KIE_SERVER} configuration on dashbuilder runtime must be improved [https://issues.redhat.com/browse/RHPAM-3058[RHPAM-3058]]
+endif::[]
+
+ifdef::DM[]
+* Package list is not populating correctly for imported projects [https://issues.redhat.com/browse/RHDM-1377[RHDM-1377]]
+* `java.lang.Number` import remains in the list of imports even after deletion [https://issues.redhat.com/browse/RHDM-247[RHDM-247]]
+* If the project contains DRL files with the queries, the test scenarios designer displays queries in the coverage report [https://issues.redhat.com/browse/RHDM-1448[RHDM-1448]]
+endif::[]
+
+ifdef::PAM[]
+
+== Process Designer
+
+* Case management properties are missing in a case definition [https://issues.redhat.com/browse/RHPAM-3131[RHPAM-3131]]
+* If you use the `^` character in the subject of a user task notification an error occurs [https://issues.redhat.com/browse/RHPAM-2763[RHPAM-2763]]
+* Called element in reusable sub process is not populated [https://issues.redhat.com/browse/RHPAM-2760[RHPAM-2760]]
+* Ruleflow group is not populated [https://issues.redhat.com/browse/RHPAM-2740[RHPAM-2740]]
+* If you migrate a process from the legacy process designer to the new process designer, you receive an incorrect warning that a node will be ignored [https://issues.redhat.com/browse/RHPAM-2452[RHPAM-2452]]
+
+endif::[]
+
+== Installer
+
+* On {EAP}, the {PRODUCT} installer adds an additional `$` sign in the vaulted password of database user [https://issues.redhat.com/browse/RHPAM-3148[RHPAM-3148]]
