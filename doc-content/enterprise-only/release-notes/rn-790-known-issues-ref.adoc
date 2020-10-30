@@ -36,6 +36,72 @@ Issue: DRL based test scenario throws an unexpected errors when you open a colle
 
 Workaround: None.
 
+.You cannot add a deployment unit when you create a container for the first time [https://issues.redhat.com/browse/RHPAM-3254[RHPAM-3254]]
+
+Issue: You cannot add a deployment unit when you create a container for the first time, you receive an unexpected system error.
+
+Steps to reproduce:
+
+. In {CENTRAL}, go to *Menu → Deploy → Execution Servers*.
+. Under *Deployment Units*, click *Add Deployment Unit*.
+. Enter the GAV values manually.
+. Select the *Start Deployment Unit?* check box to start the service.
+. Click *Finish*.
++
+You receive an unexpected system error.
+
+Workaround: None.
+
+.Unable to navigate from child process instance to parent process instance even after both are instance [https://issues.redhat.com/browse/RHPAM-3227[RHPAM-3227]]
+
+Issue: You cannot navigate from child process instance to parent process instance but possible to navigate from parent process instance to child process instance.
+
+Steps to reproduce:
+
+. In {CENTRAL}, create parent process and child process relationship.
+. Start the process instance and make it active.
+. Notice that, you cannot navigate from child process instance to parent process instance.
+
+Expected result: Whenever there is an active process instances, there must be link to navigate from child process instance to parent process instance and vice versa.
+
+Actual result: You cannot navigate from child process instance to parent process instance.
+
+Workaround: None.
+
+.The deployment unit fields are missing when you add a new deployment unit [https://issues.redhat.com/browse/RHPAM-3213[RHPAM-3213]]
+
+Issue: When you add a deployment unit, *Add Deployment Unit* fields are missing.
+
+Steps to reproduce:
+
+. In {CENTRAL}, go to *Menu → Deploy → Execution Servers*.
+. Under *Deployment Units*, click *Add Deployment Unit*.
++
+Deployment unit fields are missing.
+
+Workaround: Deployment unit fields will appear only if navigate to *Process Configuration* and come back.
+
+== Form modeler
+
+.`DocumentCollection` output parameter does not work in generated forms [https://issues.redhat.com/browse/RHPAM-3252[RHPAM-3252]]
+
+Issue: If the documents are configured as output variable only, for example, documents are uploaded as a part of the human task, then the input parameter of `DocumentColletion` type is not present and the default value `""` (empty string) is sent to `DocumentCollection`. You receive an exception.
+
+Steps to reproduce:
+
+. Deploy the project attached in the https://issues.redhat.com/browse/RHPAM-3252[RHPAM-3252] issue.
+. Create a new process instance.
+. Enter the following endpoint URL:
++
+[source]
+----
+http://<host>:<port>/kie-server/services/rest/server/containers/\{containerId}/forms/tasks/\{taskInstanceId}/content\
+----
+
+You receive an exception.
+
+Workaround: None.
+
 ifdef::PAM[]
 == Process Designer
 
@@ -77,7 +143,7 @@ Expected result: The *Rule Flow Group* drop-down list contains ruleflow-group th
 
 Actual result: The *Rule Flow Group* drop-down list is empty.
 
-Workaround: Deselect and then re-select business rule task.
+Workaround: Deselect and select the business rule task again.
 
 .Edited rule flow group is not reflected in business rule task properties [https://issues.redhat.com/browse/RHPAM-3194[RHPAM-3194]]
 
@@ -98,7 +164,7 @@ Expected result: The *Rule Flow Group* drop-down list contains edited `testgroup
 
 Actual result: The *Rule Flow Group* drop-down list contains `testgroup` value.
 
-Workaround: Deselect and then re-select business rule task.
+Workaround: Deselect and select the business rule task again.
 
 .The cursor position is different in Firefox browser when you use an inline text editor [https://issues.redhat.com/browse/RHPAM-3171[RHPAM-3171]]
 
@@ -134,4 +200,322 @@ Actual result: The text is visible over the *Properties* panel.
 
 Workaround: None.
 
+.You cannot create or open Case Management (Preview) asset [https://issues.redhat.com/browse/RHPAM-3281[RHPAM-3281]]
+
+Issue: When you create or open Case Management (Preview) asset, you receive a runtime exception.
+
+Steps to reproduce:
+
+. Create a case project.
+. Create a new Case Management (Preview) asset.
+
+Expected result: You can successfully create or open Case Management (Preview) asset and runtime exception does not occur.
+
+Actual result: You receive a runtime exception when you create or open Case Management (Preview) asset
+
+Workaround: None.
+
+.Not all illegal characters are removed from data object name [https://issues.redhat.com/browse/RHPAM-3250[RHPAM-3250]]
+
+Issue: When you create a data object with a name containing illegal characters, you receive a warning message after saving, closing and saving it again.
+
+Steps to reproduce:
+
+. Create a data object with `~!@#$%^&*()_+`10-={}[]:"|;'\<>?,./°ľščťžýáíéúä!ô§ň` name.
+. Save, close and reopen the process.
+. Move with the node and save the process again.
+
+Expected result: All illegal characters are removed when the process is saved and reopened.
+
+Actual result: You receive a warning message.
+
+Workaround: None.
+
+.Scrolling of the Properties panel stops when a mouse pointer is over a script area [https://issues.redhat.com/browse/RHPAM-3208[RHPAM-3208]]
+
+Issue: When a mouse pointer is over a script area, scrolling of the *Properties* panel stops.
+
+Steps to reproduce:
+
+. Create a user task.
+. Expand *Implementation/Execution* section.
+. Scroll down and keep scrolling until it stops.
+
+Expected result: Scrolling stops working when the scroll-bar is on the bottom and text are does not contain inner scroll-bar.
+
+Actual result: Scrolling stops working when a pointer is over *On Entry Action* field.
+
+Workaround: If the mouse pointer is outside the text area, the main scroll-bar is always activated.
+
+.Text area used for script task is cropped and shifted [https://issues.redhat.com/browse/RHPAM-3207[RHPAM-3207]]
+
+Issue: Text area used for script task is cropped and shifted when you enter large lines of code. Also, the vertical scrollbar is shifted.
+
+Steps to reproduce:
+
+. Create a script task.
+. Expand *Implementation/Execution* section.
+. In *Script* text area, enter large lines of code.
+
+Expected result: Text area used for script task is not cropped and shifted.
+
+Actual result: Text area used for script task is cropped and shifted.
+
+Workaround: None.
+
+.When an inline text editor is active, you cannot activate any property immediately [https://issues.redhat.com/browse/RHPAM-3198[RHPAM-3198]]
+
+Issue: It is not possible to activate any property immediately in the *Properties* panel when an inline editor is active.
+
+Steps to reproduce:
+
+. Create any node.
+. Ensure that *Properties* panel is open.
+. Double-click on the node to activate the inline text editor.
+. Click on any property from the *Properties* panel.
+
+Expected result: You can edit the property when an inline text editor is active.
+
+Actual result: You cannot edit the property when an inline text editor is active.
+
+Workaround: When you follow the steps to reproduce, click on the property again.
+
+.You cannot use an inline text editor when a node is near to the left canvas border [https://issues.redhat.com/browse/RHPAM-3167[RHPAM-3167]]
+
+Issue: You cannot use an inline text editor when a node is near to the left canvas border. This issue is applicable to events, gateways and data object.
+
+Steps to reproduce:
+
+. Create any node.
+. Place it near to the left canvas border.
+. Double-click on the node.
+
+Expected result: An inline text editor is active and you can edit the node name.
+
+Actual result: An inline text editor is not active and you cannot edit the node name.
+
+Workaround: None.
+
+.The edited node is see-through when you use an inline text editor [https://issues.redhat.com/browse/RHPAM-3166[RHPAM-3166]]
+
+Issue: The edited node is see-through when you use an inline text editor.
+
+Steps to reproduce:
+
+. Create an embedded sub-process.
+. Change the name of this sub-process to a long text. For example, over 300 characters.
+. Create any node inside the sub-process and place it over the sub-process's text.
+. Edit the node name using an inline text editor.
+
+Expected result: The text is readable and the edited node is not see-through.
+
+Actual result: The text is not readable because the edited node is see-through.
+
+Workaround: None.
+
+== Process engine
+
+.When the SLA on user task is executed, you receive `No session found for context` errors [https://issues.redhat.com/browse/RHPAM-3233[RHPAM-3233]]
+
+Issue: When the service level agreement (SLA) on user task is executed on container with `PER_PROCESS_INSTANCE` runtime strategy, you receive `No session found for context` errors.
+
+Steps to reproduce:
+
+. Clone the https://github.com/kiegroup/droolsjbpm-integration[droolsjbpm-integration] project.
+. Open `SLAComplianceIntegrationTest.java` file from the cloned project.
+. Comment out all the tests except `testSLAonUserTaskViolated()`.
+. Open the terminal on `kie-server-integ-tests-jbpm/` folder and execute the test using following command:
++
+[source]
+----
+mvn clean install -Pwildfly -Dit.test=SLAComplianceIntegrationTest
+----
+. Check the logs on the terminal.
++
+Once the test execution starts, you will receive `No session found for context` errors.
+
 endif::[]
+
+== DMN designer
+
+.Decision service is missing `inputData` element in model with multiple DRDs [https://issues.redhat.com/browse/RHDM-1483[RHDM-1483]]
+
+Issue: In a model containing multiple decision requirement diagrams (DRDs), when you try reuse a decision component by adding it into a decision service node, the `inputData` element is missing from the the resulting decision service node.
+
+Steps to reproduce:
+
+. Define multiple decision requirement diagrams (DRDs).
+. In one DRD, define some decisions with inputs.
+. In another DRD, define decision service and reuse the decision components from above.
++
+Do not duplicate the inputs.
+. Build and deploy the decision service.
+. Do any of the following tasks:
+
+* Evaluate the decision to see the error reported in the description.
+* Verify the dmn source and see that `inputData` element is missing from decision service .
+
+Workaround: Add an `inputData` element mannually into resulting `decisionService` element.
+
+.DMN editor does not detect the changes from the Decision Navigator view [https://issues.redhat.com/browse/RHDM-1482[RHDM-1482]]
+
+Issue: DMN editor does not detect change in the file when decision requirement diagram (DRD) is renamed or removed from the *Decision Navigator* view.
+
+Steps to reproduce:
+
+. Rename a DRD from the *Decision Navigator* view.
+. Click *Save*.
++
+You receive *You have no unsaved changes* alert window.
+. Close the DMN editor.
++
+You receive *You have no unsaved changes* alert window.
+. Reopen the DMN editor.
++
+The name of the DRD is still the same.
+
+Workaround: You need to do a different change to the file which then enforces save or discard action.
+
+.In decision table, the constraint value is missing [https://issues.redhat.com/browse/RHDM-1460[RHDM-1460]]
+
+Issue: The constraint value is missing while defining a decision table.
+
+Steps to reproduce:
+
+. Create a DMN file with decision.
+. Define a decision table.
+. Set the first column type as a number.
+. Save the asset.
+. Close the editor.
+. Reopen the asset.
+. Go to the decision table.
+. Select the input with type as a number.
+. Open the *Properties* panel.
+. Set the constraint in the *Constraint value* field.
+. Select the output column.
+. Select the input column again.
+. Verify that the constraint value is missing.
+
+Workaround: None.
+
+
+.The undo and redo operations does not work properly when you delete a node in decision requirements graph (DRG) [https://issues.redhat.com/browse/RHDM-1459[RHDM-1459]]
+
+Issue: In a model containing multiple decision requirement diagrams (DRDs), the undo and redo operations does not work properly when you delete a node in decision requirements graph (DRG).
+
+Steps to reproduce:
+
+. Move the node to a DRD.
+. Navigate to DRG.
+. Delete the node from the DRG.
+. Undo the changes.
+
+Expected result: You can perform the undo and redo operations in DRG.
+
+Actual result: You receive an error pop-up. When you confirm, the DRG is broken.
+
+Workaround: None.
+
+.The undo and redo operations are lost when you switch between the diagrams [https://issues.redhat.com/browse/RHDM-1458[RHDM-1458]]
+
+Issue: In a model containing multiple decision requirement diagrams (DRDs), the undo and redo operations are lost when you switch between the diagrams.
+
+Steps to reproduce:
+
+. Open a DMN file with two or more decision requirement diagrams (DRDs).
+. Make some changes. For example, move a node in one diagram.
+. Switch to another diagram.
+. Click *Undo* or press (Ctrl+Z).
++
+The undo and redo operations are lost and nothing changes.
+
+Workaround: None.
+
+.In {CENTRAL}, the DMN editor is unable to save the changes in the Properties panel [https://issues.redhat.com/browse/RHDM-1456[RHDM-1456]]
+
+Issue: In DMN editor, when you change the name property in the *Properties* panel, try to save the changes and reopen the editor, the DMN editor is unable to save the changes.
+
+Steps to reproduce:
+
+. Create a DMN file.
+. Change the name of the DMN file in the *Properties* panel.
+. Click *Save*.
++
+You receive *You have no unsaved changes* alert window.
+. Close the DMN editor.
+. Reopen the asset and check the the *Properties* panel.
++
+The changes are not saved.
+
+Workaround: None.
+
+.DMN editor is reporting unsaved changes in the DMN files even after there are no changes [https://issues.redhat.com/browse/RHDM-1453[RHDM-1453]]
+
+Issue: When you open a DMN file in {CENTRAL} and try to close the file right away, the DMN editor reports unsaved changes in the DMN files even after there are no changes.
+
+Steps to reproduce:
+
+. In Business Central, go to *Menu → Design → Projects*.
+. Click *Try samples*.
+. Open *Traffic_Violation* project.
+. Open *Traffic Violation* DMN file.
+. Close the editor.
++
+You receive an *Unsaved changes* error pop-up.
+
+Workaround: None.
+
+== Decision engine
+
+.`testDoubleNaN` fails after jitting on `TypeCoercionTest` [https://issues.redhat.com/browse/RHDM-1470[RHDM-1470]]
+
+Issue: You receive an `AssertionError` error in `org.drools.modelcompiler.TypeCoercionTest#testDoubleNaN` when the constraint is jitted.
+
+Steps to reproduce:
+
+. Run the following command in `org.drools.modelcompiler` module:
++
+[source]
+----
+mvn clean install -Dtest=org.drools.modelcompiler.TypeCoercionTest#testDoubleNaN* -Ddrools.jittingThreshold=0
+----
+
+Workaround: None.
+
+== High-availability {CENTRAL} on premise
+
+.You cannot create multiple processes at the same time [https://issues.redhat.com/browse/RHPAM-3202[RHPAM-3202]]
+
+Issue: When you create multiple processes at the same time, you receive an error message and the process is not created.
+
+Steps to reproduce:
+
+. Create multiple processes at the same time.
++
+You receive an *Activity not found* error pop-up.
+
+Workaround: None.
+
+.When you create a project, base-kie-project is created instead of the real name of the project [https://issues.redhat.com/browse/RHPAM-3193[RHPAM-3193]]
+
+Issue: When you create a project, a project with the name *base-kie-project* is created instead of the real name of the created project.
+
+Steps to reproduce:
+
+. Create multiple projects with multiple users in the same space.
++
+The *base-kie-project* project is created.
+
+Workaround: Delete and recreate the project or rename the project name from *Settings* tab.
+
+.You cannot create multiple projects at the same time [https://issues.redhat.com/browse/RHPAM-3192[RHPAM-3192]]
+
+Issue: When you create multiple projects at the same time, you receive an error message and the project is not created.
+
+Steps to reproduce:
+
+. Create multiple projects at the same time.
++
+You receive an error pop-up.
+
+Workaround: None.
