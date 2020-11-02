@@ -67,6 +67,8 @@ A new module named `drools-metric` is added, which can assist in the performance
 
 For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-drl-rules[_{DRL_RULES}_].
 
+ifdef::PAM[]
+
 == {PROCESS_ENGINE_CAP}
 
 === Support for process fluent API
@@ -97,6 +99,8 @@ Process process = factory
 ----
 
 For more information about process fluent API, see {URL_DEPLOYING_AND_MANAGING_SERVICES}#assembly-kie-apis[_{KIE_APIS}_].
+
+endif::[]
 
 == {PLANNER}
 
