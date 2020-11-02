@@ -69,10 +69,6 @@ endif::[]
 
 * On {EAP}, the {PRODUCT} installer adds an additional `$` sign in the vaulted password of database user [https://issues.redhat.com/browse/RHPAM-3148[RHPAM-3148]]
 
-== {PLANNER}
-
-* Added a new reference implementation for {PLANNER} to create a school timetable [https://issues.redhat.com/browse/RHDM-1430[RHDM-1430]]
-
 == {OPENSHIFT}
 
 * In monitoring console page, when you create a new page, you receive an *Activity not found* error pop-up [https://issues.redhat.com/browse/RHPAM-3066[RHPAM-3066]]

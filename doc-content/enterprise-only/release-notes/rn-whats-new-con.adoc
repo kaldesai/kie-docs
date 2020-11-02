@@ -40,6 +40,7 @@ ifdef::PAM[]
 
 === Process designer updates
 The following list provides a summary of process designer updates:
+
 * Ability to add data objects in a process diagram
 * Ability to add Kafka work item in a process diagram to send events to a Kafka topic
 * Ability to double-click any diagram element to edit its name using the new inline text editor
@@ -109,15 +110,11 @@ The rotation pattern on the Employee Rostering Rotation window has been redesign
 
 == Spring Boot
 
+ifdef::PAM[]
+
 === Replicating audit data in a JMS message broker
 
 You can now replicate {KIE_SERVER} audit data to a Java Message Service (JMS) message broker, for example activeMQ or Artemis, and then dump the data in an external database schema so that you can improve the performance of your Spring Boot application by deleting the audit data from your application schema.
-
-For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[_{CREATING_SPRING_BOOT_APPLICATIONS}_].
-
-=== Self-contained {PRODUCT} Spring Boot JAR file
-
-You can create a self-contained {PRODUCT} Spring Boot JAR file that contains multiple versions of the same KJAR file.
 
 For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[_{CREATING_SPRING_BOOT_APPLICATIONS}_].
 
@@ -127,11 +124,23 @@ You can now create a PostgreSQL schema that uses the `bytea` column type instead
 
 For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[{CREATING_SPRING_BOOT_APPLICATIONS}].
 
+endif::[]
+
+=== Self-contained {PRODUCT} Spring Boot JAR file
+
+You can create a self-contained {PRODUCT} Spring Boot JAR file that contains multiple versions of the same KJAR file.
+
+For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[_{CREATING_SPRING_BOOT_APPLICATIONS}_].
+
 == {OPENSHIFT}
 
 === Support for {OPENSHIFT} version 4.6
 
 {PRODUCT} now supports {OPENSHIFT} version 4.6. In order to support this version, necessary changes in the operator bundle format were made.
+{OPENSHIFT} version 4.6 provides an extended update support. For more information, see https://access.redhat.com/support/policy/updates/openshift-eus?extIdCarryOver=true&sc_cid=701f2000001OH7iAAG[Red Hat OpenShift Extended Update Support (EUS) Overview].
+
+IMPORTANT: {PRODUCT} {PRODUCT_VERSION} is supported only on {OPENSHIFT} version 3.11 and {OPENSHIFT} version 4.6 EUS. Due to the internal changes of the operator and API version, {OPENSHIFT} version 4.5 is not supported and this makes an exception to the general support policy for the Red Hat Middleware products.
+For more information, see https://access.redhat.com/articles/5115291[Support of Red Hat Middleware products and components on Red Hat OpenShift].
 
 === Support for LDAP failover
 
@@ -156,12 +165,6 @@ ifdef::PAM[]
 
 For more information, see {URL_DEPLOYING_ON_OPENSHIFT}#customimage-smartrouter-proc_openshift-operator[_{DEPLOYING_OPENSHIFT_OPERATOR}_].
 
-=== Support for deploying an unmanaged {KIE_SERVER} on {OPENSHIFT} using the operator
-
-You can now deploy {PRODUCT} on {OPENSHIFT} using the operator with a {KIE_SERVER} that is not managed by {CENTRAL} monitoring.
-
-For more information, see {URL_DEPLOYING_ON_OPENSHIFT}#operator-deploy-central-proc_openshift-operator[_{DEPLOYING_OPENSHIFT_OPERATOR}_].
-
 === Logging level configuration for Smart Router
 
 You can now configure the logging level for Smart Router when deploying {PRODUCT} on {OPENSHIFT}.
@@ -169,3 +172,9 @@ You can now configure the logging level for Smart Router when deploying {PRODUCT
 For more information, see {URL_DEPLOYING_ON_OPENSHIFT}#operator-deploy-smartrouter-proc_openshift-operator[_{DEPLOYING_OPENSHIFT_OPERATOR}_].
 
 endif::PAM[]
+
+=== Support for deploying an unmanaged {KIE_SERVER} on {OPENSHIFT} using the operator
+
+You can now deploy {PRODUCT} on {OPENSHIFT} using the operator with a {KIE_SERVER} that is not managed by {CENTRAL} monitoring.
+
+For more information, see {URL_DEPLOYING_ON_OPENSHIFT}#operator-deploy-central-proc_openshift-operator[_{DEPLOYING_OPENSHIFT_OPERATOR}_].
