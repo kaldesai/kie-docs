@@ -22,6 +22,8 @@ ifdef::PAM[]
 * An error message about missing {KIE_SERVER} configuration on dashbuilder runtime must be improved [https://issues.redhat.com/browse/RHPAM-3058[RHPAM-3058]]
 * When you remove parent process instance details from the process list, you receive an error message [https://issues.redhat.com/browse/RHPAM-3102[RHPAM-3102]]
 * When you skip a task from task event listener, you receive `BAMTaskEventListener` warning [https://issues.redhat.com/browse/RHPAM-3100[RHPAM-3100]]
+* To avoid large memory retention, make the `LRUCache` file configurable [https://issues.redhat.com/browse/RHPAM-2808[RHPAM-2808]]
+* When more than one {KIE_SERVERS} are connected with different IDs, you receive an unexpected system error [https://issues.redhat.com/browse/RHPAM-3134[RHPAM-3134]]
 endif::[]
 
 
@@ -36,6 +38,7 @@ ifdef::PAM[]
 * If you migrate a process from the legacy process designer to the new process designer, you receive an incorrect warning that a node will be ignored [https://issues.redhat.com/browse/RHPAM-2452[RHPAM-2452]]
 * In the process modeler, the *Service Tasks* name is changed to *Custom Tasks* [https://issues.redhat.com/browse/RHPAM-3008[RHPAM-3008]]
 * The leap days are not validated in timer events [https://issues.redhat.com/browse/RHPAM-2987[RHPAM-2987]]
+* When try you implement `catch-all` errors using an event sub-process, if the value of `ErrorRef` for the error start event is empty, you receive build errors [https://issues.redhat.com/browse/RHPAM-3093[RHPAM-3093]]
 
 == Process engine
 
@@ -45,6 +48,7 @@ ifdef::PAM[]
 * Define jBPM datasource as `@Primary` to avoid the failure of `entityManagerFactory` in `JBPMAutoConfiguration` [https://issues.redhat.com/browse/RHPAM-3072[RHPAM-3072]]
 * A business process with `required` variable tag should not be accepted via REST API [https://issues.redhat.com/browse/RHPAM-3048[RHPAM-3048]]
 * A main process fails due to Sub-process exception handling transaction rollback [https://issues.redhat.com/browse/RHPAM-2982[RHPAM-2982]]
+* When you dynamically add a new node to process instance, the execution of the process fails with a runtime exception [https://issues.redhat.com/browse/RHPAM-3188[RHPAM-3188]]
 
 endif::[]
 
@@ -72,3 +76,9 @@ endif::[]
 == {OPENSHIFT}
 
 * In monitoring console page, when you create a new page, you receive an *Activity not found* error pop-up [https://issues.redhat.com/browse/RHPAM-3066[RHPAM-3066]]
+
+ifdef::PAM[]
+* When you try to configure an external {RH-SSO} configuration, you receive `SSL required for: EXTERNAL` error message [https://issues.redhat.com/browse/RHPAM-2804[RHPAM-2804]]
+* Missing support for `xa-pool` configuration of `is-same-rm-override` field [https://issues.redhat.com/browse/RHPAM-3071[RHPAM-3071]]
+* In {OPENSHIFT}, when you create a secure connection between {CENTRAL} and {KIE_SERVER}, a wrong URL is generated [https://issues.redhat.com/browse/RHPAM-3162[RHPAM-3162]]
+endif::[]

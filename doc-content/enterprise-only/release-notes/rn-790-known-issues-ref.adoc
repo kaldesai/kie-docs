@@ -52,6 +52,8 @@ You receive an unexpected system error.
 
 Workaround: None.
 
+ifdef::PAM[]
+
 .Unable to navigate from child process instance to parent process instance even after both are instance [https://issues.redhat.com/browse/RHPAM-3227[RHPAM-3227]]
 
 Issue: You cannot navigate from child process instance to parent process instance but possible to navigate from parent process instance to child process instance.
@@ -68,6 +70,8 @@ Actual result: You cannot navigate from child process instance to parent process
 
 Workaround: None.
 
+endif::[]
+
 .The deployment unit fields are missing when you add a new deployment unit [https://issues.redhat.com/browse/RHPAM-3213[RHPAM-3213]]
 
 Issue: When you add a deployment unit, *Add Deployment Unit* fields are missing.
@@ -80,6 +84,8 @@ Steps to reproduce:
 Deployment unit fields are missing.
 
 Workaround: Deployment unit fields will appear only if navigate to *Process Configuration* and come back.
+
+ifdef::PAM[]
 
 == Form modeler
 
@@ -101,6 +107,8 @@ http://<host>:<port>/kie-server/services/rest/server/containers/\{containerId}/f
 You receive an exception.
 
 Workaround: None.
+
+endif::[]
 
 ifdef::PAM[]
 == Process Designer
