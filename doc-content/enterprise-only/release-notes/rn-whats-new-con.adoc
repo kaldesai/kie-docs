@@ -14,23 +14,23 @@ For more information about creating DMN models with multiple diagrams, see {URL_
 ifdef::PAM[]
 
 === Dashbuilder runtime
-Dashbuilder runtime is a new add-on standalone web application and it is distributed as a `WAR` to run the dashboards on {EAP}. If you have access to dashbuilder runtime, you can explore the dashboards created in {CENTRAL}. The following list provides a summary of dashbuilder runtime updates:
+Dashbuilder runtime is a new add-on standalone web application, distributed as a `WAR` to run the dashboards on {EAP}. If you have access to dashbuilder runtime, you can explore the dashboards created in {CENTRAL}. The following list provides a summary of dashbuilder runtime updates:
 
-* After creating dashboards using datasets and pages, you can export these dashboards from {CENTRAL} using custom export.
-* You can import, access, and run the dashboards which are exported from {CENTRAL} in a dashbuilder runtime.
+* After creating dashboards using datasets and pages, you can export these dashboards from {CENTRAL} using *custom export*.
+* You can import, access, and run the dashboards that are exported from {CENTRAL} in dashbuilder runtime.
 * Dashbuilder runtime accesses the {KIE_SERVER} REST API to run the queries from imported {KIE_SERVER} datasets.
-* Dashbuilder runtime provides embedded capabilities which allow you to set a specific dashboard from an instance of dashbuilder runtime on your web applications.
+* Dashbuilder runtime provides embedded capabilities that allow you to set a specific dashboard from an instance of dashbuilder runtime on your web applications.
 * In Dashbuilder runtime, you can import multiple dashboards in a single dashbuilder runtime instance.
-* You can now create and add external components which can be a part of the dashboard page.
+* You can create and add external components that can be a part of the dashboard page.
 
 === Enhanced search capabilities
 {PRODUCT} {ENTERPRISE_VERSION} provides enhanced search capabilities, including flexible search criteria for tasks, process instances, and cases. For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-and-building-cases[_{DESIGNING_CASES}_].
 
 === Ability to configure emails in the task notification
-You can now directly add email addresses to send task notification emails.
+You can now directly add email addresses to send task notification emails. For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-interacting-with-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
 
 == Entando AppBuilder
-Entando AppBuilder is now officially removed from the {PRODUCT} 7.9. {PRODUCT} will no longer include entitlements for Entando AppBuilder. The feature references and documentation will not be available from 7.9 release.
+Entando AppBuilder is now officially removed from the {PRODUCT} 7.9. {PRODUCT} no longer includes entitlements for Entando AppBuilder. The feature references and documentation is not be available from the 7.9 release.
 
 endif::PAM[]
 
@@ -43,7 +43,7 @@ The following list provides a summary of process designer updates:
 
 * Ability to add data objects in a process diagram
 * Ability to add Kafka work item in a process diagram to send events to a Kafka topic
-* Ability to double-click any diagram element to edit its name using the new inline text editor
+* Ability to double-click any diagram node to edit its name using the new inline text editor
 * Ability to view highlighted syntax when writing a script in Java, JavaScript, and MVEL
 * Ability to use multiple connections for a task or an event using `jbpm.enable.multi.con` system property
 
@@ -118,7 +118,7 @@ ifdef::PAM[]
 
 === Replicating audit data in a JMS message broker
 
-You can now replicate {KIE_SERVER} audit data to a Java Message Service (JMS) message broker, for example activeMQ or Artemis, and then dump the data in an external database schema so that you can improve the performance of your Spring Boot application by deleting the audit data from your application schema.
+You can now replicate {KIE_SERVER} audit data to a Java Message Service (JMS) message broker, for example, activeMQ or Artemis, After replicating the data, you can dump the data in an external database schema so that you can improve the performance of your Spring Boot application by deleting the audit data from your application schema.
 
 For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[_{CREATING_SPRING_BOOT_APPLICATIONS}_].
 
@@ -140,7 +140,7 @@ For more information, see {URL_INTEGRATING}#assembly-springboot-business-apps[_{
 
 === Support for {OPENSHIFT} version 4.6
 
-{PRODUCT} now supports {OPENSHIFT} version 4.6. In order to support this version, necessary changes in the operator bundle format were made.
+{PRODUCT} now supports {OPENSHIFT} version 4.6. In order to support this version, necessary changes in the operator bundle format are made.
 {OPENSHIFT} version 4.6 provides an extended update support. For more information, see https://access.redhat.com/support/policy/updates/openshift-eus?extIdCarryOver=true&sc_cid=701f2000001OH7iAAG[Red Hat OpenShift Extended Update Support (EUS) Overview].
 
 IMPORTANT: {PRODUCT} {PRODUCT_VERSION} is supported only on {OPENSHIFT} version 3.11 and {OPENSHIFT} version 4.6 EUS. Due to the internal changes of the operator and API version, {OPENSHIFT} version 4.5 is not supported and this makes an exception to the general support policy for the Red Hat Middleware products.

@@ -13,16 +13,20 @@ For more information on Red Hat Technology Preview features, see https://access.
 ifdef::PAM[]
 
 == Case modeler
-Case modeler in {CENTRAL} now includes the new process designer. It provides the option to model a case as a sequence of stages so it is simple to define a case model at high-level. Case modeling supports three types of tasks: human tasks, sub-processes, and sub-cases.
+Case modeler in {CENTRAL} now includes the new process designer. It provides the option to model a case as a sequence of stages that makes it easy to define a case model at high-level. Case modeling supports three types of tasks: human tasks, sub-processes, and sub-cases.
 
-[NOTE]
-====
-The case modeler in {PRODUCT} {PRODUCT_VERSION} is a Technology Preview feature and is disabled by default in {CENTRAL}. To enable the case modeler preview in {CENTRAL}, in the upper-right corner of the window click *Settings* -> *Roles*, select a role from the left panel, click *Editors* -> *(New) Case Modeler* -> *Read*, and then click *Save* to save the changes.
-====
+The case modeler in {PRODUCT} {PRODUCT_VERSION} is a Technology Preview feature and is disabled by default in {CENTRAL}.
+
+To enable the case modeler preview:
+
+. In {CENTRAL}, select the *Admin* icon in the top-right corner of the screen and select *Roles*.
+. Select a role from the left panel.
+. Click *Editors* -> *(New) Case Modeler* -> *Read*.
+. Click *Save*.
 
 == Prediction Service API
 
-You can use the Prediction Service API to provide a prediction service that assists with human tasks. The prediction service can use AI. For example, you can use Predictive Model Markup Language (PMML) models or Statistical Machine Intelligence and Learning Engine (SMILE) to implement the service.
+You can use the prediction service API to provide a prediction service that assists with human tasks. The prediction service can use AI. For example, you can use the Predictive Model Markup Language (PMML) models or Statistical Machine Intelligence and Learning Engine (SMILE) to implement the service.
 
 endif::PAM[]
 

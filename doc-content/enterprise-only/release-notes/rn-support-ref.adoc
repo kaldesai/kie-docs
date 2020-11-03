@@ -21,7 +21,7 @@ This section highlights supported version updates in {PRODUCT} {PRODUCT_VERSION}
 
 == Support for High-availability authoring on {EAP} on premise
 
-Configuration of {CENTRAL} on {EAP} for high availability (HA) on premise is fully supported.
+Configuration of {CENTRAL} on {EAP} for high-availability (HA) on premise is fully supported.
 
 For more information about installing and configuring {PRODUCT} in a {EAP} clustered environment, see {URL_INSTALLING_AND_CONFIGURING}#assembly-clustering-eap[_{INSTALLING_ON_EAP_CLUSTER}_].
 
