@@ -37,9 +37,11 @@ include::{shared-dir}/Workbench/SecurityManagement/managing-business-central-edi
 
 include::{shared-dir}/Workbench/SecurityManagement/business-central-security-management-con.adoc[leveloffset=+1]
 //include::{enterprise-dir}/admin-and-config/business-central-settings-security-con.adoc[leveloffset=+1]
+include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-security-policy-con.adoc[leveloffset=+2]
+include::{shared-dir}/Workbench/SecurityManagement/business-central-security-management-permissions-con.adoc[leveloffset=+2]
+include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-changing-permissions-proc.adoc[leveloffset=+3]
 include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-changing-home-proc.adoc[leveloffset=+2]
 include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-setting-priorities-proc.adoc[leveloffset=+2]
-include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-changing-permissions-proc.adoc[leveloffset=+2]
 
 include::{enterprise-dir}/admin-and-config/managing-business-central-artifacts-con.adoc[leveloffset=+1]
 include::{enterprise-dir}/admin-and-config/managing-business-central-view-artifacts-proc.adoc[leveloffset=+2]

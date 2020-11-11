@@ -1,0 +1,12 @@
+[id='business-central-security-management-permissions-con']
+
+= Permissions
+
+A permission is an authorization granted to the user to do some actions related to a specific resource within the application. For example, user can have following permissions:
+
+* View a page
+* Save the project
+* View a repository
+* Delete a dashboard
+
+A permission can be granted or denied and it can be global or resource specific. You can use these permissions to protect the access to resources and customize features within the application.
