@@ -7,7 +7,9 @@
 * manager
 * admin
 * analyst
+* rest-all
 * developer
+* rest-project
 * user
 
 [NOTE]
