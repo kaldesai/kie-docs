@@ -29,14 +29,17 @@ As an administrator, you can customize the following on the admin *Settings* pag
 * You are logged in to {CENTRAL} with the `admin` user role.
 
 // Modules - concepts, procedures, refs, etc.
-include::{enterprise-dir}/admin-and-config/managing-business-central-user-management-con.adoc[leveloffset=+1]
-include::{enterprise-dir}/admin-and-config/business-central-settings-creating-new-users-proc.adoc[leveloffset=+2]
-include::{enterprise-dir}/admin-and-config/managing-business-central-editing-users-proc.adoc[leveloffset=+2]
-include::{enterprise-dir}/admin-and-config/managing-business-central-creating-groups-proc.adoc[leveloffset=+2]
-include::{enterprise-dir}/admin-and-config/managing-business-central-editing-groups-proc.adoc[leveloffset=+2]
+include::{shared-dir}/Workbench/SecurityManagement/managing-business-central-user-and-group-management-con.adoc[leveloffset=+1]
+include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-creating-new-users-proc.adoc[leveloffset=+2]
+include::{shared-dir}/Workbench/SecurityManagement/managing-business-central-editing-users-proc.adoc[leveloffset=+2]
+include::{shared-dir}/Workbench/SecurityManagement/managing-business-central-creating-groups-proc.adoc[leveloffset=+2]
+include::{shared-dir}/Workbench/SecurityManagement/managing-business-central-editing-groups-proc.adoc[leveloffset=+2]
 
-include::{enterprise-dir}/admin-and-config/business-central-settings-security-con.adoc[leveloffset=+1]
-include::{enterprise-dir}/admin-and-config/business-central-settings-changing-permissions-proc.adoc[leveloffset=+2]
+include::{shared-dir}/Workbench/SecurityManagement/business-central-security-management-con.adoc[leveloffset=+1]
+//include::{enterprise-dir}/admin-and-config/business-central-settings-security-con.adoc[leveloffset=+1]
+include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-changing-home-proc.adoc[leveloffset=+2]
+include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-setting-priorities-proc.adoc[leveloffset=+2]
+include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-changing-permissions-proc.adoc[leveloffset=+2]
 
 include::{enterprise-dir}/admin-and-config/managing-business-central-artifacts-con.adoc[leveloffset=+1]
 include::{enterprise-dir}/admin-and-config/managing-business-central-view-artifacts-proc.adoc[leveloffset=+2]
