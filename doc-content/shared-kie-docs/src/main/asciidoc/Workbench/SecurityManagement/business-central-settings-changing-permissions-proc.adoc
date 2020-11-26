@@ -1,7 +1,12 @@
 [id='business-central-settings-changing-permissions-proc_{context}']
-= Changing permissions for groups and roles
+= Changing permissions for groups and roles in {CENTRAL}
 
 You cannot change permissions for an individual user. However, you can change permissions for groups and roles. The changed permissions apply to users that have the role or belong to the group that you changed.
+
+[NOTE]
+====
+Any changes you make to roles or groups affect all of the users associated with that role or group.
+====
 
 .Procedure
 . In {CENTRAL}, select the *Admin* icon in the top-right corner of the screen.
@@ -9,6 +14,9 @@ You cannot change permissions for an individual user. However, you can change pe
 . From the list, click the role or group you want to edit. All details are displayed in the right pane.
 . Set the *Home Page* or *Priority* under the *Settings* section.
 . Set the {CENTRAL}, page, editor, space, and project permissions under the *Permissions* section.
++
+.Setting the permissions
+image::Workbench/SecurityManagement/set-permissions.png[Setting the permissions]
 +
 You can expand the resource type whose permissions you want to change.
 . Optional: To add an item not listed, click *Add Exception* and then set the permissions as required.
@@ -19,8 +27,3 @@ You cannot add an exception to the {CENTRAL} resource type.
 ====
 +
 . Click *Save*.
-
-[NOTE]
-====
-Any changes you make to roles or groups affect all of the users associated with that role or group.
-====

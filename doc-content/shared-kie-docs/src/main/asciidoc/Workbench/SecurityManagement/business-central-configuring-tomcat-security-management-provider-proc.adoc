@@ -1,0 +1,30 @@
+[id='business-central-configuring-tomcat-security-management-provider-proc']
+
+= Configuring tomcat security management provider
+
+.Prerequisites
+
+* Tomcat is installed on the system.
+* If you want to use this, you must include the following system properties:
++
+.Tomcat security management provider system properties
+[%header,cols=3]
+[%autowidth]
+|===
+|Property |Description |Default value
+
+|`org.uberfire.ext.security.management.tomcat.catalina-base` | The path for the tomcat base directory. This property is mandatory. | `/opt/tomcat`
+
+|`org.uberfire.ext.security.management.tomcat.users-file` | Tomcat's users `XML` file path. This property is mandatory. |`conf/tomcat-users.xml`
+
+|===
+
+.Procedure
+
+. Create the `security-management.properties` file in the root of your application. For example, `src/main/resources/security-management.properties`.
+. Enter the following keys and provider name as a value:
++
+[source]
+----
+org.uberfire.ext.security.management.api.userManagementServices=TomcatUserManagementService
+----
