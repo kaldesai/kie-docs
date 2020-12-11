@@ -8,15 +8,15 @@ The user & group management features available will depend on the security provi
 
 NOTE: If the security management provider is not installed, the user interface for managing the security realm will not be available. Once a management security provider is installed and setup, the user and group management features are automatically enabled in the security management user interface.
 
-{CENTRAL} provides the following security management providers:
+{CENTRAL} provides the following security management provider:
 
-* Wildfly or {EAP} security management provider
+* {EAP} security management provider
 +
 This security provider supports realm types based on `application-users.properties` or `application-roles.properties` property files.
 +
-You can use the following system properties for the Wildfly or {EAP} security management provider implementation:
+You can use the following system properties for the {EAP} security management provider implementation:
 +
-.Wildfly or {EAP} security management provider properties
+.{EAP} security management provider properties
 [%header,cols=2]
 [%autowidth]
 |===
@@ -24,28 +24,8 @@ You can use the following system properties for the Wildfly or {EAP} security ma
 
 |`*org.uberfire.ext.security.management.wildfly.properties.WildflyUserManagementService*` | You can use this property for user, group, and role implementations.
 
-|`*org.uberfire.ext.security.management.wildfly.properties.WildflyUserPropertiesManager*` | You can use this property for user management implementations. This property maps the Wildfly or {EAP} users for the given realm to the application users.
+|`*org.uberfire.ext.security.management.wildfly.properties.WildflyUserPropertiesManager*` | You can use this property for user management implementations. This property maps the {EAP} users for the given realm to the application users.
 
-|`*org.uberfire.ext.security.management.wildfly.properties.WildflyGroupPropertiesManager*` | You can use this property for group management implementations. This property maps the Wildfly or {EAP} roles for the given realm to the application groups.
-
-|===
-
-* Tomcat security management provider
-+
-This provider supports realm types based on `XML` files. The default value is tomcat server, such as `tomcat-users.xml`. The classes used in this package contain the user and group manager implementations for Apache Tomcat.
-+
-You can use the following system properties for the tomcat security management provider implementation:
-+
-.Tomcat security management provider properties
-[%header,cols=2]
-[%autowidth]
-|===
-|Property |Description
-
-|`*org.uberfire.ext.security.management.tomcat.TomcatUserManagementService*` | You can use this property for user, group, and role implementations.
-
-|`*org.uberfire.ext.security.management.tomcat.TomcatUserManager*` | You can use this property for user management implementations. This property maps the tomcat users for the given realm to the application users.
-
-|`*org.uberfire.ext.security.management.tomcat.TomcatGroupManager*` | You can use this property for group management implementations. This property maps the tomcat roles for the given realm to the application groups.
+|`*org.uberfire.ext.security.management.wildfly.properties.WildflyGroupPropertiesManager*` | You can use this property for group management implementations. This property maps the {EAP} roles for the given realm to the application groups.
 
 |===

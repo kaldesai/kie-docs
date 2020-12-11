@@ -1,13 +1,13 @@
 [id='business-central-configuring-EAP-security-management-provider-proc']
 
-= Configuring Wildfly or {EAP} security management provider
+= Configuring {EAP} security management provider
 
 .Prerequisites
 
-* Wildfly or {EAP} is installed on the system.
-* If you want to use an existing users or roles property files from the Wildfly or {EAP} instance, you must include the following system properties:
+* {EAP} is installed on the system.
+* If you want to use an existing users or roles property files from the {EAP} instance, you must include the following system properties:
 +
-.Wildfly or {EAP} security management provider based on property files
+.{EAP} security management provider based on property files
 [%header,cols=3]
 [%autowidth]
 |===
@@ -22,7 +22,7 @@
 |===
 
 +
-.Wildfly or {EAP} security management provider based on property files and CLI mode
+.{EAP} security management provider based on property files and CLI mode
 [%header,cols=3]
 [%autowidth]
 |===
@@ -42,10 +42,10 @@
 
 .Procedure
 
-To configure Wildfly or {EAP} Security management provider do any of the following tasks:
+To configure {EAP} Security management provider do any of the following tasks:
 
 --
-If you want to use Wildfly or {EAP} security provider based on property files, do the following tasks:
+If you want to use {EAP} security provider based on property files, do the following tasks:
 
 ... Create the `security-management.properties` file in the root of your application. For example, `src/main/resources/security-management.properties`.
 ... Enter the following keys and provider name as a value:
@@ -55,7 +55,7 @@ If you want to use Wildfly or {EAP} security provider based on property files, d
 org.uberfire.ext.security.management.api.userManagementServices=WildflyUserManagementService
 ----
 
-If you want to use Wildfly or {EAP} security provider based on property files and CLI mode, do the following tasks:
+If you want to use {EAP} security provider based on property files and CLI mode, do the following tasks:
 
 ... Create the `security-management.properties` file in the root of your application. For example, `src/main/resources/security-management.properties`.
 ... Enter the following keys and provider name as a value:
