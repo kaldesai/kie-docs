@@ -4,7 +4,7 @@
 
 Every application contains a single security policy which is used every time the system checks a permission. In security policy, the set of permissions are assigned to every role and a group.
 
-The security policy file is stored in the `WEB-INF/classes/security-policy.properties` under your application's `WAR` file structure.
+The default security policy file is stored in the `WEB-INF/classes/security-policy.properties` under your application's `WAR` file structure.
 
 NOTE: If the security policy is not defined then the security management feature is disabled and by default, the permission for all the resources and features is granted.
 
@@ -22,4 +22,4 @@ role.user.permission.perspective.read.Home=true
 role.user.permission.perspective.read.Dashboard=true
 ----
 
-Every entry defines a single permission which is assigned to a role or group. When an application starts, the security policy file is loaded and stored in the memory.
+Every entry defines a single permission which is assigned to a role or group. When an application starts, the default security policy file is loaded and stored in the `.niogit` directory.
