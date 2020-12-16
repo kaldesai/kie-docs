@@ -22,6 +22,6 @@ role.user.permission.perspective.read.Home=true
 role.user.permission.perspective.read.Dashboard=true
 ----
 
-In this example, the role `admin` has all the permissions but cannot read and view the dashboard perspective, whereas the role `user` can only view the dashboard perspective.
+In this example, the role `admin` has all the permissions but cannot read and view the dashboard perspective, whereas the role `user` can only read and view the dashboard perspective.
 
 Every entry defines a single permission which is assigned to a role or group. When an application starts, the default security policy file is loaded and stored in the `.niogit` directory.
