@@ -1,4 +1,4 @@
-[id='managing-business-central-user-and-group-management-con']
+[id='managing-business-central-user-and-group-management-con_{context}']
 = User and group management
 
 {CENTRAL} defines three types of entities for security management: users, groups, and roles. You can assign permissions to both roles and groups. You can assign the following roles in {CENTRAL}:

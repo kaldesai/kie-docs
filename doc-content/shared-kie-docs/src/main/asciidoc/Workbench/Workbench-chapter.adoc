@@ -14,6 +14,7 @@ include::SecurityManagement/managing-business-central-editing-users-proc.adoc[le
 include::SecurityManagement/managing-business-central-creating-groups-proc.adoc[leveloffset=+2]
 include::SecurityManagement/managing-business-central-editing-groups-proc.adoc[leveloffset=+2]
 include::SecurityManagement/business-central-security-management-con.adoc[leveloffset=+1]
+include::SecurityManagement/business-central-accessing-security-management-proc.adoc[leveloffset=+2]
 include::SecurityManagement/business-central-settings-security-policy-con.adoc[leveloffset=+2]
 include::SecurityManagement/business-central-security-management-provider-con.adoc[leveloffset=+2]
 include::SecurityManagement/business-central-configuring-EAP-security-management-provider-proc.adoc[leveloffset=+3]

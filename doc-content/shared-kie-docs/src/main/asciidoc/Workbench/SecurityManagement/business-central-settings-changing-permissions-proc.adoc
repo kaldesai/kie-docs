@@ -1,7 +1,7 @@
 [id='business-central-settings-changing-permissions-proc_{context}']
 = Changing permissions for groups and roles in {CENTRAL}
 
-You cannot change permissions for an individual user. However, you can change permissions for groups and roles. The changed permissions apply to users that have the role or belong to the group that you changed.
+In {CENTRAL}, you cannot change permissions for an individual user. However, you can change permissions for groups and roles. The changed permissions apply to users that have the role or belong to the group that you changed.
 
 [NOTE]
 ====

@@ -1,0 +1,15 @@
+[id='business-central-accessing-security-management-proc_{context}']
+
+= Accessing the {CENTRAL} security management page
+
+To access the *Security management* page, complete the following tasks:
+
+.Procedure
+
+. Select the *Admin* icon in the top-right corner of the screen.
+. Click *Roles*, *Groups*, or *Users* on the {CENTRAL} *Settings* page.
++
+Depending on which icon you click, the *Security management* page opens for the respective tab.
+. Use roles and groups to manage privileges and settings for users.
++
+Any changes apply to all users with the affected role or group.

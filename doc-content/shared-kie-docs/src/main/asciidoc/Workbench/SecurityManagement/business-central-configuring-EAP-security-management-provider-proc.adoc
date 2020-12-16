@@ -1,11 +1,21 @@
-[id='business-central-configuring-EAP-security-management-provider-proc']
+[id='business-central-configuring-EAP-security-management-provider-proc_{context}']
 
-= Configuring {EAP} security management provider
+= Configuring the {EAP} security management provider
+
+This procedure describes how to configure the {EAP} security management provider.
 
 .Prerequisites
 
-* {EAP} is installed on the system.
-* If you want to use an existing users or roles property files from the {EAP} instance, you must include the following system properties:
+* {EAP} is installed.
+
+.Procedure
+
+To configure {EAP} Security management provider, do any of the following tasks:
+
+--
+To use {EAP} security provider based on property files, complete the following steps:
+
+... To use an existing users or roles property files from the {EAP} instance, include the following system properties in the `EAP_HOME/standalone/configuration/application-users.properties` and `EAP_HOME/standalone/configuration/application-roles.properties` files:
 +
 .{EAP} security management provider based on property files
 [%header,cols=3]
@@ -20,7 +30,18 @@
 |`org.uberfire.ext.security.management.wildfly.properties.groups-file-path` | The absolute file path for the groups property file. This property is mandatory. |`./standalone/configuration/application-roles.properties`
 
 |===
+... Create the `security-management.properties` file in the root of your application. For example, create the following file:
+`src/main/resources/security-management.properties`.
+... Enter the following keys and provider name as a value:
++
+[source]
+----
+org.uberfire.ext.security.management.api.userManagementServices=WildflyUserManagementService
+----
 
+To use {EAP} security provider based on property files and CLI mode, complete the following steps:
+
+... To use an existing users or roles property files from the {EAP} instance, include the following system properties in the `EAP_HOME/standalone/configuration/application-users.properties` and `EAP_HOME/standalone/configuration/application-roles.properties` files:
 +
 .{EAP} security management provider based on property files and CLI mode
 [%header,cols=3]
@@ -40,24 +61,8 @@
 
 |===
 
-.Procedure
-
-To configure {EAP} Security management provider do any of the following tasks:
-
---
-If you want to use {EAP} security provider based on property files, do the following tasks:
-
-... Create the `security-management.properties` file in the root of your application. For example, `src/main/resources/security-management.properties`.
-... Enter the following keys and provider name as a value:
-+
-[source]
-----
-org.uberfire.ext.security.management.api.userManagementServices=WildflyUserManagementService
-----
-
-If you want to use {EAP} security provider based on property files and CLI mode, do the following tasks:
-
-... Create the `security-management.properties` file in the root of your application. For example, `src/main/resources/security-management.properties`.
+... Create the `security-management.properties` file in the root of your application. For example, create the following file:
+`src/main/resources/security-management.properties`.
 ... Enter the following keys and provider name as a value:
 +
 [source]

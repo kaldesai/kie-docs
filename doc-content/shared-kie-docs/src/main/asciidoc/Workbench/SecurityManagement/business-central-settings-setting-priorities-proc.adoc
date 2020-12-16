@@ -1,4 +1,4 @@
-[id='business-central-settings-setting-priorities-proc']
+[id='business-central-settings-setting-priorities-proc_{context}']
 = Setting priorities
 
 A user can have multiple roles and belong to multiple groups. The Priority setting determines the order of precedence of a role or group.

@@ -36,6 +36,7 @@ include::{shared-dir}/Workbench/SecurityManagement/managing-business-central-cre
 include::{shared-dir}/Workbench/SecurityManagement/managing-business-central-editing-groups-proc.adoc[leveloffset=+2]
 
 include::{shared-dir}/Workbench/SecurityManagement/business-central-security-management-con.adoc[leveloffset=+1]
+include::{shared-dir}/Workbench/SecurityManagement/business-central-accessing-security-management-proc.adoc[leveloffset=+2]
 //include::{enterprise-dir}/admin-and-config/business-central-settings-security-con.adoc[leveloffset=+1]
 include::{shared-dir}/Workbench/SecurityManagement/business-central-settings-security-policy-con.adoc[leveloffset=+2]
 include::{shared-dir}/Workbench/SecurityManagement/business-central-security-management-provider-con.adoc[leveloffset=+2]
