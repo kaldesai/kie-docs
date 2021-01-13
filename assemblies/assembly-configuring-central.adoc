@@ -19,7 +19,8 @@ As an administrator, you can customize the following on the admin *Settings* pag
 * *Process Administration*: Set the default pagination option in {CENTRAL}.
 * *Process Designer*: Set diagram editor properties.
 * *SSH Keys*: Add or delete SSH keys.
-* *Service Tasks Administration*: Enable or disable default service tasks and upload custom service tasks.
+* *Custom Tasks Administration*: Enable or disable default service tasks and upload custom service tasks.
+* *Dashbuilder Data Transfer*: Import and export Dashbuilder data as ZIP files in {CENTRAL}.
 * *Profiles*: Set the workbench profile as *Planner and Rules* or *Full*.
 * *Archetype*: View, add, validate, set as default, and delete the archetypes. Used as a template when creating a new project in {CENTRAL}.
 
