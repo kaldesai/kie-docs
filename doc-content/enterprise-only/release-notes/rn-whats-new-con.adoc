@@ -79,7 +79,7 @@ ifdef::PAM[]
 The following list provides a summary of dashbuilder runtime updates:
 
 * It is now possible to automatically deploy the dashboards from {CENTRAl} on dashbuilder runtime. {CENTRAl} is linked to dashbuilder runtime with the help of gradual export feature. You can select datasets and pages, but instead of downloading a `ZIP` file, you can click the *Open* button. When you click the *Open* button, the selected data is exported and dashbuilder runtime updates the model content when it is opened.
-
++
 You can use `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to enable this new feature.
 
 * Dashboards imported in dashbuilder runtime can have a default page. The following list provides a summary of dashbuilder runtime default page updates:
