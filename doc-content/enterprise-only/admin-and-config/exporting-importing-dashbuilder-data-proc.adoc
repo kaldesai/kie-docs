@@ -150,3 +150,27 @@ WARNING: You should only import Dashbuilder data to a clean installation of {PRO
 . Click *Import*.
 
 endif::DM[]
+
+== Deploying dashboards from {CENTRAL} on dashbuilder runtime
+
+You can automatically deploy the dashboards from {CENTRAl} on dashbuilder runtime. {CENTRAl} is linked to dashbuilder runtime with the help of gradual export feature.
+
+.Prerequisites
+
+* Dasbuilder runtime is configured on the system.
+* You must set the `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to `true` in the `standalone.xml` file to enable the feature.
+
+.Procedure
+
+. Start {CENTRAL}, go to *Menu → Design → Pages*.
+. In the *Components* panel, drag and edit the required component types to the canvas.
+. Click *Save*.
+. In {CENTRAL}, select the *Admin* icon in the top-right corner of the screen and select *Dashbuilder Data Transfer*.
+. On the *Dashbuilder Data Transfer* page, click *Custom export*.
+. In *Export Wizard* panel, verify the pages that you want to include in the ZIP file and click *Next*.
+. Select *Export Wizard* and click *Open*.
++
+You can see the dashbuilder runtime home page.
+. Go to *Dashboards → Runtime Dashboards* and select the exported ZIP file.
++
+The selected data is exported and dashbuilder runtime updates the model content when it is opened.
