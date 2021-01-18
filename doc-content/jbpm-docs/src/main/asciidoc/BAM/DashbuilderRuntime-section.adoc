@@ -16,29 +16,128 @@ After login, users may upload dashboard files exported from {CENTRAL}
 image::BAM/DashbuilderRuntimeWelcomePage.png[]
 
 == Exporting Dashbuilder data
-You can export the dashbuilder related data such as datasets, pages, and navigation from {CENTRAL} as a ZIP file. If the exported dashboard contains only one page then it will be used as the default page or you can select a default page by just naming it *index*.
+
+You can export the dashbuilder related data such as datasets, pages, and navigation from {CENTRAL} as a ZIP file.
 
 .Procedure
 . In {CENTRAL}, select the *Admin* icon in the top-right corner of the screen and select *Dashbuilder Data Transfer*.
-. If you want to export all dashbuilder data as a ZIP file, click *Export all* on the *Dashbuilder Data Transfer* page.
-. If you want to select the data to be exported, click *Custom Export* on the *Dashbuilder Data Transfer* page.
 
-image::BAM/GradualExport.png[]
+. To export the dashbuilder related data, do any of the following tasks:
++
+--
+If you want to export all dashbuilder data as a ZIP file, do the following tasks:
+
+... On the *Dashbuilder Data Transfer* page, click *Export all*.
++
+An `export.zip` file containing all dashbuilder data is downloaded. The `export.zip` file structure is separated by data type. For example:
++
+[source]
+----
+dashbuilder/datasets/definitions/dataset-example1.dset
+dashbuilder/datasets/definitions/dataset-example2.dset
+dashbuilder/datasets/readme.md
+dashbuilder/perspectives/page1/perspective_layout
+dashbuilder/perspectives/page1/perspective_layout.plugin
+dashbuilder/perspectives/page2/perspective_layout
+dashbuilder/perspectives/page2/perspective_layout.plugin
+dashbuilder/perspectives/readme.md
+dashbuilder/navigation/navigation/navtree.json
+dashbuilder/navigation/readme.md
+VERSION
+----
+
+
+If you want to export customized user created dashbuilder data as a ZIP file, do the following tasks:
+
+... On the *Dashbuilder Data Transfer* page, click *Custom export*.
+... In *Export Wizard* panel, select the datasets that you want to include in the ZIP file and click *Next*.
+... Select the pages that you want to include in the ZIP file and click *Next*.
++
+The *Export Wizard* panel validates the selected datasets and pages. The summary of the datasets and pages is available on the panel.
++
+NOTE: Navigation is always included in the exported `ZIP` file.
+
+... Click *Download* if your export is ready.
++
+An `export.zip` file containing customized dashbuilder data is downloaded.
++
+NOTE: You must select the pages and the datasets associated with those pages in the *Export Wizard* panel. You must select at least one page. If you fail to select both datasets and pages, an export error is generated and you can not download the `export.zip` file.
+
+... Click *Finish*.
+
+--
+
+== Importing Dashbuilder data
+
+You can import Dashbuilder data to {CENTRAL} from a ZIP file if the archive is structured in the same way as the following example:
+
+[source]
+----
+dashbuilder/datasets/definitions/dataset-example1.dset
+dashbuilder/datasets/definitions/dataset-example2.dset
+dashbuilder/datasets/readme.md
+dashbuilder/perspectives/page1/perspective_layout
+dashbuilder/perspectives/page1/perspective_layout.plugin
+dashbuilder/perspectives/page2/perspective_layout
+dashbuilder/perspectives/page2/perspective_layout.plugin
+dashbuilder/perspectives/readme.md
+dashbuilder/navigation/navigation/navtree.json
+dashbuilder/navigation/readme.md
+VERSION
+----
+
+.Procedure
+. In {CENTRAL}, select the *Admin* icon in the top-right corner of the screen and select *Dashbuilder Data Transfer*.
++
+WARNING: You should only import Dashbuilder data to a clean installation of {PRODUCT} in order to avoid overwriting data on an existing system.
+
+. On the *Dashbuilder Data Transfer* page, click the *Choose File* icon.
+
+. Navigate to the ZIP file you want to import and select the file.
+
+. Click the *Upload* icon.
+
+. Click *Import*.
+
+== Deploying dashboards from {CENTRAL} on dashbuilder runtime
+
+You can automatically deploy the dashboards from {CENTRAl} on dashbuilder runtime. {CENTRAl} is linked to dashbuilder runtime with the help of gradual export feature.
+
+.Prerequisites
+
+* Dasbuilder runtime is configured on the system.
+* You must set the `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to `true` in the `standalone.xml` file to enable the feature.
+
+.Procedure
+
+. Start {CENTRAL}, go to *Menu → Design → Pages*.
+. In the *Components* panel, drag and edit the required component types to the canvas.
+. Click *Save*.
+. In {CENTRAL}, select the *Admin* icon in the top-right corner of the screen and select *Dashbuilder Data Transfer*.
+. On the *Dashbuilder Data Transfer* page, click *Custom export*.
+. In *Export Wizard* panel, verify the pages that you want to include in the ZIP file and click *Next*.
+. Select *Export Wizard* and click *Open*.
++
+You can see the dashbuilder runtime home page.
+. Go to *Dashboards → Runtime Dashboards* and select the exported ZIP file.
++
+The selected data is exported and dashbuilder runtime updates the model content when it is opened.
+
 
 
 == Execution modes
 Dashbuilder Runtime has execution modes, which are:
 
-* *SINGLE*: This is the default mode. When a dashboard is uploaded then it will be used in Runtime. It is also possible to refer on dashboards under the directory configured using the system property `dashbuilder.import.base.dir`, default value is `/tmp/dashbuilder/models`. 
+* *SINGLE*: This is the default mode. When a dashboard is uploaded then it will be used in Runtime. It is also possible to refer on dashboards under the directory configured using the system property `dashbuilder.import.base.dir`, default value is `/tmp/dashbuilder/models`.
 If a file is in the `models` directory, then it is possible to load it using `RUNTIME_URL?import=FILE_NAME` in the URL. For example, the file `sales_dashboard.zip`, placed in the `models` directory, can be loaded using `RUNTIME_URL?import=sales_dashboard`(notice that the file extension is not necessary).
-* *STATIC*: In this mode Dashbuilder Runtime will not prompt users for upload and use the model file configured using system property `dashbuilder.runtime.import`. 
+* *STATIC*: In this mode Dashbuilder Runtime will not prompt users for upload and use the model file configured using system property `dashbuilder.runtime.import`.
 * *MULTI*:  Finally in multi mode users can upload multiple dashboards in the same Dashbuilder Runtime installation. To enable it the system property `dashbuilder.runtime.multi` must be set as true.
 
 image::BAM/DashbuilderRuntimeMultiMode.png[]
 
 == Embedding dashboards
 
-Dashboards running in Dashbuilder Runtime can be embedded in third-party applications using an `iframe`. To embed dashboards, the query parameter *standalone* should be added to the URL along with the dashboard page name using the query param *perspective*: 
+Dashboards running in Dashbuilder Runtime can be embedded in third-party applications using an `iframe`. To embed dashboards, the query parameter *standalone* should be added to the URL along with the dashboard page name using the query param *perspective*:
 
 `RUNTIME_URL?standalone&perspective=PAGE_NAME`
 
@@ -107,7 +206,7 @@ There are multiple configuration for Dashbuilder Runtime which can be done using
 | Values
 
 |*dashbuilder.import.base.dir*
-|Sets the directory where ZIP models should be placed. 
+|Sets the directory where ZIP models should be placed.
 Default is `/tmp/dashbuilder/models`
 |a path in your system to a directory
 
@@ -125,7 +224,7 @@ Default is false
 | true / false
 
 |*dashbuilder.runtime.multi*
-|Enables/disables multi mode. 
+|Enables/disables multi mode.
 Default is false.
 | true / false
 
