@@ -4,24 +4,6 @@
 
 In the context of security management, a realm restricts access to different application resources. Realms contain information about the users, groups, roles, and permissions. A concrete user and group management service implementation for a specific realm is called a security management provider.
 
-The user and group management features available depend on the configured security provider determines what user and group management features are available. If the built-in security management providers do not fit with your application security realm, then you can build and register your own security management provider.
+If the built-in security management providers do not fit with your application security realm, then you can build and register your own security management provider.
 
 NOTE: If the security management provider is not installed, the user interface for managing the security realm will not be available. After you install and configure a security management provider, the user and group management features are automatically enabled in the security management user interface.
-
-{CENTRAL} includes the {EAP} security management provider which supports realm types based on the contents of the `application-users.properties` or `application-roles.properties` property file.
-
-You can use the following system properties to implement the {EAP} security management provider:
-
-.{EAP} security management provider properties
-[%header,cols=2]
-[%autowidth]
-|===
-|Property |Description
-
-|`*org.uberfire.ext.security.management.wildfly.properties.WildflyUserManagementService*` | You can use this property for user, group, and role implementations.
-
-|`*org.uberfire.ext.security.management.wildfly.properties.WildflyUserPropertiesManager*` | You can use this property for user management implementations. This property maps the {EAP} users for the specified realm to the application users.
-
-|`*org.uberfire.ext.security.management.wildfly.properties.WildflyGroupPropertiesManager*` | You can use this property for group management implementations. This property maps the {EAP} roles for the specified realm to the application groups.
-
-|===

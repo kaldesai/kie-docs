@@ -2,7 +2,7 @@
 
 = Configuring the {EAP} security management provider
 
-This procedure describes how to configure the {EAP} security management provider.
+{CENTRAL} includes the {EAP} security management provider which supports realm types based on the contents of the `application-users.properties` or `application-roles.properties` property file.
 
 .Prerequisites
 
@@ -13,7 +13,7 @@ This procedure describes how to configure the {EAP} security management provider
 To configure {EAP} Security management provider, do any of the following tasks:
 
 --
-To use {EAP} security provider based on property files, complete the following steps:
+* To use {EAP} security provider based on property files, complete the following steps:
 
 ... To use an existing users or roles property files from the {EAP} instance, include the following system properties in the `EAP_HOME/standalone/configuration/application-users.properties` and `EAP_HOME/standalone/configuration/application-roles.properties` files:
 +
@@ -31,7 +31,11 @@ To use {EAP} security provider based on property files, complete the following s
 
 |===
 ... Create the `security-management.properties` file in the root of your application. For example, create the following file:
-`src/main/resources/security-management.properties`.
++
+[source]
+----
+`src/main/resources/security-management.properties`
+----
 ... Enter the following keys and provider name as a value:
 +
 [source]
@@ -39,7 +43,7 @@ To use {EAP} security provider based on property files, complete the following s
 org.uberfire.ext.security.management.api.userManagementServices=WildflyUserManagementService
 ----
 
-To use {EAP} security provider based on property files and CLI mode, complete the following steps:
+* To use {EAP} security provider based on property files and CLI mode, complete the following steps:
 
 ... To use an existing users or roles property files from the {EAP} instance, include the following system properties in the `EAP_HOME/standalone/configuration/application-users.properties` and `EAP_HOME/standalone/configuration/application-roles.properties` files:
 +
@@ -62,7 +66,11 @@ To use {EAP} security provider based on property files and CLI mode, complete th
 |===
 
 ... Create the `security-management.properties` file in the root of your application. For example, create the following file:
-`src/main/resources/security-management.properties`.
++
+[source]
+----
+`src/main/resources/security-management.properties`
+----
 ... Enter the following keys and provider name as a value:
 +
 [source]

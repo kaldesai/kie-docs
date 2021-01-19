@@ -2,8 +2,6 @@
 
 = Security management
 
-This section describes how you can manage the users, groups, and permissions with the help of user interface in order to configure who can access the different available resources and features.
+Security management describes how you can manage the users, groups, and permissions with the help of user interface in order to configure who can access the different available resources and features.
 
-{CENTRAL} defines three types of entities for security management: users, groups, and roles. You can assign permissions to both roles and groups. User privileges depend on permissions from the groups and roles that the user is a member of.
-
-You can perform security and permission management tasks from the *Security management* page.
+You control access to {CENTRAL} resources and features by managing users, groups, and permissions from the {CENTRAL} Security management page. {CENTRAL} defines three types of entities for security management: users, groups, and roles. You can assign permissions to both roles and groups. Users inherit permissions from the groups and roles that the user is a member of.
