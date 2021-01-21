@@ -1,0 +1,3 @@
+[id='building-custom-dashboard-widgets-running-heatmap-components-proc_{context}']
+
+= Running heatmap components

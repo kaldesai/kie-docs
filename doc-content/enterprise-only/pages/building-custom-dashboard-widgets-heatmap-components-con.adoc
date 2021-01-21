@@ -1,0 +1,5 @@
+[id='building-custom-dashboard-widgets-heatmap-components-con_{context}']
+
+= Heatmap components
+
+In {CENTRAL}, you can add external components to a page. The components are disabled by default. To enable the external components, change the value of `dashbuilder.components.enable` system property to `true`.
