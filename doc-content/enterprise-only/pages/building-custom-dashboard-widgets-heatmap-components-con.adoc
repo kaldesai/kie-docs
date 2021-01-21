@@ -2,4 +2,8 @@
 
 = Heatmap components
 
-In {CENTRAL}, you can add external components to a page. The components are disabled by default. To enable the external components, change the value of `dashbuilder.components.enable` system property to `true`.
+In {CENTRAL}, you can add heatmap components to a page. You can export these components to Dashbuilder Runtime.
+You can retrieve the heat information from a {KIE_Server} datasets. You can create, edit and, build a dashboard using heatmap component.
+
+Heatmaps components are used to display heat information over a process diagram. The color on the process diagram nodes is related to the value you assign to each node. Based on the values that you provide, the color varies on a process diagram.
+If the assigned value is maximum, the heat intensifies and if it is minimum, it will not show any heat on the process diagram.

@@ -1,3 +1,5 @@
 [id='building-custom-dashboard-widgets-creating-all-processes-heatmap-components-proc_{context}']
 
-= Creating all processes heatmap components
+= Creating processes heatmap components
+
+You can use multiple processes diagrams. 
