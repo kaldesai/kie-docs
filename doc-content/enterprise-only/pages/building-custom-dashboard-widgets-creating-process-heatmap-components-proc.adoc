@@ -2,10 +2,14 @@
 
 = Creating process heatmap components
 
+You can create heatmap components for a specific process in {CENTRAL}.
+
 .Prerequisites
 
-* {KIE_SERVER} is integrated with {CENTRAL}.
-
+* {KIE_SERVER} is deployed and connected to {CENTRAL}.
+* You have created a project in {CENTRAL} and it contains at least one business process asset.
+* A project with a process definition has been deployed in {CENTRAL}.
+* Sample process instances are created.
 
 .Procedure
 
@@ -28,7 +32,7 @@ The *Data Set Creation Wizard* page opens.
 ... Select the query target from the list.
 ... In the *Query* field, enter the following custom SQL query.
 +
-[SOURCE]
+[source, SQL]
 ----
 select
    pil.externalId,
@@ -62,8 +66,31 @@ group by
      pil.externalId,
      nid
 ----
+
 ... Complete the *Data Set Creation Wizard* and click *Test*.
 ... Click *Save*.
-. Go back to *Menu → Design → Pages*.
+. Return to *Menu → Design → Pages*.
 . In the *Components* panel, expand the *Heatmaps* components and drag the *Process Heatmap* component type to the canvas.
 . In the *Displayer editor* wizard, click *Data* tab and select the newly created {KIE_SERVER} dataset.
+. In the *Data* tab, select *NID* and *AVERAGEEXECUTIONTIME* from the *Columns* field.
+. Click *Display* tab and edit the following values as per your requirements:
+* *Chart*
+* *Margins*
+* *Filter*
+* *Refresh*
+* *Columns*
+. Click *Component Editor* tab and input the following values into the *Component Properties* field:
+* *Server Template*
+* *Container ID*
+* *Process Definition ID*
++
+[NOTE]
+====
+All the fields are mandatory.
+====
+. Click *+OK*.
++
+.Example process heatmap components
+image::pages/process-heatmap-component.png[]
+
+You can see the heatmap components on the process diagram.

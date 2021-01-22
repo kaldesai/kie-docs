@@ -7,3 +7,5 @@ You can retrieve the heat information from a {KIE_Server} datasets. You can crea
 
 Heatmaps components are used to display heat information over a process diagram. The color on the process diagram nodes is related to the value you assign to each node. Based on the values that you provide, the color varies on a process diagram.
 If the assigned value is maximum, the heat intensifies and if it is minimum, it will not show any heat on the process diagram.
+
+Once your components are ready, you can export these heatmap components in the Dashbuilder Runtime.

@@ -1,3 +1,37 @@
 [id='building-custom-dashboard-widgets-running-heatmap-components-proc_{context}']
 
 = Running heatmap components
+
+To run the specific heatmap component, complete the following steps:
+
+.Prerequisites
+
+* npm is installed on your system. For more information about installing npm, see https://docs.npmjs.com/downloading-and-installing-node-js-and-npm[Downloading and installing Node.js and npm].
+* Yarn is installed on your system. for more information about installing yarn, See https://classic.yarnpkg.com/en/docs/install/#debian-stable[2 - Installation].
+
+.Procedure
+
+. Go to `appformer/dashbuilder/dashbuilder-shared/dashbuilder-js` directory.
+. In `dashbuilder-js` directory, open the terminal and enter the following command:
++
+[source]
+----
+yarn run init && yarn run build:fast
+----
++
+In the `dashbuilder-js/packages` directory, following components are present:
+
+* processes-heatmaps-component
+* process-heatmap-component
+* logo-component
+* heatmap-component
+
+. Go to `dashbuilder-js/packages` directory, open the desired heatmap component and enter the following command in the terminal:
++
+[source]
+----
+yarn run start
+----
+. To access the heatmap component, enter http://localhost:9001/ in a web browser.
++
+You can see the selected heatmap component on a web browser.
