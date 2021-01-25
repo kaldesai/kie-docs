@@ -45,7 +45,7 @@ VERSION
 ----
 
 
-If you want to export customized user created dashbuilder data as a ZIP file, do the following tasks:
+If you want to export customized user created and provided dashbuilder data as a ZIP file, do the following tasks:
 
 ... On the *Dashbuilder Data Transfer* page, click *Custom export*.
 ... In *Export Wizard* panel, select the datasets that you want to include in the ZIP file and click *Next*.
@@ -151,14 +151,33 @@ WARNING: You should only import Dashbuilder data to a clean installation of {PRO
 
 endif::DM[]
 
-== Deploying dashboards from {CENTRAL} on dashbuilder runtime
+ifdef::PAM[]
 
-You can automatically deploy the dashboards from {CENTRAl} on dashbuilder runtime. {CENTRAl} is linked to dashbuilder runtime with the help of gradual export feature.
+== Deploying dashboards from {CENTRAL} on Dashbuilder Runtime
+
+You can automatically deploy the dashboards from {CENTRAl} on Dashbuilder Runtime. {CENTRAl} is linked to Dashbuilder Runtime with the help of gradual export feature.
 
 .Prerequisites
 
 * Dasbuilder runtime is configured on the system.
-* You must set the `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to `true` in the `standalone.xml` file to enable the feature.
+* You have set the `dashbuilder.runtime.multi` system property to `true` in the `standalone.xml` file.
+* You have set the value of `dashbuilder.runtime.location` system property to the dashboard root URL.
++
+For example:
++
+[source]
+----
+<property name="dashbuilder.runtime.location" value=" http://localhost:8080"
+----
+* You have set the `dashbuilder.export.dir` system property to the shared directory where Dashbuilder Runtime reads its model.
++
+For example:
++
+[source]
+----
+<property name="dashbuilder.export.dir" value="/tmp/dashbuilder/models/"
+----
+
 
 .Procedure
 
@@ -167,10 +186,13 @@ You can automatically deploy the dashboards from {CENTRAl} on dashbuilder runtim
 . Click *Save*.
 . In {CENTRAL}, select the *Admin* icon in the top-right corner of the screen and select *Dashbuilder Data Transfer*.
 . On the *Dashbuilder Data Transfer* page, click *Custom export*.
-. In *Export Wizard* panel, verify the pages that you want to include in the ZIP file and click *Next*.
+. In *Export Wizard* panel, select the pages that you want to include in the ZIP file and click *Next*.
 . Select *Export Wizard* and click *Open*.
 +
-You can see the dashbuilder runtime home page.
-. Go to *Dashboards → Runtime Dashboards* and select the exported ZIP file.
+You can see the Dashbuilder Runtime home page. If you are not logged in, you are redirected to the log in page.
+. Log in to Dashbuilder Runtime.
+. Go to *Dashboards → Runtime Dashboards* and you can see the pages.
 +
-The selected data is exported and dashbuilder runtime updates the model content when it is opened.
+The selected data is exported and Dashbuilder Runtime updates the model content when it is opened.
+
+endif::PAM[]
