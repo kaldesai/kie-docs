@@ -15,7 +15,7 @@ Support for integration with the OSGi framework is deprecated in {PRODUCT}. It d
 
 == Support for RuleUnit API
 
-Existing RuleUnit API is now deprecated because it is not compatible with Kogito RuleUnit API.
+An Existing RuleUnit API is now deprecated because it is not compatible with Kogito RuleUnit API.
 
 ==  Legacy Test Scenarios tool
 The legacy Test Scenarios tool was deprecated in {PRODUCT} 7.3.0. It will be removed in a future {PRODUCT} release. Use the new Test Scenarios designer instead.
