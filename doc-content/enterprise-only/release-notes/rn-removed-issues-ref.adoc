@@ -4,8 +4,12 @@
 
 The component listed in this section are removed.
 
-== Legacy Business process asset
-The legacy Business process asset is removed in {PRODUCT} {ENTERPRISE_VERSION}. Use the new Business process asset instead.
+ifdef::PAM[]
 
-== Removed unsupported languages
-In the {PRODUCT} user interface, support for the Chinese, German, and Portuguese languages is now removed.
+== Removed the case modeler technical preview editor
+
+The case modeler technical preview editor is removed in {PRODUCT} {ENTERPRISE_VERSION}. Use the new designer for cases going forward.
+
+For more information, see {URL_GETTING_STARTED_CASES}#assembly-getting-started-case-management[_{GETTING_STARTED_CASES}_].
+
+endif::PAM[]

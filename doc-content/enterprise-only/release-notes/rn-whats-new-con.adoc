@@ -74,15 +74,15 @@ For more information, see {URL_GETTING_STARTED_DECISION_SERVICE}#assembly-gettin
 
 ifdef::PAM[]
 
-=== Dashbuilder runtime
+=== Dashbuilder Runtime
 
-The following list provides a summary of dashbuilder runtime updates:
+The following list provides a summary of Dashbuilder Runtime updates:
 
 * It is now possible to automatically deploy the dashboards from {CENTRAl} on dashbuilder runtime. {CENTRAl} is linked to dashbuilder runtime with the help of gradual export feature. You can select datasets and pages, but instead of downloading a `ZIP` file, you can click the *Open* button. When you click the *Open* button, the selected data is exported and dashbuilder runtime updates the model content when it is opened.
 +
 You can use `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to enable this new feature.
 
-* Dashboards imported in dashbuilder runtime can have a default page. The following list provides a summary of dashbuilder runtime default page updates:
+* Dashboards imported in Dashbuilder Runtime can have a default page. The following list provides a summary of dashbuilder runtime default page updates:
 
 ** When an imported dashboard has only one page, then it is used as the default page.
 ** If a page is named as `index` then it will be used as the default page.
@@ -102,6 +102,18 @@ endif::PAM[]
 
 When integrating {PRODUCT} with {RH-SSO}, you can enable support for client roles. By default, only realm roles are supported.
 
+= KIE API improvements
+
+You can now use the KIE REST API to signal a process using its alias.
+
+== Integration with {AMQ_STREAMS}
+
+You can now integrate your business processes that run on a {KIE_SERVER} with Red Hat {AMQ_STREAMS} or Apache Kafka.
+
+== Certification of {FUSE_LONG} on {EAP}
+
+{PRODUCT} is now certified to work with {FUSE_LONG} version 7.8 on {EAP}. Integration with {FUSE_LONG} version 7.8 on Karaf (OSGi) is not supported.
+
 ifdef::PAM[]
 
 == Process Designer
@@ -114,6 +126,13 @@ For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-b
 === Support for MVEL expressions in data assignments
 
 You can now add MVEL expressions in the Data IO assignments of a user task. For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
+
+== {PROCESS_ENGINE}
+
+=== {PROCESS_ENGINE_CAP} API improvements
+
+You can now use the {PROCESS_ENGINE} API to signal a process instance using its correlation key.
+You can now use the {PROCESS_ENGINE} API to determine the node type from within an event listener. When using the advanced query feature of the {PROCESS_ENGINE} API, you can now optionally exclude process variables from the search results.
 
 endif::PAM[]
 

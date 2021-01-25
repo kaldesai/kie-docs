@@ -23,3 +23,12 @@ You can deploy a high-availability {PRODUCT} authoring environment on {OPENSHIFT
 
 == OpenShift operator installer wizard
 An installer wizard is provided in the OpenShift operator for {PRODUCT}. You can use the wizard to deploy a {PRODUCT} environment on {OPENSHIFT} with the operator.
+
+== Authoring perspective customization
+
+You can customize the {CENTRAL} authoring perspective using the following features:
+
+* Ability to open a {CENTRAL} project directly using an URL path parameter, without going through a list of spaces and projects.
+* Ability to hide or show the project toolbar, *Metrics* tab, and *Change Request* tab as per your requirements.
+* Ability to enhance the pagination.
+* Ability to customize the number of assets present on the project screen.
