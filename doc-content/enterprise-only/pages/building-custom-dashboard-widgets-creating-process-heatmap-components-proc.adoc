@@ -29,7 +29,7 @@ The *Data Set Explorer* page opens.
 The *Data Set Creation Wizard* page opens.
 ... Enter the name of the dataset.
 ... Select the server configuration. It is available if you have deployed the project.
-... Select the query target from the list.
+... Select *CUSTOM* query target from the list.
 ... In the *Query* field, enter the following custom SQL query.
 +
 [source, SQL]
@@ -57,14 +57,16 @@ from(
                 NodeInstanceLog
         group by
               processinstanceid,
-               nodeinstanceid
+               nodeinstanceid,
+              nid
        order by lastLog
 )
 inner join
      ProcessInstanceLog pil on pil.processInstanceId = piid
 group by
      pil.externalId,
-     nid
+     nid,
+     nodename
 ----
 
 ... Complete the *Data Set Creation Wizard* and click *Test*.

@@ -2,6 +2,9 @@
 
 = Running heatmap components
 
+You can run the internal components locally, outside of {CENTRAL} for testing purpose only. The same API is used to create external components. You can build your own components using an external components.
+For more information about external components, see <<building-custom-dashboard-widgets-external-components-con_{context}>>
+
 To run the specific heatmap component, complete the following steps:
 
 .Prerequisites
