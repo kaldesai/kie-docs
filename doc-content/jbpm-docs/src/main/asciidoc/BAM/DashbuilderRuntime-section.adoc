@@ -107,7 +107,7 @@ You can automatically deploy the dashboards from {CENTRAl} on dashbuilder runtim
 
 * Dasbuilder runtime is configured on the system.
 * You have set the `dashbuilder.runtime.multi` system property to `true` in the `standalone.xml` file.
-* You have set the value of `dashbuilder.runtime.location` system property to the dashboard root URL.
+* You have set the value of `dashbuilder.runtime.location` system property to the Dashbuilder Runtime URL.
 +
 For example:
 +
@@ -134,7 +134,7 @@ For example:
 . In *Export Wizard* panel, verify the pages that you want to include in the ZIP file and click *Next*.
 . Select *Export Wizard* and click *Open*.
 +
-You can see the dashbuilder runtime home page. If you are not logged in, you are redirected to the log in page.
+You can see the dashbuilder runtime home page. If you are not logged in, you are redirected to the login page.
 . Log in to Dashbuilder Runtime.
 . Go to *Dashboards → Runtime Dashboards* and select the exported ZIP file.
 +
@@ -158,9 +158,13 @@ Dashboards running in Dashbuilder Runtime can be embedded in third-party applica
 
 `RUNTIME_URL?standalone&perspective=PAGE_NAME`
 
-In multi it is also required to specify the import id:
+In case of multi mode, it is also required to specify the import id:
 
 `RUNTIME_URL?standalone&perspective=PAGE_NAME&import=IMPORT_NAME`
+
+In case of multi mode, you must specify which dashboard you want to use by using the `import={dashboard_name}` property:
+
+`RUNTIME_URL?standalone&import=DASHBOARD_NAME&perspective=PAGE_NAME` 
 
 == REST API
 

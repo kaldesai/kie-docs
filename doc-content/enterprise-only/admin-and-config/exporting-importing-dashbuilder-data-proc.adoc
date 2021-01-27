@@ -161,7 +161,7 @@ You can automatically deploy the dashboards from {CENTRAl} on Dashbuilder Runtim
 
 * Dasbuilder runtime is configured on the system.
 * You have set the `dashbuilder.runtime.multi` system property to `true` in the `standalone.xml` file.
-* You have set the value of `dashbuilder.runtime.location` system property to the dashboard root URL.
+* You have set the value of `dashbuilder.runtime.location` system property to the Dashbuilder Runtime URL.
 +
 For example:
 +
@@ -189,7 +189,7 @@ For example:
 . In *Export Wizard* panel, select the pages that you want to include in the ZIP file and click *Next*.
 . Select *Export Wizard* and click *Open*.
 +
-You can see the Dashbuilder Runtime home page. If you are not logged in, you are redirected to the log in page.
+You can see the Dashbuilder Runtime home page. If you are not logged in, you are redirected to the login page.
 . Log in to Dashbuilder Runtime.
 . Go to *Dashboards → Runtime Dashboards* and you can see the pages.
 +
