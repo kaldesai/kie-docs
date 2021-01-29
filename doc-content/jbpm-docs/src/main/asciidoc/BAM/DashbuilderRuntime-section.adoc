@@ -145,26 +145,26 @@ The selected data is exported and dashbuilder runtime updates the model content 
 == Execution modes
 Dashbuilder Runtime has execution modes, which are:
 
-* *SINGLE*: This is the default mode. When a dashboard is uploaded then it will be used in Runtime. It is also possible to refer on dashboards under the directory configured using the system property `dashbuilder.import.base.dir`, default value is `/tmp/dashbuilder/models`.
+* *SINGLE*: This is the default mode. In single mode, the dashboard is used in runtime when uploaded. You can refer to dashboards under the directory configured using the `dashbuilder.import.base.dir` system property (default value is `/tmp/dashbuilder/models`).
 If a file is in the `models` directory, then it is possible to load it using `RUNTIME_URL?import=FILE_NAME` in the URL. For example, the file `sales_dashboard.zip`, placed in the `models` directory, can be loaded using `RUNTIME_URL?import=sales_dashboard`(notice that the file extension is not necessary).
-* *STATIC*: In this mode Dashbuilder Runtime will not prompt users for upload and use the model file configured using system property `dashbuilder.runtime.import`.
-* *MULTI*:  Finally in multi mode users can upload multiple dashboards in the same Dashbuilder Runtime installation. To enable it the system property `dashbuilder.runtime.multi` must be set as true.
+* *STATIC*: In static mode, the Dashbuilder Runtime does not prompt you to upload and use the model file that is configured using the `dashbuilder.runtime.import` system property.
+* *MULTI*:  In multi-mode, you can upload multiple dashboards in the same Dashbuilder Runtime installation. To enable it, set the `dashbuilder.runtime.multi` system property as true.
 
 image::BAM/DashbuilderRuntimeMultiMode.png[]
 
 == Embedding dashboards
 
-Dashboards running in Dashbuilder Runtime can be embedded in third-party applications using an `iframe`. To embed dashboards, the query parameter *standalone* should be added to the URL along with the dashboard page name using the query param *perspective*:
+Dashboards running in Dashbuilder Runtime can be embedded in third-party applications using an `iframe`. To embed dashboards, the *standalone* query parameter must be added to the URL along with the dashboard page name using the *perspective* parameter:
 
 `RUNTIME_URL?standalone&perspective=PAGE_NAME`
 
-In case of multi mode, it is also required to specify the import id:
+In case of multi-mode, it is also required to specify the import ID, for example:
 
 `RUNTIME_URL?standalone&perspective=PAGE_NAME&import=IMPORT_NAME`
 
-In case of multi mode, you must specify which dashboard you want to use by using the `import={dashboard_name}` property:
+In case of multi-mode, you must specify which dashboard you want to use by using the `import={dashboard_name}` property, for example:
 
-`RUNTIME_URL?standalone&import=DASHBOARD_NAME&perspective=PAGE_NAME` 
+`RUNTIME_URL?standalone&import=DASHBOARD_NAME&perspective=PAGE_NAME`
 
 == REST API
 
@@ -227,7 +227,7 @@ There are multiple configuration for Dashbuilder Runtime which can be done using
 | Values
 
 |*dashbuilder.import.base.dir*
-|Sets the directory where ZIP models should be placed.
+|Sets the directory where ZIP models must be placed.
 Default is `/tmp/dashbuilder/models`
 |a path in your system to a directory
 
@@ -245,7 +245,7 @@ Default is false
 | true / false
 
 |*dashbuilder.runtime.multi*
-|Enables/disables multi mode.
+|Enables or disables multi-mode.
 Default is false.
 | true / false
 

@@ -62,7 +62,7 @@ You can create a new project from scratch or clone projects from an existing Git
 
 |Branch |The default branch to be used when using a Git repository.
 
-|Assets Per Page| Used to customize the number of assets per page in the project screen. The default value is `15`.
+|Assets Per Page| Used to customize the number of assets per page in the project. The default value is `15`.
 
 |===
 +
