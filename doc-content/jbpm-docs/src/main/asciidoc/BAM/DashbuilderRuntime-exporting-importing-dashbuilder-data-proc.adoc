@@ -98,7 +98,7 @@ WARNING: You must import Dashbuilder data to a clean installation of {PRODUCT} i
 
 endif::[]
 
-ifdef::DM,JBPM[]
+ifdef::DM[]
 
 Dashbuilder is a dashboard and reporting tool integrated in {CENTRAL} and is used by the Datasets editor. You can import and export Dashbuilder data as ZIP files in {CENTRAL}.
 
@@ -148,7 +148,7 @@ WARNING: You should only import Dashbuilder data to a clean installation of {PRO
 
 . Click *Import*.
 
-endif::[]
+endif::DM[]
 
 ifdef::PAM,JBPM[]
 
