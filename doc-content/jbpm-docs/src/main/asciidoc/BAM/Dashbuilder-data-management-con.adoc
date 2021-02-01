@@ -3,7 +3,7 @@
 
 ifdef::PAM,JBPM[]
 
-Dashbuilder is a dashboard and reporting tool integrated in {CENTRAL} and is used by the Datasets editor and Content Manager page. There are three data types:
+Dashbuilder is a dashboard and reporting tool integrated in {CENTRAL} and is used by the Datasets editor and Content Manager page. Dashbuilder supports the following data types:
 
 * Datasets
 * Pages
