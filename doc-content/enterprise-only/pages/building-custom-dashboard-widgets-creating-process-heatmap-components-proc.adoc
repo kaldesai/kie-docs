@@ -1,34 +1,28 @@
 [id='building-custom-dashboard-widgets-creating-process-heatmap-components-proc_{context}']
 
-= Creating process heatmap components
+= Creating heatmap components for a process
 
 You can create heatmap components for a specific process in {CENTRAL}.
 
 .Prerequisites
 
 * {KIE_SERVER} is deployed and connected to {CENTRAL}.
-* You have created a project in {CENTRAL} and it contains at least one business process asset.
+* You have set the `dashbuilder.components.enable` system property to `true` in the `standalone.xml` file.
+* You have created a project with at least one business process asset in {CENTRAL}.
 * A project with a process definition has been deployed in {CENTRAL}.
 * Sample process instances are created.
 
 .Procedure
 
-. Start {CENTRAL}, go to *Menu → Design → Pages*.
-. In the *Pages* panel, click *New*.
-. In the *New Page* dialog box, enter a value in the *Name* field and select the required style.
-. Click *OK*. The new page opens in the *Page Editor*.
-+
-You can see that *Heatmaps* component is available under *Components* panel.
-. Click *Save*.
-. To create a new {KIE_SERVER} dataset, complete the following steps:
-... In {CENTRAL}, go to *Admin → Data Sets*.
+. Create a new {KIE_SERVER} dataset using the following steps:
+... In {CENTRAL}, go to *Admin* → *Data Sets*.
 +
 The *Data Set Explorer* page opens.
 ... Click *New Data Set* and select the *Execution Server* provider type.
 +
 The *Data Set Creation Wizard* page opens.
 ... Enter the name of the dataset.
-... Select the server configuration. It is available if you have deployed the project.
+... Select the server configuration. The server configuration is available if the project is deployed.
 ... Select *CUSTOM* query target from the list.
 ... In the *Query* field, enter the following custom SQL query.
 +
@@ -71,28 +65,26 @@ group by
 
 ... Complete the *Data Set Creation Wizard* and click *Test*.
 ... Click *Save*.
-. Return to *Menu → Design → Pages*.
-. In the *Components* panel, expand the *Heatmaps* components and drag the *Process Heatmap* component type to the canvas.
+. In {CENTRAL}, go to *Menu* → *Design* → *Pages*.
+. In the *Pages* panel, click *New*.
+. In the *New Page* dialog box, enter a value in the *Name* field and select the required style.
+. Click *OK*.
++
+The new page opens in the *Page Editor* and you can see that the *Heatmaps* component is available under the *Components* panel.
+. In the *Components* panel, expand the *Heatmaps* components and drag the *Process Heatmap* component type to the *Page Editor*.
 . In the *Displayer editor* wizard, click *Data* tab and select the newly created {KIE_SERVER} dataset.
 . In the *Data* tab, select *NID* and *AVERAGEEXECUTIONTIME* from the *Columns* field.
-. Click *Display* tab and edit the following values as per your requirements:
-* *Chart*
-* *Margins*
-* *Filter*
-* *Refresh*
-* *Columns*
-. Click *Component Editor* tab and input the following values into the *Component Properties* field:
-* *Server Template*
-* *Container ID*
-* *Process Definition ID*
+. Click the *Component Editor* tab and enter the values for the mandatory fields including *Server Template*, *Container ID*, and *Process Definition ID* into the *Component Properties* field.
 +
 [NOTE]
 ====
-All the fields are mandatory.
+To access the value of *Server Template*, go to *Deploy* → *Execution Servers* → *Server Configurations*.
+For the value of *Container ID*, go to *Manage* → *Process Instances*, you can click on the process instance you want to use and in the, *Deployment* corresponds to the *Container ID* and the *Definition ID* is the *Process Definition ID*.
 ====
+. Click the *Display* tab and edit the value of *Chart*, *Margins*, *Filter*, *Refresh*, and *Columns* as per your requirements.
 . Click *+OK*.
 +
 .Example process heatmap components
 image::pages/process-heatmap-component.png[]
 
-You can see the heatmap components on the process diagram.
+You can see the heat information on the process diagram.
