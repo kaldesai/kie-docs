@@ -5,76 +5,62 @@
 
 == {CENTRAL}
 
-* You cannot save a file when you try to rename the package from the source code [https://issues.redhat.com/browse/RHPAM-3119[RHPAM-3119]]
-* The wait spinner is not present when you add a deployment unit, manually enter GAV values, and confirm the alert window [https://issues.redhat.com/browse/RHPAM-3114[RHPAM-3114]]
-* Assets are not properly indexed for clustered {CENTRAL} environment [https://issues.redhat.com/browse/RHPAM-3089[RHPAM-3089]]
-* When you try to add a new deployment unit, you receive multiple error notifications [https://issues.redhat.com/browse/RHPAM-3112[RHPAM-3112]]
-* {CENTRAL} does not remember the last used branch when you log out [https://issues.redhat.com/browse/RHPAM-2957[RHPAM-2957]]
-* In the *Assets* list, there are columns like `Last modified X day ago` and `Created XX weeks ago` but they are the same for all the assets and does not reflect the actual modified or created values [https://issues.redhat.com/browse/RHPAM-2865[RHPAM-2865]]
-* Package list is not populating correctly for imported projects [https://issues.redhat.com/browse/RHDM-1377[RHDM-1377]]
-* `java.lang.Number` import remains in the list of imports when deleted [https://issues.redhat.com/browse/RHDM-247[RHDM-247]]
-* If a project contains DRL files with the queries, the test scenarios designer displays queries in the coverage report [https://issues.redhat.com/browse/RHDM-1448[RHDM-1448]]
-* When you restart {CENTRAL}, the connection between {KIE_SERVER} and {CENTRAL} does not re-establish [https://issues.redhat.com/browse/RHPAM-3137[RHPAM-3137]]
-* You cannot lock guided decision table asset in {CENTRAL} [https://issues.redhat.com/browse/RHPAM-2992[RHPAM-2992]]
-* When you rename the guided rules used in test scenarios, coverage report displays both original and renamed value of guided rules [https://issues.redhat.com/browse/RHDM-1334[RHDM-1334]]
+* Package list fails to populate default package for imported projects [https://issues.redhat.com/browse/RHPAM-3209[RHPAM-3209]]
+* Collection editor is not opening for DRL based test scenarios [https://issues.redhat.com/browse/RHDM-1464[RHDM-1464]]
+* REST Endpoints are accessible to all the logged in users, even though the users are assigned without the correct roles [https://issues.redhat.com/browse/RHPAM-3284[RHPAM-3284]]
+* In test scenarios coverage report, rule name column size is increased and and the numbers are aligned to right side [https://issues.redhat.com/browse/RHPAM-3271[RHPAM-3271]]
+* In guided decision table, an exception error pop-up returns a proper error message [https://issues.redhat.com/browse/RHPAM-3201[RHPAM-3201]]
+* The number of assets listed on the project page of {CENTRAL} does not match with count displayed for pagination [https://issues.redhat.com/browse/RHPAM-2859[RHPAM-2859]]
+
+== Form modeler
+
+* `DocumentCollection` output parameter does not work in generated forms [https://issues.redhat.com/browse/RHPAM-3252[RHPAM-3252]]
+
+== {KIE_SERVER}
+
+* When you execute a long query, you receive some issues when starting up the {KIE_SERVER} [https://issues.redhat.com/browse/RHPAM-3342[RHPAM-3342]]
+* REST endpoint authentication fails, if the authorization header contains `==` in an encoded key in REST work item handler [https://issues.redhat.com/browse/RHPAM-3259[RHPAM-3259]]
+* When a specified time is reached, a `start timer` event in a process model creates duplicate process instances [https://issues.redhat.com/browse/RHPAM-3189[RHPAM-3189]]
+* When you generate a form with components slider, DocumentCollection, MultipleInput and/or MultipleSelector, these form options are not rendering in an API response [https://issues.redhat.com/browse/RHPAM-2330[RHPAM-2330]]
+
+== DMN designer
+
+* DMN editor does not detect the changes from the Decision Navigator view [https://issues.redhat.com/browse/RHDM-1482[RHDM-1482]]
 
 ifdef::PAM[]
-* An error message about missing {KIE_SERVER} configuration on dashbuilder runtime must be improved [https://issues.redhat.com/browse/RHPAM-3058[RHPAM-3058]]
-* When you remove parent process instance details from the process list, you receive an error message [https://issues.redhat.com/browse/RHPAM-3102[RHPAM-3102]]
-* When you skip a task from task event listener, you receive `BAMTaskEventListener` warning [https://issues.redhat.com/browse/RHPAM-3100[RHPAM-3100]]
-* To avoid large memory retention, make the `LRUCache` file configurable [https://issues.redhat.com/browse/RHPAM-2808[RHPAM-2808]]
-* When more than one {KIE_SERVERS} are connected with different IDs, you receive an unexpected system error [https://issues.redhat.com/browse/RHPAM-3134[RHPAM-3134]]
-endif::[]
-
-
-ifdef::PAM[]
-
-== Process designer
-
-* Case management properties are missing in a case definition [https://issues.redhat.com/browse/RHPAM-3131[RHPAM-3131]]
-* If you use the `^` character in the subject of a user task notification an error occurs [https://issues.redhat.com/browse/RHPAM-2763[RHPAM-2763]]
-* Called element in a reusable subprocess is not populated [https://issues.redhat.com/browse/RHPAM-2760[RHPAM-2760]]
-* Ruleflow group is not populated [https://issues.redhat.com/browse/RHPAM-2740[RHPAM-2740]]
-* If you migrate a process from the legacy process designer to the new process designer, you receive an incorrect warning about node being ignored [https://issues.redhat.com/browse/RHPAM-2452[RHPAM-2452]]
-* In the process modeler, the *Service Tasks* name is changed to *Custom Tasks* [https://issues.redhat.com/browse/RHPAM-3008[RHPAM-3008]]
-* The leap days are not validated in timer events [https://issues.redhat.com/browse/RHPAM-2987[RHPAM-2987]]
-* When try you implement `catch-all` errors using an event subprocess, and if the value of `ErrorRef` for the error start event is empty, you receive build errors [https://issues.redhat.com/browse/RHPAM-3093[RHPAM-3093]]
 
 == Process engine
 
-* When you implement the interface, EventEmitter fails to execute the methods [https://issues.redhat.com/browse/RHPAM-3126[RHPAM-3126]]
-* When you upgrade {PRODUCT} from 7.7.0 to 7.8.0, the `userTaskService.saveContent` does not work [https://issues.redhat.com/browse/RHPAM-3123[RHPAM-3123]]
-* You can execute the process with multiple Sources (throw link event) with the same link name and you can use only one Target (catch link event) for the same link name across the subprocess level [https://issues.redhat.com/browse/RHPAM-3132[RHPAM-3132]]
-* Define jBPM datasource as `@Primary` to avoid the failure of `entityManagerFactory` in `JBPMAutoConfiguration` [https://issues.redhat.com/browse/RHPAM-3072[RHPAM-3072]]
-* A business process with `required` variable tag should not be accepted using REST API [https://issues.redhat.com/browse/RHPAM-3048[RHPAM-3048]]
-* The main process fails due to subprocess exception handling transaction rollback [https://issues.redhat.com/browse/RHPAM-2982[RHPAM-2982]]
-* When you dynamically add a new node to a process instance, the execution of the process fails with a runtime exception [https://issues.redhat.com/browse/RHPAM-3188[RHPAM-3188]]
+* You cannot use the same correlationKey for two active process instances [https://issues.redhat.com/browse/RHPAM-3336[RHPAM-3336]]
+* When you set `userId == null`, `exlOwner !=null` and, `groups !=null` in the query, task is not returned [https://issues.redhat.com/browse/RHPAM-3230[RHPAM-3230]]
 
 endif::[]
 
 == Decision engine
 
-* In decision tables, you can terminate the pattern with `@watch` annotation, which is used to customize the properties that the pattern is reactive on [https://issues.redhat.com/browse/RHDM-1437[RHDM-1437]]
-* The `@watch` annotation does not behave properly when you exclude all the properties but one property [https://issues.redhat.com/browse/RHDM-1436[RHDM-1436]]
-* Constraint jitting fails When you take a string value from a map and compare it with string literal [https://issues.redhat.com/browse/RHDM-1439[RHDM-1439]]
-* If the `accumulate` contains more than one accumulating function, you receive an unwanted re-firing of a rule after deserialization [https://issues.redhat.com/browse/RHDM-1434[RHDM-1434]]
-* Building rules in a default-build target of `kie-maven-plugin` takes a lot of time [https://issues.redhat.com/browse/RHDM-1433[RHDM-1433]]
-* In MVEL dialect mode, you cannot compile binary operation for `BigDecimal` type values, and you receive a compilation error in the executable model [https://issues.redhat.com/browse/RHDM-1421[RHDM-1421]]
-
-== {KIE_SERVER}
-
-* MarshallingException occurs during REST request (JSON) unmarshalling in {KIE_SERVER} [https://issues.redhat.com/browse/RHDM-1417[RHDM-1417]]
-
-== Installer
-
-* On {EAP}, the {PRODUCT} installer adds an additional `$` sign in the vaulted password of database user [https://issues.redhat.com/browse/RHPAM-3148[RHPAM-3148]]
+* `testDoubleNaN` fails after jitting on `TypeCoercionTest` [https://issues.redhat.com/browse/RHDM-1470[RHDM-1470]]
+* When you use the same variable name to different declarations, you receive a false `accumulate` functions conflict [https://issues.redhat.com/browse/RHPAM-3216[RHPAM-3216]]
+* In an executable model, a new line character between the last parameter and `);` in a call method throws a build error [https://issues.redhat.com/browse/RHDM-1550[RHDM-1550]]
+* In an executable model, when you use a compound assignment operation like `BigDecimal_type_property += BigDecimal_value`, you receive a compilation error [https://issues.redhat.com/browse/RHDM-1528[RHDM-1528]]
+* In an executable model, when you use a compound assignment operation like `BigDecimal_type_property += Numeric_value`, you receive compilation errors [https://issues.redhat.com/browse/RHDM-1527[RHDM-1527]]
+* When you use an expression like `BigDecimal_type_property = BigDecimal_type_property.divide(BigDecimal_value)` in an executable model, you receive a build failure error [https://issues.redhat.com/browse/RHDM-1521[RHDM-1521]]
+* When you use a `BigDecimal` type values in an executable model, you receive a build failure error [https://issues.redhat.com/browse/RHDM-1520[RHDM-1520]]
+* In MVEL dialect mode, when you use the four basic binary operators (`+`, `-`, `*`, `/`) for `BigDecimal` type values, you receive a compilation error in an executable model [https://issues.redhat.com/browse/RHDM-1519[RHDM-1519]]
+* In MVEL dialect mode, when you use an assignment statement for `BigDecimal` type values, you receive compilation errors in an executable model [https://issues.redhat.com/browse/RHDM-1518[RHDM-1518]]
+* The `DrlDumper` generates a wrong DRL when an `AccumulateDescr` does not contain a constraint and, you cannot build the generated DRL [https://issues.redhat.com/browse/RHDM-1517[RHDM-1517]]
+* The `DrlDumper` is unable to generate the `accumulate` import [https://issues.redhat.com/browse/RHDM-1516[RHDM-1516]]
+* When you try to bind an enum value, you receive an error in an executable model generation [https://issues.redhat.com/browse/RHDM-1514[RHDM-1514]]
+* In MVEL dialect mode, when you use an enhanced `for` (foreach) statement, you receive a compilation error in an executable model [https://issues.redhat.com/browse/RHDM-1513[RHDM-1513]]
+* In MVEL dialect mode, when you use the space characters between `(` and `LocalVariableType` in an enhanced `for` (foreach) statement, you receive a compilation error [https://issues.redhat.com/browse/RHDM-1505[RHDM-1505]]
+* When you use the standard Java serialization mechanism, the `ByteArrayResource` is declared twice [https://issues.redhat.com/browse/RHDM-1502[RHDM-1502]]
+* When you are unable to call a `reset` method in the `PriorityMap` and call it inside `org.kie.api.internal.utils.ServiceDiscoveryImpl`, you receive an exception [https://issues.redhat.com/browse/RHDM-1501[RHDM-1501]]
+* When you have two or more different implementations of a service on the classpath, the service discovery or wiring mechanism randomly chooses one of the services that comes first in the classpath. You can now explicitly configure a priority among these services [https://issues.redhat.com/browse/RHDM-1500[RHDM-1500]]
+* You cannot use `AgendaFilter` method when the rules are combined with a ruleflow and fired using `KieSession.startProcess` method [https://issues.redhat.com/browse/RHDM-1461[RHDM-1461]]
 
 == {OPENSHIFT}
 
-* In monitoring console page, when you create a new page, you receive an *Activity not found* error pop-up [https://issues.redhat.com/browse/RHPAM-3066[RHPAM-3066]]
+* {CENTRAL} pod fails to start when `known_host` file is missing from the Git hook secret [https://issues.redhat.com/browse/RHPAM-3056[RHPAM-3056]]
 
 ifdef::PAM[]
-* When you try to configure an external {RH-SSO} configuration, you receive `SSL required for: EXTERNAL` error message [https://issues.redhat.com/browse/RHPAM-2804[RHPAM-2804]]
-* Missing support for `xa-pool` configuration of `is-same-rm-override` field [https://issues.redhat.com/browse/RHPAM-3071[RHPAM-3071]]
-* In {OPENSHIFT}, when you create a secure connection between {CENTRAL} and {KIE_SERVER}, an incorrect URL is generated [https://issues.redhat.com/browse/RHPAM-3162[RHPAM-3162]]
+* {OPENSHIFT} properties related to passwords in `EJB_TIMER` cannot use literal `$n` [https://issues.redhat.com/browse/RHPAM-3211[RHPAM-3211]]
 endif::[]
