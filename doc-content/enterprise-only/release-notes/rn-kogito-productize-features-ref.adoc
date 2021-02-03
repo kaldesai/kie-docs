@@ -1,5 +1,5 @@
 [id='rn-kogito-productize-features-ref']
-= Kogito productized features
+= Kogito productized features in {PRODUCT}
 
 From {ENTERPRISE_VERSION} release, {PRODUCT} provides the following Kogito based extensions or applications that you can use to design Business Process Model and Notation (BPMN) process models and Decision Model and Notation (DMN) decision models using graphical modelers:
 

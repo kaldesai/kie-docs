@@ -12,10 +12,13 @@
 * In guided decision table, an exception error pop-up returns a proper error message [https://issues.redhat.com/browse/RHPAM-3201[RHPAM-3201]]
 * The number of assets listed on the project page of {CENTRAL} does not match with count displayed for pagination [https://issues.redhat.com/browse/RHPAM-2859[RHPAM-2859]]
 
+ifdef::PAM[]
+
 == Form modeler
 
 * `DocumentCollection` output parameter does not work in generated forms [https://issues.redhat.com/browse/RHPAM-3252[RHPAM-3252]]
 
+endif::[]
 == {KIE_SERVER}
 
 * When you execute a long query, you receive some issues when starting up the {KIE_SERVER} [https://issues.redhat.com/browse/RHPAM-3342[RHPAM-3342]]
@@ -29,7 +32,7 @@
 
 ifdef::PAM[]
 
-== Process engine
+== {PROCESS_ENGINE}
 
 * You cannot use the same correlationKey for two active process instances [https://issues.redhat.com/browse/RHPAM-3336[RHPAM-3336]]
 * When you set `userId == null`, `exlOwner !=null` and, `groups !=null` in the query, task is not returned [https://issues.redhat.com/browse/RHPAM-3230[RHPAM-3230]]
