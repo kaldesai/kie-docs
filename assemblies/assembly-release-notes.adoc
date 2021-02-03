@@ -12,6 +12,8 @@ include::{enterprise-dir}/release-notes/snip-conscious-language.adoc[leveloffset
 
 include::{enterprise-dir}/release-notes/rn-intro-con.adoc[leveloffset=+1]
 
+include::{enterprise-dir}/release-notes/rn-kogito-productize-features-ref.adoc[leveloffset=+1]
+
 include::{enterprise-dir}/release-notes/rn-whats-new-con.adoc[leveloffset=+1]
 
 include::{enterprise-dir}/release-notes/rn-support-ref.adoc[leveloffset=+1]

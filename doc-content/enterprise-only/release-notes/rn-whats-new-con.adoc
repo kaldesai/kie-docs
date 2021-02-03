@@ -49,22 +49,12 @@ The test scenarios designer in {CENTRAL} is now available with the new features 
 
 * In rule-based test scenarios, it is now possible to use the following new java classes as data objects:
 
-** LocalDateTime
-** LocalTime
-** BigDecimal
-** BigInteger
+** `LocalDateTime`
+** `LocalTime`
+** `BigDecimal`
+** `BigInteger`
 
-* It is now possible to use the following classes to create and manage the list values for the data objects:
-
-** Byte
-** Character
-** Float
-** Long
-** Short
-** LocalDateTime
-** LocalTime
-** BigDecimal
-** BigInteger
+* It is now possible to use the `Byte`, `Character`, `Float`, `Long`, `Short`, `LocalDateTime`, `LocalTime`, `BigDecimal`, and `BigInteger` classes to create and manage the list values for the data objects.
 
 === New parameter list for Decision Services
 
@@ -78,17 +68,16 @@ ifdef::PAM[]
 
 The following list provides a summary of Dashbuilder Runtime updates:
 
-* It is now possible to automatically deploy the dashboards from {CENTRAl} on dashbuilder runtime. {CENTRAl} is linked to dashbuilder runtime with the help of gradual export feature. You can select datasets and pages, but instead of downloading a `ZIP` file, you can click the *Open* button. When you click the *Open* button, the selected data is exported and dashbuilder runtime updates the model content when it is opened.
-+
+* It is now possible to automatically deploy the dashboards from {CENTRAl} on Dashbuilder Runtime. {CENTRAl} is linked to Dashbuilder Runtime with the help of gradual export feature. You can select datasets and pages, but instead of downloading a `ZIP` file, you can click the *Open* button. When you click the *Open* button, the selected data is exported and Dashbuilder Runtime updates the model content when it is opened.
 You can use `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to enable this new feature.
 
-* Dashboards imported in Dashbuilder Runtime can have a default page. The following list provides a summary of dashbuilder runtime default page updates:
+* Dashboards that imported in Dashbuilder Runtime contain a default page. The following list provides a summary of updates of the Dashbuilder Runtime default page:
 
-** When an imported dashboard has only one page, then it is used as the default page.
-** If a page is named as `index` then it will be used as the default page.
-** In other cases, the generic Dashbuilder Runtime home page is used.
+** When an imported dashboard contains only one page, then it is used as the default page.
+** If a page is named as `index` then it is used as the default page.
+** In other cases, the generic home page of the Dashbuilder Runtime is used.
 
-* Dashbuilder runtime is now available with the new heatmap component feature. Heatmap is a new {CENTRAL} component that can be added to pages and be exported to Dashbuilder Runtime. Similar to a bar chart, line chart, you can drag these Heatmap components to a page and later you can export it to Dashbuilder Runtime. Heatmaps components are used to display heat information over a process diagram. The heat information can be retrieved from a {KIE_Server} datasets. You can create, edit and, build a dashboard using heatmap component.
+* Dashbuilder Runtime is now available with the new heatmap component feature. Heatmap is a new {CENTRAL} component that can be added to pages and be exported to Dashbuilder Runtime. Similar to a bar chart, line chart, you can drag these Heatmap components to a page and later you can export it to Dashbuilder Runtime. Heatmaps components are used to display heat information over a process diagram. The heat information can be retrieved from a {KIE_Server} datasets. You can create, edit and, build a dashboard using heatmap component.
 
 === Removed the case modeler technical preview editor
 
@@ -97,22 +86,6 @@ The case modeler technical preview editor is removed in {PRODUCT} {ENTERPRISE_VE
 For more information, see {URL_GETTING_STARTED_CASES}#assembly-getting-started-case-management[_{GETTING_STARTED_CASES}_].
 
 endif::PAM[]
-
-== Support for client roles in {RH-SSO}
-
-When integrating {PRODUCT} with {RH-SSO}, you can enable support for client roles. By default, only realm roles are supported.
-
-= KIE API improvements
-
-You can now use the KIE REST API to signal a process using its alias.
-
-== Integration with {AMQ_STREAMS}
-
-You can now integrate your business processes that run on a {KIE_SERVER} with Red Hat {AMQ_STREAMS} or Apache Kafka.
-
-== Certification of {FUSE_LONG} on {EAP}
-
-{PRODUCT} is now certified to work with {FUSE_LONG} version 7.8 on {EAP}. Integration with {FUSE_LONG} version 7.8 on Karaf (OSGi) is not supported.
 
 ifdef::PAM[]
 
@@ -132,9 +105,35 @@ You can now add MVEL expressions in the Data IO assignments of a user task. For 
 === {PROCESS_ENGINE_CAP} API improvements
 
 You can now use the {PROCESS_ENGINE} API to signal a process instance using its correlation key.
-You can now use the {PROCESS_ENGINE} API to determine the node type from within an event listener. When using the advanced query feature of the {PROCESS_ENGINE} API, you can now optionally exclude process variables from the search results.
+You can now use the {PROCESS_ENGINE} API to determine the node type from within an event listener.
+
+When using the advanced query feature of the {PROCESS_ENGINE} API, you can now optionally exclude process variables from the search results.
+
+For more information about using the {PROCESS_ENGINE} API, see {URL_DEPLOYING_AND_MANAGING_SERVICES}#assembly-kie-apis[_{KIE_APIS}_].
+
+=== KIE API improvements
+
+You can now use the KIE REST API to signal a process using its alias.
+
+For more information about using the KIE REST API, see {URL_DEPLOYING_AND_MANAGING_SERVICES}#assembly-kie-apis[_{KIE_APIS}_].
 
 endif::PAM[]
+
+== Integration
+
+=== Integration with AMQ Streams
+
+You can now integrate your business processes that run on a {KIE_SERVER} with Red Hat AMQ Streams or Apache Kafka.
+Processes can send and receive Kafka messages using message events.
+A {KIE_SERVER} can emit Kafka events when a process, case, or task completes.
+
+For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+
+=== Support for client roles in {RH-SSO}
+
+When integrating {PRODUCT} with {RH-SSO}, you can enable support for client roles. By default, only realm roles are supported.
+
+For more information about integration with {RH-SSO}, see {URL_INTEGRATING}#assembly-integrating-sso[_{INTEGRATING_SSO}_].
 
 == {KIE_SERVER}
 
