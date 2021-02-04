@@ -3,8 +3,9 @@
 
 From {ENTERPRISE_VERSION} release, {PRODUCT} provides the following Kogito based extensions or applications that you can use to design Business Process Model and Notation (BPMN) process models and Decision Model and Notation (DMN) decision models using graphical modelers:
 
-* Standalone BPMN and DMN editors
-* BPMN and DMN VSCode Extensions
+* Standalone embeddable DMN and BPMN editors
+* Standalone embeddable DMN viewer
+* VSCode extension with BPMN, DMN, and test scenario editors
 
 Customers who own the {PRODUCT} have an access to these new capabilities without the need of acquiring new subscription.
 
