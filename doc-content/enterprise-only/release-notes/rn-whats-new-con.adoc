@@ -60,7 +60,7 @@ The test scenarios designer in {CENTRAL} is now available with the new features 
 
 {PRODUCT} {ENTERPRISE_VERSION} includes a new *Decision Service details* section in the DMN editor properties panel containing a read-only list of *Input Data*, *Encapsulated Decisions*, and *Output Decisions*.
 
-For more information, see {URL_GETTING_STARTED_DECISION_SERVICE}#assembly-getting-started-decision-services[_{GETTING_STARTED_DECISION_SERVICE}_].
+//For more information, see {URL_GETTING_STARTED_DECISION_SERVICE}#assembly-getting-started-decision-services[_{GETTING_STARTED_DECISION_SERVICE}_].
 
 ifdef::PAM[]
 
@@ -78,12 +78,6 @@ You can use `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `da
 ** In other cases, the generic home page of the Dashbuilder Runtime is used.
 
 * Dashbuilder Runtime is now available with the new heatmap component feature. Heatmap is a new {CENTRAL} component that can be added to pages and be exported to Dashbuilder Runtime. Similar to a bar chart, line chart, you can drag these Heatmap components to a page and later you can export it to Dashbuilder Runtime. Heatmaps components are used to display heat information over a process diagram. The heat information can be retrieved from a {KIE_Server} datasets. You can create, edit and, build a dashboard using heatmap component.
-
-=== Removed the case modeler technical preview editor
-
-The case modeler technical preview editor is removed in {PRODUCT} {ENTERPRISE_VERSION}. Use the new designer for cases going forward.
-
-For more information, see {URL_GETTING_STARTED_CASES}#assembly-getting-started-case-management[_{GETTING_STARTED_CASES}_].
 
 endif::PAM[]
 
@@ -127,7 +121,7 @@ You can now integrate your business processes that run on a {KIE_SERVER} with Re
 Processes can send and receive Kafka messages using message events.
 A {KIE_SERVER} can emit Kafka events when a process, case, or task completes.
 
-For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+//For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
 
 === Support for client roles in {RH-SSO}
 
