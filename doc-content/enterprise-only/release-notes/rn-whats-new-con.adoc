@@ -5,41 +5,9 @@ This section highlights new features in {PRODUCT} {PRODUCT_VERSION}.
 
 == {CENTRAL}
 
-=== New standalone BPMN and DMN editors
-
-{PRODUCT} now provides standalone editors for Business Process Model and Notation (BPMN) process models and Decision Model and Notation (DMN) decision models. The standalone editors enable you to view and design BPMN and DMN models embedded in your web applications. The read-only mode for standalone BPMN editor is not supported in {PRODUCT} 7.10.0.
-
-The standalone editors are distributed in a self-contained library that provides an all-in-one JavaScript file for each editor. The JavaScript file uses a comprehensive API to set and control the editor. You can install the standalone editors in three ways:
-
-* Use hosted JavaScript files directly
-* Download each JavaScript file manually
-* Use the NPM package
-
-For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_] and {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
-
 === Support for DMN 1.1 and 1.3 assets in DMN designer
 
 You can now use the DMN designer in {CENTRAL} to open DMN 1.1 and 1.3 assets. Any DMN 1.1 and 1.3 models (do not contain DMN 1.3 features) that you import into {CENTRAL}, open in the DMN designer, and save are converted to DMN 1.2 models. For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_].
-
-=== Support for VSCode extension
-
-{PRODUCT} now provides support for VSCode extension enabling you to view and design BPMN and DMN models in Visual Studio Code (VSCode). The VSCode extension in {PRODUCT} requires VSCode 1.46.0 or later.
-
-You can install the {PRODUCT} VSCode extension using:
-
-* VSCode user interface
-
-. Open *Extensions* menu option.
-. Search for and install *Red Hat Business Automation Bundle* extension.
-
-* Terminal
-
-. Launch VSCode Quick Open.
-. Enter the following command and press *Enter*.
-+
-`ext install redhat.vscode-extension-red-hat-business-automation-bundle`
-
-For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_] and {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
 
 === Test scenarios
 
@@ -83,6 +51,43 @@ endif::PAM[]
 
 ifdef::PAM[]
 
+== New standalone BPMN and DMN editors
+
+{PRODUCT} now provides standalone editors for Business Process Model and Notation (BPMN) process models and Decision Model and Notation (DMN) decision models. The standalone editors enable you to view and design BPMN and DMN models embedded in your web applications. The read-only mode for standalone BPMN editor is not supported in {PRODUCT} 7.10.0.
+
+The standalone editors are distributed in a self-contained library that provides an all-in-one JavaScript file for each editor. The JavaScript file uses a comprehensive API to set and control the editor. You can install the standalone editors in three ways:
+
+* Use hosted JavaScript files directly
+* Download each JavaScript file manually
+* Use the NPM package
+
+For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_] and {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
+
+endif::PAM[]
+
+== Support for VSCode extension
+
+{PRODUCT} now provides support for VSCode extension enabling you to view and design BPMN and DMN models in Visual Studio Code (VSCode). The VSCode extension in {PRODUCT} requires VSCode 1.46.0 or later.
+
+You can install the {PRODUCT} VSCode extension using:
+
+* VSCode user interface
+
+. Open *Extensions* menu option.
+. Search for and install *Red Hat Business Automation Bundle* extension.
+
+* Terminal
+
+. Launch VSCode Quick Open.
+. Enter the following command and press *Enter*.
++
+`ext install redhat.vscode-extension-red-hat-business-automation-bundle`
+
+For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_] and {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
+
+
+ifdef::PAM[]
+
 == Process Designer
 
 === Ability to access activity details in boundary events
@@ -94,7 +99,7 @@ For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-b
 
 You can now add MVEL expressions in the Data IO assignments of a user task. For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
 
-== {PROCESS_ENGINE}
+== {PROCESS_ENGINE_CAP}
 
 === {PROCESS_ENGINE_CAP} API improvements
 
@@ -115,6 +120,8 @@ endif::PAM[]
 
 == Integration
 
+ifdef::PAM[]
+
 === Integration with AMQ Streams
 
 You can now integrate your business processes that run on a {KIE_SERVER} with Red Hat AMQ Streams or Apache Kafka.
@@ -122,12 +129,15 @@ Processes can send and receive Kafka messages using message events.
 A {KIE_SERVER} can emit Kafka events when a process, case, or task completes.
 
 //For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+endif::PAM[]
 
 === Support for client roles in {RH-SSO}
 
 When integrating {PRODUCT} with {RH-SSO}, you can enable support for client roles. By default, only realm roles are supported.
 
 For more information about integration with {RH-SSO}, see {URL_INTEGRATING}#assembly-integrating-sso[_{INTEGRATING_SSO}_].
+
+ifdef::PAM[]
 
 == {KIE_SERVER}
 
@@ -141,9 +151,11 @@ With the cluster extension, the jbpm engine now supports singleton timer start n
 
 == Spring Boot
 
-=== Plugable variable persistence
+=== Pluggable variable persistence
 
-You can now provide an arbitrary entity manager for configured process variable persistence in your {PRODUCT} spring boot application.
+You can now provide an arbitrary entity manager for configured process variable persistence in your {PRODUCT} Spring Boot application.
+
+endif::PAM[]
 
 == {OPENSHIFT}
 
