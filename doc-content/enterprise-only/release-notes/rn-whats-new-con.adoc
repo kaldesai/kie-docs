@@ -134,6 +134,7 @@ You can now integrate your business processes that run on a {KIE_SERVER} with Re
 A {KIE_SERVER} can emit Kafka events when a process, case, or task completes.
 
 For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+
 endif::PAM[]
 
 === Support for client roles in {RH-SSO}
