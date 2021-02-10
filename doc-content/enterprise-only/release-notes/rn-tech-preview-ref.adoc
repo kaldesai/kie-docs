@@ -14,7 +14,7 @@ ifdef::PAM[]
 
 == Prediction Service API
 
-You can use the prediction service API to provide a prediction service that assists with human tasks. The prediction service can use AI. For example, you can use the Predictive Model Markup Language (PMML) models or Statistical Machine Intelligence and Learning Engine (SMILE) to implement the service.
+You can use the prediction service API to provide a prediction service that assists with user tasks. The prediction service can use AI. For example, you can use the Predictive Model Markup Language (PMML) models or Statistical Machine Intelligence and Learning Engine (SMILE) to implement the service.
 
 endif::PAM[]
 

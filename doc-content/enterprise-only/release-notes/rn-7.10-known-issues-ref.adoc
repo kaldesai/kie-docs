@@ -7,9 +7,9 @@ This section lists known issues with {PRODUCT} {PRODUCT_VERSION}.
 
 ifdef::PAM[]
 
-.Unable to display the new dashboard data when you open the Dashbuilder Runtime from {CENTAL} again [https://issues.redhat.com/browse/RHPAM-3411[RHPAM-3411]]
+.Unable to display the new dashboard data when you open the Dashbuilder Runtime from the {CENTAL} again [https://issues.redhat.com/browse/RHPAM-3411[RHPAM-3411]]
 
-Issue: You cannot see the new dashboard data when you open the Dashbuilder Runtime from {CENTAL} again
+Issue: You cannot see the new dashboard data when you open the Dashbuilder Runtime from the {CENTAL} again
 
 Steps to reproduce:
 
@@ -28,27 +28,27 @@ Workaround: None.
 
 .Unable to find heatmap component feature on Windows [https://issues.redhat.com/browse/RHPAM-3412[RHPAM-3412]]
 
-Issue: In Windows, when you add heatmap component properties, you receive *Not Found* error message.
+Issue: In Windows, when you add heatmap component properties, you receive a *Not Found* error message.
 
 Workaround: None.
 
 .Heatmap dashboard fails on multi-mode [https://issues.redhat.com/browse/RHPAM-3408[RHPAM-3408]]
 
-Issue: In Dashbuilder Runtime, when you set the `dashbuilder.runtime.multi` system property to `true` while you try to import the heatmap dashboard, you receive an error.
+Issue: In Dashbuilder Runtime, when you set the `dashbuilder.runtime.multi` system property to `true` while importing the heatmap dashboard, you receive an error.
 
 Workaround: None.
 
 .Unable to display heatmap internal component [https://issues.redhat.com/browse/RHPAM-3401[RHPAM-3401]]
 
-Issue: In Page authoring, the categories for provided heatmap internal components are not displayed by default.
+Issue: The categories for provided heatmap internal components are not displayed by default in the page authoring.
 
 Workaround: Set the `dashbuilder.components.enable` system property to `true`.
 
 endif::[]
 
-.You cannot manage a list of structures in test scenario editor, you receive an exception [https://issues.redhat.com/browse/RHDM-1590[RHDM-1590]]
+.When you manage a list of structures in the test scenario editor, it throws an exception [https://issues.redhat.com/browse/RHDM-1590[RHDM-1590]]
 
-Issue: In test scenario editor, when you try to delete an item from a list of structures with nested structures, an exception is thrown with a message that it is not helpful to the end user.
+Issue: In the test scenario editor, when you delete an item from a list of nested structures, you receive an exception with an inappropriate message.
 
 Steps to reproduce:
 
@@ -62,9 +62,9 @@ You receive *Uncaught exception: Exception caught: (TypeError) : Cannot read pro
 
 Workaround: None.
 
-.*Settings* panel is not updated when you make the changes in the the *DMN model* field [https://issues.redhat.com/browse/RHDM-1589[RHDM-1589]]
+.*Settings* panel is not updated when you make the changes in the *DMN model* field [https://issues.redhat.com/browse/RHDM-1589[RHDM-1589]]
 
-Issue: In an existing DMN test scenario file, when you change the *DMN model* field, the related *DMN name* and *DMN namespace* read-only fields are not updated. The content of the *Settings* panel is out of sync.
+Issue: In an existing DMN test scenario file, when you change the *DMN model* field, the related *DMN name* and *DMN namespace* read-only fields are not updated. The content of the *Settings* panel is not synchronized.
 
 Steps to reproduce:
 
@@ -86,17 +86,17 @@ Steps to reproduce:
 
 . Create a new business process.
 . Create a task that contains *Multiple Instance* property.
-. Enter any string to *On Entry Action* property.
+. Enter any string to the *On Entry Action* property.
 . Change the language to JavaScript.
-. Set the value of *Multiple Instance* property to `true`.
+. Set the value of the *Multiple Instance* property to `true`.
 
-Expected result: No errors occur either in user interface or server log.
+Expected result: No errors occur in the user interface or server log.
 
 Actual result: You receive an unexpected system error.
 
 Workaround: None.
 
-.Service task thumbnails are large in documentations [https://issues.redhat.com/browse/RHPAM-2759[RHPAM-2759]]
+.Service task thumbnails are large in documentation [https://issues.redhat.com/browse/RHPAM-2759[RHPAM-2759]]
 
 Issue: Service task thumbnails are large as compared to other nodes thumbnails in *Documentation*.
 
@@ -107,13 +107,13 @@ Steps to reproduce:
 . Close and reopen the process.
 . Open the *Documentation* tab and scroll down.
 
-Expected result: Service task thumbnails are of the same size as as compared to other nodes thumbnails.
+Expected result: Service task thumbnails are of the same size as compared to other thumbnails.
 
-Actual result: Service task thumbnails are large as compared to other nodes thumbnails.
+Actual result: Service task thumbnails are large as compared to other thumbnails.
 
 Workaround: None.
 
-.Missing `structureRef` for message event when you create a process [https://issues.redhat.com/browse/RHPAM-3437[RHPAM-3437]]
+.`structureRef` is missing for message event when creating a process [https://issues.redhat.com/browse/RHPAM-3437[RHPAM-3437]]
 
 Issue: When you create a new process, the message event does not contain the `structureRef` in the generated BPMN file.
 
@@ -126,13 +126,15 @@ Steps to reproduce:
 . Add a newly created process variable as an input or output of both the nodes.
 +
 The generated BPMN file does not contain the `structureRef` for `endMessageType`, as per the following example:
++
 [source]
 ----
 <bpmn2:itemDefinition id="endMessageType"/>
 <bpmn2:message id="_Icr1JGVqEeuMVv5wG-FCkw" itemRef="endMessageType" name="endMessage"/>
 ----
 
-Workaround: Perform the same steps in desktop VSCode editor, the correct BPMN file is generated, as per the following example:
+Workaround: Perform the same steps in the VSCode editor in desktop, the correct BPMN file is generated, as per the following example:
++
 [source]
 ----
 <bpmn2:itemDefinition id="personMessageType" structureRef="com.javierito.Person"/>
@@ -143,7 +145,7 @@ Workaround: Perform the same steps in desktop VSCode editor, the correct BPMN fi
 
 .The *Data I/O* of a reusable sub-process does not return any implicit data [https://issues.redhat.com/browse/RHPAM-3429[RHPAM-3429]]
 
-Issue: When you use the *Data I/O* variables like `nodeInstance`, `event`, and `workItem`, a reusable sub-process does not return any implicit data. All the returned values are null.
+Issue: When you use the *Data I/O* variables such as `nodeInstance`, `event`, and `workItem`, a reusable sub-process does not return any implicit data. All the returned values are null.
 
 Steps to reproduce:
 
@@ -158,7 +160,7 @@ Workaround: None.
 
 .The *Data I/O* of an implicit event variable returns a `null` value for some node types [https://issues.redhat.com/browse/RHPAM-3428[RHPAM-3428]]
 
-Issue: When you use the *Data I/O* variables like an implicit `event` variable, you receive a `null` value for some node types in return.
+Issue: When you use the *Data I/O* variables such as an implicit `event` variable, you receive a `null` value for some node types is returned.
 
 Steps to reproduce:
 
@@ -176,12 +178,12 @@ endif::[]
 
 .Undo operations are not visible in standalone DMN editor [https://issues.redhat.com/browse/RHDM-1561[RHDM-1561]]
 
-Issue: When you change any value in the *Properties* panel and click *Undo* right away without collapsing the *Properties* panel, the changed value is not reflected.
+Issue: In the standalone DMN editor, when you change any value in the *Properties* panel and click *Undo* without collapsing the *Properties* panel, the changed value is not reflected.
 
 Workaround: To reflect the changes, you can collapse and expand the *Properties* panel again.
 
-.Standalone DMN editor is missing `isDirty` indication on data type or included models [https://issues.redhat.com/browse/RHDM-1560[RHDM-1560]]
+.Standalone DMN editor is missing `isDirty` indication on data types or included models [https://issues.redhat.com/browse/RHDM-1560[RHDM-1560]]
 
-Issue: The `subscribeToContentChanges` API method fails to reflect the changes made in data type or included models. As a result, save, discard,undo, and redo operations are not available.
+Issue: The `subscribeToContentChanges` API method fails to reflect the changes that are made in a data type or included models. As a result, save, discard,undo, and redo operations are not available.
 
 Workaround: None.

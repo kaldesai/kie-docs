@@ -11,24 +11,24 @@ You can now use the DMN designer in {CENTRAL} to open DMN 1.1 and 1.3 assets. An
 
 === Test scenarios
 
-The test scenarios designer in {CENTRAL} is now available with the new features supported in {PRODUCT} {PRODUCT_VERSION}.
+The test scenarios designer in {CENTRAL} is now available with the new features:
 
-* In the test scenario editor, you can now perform the undo and redo operations from the *Settings* panel. Also, the warning pop-up is indicated when you save or discard any changes from the *Settings* panel.
+* You can now perform the undo and redo operations from the *Settings* panel. Also, the warning pop-up is indicated when you save or discard any changes from the *Settings* panel.
 
-* In rule-based test scenarios, it is now possible to use the following new java classes as data objects:
+* In rule-based test scenarios, you can use the following new java classes as data objects:
 
 ** `LocalDateTime`
 ** `LocalTime`
 ** `BigDecimal`
 ** `BigInteger`
 
-* It is now possible to use the `Byte`, `Character`, `Float`, `Long`, `Short`, `LocalDateTime`, `LocalTime`, `BigDecimal`, and `BigInteger` classes to create and manage the list values for the data objects.
+* You can use `Byte`, `Character`, `Float`, `Long`, `Short`, `LocalDateTime`, `LocalTime`, `BigDecimal`, and `BigInteger` classes to create and manage the list of data objects values.
 
 === New parameter list for Decision Services
 
 {PRODUCT} {ENTERPRISE_VERSION} includes a new *Decision Service details* section in the DMN editor properties panel containing a read-only list of *Input Data*, *Encapsulated Decisions*, and *Output Decisions*.
 
-//For more information, see {URL_GETTING_STARTED_DECISION_SERVICE}#assembly-getting-started-decision-services[_{GETTING_STARTED_DECISION_SERVICE}_].
+For more information, see {URL_GETTING_STARTED}#assembly-getting-started-decision-services[_{GETTING_STARTED_DECISION_SERVICE}_] and {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_].
 
 ifdef::PAM[]
 
@@ -36,16 +36,20 @@ ifdef::PAM[]
 
 The following list provides a summary of Dashbuilder Runtime updates:
 
-* It is now possible to automatically deploy the dashboards from {CENTRAl} on Dashbuilder Runtime. {CENTRAl} is linked to Dashbuilder Runtime with the help of gradual export feature. You can select datasets and pages, but instead of downloading a `ZIP` file, you can click the *Open* button. When you click the *Open* button, the selected data is exported and Dashbuilder Runtime updates the model content when it is opened.
-You can use `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to enable this new feature.
+* You can automatically deploy the dashboards from {CENTRAL} on Dashbuilder Runtime. {CENTRAL} is linked to Dashbuilder Runtime using a gradual export feature. You can select datasets and pages, but instead of downloading a `ZIP` file, you can click the *Open* button. After clicking the *Open* button, the selected data is exported, and Dashbuilder Runtime updates the model content when it is opened.
+You can use `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to enable this feature.
++
+For more information, see {URL_MANAGING_SETTINGS}#assembly-configuring-central[_{CONFIGURING_CENTRAL}_].
 
-* Dashboards that imported in Dashbuilder Runtime contain a default page. The following list provides a summary of updates of the Dashbuilder Runtime default page:
+* Dashboards that imported in Dashbuilder Runtime contain a default page. The following are the updates of the Dashbuilder Runtime default page:
 
-** When an imported dashboard contains only one page, then it is used as the default page.
-** If a page is named as `index` then it is used as the default page.
-** In other cases, the generic home page of the Dashbuilder Runtime is used.
+** If an imported dashboard consists of only one page, then the page is used as the default page.
+** If a page is named as `index`, then the index page is used as the default page.
+** In other cases, the generic home page of the Dashbuilder Runtime is used as the default page.
 
-* Dashbuilder Runtime is now available with the new heatmap component feature. Heatmap is a new {CENTRAL} component that can be added to pages and be exported to Dashbuilder Runtime. Similar to a bar chart, line chart, you can drag these Heatmap components to a page and later you can export it to Dashbuilder Runtime. Heatmaps components are used to display heat information over a process diagram. The heat information can be retrieved from a {KIE_Server} datasets. You can create, edit and, build a dashboard using heatmap component.
+* Dashbuilder Runtime is now available with a new heatmap component feature. You can add the heatmap component to the pages and export it to the Dashbuilder Runtime. Heatmap components are used to display heat information over a process diagram, and you can create, edit, and build a dashboard using the heatmap component. The heat information is retrieved from {KIE_SERVER} datasets.
++
+For more information, see {URL_MANAGING_SETTINGS}#assembly-building-custom-dashboard-widgets[_{BUILDING_WIDGETS}_].
 
 endif::PAM[]
 
@@ -57,7 +61,6 @@ ifdef::PAM[]
 
 The standalone editors are distributed in a self-contained library that provides an all-in-one JavaScript file for each editor. The JavaScript file uses a comprehensive API to set and control the editor. You can install the standalone editors in three ways:
 
-* Use hosted JavaScript files directly
 * Download each JavaScript file manually
 * Use the NPM package
 
@@ -97,24 +100,27 @@ For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-b
 
 === Support for MVEL expressions in data assignments
 
-You can now add MVEL expressions in the Data IO assignments of a user task. For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
+You can now add MVEL expressions in the data input and output assignments of a user task. For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
 
 == {PROCESS_ENGINE_CAP}
 
 === {PROCESS_ENGINE_CAP} API improvements
 
-You can now use the {PROCESS_ENGINE} API to signal a process instance using its correlation key.
-You can now use the {PROCESS_ENGINE} API to determine the node type from within an event listener.
+The following list provides a summary of the process engine API updates:
 
-When using the advanced query feature of the {PROCESS_ENGINE} API, you can now optionally exclude process variables from the search results.
+* You can now use the {PROCESS_ENGINE} API to signal a process instance using its correlation key.
+* You can now use the {PROCESS_ENGINE} API to determine the node type from within an event listener.
+* When using the advanced query feature of the {PROCESS_ENGINE} API, you can now optionally exclude process variables from the search results.
 
 For more information about using the {PROCESS_ENGINE} API, see {URL_DEPLOYING_AND_MANAGING_SERVICES}#assembly-kie-apis[_{KIE_APIS}_].
 
 === KIE API improvements
 
-You can now use the KIE REST API to signal a process using its alias.
+You can now use the KIE REST API to signal a process using its alias. For more information about using the KIE REST API, see {URL_DEPLOYING_AND_MANAGING_SERVICES}#assembly-kie-apis[_{KIE_APIS}_].
 
-For more information about using the KIE REST API, see {URL_DEPLOYING_AND_MANAGING_SERVICES}#assembly-kie-apis[_{KIE_APIS}_].
+=== Singleton timer start node
+
+The {PROCESS_ENGINE} now supports the singleton timer start node in a process with the cluster extension. When the extension is configured and a process is deployed in several instances, the timer start node is only triggered once among all instances.
 
 endif::PAM[]
 
@@ -124,11 +130,10 @@ ifdef::PAM[]
 
 === Integration with AMQ Streams
 
-You can now integrate your business processes that run on a {KIE_SERVER} with Red Hat AMQ Streams or Apache Kafka.
-Processes can send and receive Kafka messages using message events.
+You can now integrate your business processes that run on a {KIE_SERVER} with Red Hat AMQ Streams or Apache Kafka. Processes can send and receive Kafka messages using message events.
 A {KIE_SERVER} can emit Kafka events when a process, case, or task completes.
 
-//For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
 endif::PAM[]
 
 === Support for client roles in {RH-SSO}
@@ -143,11 +148,7 @@ ifdef::PAM[]
 
 === Running job failover
 
-If you have multiple {KIE_SERVER} nodes in cluster and one node fails while in a running state, the jobs in that instance are requested to another running node.
-
-=== Singleton timer start node
-
-With the cluster extension, the jbpm engine now supports singleton timer start node in a process. When the extension is configured and one process is deployed in several instances, the timer start node will be only triggered once among all instances.
+If you have multiple {KIE_SERVER} nodes in a cluster and one node fails while a job is in a running state, the jobs in that instance are requested to another running node.
 
 == Spring Boot
 
@@ -161,11 +162,17 @@ endif::PAM[]
 
 === Support for {OPENSHIFT} version 4.7
 
-{PRODUCT} now supports {OPENSHIFT} version 4.7.
+{PRODUCT} now supports {OPENSHIFT} version 4.7 and {OPENSHIFT} version 4.6 EUS.
+
+For more information, see https://access.redhat.com/support/policy/updates/openshift[Red Hat OpenShift Container Platform Life Cycle Policy] and https://access.redhat.com/support/policy/updates/openshift-eus[Red Hat OpenShift Extended Update Support (EUS) Overview].
+
+ifdef::PAM[]
 
 === Support for Dashbuilder Standalone on {OPENSHIFT}
 
-{PRODUCT} now supports Dashbuilder Standalone (dashbuilder-runtime) on {OPENSHIFT}.
+{PRODUCT} now supports Dashbuilder Standalone (Dashbuilder Runtime) on {OPENSHIFT}.
+
+endif::PAM[]
 
 === Support for LDAP login module stacking
 

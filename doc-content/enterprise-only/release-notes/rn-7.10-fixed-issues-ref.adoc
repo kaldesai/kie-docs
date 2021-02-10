@@ -7,10 +7,10 @@
 
 * Package list fails to populate default package for imported projects [https://issues.redhat.com/browse/RHPAM-3209[RHPAM-3209]]
 * Collection editor is not opening for DRL based test scenarios [https://issues.redhat.com/browse/RHDM-1464[RHDM-1464]]
-* REST Endpoints are accessible to all the logged in users, even though the users are assigned without the correct roles [https://issues.redhat.com/browse/RHPAM-3284[RHPAM-3284]]
-* In test scenarios coverage report, rule name column size is increased and and the numbers are aligned to right side [https://issues.redhat.com/browse/RHPAM-3271[RHPAM-3271]]
-* In guided decision table, an exception error pop-up returns a proper error message [https://issues.redhat.com/browse/RHPAM-3201[RHPAM-3201]]
-* The number of assets listed on the project page of {CENTRAL} does not match with count displayed for pagination [https://issues.redhat.com/browse/RHPAM-2859[RHPAM-2859]]
+* REST endpoints are accessible to all the logged in users, even when the users are assigned without the correct roles [https://issues.redhat.com/browse/RHPAM-3284[RHPAM-3284]]
+* In test scenarios coverage report, rule name column size is increased and the numbers are aligned to the right side [https://issues.redhat.com/browse/RHPAM-3271[RHPAM-3271]]
+* In a guided decision table, an exception error pop-up returns an inappropriate error message [https://issues.redhat.com/browse/RHPAM-3201[RHPAM-3201]]
+* The number of assets listed on the project page of {CENTRAL} does not match with the count displayed for pagination [https://issues.redhat.com/browse/RHPAM-2859[RHPAM-2859]]
 
 ifdef::PAM[]
 
@@ -24,13 +24,13 @@ endif::[]
 
 ifdef::PAM[]
 
-* When you execute a long query, you receive some issues when starting up the {KIE_SERVER} [https://issues.redhat.com/browse/RHPAM-3342[RHPAM-3342]]
+* Some issues appear when starting up the {KIE_SERVER} while executing a long query [https://issues.redhat.com/browse/RHPAM-3342[RHPAM-3342]]
 * When a specified time is reached, a `start timer` event in a process model creates duplicate process instances [https://issues.redhat.com/browse/RHPAM-3189[RHPAM-3189]]
-* When you generate a form with components slider, DocumentCollection, MultipleInput and/or MultipleSelector, these form options are not rendering in an API response [https://issues.redhat.com/browse/RHPAM-2330[RHPAM-2330]]
+* When you generate a form with a components slider, various form options including DocumentCollection, MultipleInput, and MultipleSelector, are not rendering in an API response [https://issues.redhat.com/browse/RHPAM-2330[RHPAM-2330]]
 
 endif::[]
 
-* REST endpoint authentication fails, if the authorization header contains `==` in an encoded key in REST work item handler [https://issues.redhat.com/browse/RHPAM-3259[RHPAM-3259]]
+* REST endpoint authentication fails, if the authorization header contains `==` in an encoded key in the REST work item handler [https://issues.redhat.com/browse/RHPAM-3259[RHPAM-3259]]
 
 == DMN designer
 
@@ -40,8 +40,8 @@ ifdef::PAM[]
 
 == Process engine
 
-* You cannot use the same correlationKey for two active process instances [https://issues.redhat.com/browse/RHPAM-3336[RHPAM-3336]]
-* When you set `userId == null`, `exlOwner !=null` and, `groups !=null` in the query, task is not returned [https://issues.redhat.com/browse/RHPAM-3230[RHPAM-3230]]
+* You cannot use the same `correlationKey` for two active process instances [https://issues.redhat.com/browse/RHPAM-3336[RHPAM-3336]]
+* When you set `userId == null`, `exlOwner !=null` and, `groups !=null` in a query, the task is not returned [https://issues.redhat.com/browse/RHPAM-3230[RHPAM-3230]]
 
 endif::[]
 
@@ -50,20 +50,20 @@ endif::[]
 * `testDoubleNaN` fails after jitting on `TypeCoercionTest` [https://issues.redhat.com/browse/RHDM-1470[RHDM-1470]]
 * When you use the same variable name to different declarations, you receive a false `accumulate` functions conflict [https://issues.redhat.com/browse/RHPAM-3216[RHPAM-3216]]
 * In an executable model, a new line character between the last parameter and `);` in a call method throws a build error [https://issues.redhat.com/browse/RHDM-1550[RHDM-1550]]
-* In an executable model, when you use a compound assignment operation like `BigDecimal_type_property += BigDecimal_value`, you receive a compilation error [https://issues.redhat.com/browse/RHDM-1528[RHDM-1528]]
-* In an executable model, when you use a compound assignment operation like `BigDecimal_type_property += Numeric_value`, you receive compilation errors [https://issues.redhat.com/browse/RHDM-1527[RHDM-1527]]
-* When you use an expression like `BigDecimal_type_property = BigDecimal_type_property.divide(BigDecimal_value)` in an executable model, you receive a build failure error [https://issues.redhat.com/browse/RHDM-1521[RHDM-1521]]
+* In an executable model, when you use a compound assignment operation such as `BigDecimal_type_property += BigDecimal_value`, you receive a compilation error [https://issues.redhat.com/browse/RHDM-1528[RHDM-1528]]
+* In an executable model, when you use a compound assignment operation such as `BigDecimal_type_property += Numeric_value`, you receive compilation errors [https://issues.redhat.com/browse/RHDM-1527[RHDM-1527]]
+* When you use an expression such as `BigDecimal_type_property = BigDecimal_type_property.divide(BigDecimal_value)` in an executable model, you receive a build failure error [https://issues.redhat.com/browse/RHDM-1521[RHDM-1521]]
 * When you use a `BigDecimal` type values in an executable model, you receive a build failure error [https://issues.redhat.com/browse/RHDM-1520[RHDM-1520]]
-* In MVEL dialect mode, when you use the four basic binary operators (`+`, `-`, `*`, `/`) for `BigDecimal` type values, you receive a compilation error in an executable model [https://issues.redhat.com/browse/RHDM-1519[RHDM-1519]]
-* In MVEL dialect mode, when you use an assignment statement for `BigDecimal` type values, you receive compilation errors in an executable model [https://issues.redhat.com/browse/RHDM-1518[RHDM-1518]]
-* The `DrlDumper` generates a wrong DRL when an `AccumulateDescr` does not contain a constraint and, you cannot build the generated DRL [https://issues.redhat.com/browse/RHDM-1517[RHDM-1517]]
+* In MVEL dialect mode in an executable model, when you use the four basic binary operators (`+`, `-`, `*`, `/`) for `BigDecimal` type values, you receive a compilation error [https://issues.redhat.com/browse/RHDM-1519[RHDM-1519]]
+* In MVEL dialect mode in an executable model, when you use an assignment statement for `BigDecimal` type values, you receive compilation errors [https://issues.redhat.com/browse/RHDM-1518[RHDM-1518]]
+* When an `AccumulateDescr` does not contain a constraint, the `DrlDumper` generates an incorrect DRL, which does not allow you to build the generated DRL [https://issues.redhat.com/browse/RHDM-1517[RHDM-1517]]
 * The `DrlDumper` is unable to generate the `accumulate` import [https://issues.redhat.com/browse/RHDM-1516[RHDM-1516]]
-* When you try to bind an enum value, you receive an error in an executable model generation [https://issues.redhat.com/browse/RHDM-1514[RHDM-1514]]
-* In MVEL dialect mode, when you use an enhanced `for` (foreach) statement, you receive a compilation error in an executable model [https://issues.redhat.com/browse/RHDM-1513[RHDM-1513]]
-* In MVEL dialect mode, when you use the space characters between `(` and `LocalVariableType` in an enhanced `for` (foreach) statement, you receive a compilation error [https://issues.redhat.com/browse/RHDM-1505[RHDM-1505]]
+* When you try to bind an `enum` value, you receive an error in an executable model generation [https://issues.redhat.com/browse/RHDM-1514[RHDM-1514]]
+* In MVEL dialect mode in an executable model, when you use an enhanced `for` (foreach) statement, you receive a compilation error [https://issues.redhat.com/browse/RHDM-1513[RHDM-1513]]
+* In MVEL dialect mode in an executable model, when you use the space characters between `(` and `LocalVariableType` in an enhanced `for` (foreach) statement, you receive a compilation error [https://issues.redhat.com/browse/RHDM-1505[RHDM-1505]]
 * When you use the standard Java serialization mechanism, the `ByteArrayResource` is declared twice [https://issues.redhat.com/browse/RHDM-1502[RHDM-1502]]
-* When you are unable to call a `reset` method in the `PriorityMap` and call it inside `org.kie.api.internal.utils.ServiceDiscoveryImpl`, you receive an exception [https://issues.redhat.com/browse/RHDM-1501[RHDM-1501]]
-* When you have two or more different implementations of a service on the classpath, the service discovery or wiring mechanism randomly chooses one of the services that comes first in the classpath. You can now explicitly configure a priority among these services [https://issues.redhat.com/browse/RHDM-1500[RHDM-1500]]
+* When you are unable to call a `reset` method in the `PriorityMap` and call the method inside `org.kie.api.internal.utils.ServiceDiscoveryImpl`, you receive an exception [https://issues.redhat.com/browse/RHDM-1501[RHDM-1501]]
+* When you have two or more different implementations of service on the classpath, the service discovery or wiring mechanism randomly chooses the services that come first in the classpath. You can now explicitly configure a priority among these services [https://issues.redhat.com/browse/RHDM-1500[RHDM-1500]]
 * You cannot use `AgendaFilter` method when the rules are combined with a ruleflow and fired using `KieSession.startProcess` method [https://issues.redhat.com/browse/RHDM-1461[RHDM-1461]]
 
 == {OPENSHIFT}
