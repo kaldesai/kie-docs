@@ -7,9 +7,9 @@ This section lists known issues with {PRODUCT} {PRODUCT_VERSION}.
 
 ifdef::PAM[]
 
-.Unable to display the new dashboard data when you open the Dashbuilder Runtime from the {CENTAL} again [https://issues.redhat.com/browse/RHPAM-3411[RHPAM-3411]]
+.Unable to display the new dashboard data when you open the Dashbuilder Runtime from the {CENTRAL} again [https://issues.redhat.com/browse/RHPAM-3411[RHPAM-3411]]
 
-Issue: You cannot see the new dashboard data when you open the Dashbuilder Runtime from the {CENTAL} again
+Issue: You cannot see the new dashboard data when you open the Dashbuilder Runtime from the {CENTRAL} again
 
 Steps to reproduce:
 
@@ -134,7 +134,6 @@ The generated BPMN file does not contain the `structureRef` for `endMessageType`
 ----
 
 Workaround: Perform the same steps in the VSCode editor in desktop, the correct BPMN file is generated, as per the following example:
-+
 [source]
 ----
 <bpmn2:itemDefinition id="personMessageType" structureRef="com.javierito.Person"/>

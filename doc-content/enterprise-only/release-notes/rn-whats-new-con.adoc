@@ -24,6 +24,8 @@ The test scenarios designer in {CENTRAL} is now available with the new features:
 
 * You can use `Byte`, `Character`, `Float`, `Long`, `Short`, `LocalDateTime`, `LocalTime`, `BigDecimal`, and `BigInteger` classes to create and manage the list of data objects values.
 
+For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-test-scenarios[_{TESTING_DECISION_SERVICE}_].
+
 === New parameter list for Decision Services
 
 {PRODUCT} {ENTERPRISE_VERSION} includes a new *Decision Service details* section in the DMN editor properties panel containing a read-only list of *Input Data*, *Encapsulated Decisions*, and *Output Decisions*.
