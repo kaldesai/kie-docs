@@ -98,7 +98,7 @@ Workaround: None.
 
 .Service task thumbnails are large in documentation [https://issues.redhat.com/browse/RHPAM-2759[RHPAM-2759]]
 
-Issue: Service task thumbnails are large as compared to other nodes thumbnails in *Documentation*.
+Issue: Service task thumbnails are large as compared to other thumbnails in *Documentation*.
 
 Steps to reproduce:
 
@@ -133,7 +133,7 @@ The generated BPMN file does not contain the `structureRef` for `endMessageType`
 <bpmn2:message id="_Icr1JGVqEeuMVv5wG-FCkw" itemRef="endMessageType" name="endMessage"/>
 ----
 
-Workaround: Perform the same steps in the VSCode editor in desktop, the correct BPMN file is generated, as per the following example:
+Workaround: Perform the same steps in the VSCode editor in desktop, the correct BPMN file is generated as per the following example:
 [source]
 ----
 <bpmn2:itemDefinition id="personMessageType" structureRef="com.javierito.Person"/>

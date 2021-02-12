@@ -11,9 +11,9 @@ You can now use the DMN designer in {CENTRAL} to open DMN 1.1 and 1.3 assets. An
 
 === Test scenarios
 
-The test scenarios designer in {CENTRAL} is now available with the new features:
+The test scenarios designer in {CENTRAL} is now available with the following new features:
 
-* You can now perform the undo and redo operations from the *Settings* panel. Also, the warning pop-up is indicated when you save or discard any changes from the *Settings* panel.
+* You can now perform the undo and redo operations from the *Settings* panel. Also, a warning pop-up is displayed when you save or discard any changes from the *Settings* panel.
 
 * In rule-based test scenarios, you can use the following new java classes as data objects:
 
@@ -22,7 +22,7 @@ The test scenarios designer in {CENTRAL} is now available with the new features:
 ** `BigDecimal`
 ** `BigInteger`
 
-* You can use `Byte`, `Character`, `Float`, `Long`, `Short`, `LocalDateTime`, `LocalTime`, `BigDecimal`, and `BigInteger` classes to create and manage the list of data objects values.
+* You can use `Byte`, `Character`, `Float`, `Long`, `Short`, `LocalDateTime`, `LocalTime`, `BigDecimal`, and `BigInteger` classes to create and manage the list of data object values.
 
 For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-test-scenarios[_{TESTING_DECISION_SERVICE}_].
 
@@ -38,12 +38,12 @@ ifdef::PAM[]
 
 The following list provides a summary of Dashbuilder Runtime updates:
 
-* You can automatically deploy the dashboards from {CENTRAL} on Dashbuilder Runtime. {CENTRAL} is linked to Dashbuilder Runtime using a gradual export feature. You can select datasets and pages, but instead of downloading a `ZIP` file, you can click the *Open* button. After clicking the *Open* button, the selected data is exported, and Dashbuilder Runtime updates the model content when it is opened.
+* You can automatically deploy the dashboards from {CENTRAL} on Dashbuilder Runtime. {CENTRAL} is linked to Dashbuilder Runtime using a gradual export feature. You can select datasets and pages, but instead of downloading a `ZIP` file, you can click the *Open* button. After clicking the *Open* button, the selected data is exported, and Dashbuilder Runtime updates the model content.
 You can use `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to enable this feature.
 +
 For more information, see {URL_MANAGING_SETTINGS}#assembly-configuring-central[_{CONFIGURING_CENTRAL}_].
 
-* Dashboards that imported in Dashbuilder Runtime contain a default page. The following are the updates of the Dashbuilder Runtime default page:
+* Dashboards that are imported in Dashbuilder Runtime contain a default page. The following are the updates of the Dashbuilder Runtime default page:
 
 ** If an imported dashboard consists of only one page, then the page is used as the default page.
 ** If a page is named as `index`, then the index page is used as the default page.
@@ -61,7 +61,7 @@ ifdef::PAM[]
 
 {PRODUCT} now provides standalone editors for Business Process Model and Notation (BPMN) process models and Decision Model and Notation (DMN) decision models. The standalone editors enable you to view and design BPMN and DMN models embedded in your web applications. The read-only mode for standalone BPMN editor is not supported in {PRODUCT} 7.10.0.
 
-The standalone editors are distributed in a self-contained library that provides an all-in-one JavaScript file for each editor. The JavaScript file uses a comprehensive API to set and control the editor. You can install the standalone editors in three ways:
+The standalone editors are distributed in a self-contained library that provides an all-in-one JavaScript file for each editor. The JavaScript file uses a comprehensive API to set and control the editor. You can install the standalone editors in two ways:
 
 * Download each JavaScript file manually
 * Use the NPM package
