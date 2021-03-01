@@ -104,8 +104,8 @@ image:ReleaseNotes/StunnerToolbar-7.0.0.png[align="center", title="Toolbar re-de
 
 The entire admin console screens have been re-designed focusing on:
 
-** Create new layout and re-styling existent elements.
-** Revised *Manage Process Instances* page
+** Create new layout and re-styling existent elements
+** Revise *Manage Process Instances* page
 ** Review and improve quick filter creation
 ** Review and improve saved filters
 ** Rename top level menus
