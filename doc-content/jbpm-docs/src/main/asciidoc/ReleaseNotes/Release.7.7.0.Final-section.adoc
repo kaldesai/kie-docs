@@ -174,7 +174,7 @@ image::ReleaseNotes/ConsoleItemDetails_7.7.0.png[align="center", title="Item det
 Some changes have been introduced for that purpose:
 
 ** Migrated details views to full screen/adjust styling and breadcrumbs
-** Moved process model popup in process definition and instance to tab in details ( process definitions and process instances)
+** Moved process model pop up in process definition and instance to tab in details ( process definitions and process instances)
 ** Moved actions to the new layout toolbar.
 ** Re-styling the tabs items details to be shown in full screen mode
 ** Navigate back to list view using “X” close button or breadcrumbs
