@@ -13,6 +13,10 @@ You can create a new project from scratch or clone projects from an existing Git
 The *Projects* page opens.
 . In the *Project Preferences* panel, click the preference you want to modify. The following preferences are available:
 +
+* *Project Importing*: This preference has the following property:
+
+** Select the *Allow multiple projects to be imported on cluster* checkbox to import multiple projects at the same time on a cluster.
+
 * *File exporting*: This preference has the following properties:
 +
 [caption="Table 1. "]
@@ -79,7 +83,7 @@ The *Projects* page opens.
 
 |Disable GAV conflict check? |Determines whether to enable or disable the GAV conflict check. Disabling this feature allows projects to have the same GAV (Group ID, Artifact, Version).
 
-|Allow child GAV edition? |Determines whether to allow child/sub-projects to have GAV edition.
+|Allow child GAV edition? |Determines whether to allow child or sub-projects to have GAV edition.
 |===
 +
 NOTE: Duplicate GAV detection is disabled for projects in *Development Mode*. To enable duplicate GAV detection for a project in {CENTRAL}, go to project *Settings* -> *General Settings* -> *Version* and toggle the *Development Mode* option to *OFF* (if applicable).
