@@ -84,6 +84,6 @@ You can customize the project settings in {CENTRAL}. Also, you can create a new 
 |Allow child GAV edition? |Determines whether to allow child or subprojects to contain GAV edition.
 |===
 +
-NOTE: Duplicate GAV detection is disabled for projects in the development ode. To enable duplicate GAV detection for a project in {CENTRAL}, go to project *Settings* -> *General Settings* -> *Version* and toggle the *Development Mode* option to *OFF* (if applicable).
+NOTE: Duplicate GAV detection is disabled for projects in the development mode. To enable duplicate GAV detection for a project in {CENTRAL}, go to project *Settings* -> *General Settings* -> *Version* and toggle the *Development Mode* option to *OFF* (if applicable).
 +
 . Click *Save*.
