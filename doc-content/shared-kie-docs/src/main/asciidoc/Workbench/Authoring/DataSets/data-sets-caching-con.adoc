@@ -1,5 +1,5 @@
 [id='data-sets-caching-con_{context}']
-= Caching
+= Caching data
 
 {CENTRAL} provides caching mechanisms for storing data sets and performing data operations using in-memory data. Caching data reduces network traffic, remote system payload, and processing time. To avoid performance issues, configure the cache settings in {CENTRAL}.
 
@@ -9,6 +9,8 @@ For any data lookup call that results in a data set, the caching method determin
 
 * Client level
 * Back-end level
+
+You can set the *Client Cache* and *Backend Cache* settings on the *Advanced* tab of the data set.
 
 [float]
 == Client cache
