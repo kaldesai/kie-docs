@@ -1,23 +1,21 @@
 [id='customizing-project-preferences-proc_{CONTEXT}']
 = Customizing project preferences
 
-A project stores assets and is part of a space. A space can hold multiple projects.
+In {CENTRAL}, a project is a part of your space and stores the related assets. You can add multiple projects in a space.
 
-For example, an organization has many departments, such as HR, Payroll, Engineering, R&D, and so on. Each department maps to a space and every department can have its own projects.
+For example, an organization includes various departments, such as HR, Payroll, Engineering, and R&D. You can map each department to a space in {CENTRAL}, along with adding respective projects.
 
-You can create a new project from scratch or clone projects from an existing Git repository.
+You can customize the project settings in {CENTRAL}. Also, you can create a new project or clone projects from an existing Git repository.
 
 .Procedure
-. In {CENTRAL}, select the *Admin* icon in the upper-right corner of the screen and select *Projects*.
+. In {CENTRAL}, select the *Admin* icon in the upper-right corner and select *Projects*.
+. In the *Project Preferences* panel, select the preference you want to modify. The project preferences include:
 +
-The *Projects* page opens.
-. In the *Project Preferences* panel, click the preference you want to modify. The following preferences are available:
-+
-* *Project Importing*: This preference has the following property:
+* *Project Importing*: This preference consists of the following property:
 
-** Select the *Allow multiple projects to be imported on cluster* checkbox to import multiple projects at the same time on a cluster.
+** Select the *Allow multiple projects to be imported on cluster* to import multiple projects on a cluster.
 
-* *File exporting*: This preference has the following properties:
+* *File exporting*: This preference consists of the following properties:
 +
 [caption="Table 1. "]
 .File exporting properties
@@ -28,12 +26,12 @@ The *Projects* page opens.
 
 |PDF orientation |Determines whether the PDF orientation is portrait or landscape.
 
-|PDF units |Determines whether the PDF unit is _PT_, _MM_, _CN_ or _IN_.
+|PDF units |Determines whether the PDF unit is _PT_, _MM_, _CN_, or _IN_.
 
 |PDF page format |Determines whether the PDF page format is _A[0-10]_, _B[0-10]_, or _C[0-10]_.
 |===
 +
-* *Spaces*: This preference has the following properties:
+* *Spaces*: This preference consists of the following properties:
 +
 [caption="Table 2. "]
 .Spaces properties
@@ -53,7 +51,7 @@ The *Projects* page opens.
 |Alias (in plural) |Determines the customized alias (plural) of the space.
 |===
 +
-* *Default values*: This preference has the following properties:
+* *Default values*: This preference consists of the following properties:
 +
 [caption="Table 3. "]
 .Default values properties
@@ -62,9 +60,9 @@ The *Projects* page opens.
 |===
 |Field |Description
 
-|Version |The default version number of a project when creating projects using the Quick setup option.
+|Version |The default version number of a project when creating projects.
 
-|Description |The default description of a project when creating projects using the Quick setup option.
+|Description |The default description of a project when creating projects.
 
 |Branch |The default branch to be used when using a Git repository.
 
@@ -72,7 +70,7 @@ The *Projects* page opens.
 
 |===
 +
-* *Advanced GAV preferences*: This preference has the following properties:
+* *Advanced GAV preferences*: This preference consists of the following properties:
 +
 [caption="Table 4. "]
 .Advanced GAV preference properties
@@ -81,11 +79,11 @@ The *Projects* page opens.
 |===
 |Field |Description
 
-|Disable GAV conflict check? |Determines whether to enable or disable the GAV conflict check. Disabling this feature allows projects to have the same GAV (Group ID, Artifact, Version).
+|Disable GAV conflict check? |Determines whether to enable or disable the GAV conflict check. Disabling this checkbox enables the projects to contain the same GAV (group ID, artifact, and version).
 
-|Allow child GAV edition? |Determines whether to allow child or sub-projects to have GAV edition.
+|Allow child GAV edition? |Determines whether to allow child or subprojects to contain GAV edition.
 |===
 +
-NOTE: Duplicate GAV detection is disabled for projects in *Development Mode*. To enable duplicate GAV detection for a project in {CENTRAL}, go to project *Settings* -> *General Settings* -> *Version* and toggle the *Development Mode* option to *OFF* (if applicable).
+NOTE: Duplicate GAV detection is disabled for projects in the development ode. To enable duplicate GAV detection for a project in {CENTRAL}, go to project *Settings* -> *General Settings* -> *Version* and toggle the *Development Mode* option to *OFF* (if applicable).
 +
 . Click *Save*.
