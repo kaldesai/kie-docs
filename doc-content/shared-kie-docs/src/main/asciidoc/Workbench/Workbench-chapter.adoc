@@ -2,20 +2,28 @@
 = {CENTRAL} (General)
 
 include::Installation/Installation-section.adoc[leveloffset=+1]
+
 include::QuickStart/QuickStart-section.adoc[leveloffset=+1]
+
 include::Configuration/Configuration-section.adoc[leveloffset=+1]
+
 include::General/Introduction-section.adoc[leveloffset=+1]
+
 include::General/ChangingLayout-section.adoc[leveloffset=+1]
+
 include::Authoring/Authoring-section.adoc[leveloffset=+1]
 //include::SecurityManagement/SecurityManagement-section.adoc[leveloffset=+1]
+
 include::SecurityManagement/managing-business-central-user-and-group-management-con.adoc[leveloffset=+1]
 include::SecurityManagement/business-central-settings-creating-new-users-proc.adoc[leveloffset=+2]
 include::SecurityManagement/managing-business-central-editing-users-proc.adoc[leveloffset=+2]
 include::SecurityManagement/managing-business-central-creating-groups-proc.adoc[leveloffset=+2]
 include::SecurityManagement/managing-business-central-editing-groups-proc.adoc[leveloffset=+2]
+
 include::SecurityManagement/business-central-security-management-con.adoc[leveloffset=+1]
 include::SecurityManagement/business-central-security-management-provider-con.adoc[leveloffset=+2]
-include::SecurityManagement/business-central-configuring-EAP-security-management-provider-proc.adoc[leveloffset=+3]
+include::SecurityManagement/configuring-EAP-security-management-provider-property-files-proc.adoc[leveloffset=+3]
+include::SecurityManagement/configuring-EAP-security-management-provider-CLI-mode-proc.adoc[leveloffset=+3]
 include::SecurityManagement/business-central-security-management-permissions-con.adoc[leveloffset=+2]
 include::SecurityManagement/business-central-settings-changing-permissions-proc.adoc[leveloffset=+3]
 include::SecurityManagement/business-central-settings-changing-home-proc.adoc[leveloffset=+3]
@@ -23,9 +31,13 @@ include::SecurityManagement/business-central-settings-setting-priorities-proc.ad
 
 
 include::SSHKeyStore/SSHKeyStore-section.adoc[leveloffset=+1]
+
 include::Embedding/Embedding-section.adoc[leveloffset=+1]
+
 include::ExecServer/ExecServer-section.adoc[leveloffset=+1]
+
 include::ExperimentalFeatures/ExperimentalFeatures-section.adoc[leveloffset=+1]
+
 include::WorkbenchProfiles/WorkbenchProfiles-section.adoc[leveloffset=+1]
 
 include::performance-tuning-business-central-ref.adoc[leveloffset=+1]

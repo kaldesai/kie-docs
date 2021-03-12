@@ -1,0 +1,44 @@
+[id='configuring-EAP-security-management-provider-CLI-mode-proc_{context}']
+
+= Configuring the {EAP} security management provider based on property files and CLI mode
+
+To use the {EAP} security management provider based on property files and CLI mode, complete the following steps:
+
+.Prerequisites
+
+* {EAP} is installed.
+
+.Procedure
+
+. To use an existing users or roles property files from the {EAP} instance, include the following system properties in the `EAP_HOME/standalone/configuration/application-users.properties` and `EAP_HOME/standalone/configuration/application-roles.properties` files:
++
+.{EAP} security management provider based on property files and CLI mode
+[%header,cols=3]
+[%autowidth]
+|===
+|Property |Description |Default value
+
+|`org.uberfire.ext.security.management.wildfly.cli.host` | The native administration interface host. |`localhost`
+
+|`org.uberfire.ext.security.management.wildfly.cli.port` | The native administration interface port. |`9990`
+
+|`org.uberfire.ext.security.management.wildfly.cli.user` | The native administration interface username. |NA
+
+|`org.uberfire.ext.security.management.wildfly.cli.password` | The native administration interface user's password. |NA
+
+|`org.uberfire.ext.security.management.wildfly.cli.realm` | The realm used by the application's security context. |`ApplicationRealm`
+
+|===
+
+. Create the `security-management.properties` file in the root of your application. For example, create the following file:
++
+[source]
+----
+src/main/resources/security-management.properties
+----
+. Enter the following keys and provider name as a value:
++
+[source]
+----
+org.uberfire.ext.security.management.api.userManagementServices=WildflyCLIUserManagementService
+----

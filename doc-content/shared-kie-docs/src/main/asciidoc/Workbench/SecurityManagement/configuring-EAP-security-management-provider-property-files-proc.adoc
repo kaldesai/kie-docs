@@ -1,0 +1,39 @@
+[id='configuring-EAP-security-management-provider-property-files-proc_{context}']
+
+= Configuring the {EAP} security management provider based on property files
+
+You can build and register your own {EAP} security management provider. To use the {EAP} security management provider based on property files, complete the following steps:
+
+.Prerequisites
+
+* {EAP} is installed.
+
+.Procedure
+
+. To use an existing users or roles property files from the {EAP} instance, include the following system properties in the `EAP_HOME/standalone/configuration/application-users.properties` and `EAP_HOME/standalone/configuration/application-roles.properties` files:
++
+.{EAP} security management provider based on property files
+[%header,cols=3]
+[%autowidth]
+|===
+|Property |Description |Default value
+
+|`org.uberfire.ext.security.management.wildfly.properties.realm` | The name of the realm. This property is not mandatory. | `ApplicationRealm`
+
+|`org.uberfire.ext.security.management.wildfly.properties.users-file-path` | The absolute file path for the users property file. This property is mandatory. |`./standalone/configuration/application-users.properties`
+
+|`org.uberfire.ext.security.management.wildfly.properties.groups-file-path` | The absolute file path for the groups property file. This property is mandatory. |`./standalone/configuration/application-roles.properties`
+
+|===
+. Create the `security-management.properties` file in the root of your application. For example, create the following file:
++
+[source]
+----
+src/main/resources/security-management.properties
+----
+. Enter the following keys and provider name as a value:
++
+[source]
+----
+org.uberfire.ext.security.management.api.userManagementServices=WildflyUserManagementService
+----
