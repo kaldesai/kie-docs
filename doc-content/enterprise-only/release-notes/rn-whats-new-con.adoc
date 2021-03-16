@@ -124,7 +124,7 @@ endif::PAM[]
 
 == New wrapper modules
 
-{PRODUCT} {Version} now provides new wrapper modules to make the Drools engine lighter and more maintainable. There is an ongoing refactoring process to isolate and descope optional features that are not related to the internal algorithm of the engine. Drools engine leverages MVEL for a lot of internal usages like DRL parsing, constraints evaluation, and templates generation. Usages of MVEL are isolated in a new `drools-mvel` module. Drools engine implements KieSessions serialization with `protobuf` to ensure better backward compatibility. This serialization feature is isolated in the `drools-serialization-protobuf` module.
+{PRODUCT} {ENTERPRISE_VERSION} now provides new wrapper modules to make the Drools engine lighter and more maintainable. There is an ongoing refactoring process to isolate and descope optional features that are not related to the internal algorithm of the engine. Drools engine leverages MVEL for a lot of internal usages like DRL parsing, constraints evaluation, and templates generation. Usages of MVEL are isolated in a new `drools-mvel` module. Drools engine implements KieSessions serialization with `protobuf` to ensure better backward compatibility. This serialization feature is isolated in the `drools-serialization-protobuf` module.
 
 According to your project requirements, you can add `drools-mvel` and `drools-serialization-protobuf` modules in your project classpath.
 
