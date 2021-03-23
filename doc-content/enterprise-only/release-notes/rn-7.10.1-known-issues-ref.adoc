@@ -33,6 +33,24 @@ Actual result: Custom task thumbnails are not consistent.
 
 Workaround: None.
 
+.JavaScript language in an *On Entry Action* causes an unexpected system error after changing node to *Multiple Instance* [https://issues.redhat.com/browse/RHPAM-3409[RHPAM-3409]]
+
+Issue: In the *Properties* panel, if the language is set to JavaScript in an *On Entry Action* property and you change the node to *Multiple Instance*, you receive an unexpected system error.
+
+Steps to reproduce:
+
+. Create a new business process.
+. Create a task that contains *Multiple Instance* property.
+. Enter any string to the *On Entry Action* property.
+. Change the language to JavaScript.
+. Set the value of the *Multiple Instance* property to `true`.
+
+Expected result: No errors occur in the user interface or server log.
+
+Actual result: You receive an unexpected system error.
+
+Workaround: None.
+
 endif::[]
 
 == {KIE_SERVER}
