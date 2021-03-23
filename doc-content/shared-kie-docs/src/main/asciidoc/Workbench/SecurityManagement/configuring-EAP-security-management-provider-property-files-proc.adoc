@@ -2,7 +2,7 @@
 
 = Configuring the {EAP} security management provider based on property files
 
-You can build and register your own {EAP} security management provider. To use the {EAP} security management provider based on property files, complete the following steps:
+You can build and register your own {EAP} security management provider. To use the {EAP} security management provider based on property files, complete the steps in this procedure.
 
 .Prerequisites
 
@@ -18,6 +18,8 @@ You can build and register your own {EAP} security management provider. To use t
 <property name="org.uberfire.ext.security.management.wildfly.properties.users-file-path" value="/standalone/configuration/application-users.properties"/>
 <property name="org.uberfire.ext.security.management.wildfly.properties.groups-file-path" value="/standalone/configuration/application-roles.properties"/>
 ----
++
+The following table provides a description and default value for these properties:
 +
 .{EAP} security management provider based on property files
 [%header,cols=3]

@@ -2,7 +2,7 @@
 
 = Configuring the {EAP} security management provider based on property files and CLI mode
 
-To use the {EAP} security management provider based on property files and CLI mode, complete the following steps:
+To use the {EAP} security management provider based on property files and CLI mode, complete the steps in this procedure.
 
 .Prerequisites
 
@@ -20,6 +20,8 @@ To use the {EAP} security management provider based on property files and CLI mo
 <property name="org.uberfire.ext.security.management.wildfly.cli.password" value="<USER_PWD>"/>
 <property name="org.uberfire.ext.security.management.wildfly.cli.realm" value="ApplicationRealm"/>
 ----
++
+The following table provides a description and default value for these properties:
 +
 .{EAP} security management provider based on property files and CLI mode
 [%header,cols=3]
