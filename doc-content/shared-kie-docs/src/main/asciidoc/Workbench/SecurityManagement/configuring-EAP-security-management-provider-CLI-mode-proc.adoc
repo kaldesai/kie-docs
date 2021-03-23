@@ -10,7 +10,16 @@ To use the {EAP} security management provider based on property files and CLI mo
 
 .Procedure
 
-. To use an existing users or roles property files from the {EAP} instance, include the following system properties in the `EAP_HOME/standalone/configuration/application-users.properties` and `EAP_HOME/standalone/configuration/application-roles.properties` files:
+. To use an existing users or roles property file from the {EAP} instance, include the following system properties in the `EAP_HOME/standalone/configuration/application-users.properties` and `EAP_HOME/standalone/configuration/application-roles.properties` files, as shown in the following example:
++
+[source,xml,subs="attributes+"]
+----
+<property name="org.uberfire.ext.security.management.wildfly.cli.host" value="localhost"/>
+<property name="org.uberfire.ext.security.management.wildfly.cli.port" value="9990"/>
+<property name="org.uberfire.ext.security.management.wildfly.cli.user" value="<USERNAME>"/>
+<property name="org.uberfire.ext.security.management.wildfly.cli.password" value="<USER_PWD>"/>
+<property name="org.uberfire.ext.security.management.wildfly.cli.realm" value="ApplicationRealm"/>
+----
 +
 .{EAP} security management provider based on property files and CLI mode
 [%header,cols=3]
@@ -29,16 +38,15 @@ To use the {EAP} security management provider based on property files and CLI mo
 |`org.uberfire.ext.security.management.wildfly.cli.realm` | The realm used by the application's security context. |`ApplicationRealm`
 
 |===
-
-. Create the `security-management.properties` file in the root of your application. For example, create the following file:
+. Create the `security-management.properties` file in the root directory of your application. For example, create the following file:
 +
 [source]
 ----
 src/main/resources/security-management.properties
 ----
-. Enter the following keys and provider name as a value:
+. Enter the following system property and security provider name as a value in the `security-management.properties` file:
 +
-[source]
+[source,xml,subs="attributes+"]
 ----
-org.uberfire.ext.security.management.api.userManagementServices=WildflyCLIUserManagementService
+<property name="org.uberfire.ext.security.management.api.userManagementServices" value="WildflyCLIUserManagementService"/>
 ----
