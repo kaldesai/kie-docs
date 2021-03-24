@@ -51,13 +51,13 @@ Actual result: You receive an unexpected system error.
 
 Workaround: None.
 
-endif::[]
-
 == {KIE_SERVER}
 
 .Execution of the `WebServiceWorkItemHandler` running on {EAP} 7.3.5 fails [https://issues.redhat.com/browse/RHPAM-3440[RHPAM-3440]]
 
 Issue: The execution of the `WebServiceWorkItemHandler` on {KIE_SERVER} running on {EAP} 7.3.5 fails. The `ModuleClassLoader` is changed in the latest {EAP} release causes incompatibility with the code working in previous versions.
+
+NOTE: Do not upgrade to {EAP} 7.3.5 if you are using `WebServiceWorkItemHandler` on {KIE_SERVER}. Use {EAP} 7.3.4 instead.
 
 Steps to reproduce:
 
@@ -71,5 +71,6 @@ mvn clean install -Peap7 -Deap7.download.url=<eap 7.3.5 zip file URL> -Dit.test=
 ----
 Test fails along with the errors in the console.
 
-
 Workaround: None.
+
+endif::[]

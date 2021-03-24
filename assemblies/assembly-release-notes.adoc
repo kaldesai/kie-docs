@@ -28,7 +28,9 @@ include::{enterprise-dir}/release-notes/rn-7.10-known-issues-ref.adoc[leveloffse
 
 include::{enterprise-dir}/release-notes/rn-7.10-fixed-issues-ref.adoc[leveloffset=+1]
 
+ifdef::PAM[]
 include::{enterprise-dir}/release-notes/rn-7.10.1-known-issues-ref.adoc[leveloffset=+1]
+endif::[]
 
 include::{enterprise-dir}/release-notes/rn-7.10.1-fixed-issues-ref.adoc[leveloffset=+1]
 

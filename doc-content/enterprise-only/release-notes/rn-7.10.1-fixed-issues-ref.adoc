@@ -30,13 +30,13 @@ ifdef::PAM[]
 == {PROCESS_ENGINE_CAP}
 
 * Due to lazy loading of the runtime engine KIE session ID fails to unlock during the disposal [https://issues.redhat.com/browse/RHPAM-3447[RHPAM-3447]]
+* A process with multiple parallel gateways is not completed in `Async` mode [https://issues.redhat.com/browse/RHPAM-3338[RHPAM-3338]]
 
 == Process Designer
 
 * `structureRef` is missing for message event when creating a process [https://issues.redhat.com/browse/RHPAM-3437[RHPAM-3437]]
 * You cannot edit the expressions in the data input and output assignments of a user task [https://issues.redhat.com/browse/RHPAM-3434[RHPAM-3434]]
 * When you create a new case project in {CENTRAL}, a Work Item Definition (WID) file is not present at the root package instead it is located outside of the root package [https://issues.redhat.com/browse/RHPAM-3432[RHPAM-3432]]
-* A process with multiple parallel gateways is not completed in `Async` mode [https://issues.redhat.com/browse/RHPAM-3338[RHPAM-3338]]
 * Service task thumbnails are large in documentation [https://issues.redhat.com/browse/RHPAM-2759[RHPAM-2759]]
 endif::[]
 
@@ -70,5 +70,5 @@ endif::[]
 ifdef::PAM[]
 
 * `jbpm.business.calendar.properties` system property is not working in {OPENSHIFT} environment [https://issues.redhat.com/browse/RHPAM-3352[RHPAM-3352]]
-
+* In the {KIE_SERVER} launch script, pulling of the dependencies and KJAR validation is skipped to speedup the start time [https://issues.redhat.com/browse/RHPAM-3494[RHPAM-3494]]
 endif::[]
