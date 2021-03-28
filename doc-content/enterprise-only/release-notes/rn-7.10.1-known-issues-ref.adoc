@@ -14,15 +14,15 @@ Issue: Custom task thumbnails are not consistent in both project and case projec
 Steps to reproduce:
 
 . Create a case project.
-. In case project, create both process and case.
+. In the case project, create both a process and a case.
 . Save the changes and close the process.
-. Navigate to the project settings and add all the custom tasks.
+. Navigate to the project settings and add all of the custom tasks.
 . Save the changes.
 . Check the process.
 +
 If the issue is not visible try to close and reopen the asset.
 . Close the process.
-. Remove all the custom tasks and save the changes.
+. Remove all of the custom tasks and save the changes.
 . Check the process.
 +
 If the issue is not visible try to close and reopen the asset.
@@ -51,6 +51,14 @@ Actual result: You receive an unexpected system error.
 
 Workaround: None.
 
+== {PROCESS_ENGINE_CAP}
+
+.Listeners are not ready when a signal is released in a subprocess [https://issues.redhat.com/browse/RHPAM-3484[RHPAM-3484]]
+
+Issue: A signal released in a subprocess is not captured correctly in an intermediate capture event.
+
+Workaround: A new `executeActionAfterComplete` metadata is added. You can set the `executeActionAfterComplete` to `true` to avoid problems with the action nodes.
+
 == {KIE_SERVER}
 
 .Execution of the `WebServiceWorkItemHandler` running on {EAP} 7.3.5 fails [https://issues.redhat.com/browse/RHPAM-3440[RHPAM-3440]]
@@ -69,7 +77,7 @@ Steps to reproduce:
 ----
 mvn clean install -Peap7 -Deap7.download.url=<eap 7.3.5 zip file URL> -Dit.test=WebServiceIntegrationTest
 ----
-Test fails along with the errors in the console.
+Test fails with errors displayed in the console.
 
 Workaround: None.
 

@@ -66,9 +66,9 @@ endif::[]
 == {OPENSHIFT}
 
 * When `AUTH_LDAP_BASE_FILTER` contains the `|` value, you receive LDAP sync issues [https://issues.redhat.com/browse/RHDM-1567[RHDM-1567]]
+* In the {KIE_SERVER} launch script, pulling of the dependencies and KJAR validation is skipped to speedup the start time [https://issues.redhat.com/browse/RHPAM-3494[RHPAM-3494]]
 
 ifdef::PAM[]
 
 * `jbpm.business.calendar.properties` system property is not working in {OPENSHIFT} environment [https://issues.redhat.com/browse/RHPAM-3352[RHPAM-3352]]
-* In the {KIE_SERVER} launch script, pulling of the dependencies and KJAR validation is skipped to speedup the start time [https://issues.redhat.com/browse/RHPAM-3494[RHPAM-3494]]
 endif::[]
