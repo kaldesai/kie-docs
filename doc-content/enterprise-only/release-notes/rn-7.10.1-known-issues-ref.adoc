@@ -3,6 +3,29 @@
 
 This section lists known issues with {PRODUCT} 7.10.1.
 
+== {CENTRAL}
+
+.Data Object editor removes imports when saving [https://issues.redhat.com/browse/RHPAM-3544[RHPAM-3544]]
+
+Issue: In the data object editor, you cannot add an import using a *Source* tab. The added import is removed automatically when you save the changes.
+
+Steps to reproduce:
+
+. Open Business Central.
+. Open or create any project.
+. Create a data object.
+. In the *Source* tab of a data object, add `import java.util.Date` data object.
+. Click *Save*.
++
+You can see that the added import is not present in the data object editor.
+
+Expected result: In the the *Source* tab a data object, added import is not removed.
+
+Actual result: In the the *Source* tab a data object, added import is removed.
+
+Workaround: None.
+
+
 ifdef::PAM[]
 
 == Process Designer
