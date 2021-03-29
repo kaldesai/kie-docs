@@ -25,6 +25,11 @@ Actual result: In the the *Source* tab a data object, added import is removed.
 
 Workaround: None.
 
+.Guided decision tables does not open when you migrate from Red Hat JBoss BPM Suite 6.4 to {PRODUCT} 7.7 [https://issues.redhat.com/browse/RHPAM-3217[RHPAM-3217]]
+
+Issue: When you migrate from Red Hat JBoss BPM Suite 6.4 to {PRODUCT} 7.7, guided decision tables fails to open.
+
+Workaround: Do not use the name starting with `ruletable` for the column description.
 
 ifdef::PAM[]
 
