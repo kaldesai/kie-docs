@@ -28,6 +28,3 @@ include::DataSourceManagement/deleting-data-source-proc.adoc[leveloffset=+2]
 include::DataSourceManagement/adding-database-driver-proc.adoc[leveloffset=+2]
 include::DataSourceManagement/editing-database-driver-proc.adoc[leveloffset=+2]
 include::DataSourceManagement/deleting-database-driver-proc.adoc[leveloffset=+2]
-
-
-//include::DataSourceManagement/DataSourceManagement-section.adoc[leveloffset=+1]

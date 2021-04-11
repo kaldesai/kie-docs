@@ -1,5 +1,5 @@
 [id='data-source-management-con_{context}']
-= Data source management
+= Data source and database driver management
 
 {CENTRAL} provides data source management features that enable you to define data sources for accessing a database. These data sources are then used by other {CENTRAL} components such as the data sets. A database driver enables communication between a data source and the targeted database.
 
