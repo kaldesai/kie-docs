@@ -1,0 +1,36 @@
+[id='con-building-custom-dashboard-navigation-components_{context}']
+
+= Navigation components
+
+You can use the *Navigation* components for navigating between pages. There are six types of navigation components.
+
+.Navigation component sub-types
+[cols="1,1", options="header"]
+|===
+| Navigation component sub-types
+| Description
+
+|*Target Div*
+|This component is used by the Tab list, Menu bar, and the Tree navigator components to display their entries and keep track of the last item clicked.
+
+|*Menu Bar*
+|This component displays the entries of a navigation tree in the form of a menu bar. There is no limit to the number of levels supported by {CENTRAL}.
+
+|*Tile Navigator*
+|This component displays the navigation group in the form of tiles. Groups are displayed as folders but for single entries, its content is displayed instead when selected.
+
+|*Tree*
+|This component displays the entries in a vertical tree structure format.
+
+|*Carousel*
+|This component displays or cycles through the selected pages like a carousel or a slide show.
+
+|*Tab List*
+|This component displays selected menu pages as tabs at the top of the component.
+
+|===
+
+[NOTE]
+====
+The target div setting is not needed for non-target div components such as Carousel or Tile navigator.
+====
