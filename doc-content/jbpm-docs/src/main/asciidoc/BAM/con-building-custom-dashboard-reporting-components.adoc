@@ -1,0 +1,51 @@
+[id='con-building-custom-dashboard-reporting-components_{context}']
+= Reporting components
+
+The *Reporting* components are used for displaying data from data sets in the form of graphs, tables, maps, and so on. There are eleven types of reporting components. For more information regarding data sets, see xref:data-sets-authoring-con_building-custom-dashboard-widgets[Data sets authoring] section.
+
+The reporting components can be configured using the *New Displayer* widget, which has the following three tabs:
+
+* *Type*: Choose how to display custom data graphically.
+* *Data*: Choose a data set from the list of custom data sets that you had created from the *Data Sets* section available in the *Settings* menu.
+* *Display*: Edit and customize how the content is displayed by adding titles, changing colors, size, and so on.
+
+.Reporting component sub-types
+[cols="1,1", options="header"]
+|===
+| Reporting component sub-types
+| Description
+
+|*Bar*
+|This component is used to display the data from data sets in the form of bar chart.
+
+|*Pie*
+|This component is used to display the data from data sets in the form of pie chart. In a pie chart, the arc length of each slice is proportional to the quantity it represents.
+
+|*Line*
+|This component is used to display the data from data sets as a series of data points connected by straight line segments on two axes.
+
+|*Area*
+|This component combines the line chart and bar chart to display the data from data sets.
+
+|*Bubble*
+|This component displays multiple circles (bubbles) in a two-dimensional plot. It is a generalization of the scatter plot, replacing the dots with bubbles.
+
+|*Meter*
+|This component is used to display the data from data sets in the form of meter.
+
+|*Map*
+|This component allows you to o position your data in a context, often geographical, using different layers. Data values are displayed as markers on the map. Data values can be coordinates (lat-long pairs) or addresses.
+
+|*Metric*
+|This component is used to display the data from data sets in the form of metric. You can use the *Preview*, *HTML*, or *Javascript* tab to edit your data.
+
+|*Table*
+|This component is used to display the data from data sets in the form of table. You can hide or display the columns as per your requirements.
+
+|*Filter*
+|This component allows you to filter the data from data sets. 
+
+|*Time Series Chart*
+|This component is used to display the data from data sets in the form time series.
+
+|===
