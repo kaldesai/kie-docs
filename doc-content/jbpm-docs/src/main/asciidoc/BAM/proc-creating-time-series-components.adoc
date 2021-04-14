@@ -9,7 +9,6 @@ You can export the time series components to Dashbuilder Runtime and retrieve th
 .Prerequisites
 
 * {KIE_SERVER} is deployed and connected to {CENTRAL}.
-* {KIE_SERVER} is deployed and connected to {CENTRAL}.
 
 .Procedure
 
