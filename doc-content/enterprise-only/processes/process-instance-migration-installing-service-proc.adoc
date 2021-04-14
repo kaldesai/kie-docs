@@ -58,7 +58,7 @@ kieservers:
 ----
 $ java -jar {PRODUCT_FILE}-process-migration-service-standalone.jar -s./config.yml
 ----
-. To enable Thorntail to auto detect a JDBC driver, add the a dd the `JAR` file with the driver to the `thorntail.classpath` system property. For example, execute the following command:
+. To enable Thorntail to auto detect a JDBC driver, add the `JAR` file with the driver name to the `thorntail.classpath` system property. For example, execute the following command:
 +
 [source,subs="attributes+"]
 ----
