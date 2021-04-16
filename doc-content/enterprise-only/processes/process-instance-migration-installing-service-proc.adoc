@@ -62,7 +62,7 @@ $ java -jar {PRODUCT_FILE}-process-migration-service-standalone.jar -s./config.y
 +
 [source,subs="attributes+"]
 ----
-$ java -Dthorntail.classpath=./h2-{PRODUCT_FILE}-process-migration-service-standalone.jar -s./config.yml
+$ java -Dthorntail.classpath==./h2-1.4.200.jar -jar {PRODUCT_FILE}-process-migration-service-standalone.jar -s ./config.yml
 ----
 +
 NOTE: The `h2` JDBC driver is included by default. You can use different JDBC drivers to connect to different external databases.
