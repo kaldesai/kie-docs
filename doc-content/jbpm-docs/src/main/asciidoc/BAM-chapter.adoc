@@ -11,7 +11,7 @@ include::BAM/con-building-custom-dashboard-reporting-components.adoc[leveloffset
 include::BAM/con-building-custom-dashboard-components-properties.adoc[leveloffset=+2]
 include::BAM/proc-building-custom-dashboard-placing-components.adoc[leveloffset=+2]
 include::BAM/proc-building-custom-dashboard-previewing-pages.adoc[leveloffset=+2]
-include::BAM/proc-creating-time-series-components.adoc[leveloffset=+2]
+include::BAM/proc-adding-time-series-components.adoc[leveloffset=+2]
 
 include::BAM/ProcessDashboard-section.adoc[leveloffset=+1]
 
