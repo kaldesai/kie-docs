@@ -48,7 +48,7 @@ group by
 +
 [NOTE]
 ====
-You can modify the SQL query according to your database as per the requirements.
+You can modify the SQL query according to your database if required.
 ====
 
 ... Complete the *Data Set Creation Wizard* and click *Test*.

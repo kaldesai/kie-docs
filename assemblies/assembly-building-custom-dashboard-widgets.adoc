@@ -36,7 +36,7 @@ include::{jbpm-dir}/BAM/con-building-custom-dashboard-reporting-components.adoc[
 include::{jbpm-dir}/BAM/con-building-custom-dashboard-components-properties.adoc[leveloffset=+3]
 include::{jbpm-dir}/BAM/proc-building-custom-dashboard-placing-components.adoc[leveloffset=+3]
 include::{jbpm-dir}/BAM/proc-building-custom-dashboard-previewing-pages.adoc[leveloffset=+3]
-include::{jbpm-dir}/BAM/proc-creating-time-series-components.adoc[leveloffset=+3]
+include::{jbpm-dir}/BAM/proc-adding-time-series-components.adoc[leveloffset=+3]
 
 ifdef::PAM[]
 include::{enterprise-dir}/pages/building-custom-dashboard-widgets-heatmap-components-con.adoc[leveloffset=+2]

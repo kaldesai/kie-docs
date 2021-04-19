@@ -8,19 +8,19 @@ You can use the *Core* components to specify custom HTML information or display 
 Core components are not mandatory.
 ====
 
-.Core component sub-types
+.Core component subtypes
 [cols="1,1", options="header"]
 |===
 | Core component sub-types
 | Description
 
 |*HTML*
-|This component opens an HTML editor widget. This can be used to create HTML pages using text, images, tables, links, colors, and so on. You can customize the page as per your requirements.
+|This component opens an HTML editor widget that is used to create HTML pages using text, images, tables, links, and colors. You can also customize an HTML page if required.
 
 |*Page*
-|This component allows you to add previously created pages to a new dashboard. You can use this component to nest custom pages you have already created in your dashboard.
+|This component enables you to add previously created HTML pages to a new dashboard. You can use this component to nest custom pages that you have already created in your dashboard.
 
 |*Logo*
-|This component allows you to place images on the page. You can provide a URL for the image and set the width and height of the image as per your requirements. The default image is the Dashbuilder logo. The *Logo URL* field is mandatory.
+|This component enables you to add images on the page. To add images on a page, you can provide a URL for the image and set the width and height of the image as per your requirements. The default image is the logo of Dashbuilder. The *Logo URL* field is mandatory.
 
 |===
