@@ -18,7 +18,7 @@ The *Data Sets* page opens.
 * *Execution Server:* Generates a data set using the custom query feature of an Execution Server
 +
 
-NOTE: You must configure *{KIE_SERVER}* for *Execution Server* option.
+NOTE: You must configure *{KIE_SERVER}* for *Prometheus*, *Kafka*, and *Execution Server* options.
 
 +
 . Complete the *Data Set Creation Wizard* and click *Test*.

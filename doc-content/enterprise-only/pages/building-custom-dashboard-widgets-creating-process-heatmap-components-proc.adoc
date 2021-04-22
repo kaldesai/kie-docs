@@ -61,7 +61,7 @@ You can modify the SQL query according to your database if required.
 The new page opens in the *Page Editor* and you can see that the *Heatmaps* component is available under the *Components* panel.
 . In the *Components* panel, expand the *Heatmaps* components and drag the *Process Heatmap* component type to the *Page Editor*.
 . In the *Displayer editor* wizard, click *Data* tab and select the newly created {KIE_SERVER} dataset.
-. In the *Data* tab, select *NID* and *AVERAGEEXECUTIONTIME* from the *Columns* field.
+. In the *Data* tab, select *NODEID* and *TOTAL_HITS* from the *Columns* field.
 . Click the *Component Editor* tab and enter the values for the mandatory fields including *Server Template*, *Container ID*, and *Process Definition ID* into the *Component Properties* field.
 +
 [NOTE]
