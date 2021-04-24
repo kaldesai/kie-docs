@@ -15,8 +15,6 @@ include::General/ChangingLayout-section.adoc[leveloffset=+1]
 
 include::Authoring/Authoring-section.adoc[leveloffset=+1]
 
-//include::SecurityManagement/SecurityManagement-section.adoc[leveloffset=+1]
-
 include::SecurityManagement/con-business-central-user-management.adoc[leveloffset=+1]
 include::SecurityManagement/proc-business-central-creating-users.adoc[leveloffset=+2]
 include::SecurityManagement/proc-business-central-editing-users.adoc[leveloffset=+2]
