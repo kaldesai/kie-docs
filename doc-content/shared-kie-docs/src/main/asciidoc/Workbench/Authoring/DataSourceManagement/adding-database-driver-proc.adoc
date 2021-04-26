@@ -9,5 +9,5 @@ You can add a new database driver to {CENTRAL}.
 . In the *DataSource Explorer* pane, click *Add Driver*.
 +
 The *New driver* window opens.
-. In the *New driver* window, enter the *Name*, *Driver Class Name*, *Group Id*, *Artifact Id*, and *Version* of the database driver.
+. In the *New driver* window, enter the *Name*, *Driver Class Name*, *Group Id*, *Artifact Id*, and *Version* fields of the database driver.
 . Click *Finish*.
