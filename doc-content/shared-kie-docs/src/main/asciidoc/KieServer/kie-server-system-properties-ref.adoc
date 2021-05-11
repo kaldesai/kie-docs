@@ -368,4 +368,10 @@ endif::[]
 |`true`, `false`
 |`false`
 |While using JSON marshalling, if the property is set to `true`, it will always return a response in the proper JSON format. For example, if the original response contains only a single number, then the response is wrapped in a JSON format. For example, *{"value" : 1}*.
+
+|`org.kie.server.strict.jaxb.format`
+|`true`, `false`
+|`false`
+|When the property is set to `true`, the {KIE_SERVER} will interpret data in the REST API payload. For example, if a data field is supposed to be a number but it is not a number, you receive an error.
+
 |===
