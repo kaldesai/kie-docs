@@ -372,6 +372,6 @@ endif::[]
 |`org.kie.server.strict.jaxb.format`
 |`true`, `false`
 |`false`
-|When the property is set to `true`, the {KIE_SERVER} will interpret data in the REST API payload. For example, if a data field is supposed to be a number but it is not a number, you receive an error.
+|When the value of this property is set to `true`, {KIE_SERVER} validates the data type of the data in the REST API payload. For example, if a data field has the number data type and contains something other than a number, you will receive an error.
 
 |===
