@@ -286,6 +286,31 @@ endif::[]
 |The password of an alias for default REST {CONTROLLER}.
 |===
 
+.System properties for retrying committing transactions
+[cols="2,1,1,3", options="header"]
+|===
+|Property
+|Values
+|Default
+|Description
+
+|`org.kie.optlock.retries`
+|Integer
+|5
+|This property describes how many times the process engine retries a transaction before failing permanently.
+
+|`org.kie.optlock.delay`
+|Integer
+|50
+|The delay time before the first retry, in milliseconds.
+
+|`org.kie.optlock.delayFactor`
+|Integer
+|4
+|The multiplier for increasing the delay time for each subsequent retry. With the default values, the process engine waits 50 milliseconds before the first retry, 200 milliseconds before the second retry, 800 milliseconds before the third retry, and so on.
+
+|===
+
 .Other system properties
 [cols="30%,20%,20%,30%", options="header"]
 |===

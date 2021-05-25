@@ -1,5 +1,5 @@
 [id='pessimistic-locking-cli-proc_{context}']
-= Configuring pessimistic locking support using CLI mode
+= Configuring pessimistic locking support via code
 
 You can set the locking mechanism on a per process basis and to allow it to be _pessimistic_ . You can make the changes at a per KIE Session level or Runtime Manager level as well and not just at the process level.
 
