@@ -13,7 +13,6 @@ As a business analyst or business rules developer, you can use the *Page Editor*
 
 include::{enterprise-dir}/pages/building-custom-dashboard-widgets-creating-dashboard-proc.adoc[leveloffset=+1]
 
-
 ifdef::PAM[]
 include::{enterprise-dir}/admin-and-config/dashbuilder-runtimes-con.adoc[leveloffset=+1]
 include::{enterprise-dir}/admin-and-config/installing-dashbuilder-proc.adoc[leveloffset=+2]
@@ -34,7 +33,6 @@ include::{shared-dir}/Workbench/Authoring/DataSets/data-sets-caching-con.adoc[le
 include::{enterprise-dir}/admin-and-config/datasets-dashbuilder-runtimes-con.adoc[leveloffset=+2]
 
 ifdef::PAM[]
-
 include::{enterprise-dir}/pages/building-custom-dashboard-widgets-pages-con.adoc[leveloffset=+1]
 include::{enterprise-dir}/pages/building-custom-dashboard-widgets-creating-pages-proc.adoc[leveloffset=+2]
 include::{enterprise-dir}/pages/pages-save-del-rename-copy-proc.adoc[leveloffset=+2]
@@ -63,7 +61,6 @@ include::{enterprise-dir}/pages/building-custom-dashboard-widgets-executing-heat
 
 include::{enterprise-dir}/pages/building-custom-dashboard-widgets-external-components-con.adoc[leveloffset=+2]
 include::{enterprise-dir}/pages/building-custom-dashboard-widgets-creating-external-components-proc.adoc[leveloffset=+3]
-
 endif::PAM[]
 
 include::{shared-dir}/Workbench/SecurityManagement/con-business-central-security-management.adoc[leveloffset=+1]
