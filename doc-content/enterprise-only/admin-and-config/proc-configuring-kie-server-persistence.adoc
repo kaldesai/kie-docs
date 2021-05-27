@@ -20,7 +20,7 @@ If you want to configure {KIE_SERVER} persistence using {EAP} configuration file
 ... In your {PRODUCT} installation directory, navigate to the `standalone-full.xml` file. For example, if you use {EAP} installation for {PRODUCT}, go to `$EAP_HOME/standalone/configuration/standalone-full.xml` file.
 ... Open the `standalone-full.xml` file and under the `<system-properties>` tag, set your hibernate or JPA parameters as system properties.
 +
-The following example shows how to configure {KIE_SERVER} persistence using hibernate parameters:
+.Example of configuring {KIE_SERVER} persistence using hibernate parameters
 +
 [source,xml,subs="attributes+"]
 ----
@@ -31,7 +31,7 @@ The following example shows how to configure {KIE_SERVER} persistence using hibe
 <system-properties>
 ----
 +
-The following example shows how to configure {KIE_SERVER} persistence using JPA parameters:
+.Example of configuring {KIE_SERVER} persistence using JPA parameters
 +
 [source,xml,subs="attributes+"]
 ----
@@ -42,20 +42,18 @@ The following example shows how to configure {KIE_SERVER} persistence using JPA 
 <system-properties>
 ----
 
-
 If you want to configure {KIE_SERVER} persistence using command line, complete the following tasks:
 
 ... Pass the parameters directly from the command line using `-Dkey=value` as follows:
-
 +
-The following example shows how to configure {KIE_SERVER} persistence using hibernate parameters:
+.Example of configuring {KIE_SERVER} persistence using hibernate parameters:
 +
 [source]
 ----
 $EAP_HOME/bin/standalone.sh -Dhibernate.hbm2ddl.auto=create-drop
 ----
 +
-The following example shows how to configure {KIE_SERVER} persistence using JPA parameters:
+.Example of configuring {KIE_SERVER} persistence using JPA parameters:
 +
 [source]
 ----
