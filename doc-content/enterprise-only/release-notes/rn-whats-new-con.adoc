@@ -5,191 +5,25 @@ This section highlights new features in {PRODUCT} {PRODUCT_VERSION}.
 
 == {CENTRAL}
 
-=== Support for DMN 1.1 and 1.3 assets in DMN designer
 
-You can now use the DMN designer in {CENTRAL} to open DMN 1.1 and 1.3 assets. Any DMN 1.1 and 1.3 models (do not contain DMN 1.3 features) that you import into {CENTRAL}, open in the DMN designer, and save are converted to DMN 1.2 models. For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_].
 
-=== Test scenarios
-
-The test scenarios designer in {CENTRAL} is now available with the following new features:
-
-* You can now perform the undo and redo operations from the *Settings* panel. Also, a warning pop-up is displayed when you save or discard any changes from the *Settings* panel.
-
-* In rule-based test scenarios, you can use the following new java classes as data objects:
-
-** `LocalDateTime`
-** `LocalTime`
-** `BigDecimal`
-** `BigInteger`
-
-* You can use `Byte`, `Character`, `Float`, `Long`, `Short`, `LocalDateTime`, `LocalTime`, `BigDecimal`, and `BigInteger` classes to create and manage the list of data object values.
-
-For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-test-scenarios[_{TESTING_DECISION_SERVICE}_].
-
-=== New parameter list for Decision Services
-
-{PRODUCT} {ENTERPRISE_VERSION} includes a new *Decision Service details* section in the DMN editor properties panel containing a read-only list of *Input Data*, *Encapsulated Decisions*, and *Output Decisions*.
-
-For more information, see {URL_GETTING_STARTED}#assembly-getting-started-decision-services[_{GETTING_STARTED_DECISION_SERVICE}_] and {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_].
-
-ifdef::PAM[]
-
-=== Dashbuilder Runtime
-
-The following list provides a summary of Dashbuilder Runtime updates:
-
-* You can automatically deploy the dashboards from {CENTRAL} on Dashbuilder Runtime. {CENTRAL} is linked to Dashbuilder Runtime using a gradual export feature. You can select datasets and pages, but instead of downloading a `ZIP` file, you can click the *Open* button. After clicking the *Open* button, the selected data is exported, and Dashbuilder Runtime updates the model content.
-You can use `dashbuilder.runtime.multi`, `dashbuilder.runtime.location`, and `dashbuilder.export.dir` system properties to enable this feature.
-+
-For more information, see {URL_MANAGING_SETTINGS}#assembly-configuring-central[_{CONFIGURING_CENTRAL}_].
-
-* Dashboards that are imported in Dashbuilder Runtime contain a default page. The following are the updates of the Dashbuilder Runtime default page:
-
-** If an imported dashboard consists of only one page, then the page is used as the default page.
-** If a page is named as `index`, then the index page is used as the default page.
-** In other cases, the generic home page of the Dashbuilder Runtime is used as the default page.
-
-* Dashbuilder Runtime is now available with a new heatmap component feature. You can add the heatmap component to the pages and export it to the Dashbuilder Runtime. Heatmap components are used to display heat information over a process diagram, and you can create, edit, and build a dashboard using the heatmap component. The heat information is retrieved from {KIE_SERVER} datasets.
-+
-For more information, see {URL_MANAGING_SETTINGS}#assembly-creating-custom-pages[_{BUILDING_WIDGETS}_].
-
-endif::PAM[]
-
-== New standalone BPMN and DMN editors
-
-{PRODUCT} now provides standalone editors for Business Process Model and Notation (BPMN) process models and Decision Model and Notation (DMN) decision models. The standalone editors enable you to view and design BPMN and DMN models embedded in your web applications. The read-only mode for standalone BPMN editor is not supported in {PRODUCT} 7.10.0.
-
-The standalone editors are distributed in a self-contained library that provides an all-in-one JavaScript file for each editor. The JavaScript file uses a comprehensive API to set and control the editor. You can install the standalone editors in two ways:
-
-* Download each JavaScript file manually
-* Use the NPM package
-
-For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_] and {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
-
-== Support for VSCode extension
-
-{PRODUCT} now provides support for VSCode extension enabling you to view and design BPMN and DMN models in Visual Studio Code (VSCode). The VSCode extension in {PRODUCT} requires VSCode 1.46.0 or later.
-
-You can install the {PRODUCT} VSCode extension using:
-
-* VSCode user interface
-
-. Open *Extensions* menu option.
-. Search for and install *Red Hat Business Automation Bundle* extension.
-
-* Terminal
-
-. Launch VSCode Quick Open.
-. Enter the following command and press *Enter*.
-+
-`ext install redhat.vscode-extension-red-hat-business-automation-bundle`
-
-For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_] and {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
 
 
 ifdef::PAM[]
 
 == Process Designer
 
-=== Ability to access activity details in boundary events
-
-In the BPMN modeler, you can now set a data output in the *Data Output and Assignments* field for a boundary event. For example, you can set `nodeInstance` as a data output variable for a boundary event, which carries the node instance details to use in a further process when the boundary event is triggered.
-For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
-
-=== Support for MVEL expressions in data assignments
-
-You can now add MVEL expressions in the data input and output assignments of a user task. For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
-
-== {PROCESS_ENGINE_CAP}
-
-=== {PROCESS_ENGINE_CAP} API improvements
-
-The following list provides a summary of the process engine API updates:
-
-* You can now use the {PROCESS_ENGINE} API to signal a process instance using its correlation key.
-* You can now use the {PROCESS_ENGINE} API to determine the node type from within an event listener.
-* When using the advanced query feature of the {PROCESS_ENGINE} API, you can now optionally exclude process variables from the search results.
-
-For more information about using the {PROCESS_ENGINE} API, see {URL_DEPLOYING_AND_MANAGING_SERVICES}#assembly-kie-apis[_{KIE_APIS}_].
-
-=== KIE API improvements
-
-You can now use the KIE REST API to signal a process using its alias. For more information about using the KIE REST API, see {URL_DEPLOYING_AND_MANAGING_SERVICES}#assembly-kie-apis[_{KIE_APIS}_].
-
-=== Singleton timer start node
-
-The {PROCESS_ENGINE} now supports the singleton timer start node in a process with the cluster extension. When the extension is configured and a process is deployed in several instances, the timer start node is only triggered once among all instances.
 
 endif::PAM[]
 
-== New wrapper modules
-
-{PRODUCT} {ENTERPRISE_VERSION} now includes wrapper modules that you can use to reduce overhead and improve the maintenance of Drools engine. There is an ongoing effort to refactor Drools engine by identifying and descoping optional features that are unrelated to the internal algorithm of the engine. Drools engine uses MVEL for DRL parsing, constraints evaluation, and templates generation. Usages of MVEL are isolated in a new `drools-mvel` module. Drools engine implements KieSessions serialization with `protobuf` to ensure better backward compatibility. This serialization feature is isolated in the `drools-serialization-protobuf` module.
-
-You can add `drools-mvel` and `drools-serialization-protobuf` modules to your project classpath.
-
-{PRODUCT} now provides the following new wrapper modules:
-
-* *drools-engine*: Contains `drools-core`, `drools-compiler`, and `drools-model-compiler` dependencies
-* *drools-engine-classic*: Contains `drools-core`, `drools-compiler`, and `drools-mvel` dependencies
-
-To use the Drools engine with the executable model, you must include the `drools-engine` wrapper module in your project dependencies. To use the Drools engine without the executable model, you must import your dependencies to the `drools-engine-classic` wrapper module.
 
 == Integration
 
-ifdef::PAM[]
-
-=== Integration with AMQ Streams
-
-You can now integrate your business processes that run on a {KIE_SERVER} with Red Hat AMQ Streams or Apache Kafka. Processes can send and receive Kafka messages using message events.
-A {KIE_SERVER} can emit Kafka events when a process, case, or task completes.
-
-For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
-
-endif::PAM[]
-
-=== Support for client roles in {RH-SSO}
-
-When integrating {PRODUCT} with {RH-SSO}, you can enable support for client roles. By default, only realm roles are supported.
-
-For more information about integration with {RH-SSO}, see {URL_INTEGRATING}#assembly-integrating-sso[_{INTEGRATING_SSO}_].
-
-ifdef::PAM[]
 
 == {KIE_SERVER}
 
-=== Running job failover
-
-If you have multiple {KIE_SERVER} nodes in a cluster and one node fails while a job is in a running state, the jobs in that instance are requested to another running node.
 
 == Spring Boot
 
-=== Pluggable variable persistence
-
-You can now provide an arbitrary entity manager for configured process variable persistence in your {PRODUCT} Spring Boot application.
-
-endif::PAM[]
 
 == {OPENSHIFT}
-
-=== Support for {OPENSHIFT} version 4.7
-
-{PRODUCT} now supports {OPENSHIFT} version 4.7 and {OPENSHIFT} version 4.6 EUS.
-
-For more information, see https://access.redhat.com/support/policy/updates/openshift[Red Hat OpenShift Container Platform Life Cycle Policy] and https://access.redhat.com/support/policy/updates/openshift-eus[Red Hat OpenShift Extended Update Support (EUS) Overview].
-
-ifdef::PAM[]
-
-=== Support for Dashbuilder Standalone on {OPENSHIFT}
-
-{PRODUCT} now supports Dashbuilder Standalone (Dashbuilder Runtime) on {OPENSHIFT}.
-
-endif::PAM[]
-
-=== Support for LDAP login module stacking
-
-{PRODUCT} now supports LDAP login module stacking. You can set the `AUTH_LDAP_LOGIN_MODULE` environment variable to *optional* for LdapExtended login module images.
-
-=== Configurable persistent volume sizes for {CENTRAL}
-
-{PRODUCT} now supports configurable persistent volume sizes for {CENTRAL}. The default is 1Gi for {CENTRAL} and 64Mb for {CENTRAL} Monitoring.
