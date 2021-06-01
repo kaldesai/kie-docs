@@ -2,9 +2,9 @@
 
 = Configuring {KIE_SERVER} Persistence
 
-You can configure the {KIE_SERVER} persistence by passing hibernate or JPA parameters as system properties.
+You can configure the {KIE_SERVER} persistence by passing Hibernate or JPA parameters as system properties.
 
-To pass the hibernate or JPA parameters, use the following prefixes in your system properties:
+The {KIE_SERVER} can acknowledge the system properties with the following prefixes and you can use every Hibernate or JPA parameters with these prefixes:
 
 * `javax.persistence`
 * `hibernate`
@@ -18,9 +18,9 @@ To pass the hibernate or JPA parameters, use the following prefixes in your syst
 If you want to configure {KIE_SERVER} persistence using {EAP} configuration file, complete the following tasks:
 
 ... In your {PRODUCT} installation directory, navigate to the `standalone-full.xml` file. For example, if you use {EAP} installation for {PRODUCT}, go to `$EAP_HOME/standalone/configuration/standalone-full.xml` file.
-... Open the `standalone-full.xml` file and under the `<system-properties>` tag, set your hibernate or JPA parameters as system properties.
+... Open the `standalone-full.xml` file and under the `<system-properties>` tag, set your Hibernate or JPA parameters as system properties.
 +
-.Example of configuring {KIE_SERVER} persistence using hibernate parameters
+.Example of configuring {KIE_SERVER} persistence using Hibernate parameters
 +
 [source,xml,subs="attributes+"]
 ----
@@ -46,7 +46,7 @@ If you want to configure {KIE_SERVER} persistence using command line, complete t
 
 ... Pass the parameters directly from the command line using `-Dkey=value` as follows:
 +
-.Example of configuring {KIE_SERVER} persistence using hibernate parameters:
+.Example of configuring {KIE_SERVER} persistence using Hibernate parameters:
 +
 [source]
 ----
@@ -61,4 +61,3 @@ $EAP_HOME/bin/standalone.sh -Djavax.persistence.jdbc.url=jdbc:mysql://mysql.db.s
 ----
 
 --
-. Start the {KIE_SERVER}.
