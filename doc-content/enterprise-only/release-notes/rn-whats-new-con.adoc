@@ -5,25 +5,192 @@ This section highlights new features in {PRODUCT} {PRODUCT_VERSION}.
 
 == {CENTRAL}
 
+=== Ability to sort the column values in a guided decision table
 
+In guided decision tables, you can now double-click a column name to sort the values in ascending order, and if you double-click on the same column, the values are sorted in descending order. For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-guided-decision-tables[_{GUIDED_DECISION_TABLES}_].
 
+ifdef::PAM[]
 
+=== Time series chart component on a page
+
+It is now possible to use the *Time Series Chart* component to represent any time series data. You can create your own dashboards that can be connected to your time series data sets. You can also create, edit, and build a dashboard using a time series chart component. You can export the time series components to Dashbuilder Runtime and retrieve the information from a {KIE_SERVER} or any Prometheus data set.
+
+For more information, see {URL_MANAGING_SETTINGS}#assembly-creating-custom-pages[_{BUILDING_WIDGETS}_].
+
+=== Dashbuilder Java API for dashboards
+
+It is now possible to define dashboards using Dashbuilder Java API. You can create rows, columns, internal components, and external components and connect them to datasets.
+
+=== New `RecordsPerTransaction` parameter to use with `LogCleanupCommand`
+
+You can now use the `RecordsPerTransaction` parameter with the `LogCleanupCommand` executor command that indicates the number of records in a transaction that is removed. For more information about `RecordsPerTransaction` parameter, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
+
+=== Standalone BPMN editor now supports readonly mode
+
+You can now use the standalone BPMN editor in readonly mode. For more information about standalone editors, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
+
+=== Support for work item definitions in VSCode extension and standalone editors
+
+{PRODUCT} now provides support for work item definitions in the VSCode extension and standalone BPMN editor. For more information about work item definitions, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-custom-tasks-and-work-item-handlers[_{CUSTOM_TASKS_AND_HANDLERS}_].
+
+=== Support for changing process variable values while updating process variables in {CENTRAL}
+
+{PRODUCT} {ENTERPRISE_VERSION} includes a new *Edit* action to change variable values while updating process variables in {CENTRAL}. You can access the *Edit* action on the *Menu* -> *Manage* -> *Process Instances* -> *Process Variables* page.
+For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#proc-edit-process-variables_business-processes[_\{DESIGNING_BUSINESS_PROCESSES}_].
+
+=== Support for opening a sub-process in a new editor in {CENTRAL}
+
+{PRODUCT} {ENTERPRISE_VERSION} includes the option to open a sub-process in a new editor in {CENTRAL} from the main business process by clicking the parent and clicking the *Open Sub-process* icon. For more information, see {URL_GETTING_STARTED_CASES}#case-management-creating-subproc-proc[_{GETTING_STARTED_CASES}_].
+
+=== Support for returning the process variables for synchronous use case execution
+
+{PRODUCT} {ENTERPRISE_VERSION} includes a new `computeProcessOutcome` API method that returns the process variables for synchronous execution use cases.
+
+endif::PAM[]
+
+=== Prometheus and Kafka data set provider
+
+In {CENTRAL}, it is now possible to use the *Prometheus* and *Kafka* data set provider to create a data set to fetch the data from an external data source and use that data for the reporting and external components.
+
+The following list provides a summary of the two new data set providers in {CENTRAl}:
+
+* You can use the *Prometheus* data set provider which generates a data set using the Prometheus query.
+* You can use the *Kafka* data set provider which generates a data set using metrics from Kafka broker, consumer, or producer.
+
+For more information, see {URL_MANAGING_SETTINGS}#assembly-configuring-central[_{CONFIGURING_CENTRAL}_].
+
+=== Test scenarios
+
+The test scenarios designer in {CENTRAL} is now available with the new features supported in {PRODUCT} {PRODUCT_VERSION}.
+
+* The test scenarios designer in {CENTRAL}  now supports the nested enumeration data type attributes in rule-based test scenarios.
+
+* In test scenarios designer, you can now see the actual test results instead of a generic message in a list or a map collection editor. It is now possible to monitor the following information in a collection editor:
+** The wrong value
+** The path to reach out to the wrong value
+** The correct value
+
+For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-test-scenarios[_{TESTING_DECISION_SERVICE}_].
+
+=== New `user` parameter in KIE REST API endpoint
+
+You can now use the new `user` parameter in a KIE REST API endpoint to bypass the enabled authenticated user. The `user` parameter is added for adding or removing the users or groups to a task.
+
+=== PMML trusty implementation
+
+You can now use PMML trusty implementation to embed a PMML call in a Java application or to execute a PMML model using {KIE_SERVER}. For more information about PMML trusty implementation, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-pmml-models[_{PMML_MODELS}_].
+
+=== REST endpoints for specific DMN models
+
+{PRODUCT} now provides model-specific DMN {KIE_SERVER} endpoints that you can use to interact with your specific DMN model directly over REST, without using the {KIE_SERVER} Client (Java) API. The following REST endpoints of the {KIE_SERVER} are automatically generated based on the content of the DMN model:
+
+* `POST /server/containers/{containerId}/dmn/models/{modelname}`: A business-domain endpoint for evaluating a specified DMN model in a container
+* `POST /server/containers/{containerId}/dmn/models/{modelname}/{decisionServiceName}`: A business-domain endpoint for evaluating a specified decision service component in a specific DMN model available in a container
+* `POST /server/containers/{containerId}/dmn/models/{modelname}/dmnresult`: An endpoint for evaluating a specified DMN model containing customized body payload and returning a DMNResult response, including business-domain context, helper messages, and helper decision pointers
+* `POST /server/containers/{containerId}/dmn/models/{modelname}/{decisionServiceName}/dmnresult`: An endpoint for evaluating a specified decision service component in a specific DMN model and returning a DMNResult response, including the business-domain context, helper messages, and help decision pointers for the decision service
+* `GET /server/containers/{containerId}/dmn/models/{modelname}`: An endpoint for returning standard DMN XML without decision logic and containing the inputs and decisions of the specified DMN model
+* `GET /server/containers/{containerId}/dmn/openapi.json (|.yaml)`: An endpoint for retrieving Swagger or OAS for the DMN models in a specified container
+
+For more information about model-specific DMN {KIE_SERVER} endpoints, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-dmn-models[_{DMN_MODELS}_] and {URL_DEPLOYING_AND_MANAGING_SERVICES}#assembly-kie-apis[_{KIE_APIS}_].
+
+== DMN Designer
+
+=== Enhanced suggestions for DMN literal boxed expressions
+
+You can now see more suitable suggestions for literal boxed expressions in {CENTRAL}. When you enter a FEEL expression in the editor, the first suggestions that appear are based on the return type of FEEL functions and inferred type of the context.
 
 ifdef::PAM[]
 
 == Process Designer
 
+=== Ability to assign user task assignment strategy
+
+You can now assign an assignment strategy to a user task using `AssignmentStrategy` input variable in the BPMN modeler. For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
+
+== {PROCESS_ENGINE_CAP}
+
+=== Process Instance Migration service migrates subprocesses
+
+The Process Instance Migration service, when migrating a process, now automatically migrates its subprocesses, subprocesses of its subprocesses, and so on. For more information about Process Instance Migration, see {URL_DEVELOPING_PROCESS_SERVICES}#process-instance-migration-con[_{MANAGING_PROCESSES}_].
+
+=== `RuntimeDataService` Java API method to retrieve subprocesses
+
+The `RuntimeDataService` Java API now provides the `getProcessInstancesWithSubprocessByProcessInstanceId()` method. This method retrieves the entire hierarchy of subprocesses for a parent process, that is, its subprocesses, subprocesses of its subprocesses, and so on. If you attempt to migrate a subprocess without migrating the parent process, the migration fails.
+
+For more information about the RuntimeDataService Java API, see {URL_DEVELOPING_PROCESS_SERVICES}#service-runtime-data-con_process-engine[_{PROCESS_ENGINE_DOC}_].
+
+=== Additional indexes in persistence database
+
+The {PROCESS_ENGINE} persistence database now has additional indexes to improve performance. For more information about persistence in the {PROCESS_ENGINE}, see {URL_DEVELOPING_PROCESS_SERVICES}#persistence-con_process-engine[_{PROCESS_ENGINE_DOC}_].
+
+=== New {KIE_SERVER) system properties for retrying committing transactions
+
+When the {PROCESS_ENGINE_CAP} commits a transaction, sometimes the committing fails because another transaction is being committed at the same time. In this case, the {PROCESS_ENGINE_CAP} needs to retry the transaction.
+
+The following {KIE_SERVER) system properties now control the retrying process:
+
+* `org.kie.optlock.retries`: How many times the {PROCESS_ENGINE_CAP} retries a transaction before failing permanently. The default value is 5.
+* `org.kie.optlock.delay`: The delay time before the first retry, in milliseconds. The default value is 50.
+* `org.kie.optlock.delayFactor`: The multiplier for increasing the delay time for each subsequent retry. The default value is 4. With the default values, the {PROCESS_ENGINE} waits 50 milliseconds before the first retry, 200 milliseconds before the second retry, 800 milliseconds before the third retry, and so on.
+
+For more information about transactions in the {PROCESS_ENGINE}, see {URL_DEVELOPING_PROCESS_SERVICES}#persistence-con_process-engine[_{PROCESS_ENGINE_DOC}_].
+
+=== Support for web service calls that use wrapped parameters
+
+You can now define wrapped parameters for web service calls that contain all inputs into single objects.
 
 endif::PAM[]
 
+== {PLANNER}
+
+=== {PLANNER_SHORT} 8
+
+* {PRODUCT} includes {PLANNER_SHORT} 8 as well as {PLANNER_SHORT} 7. {PLANNER_SHORT} 7 is now deprecated and might be removed in a future release. For information about migrating your projects from a previous version of {PLANNER_SHORT}, see Upgrading your Red Hat build of OptaPlanner projects to OptaPlanner 8.
+
+* {PLANNER_SHORT} has added a school time table and vaccination appointment scheduler quick start for {QUARKUS}. For more information, see the following guides:
+** {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-school-timetable-quarkus_{context}[_\{PLANNER_QUARKUS_TIMETABLE}_]
+** {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-vaccination_{context}[_\{PLANNER_VACCINATION}_]
+
+* The employee rostering  and vehicle route planning starter applications have been migrated to {QUARKUS}. For more information, see the following guides:
+** {URL_DEVELOPING_SOLVERS}#assembly-optimizer-running-employee-rostering-openshift[_\{RUNNING_ROSTER_FOR_PLANNER_OPENSHIFT}_]
+** {URL_DEVELOPING_SOLVERS}#assembly-business-optimizer-vrp[_\{RUNNING_VRP_FOR_PLANNER}_]
+
+* The dinner party examples has been removed.
+* The Constraint Streams API is now richer, faster, and  more stable and provides better error messages.
+* ScoreManager now supports score explanations.
+* The SolverManager API now provides the ability to listen to both the best solution events and the solving ended event.
+* {PLANNER_SHORT} is supported on premise and on {OPENSHIFT} 4.x (embedded) with JDK 11 only.
+
+== Smart Router
+
+You can configure Smart Router (KIE Server Router) for Transport Layer Security (TLS) support to allow HTTPS traffic. In addition, you can disable unsecure HTTP connections to Smart Router. For more information, see the "Configuring Smart Router for TLS Support" section in {URL_INSTALLING_AND_CONFIGURING}#assembly-clustering-eap[_{INSTALLING_ON_EAP_CLUSTER}_]
 
 == Integration
 
+=== Integration with Spring Boot version 2.3.4
 
-== {KIE_SERVER}
+{PRODUCT} now integrates with Spring Boot version 2.3.4.
 
+For more information about integrating {PRODUCT} with Spring Boot, see {URL_INTEGRATING}#assembly-springboot-business-apps[_{CREATING_SPRING_BOOT_APPLICATIONS}_].
 
-== Spring Boot
+ifdef::PAM[]
 
+=== Defaults are provided for configuring the Kafka Work Item Handler
+
+When you configure the Kafka Work Item Handler, which is used for sending Kafka messages using a custom task, you can now skip some fields. {PRODUCT} provides default values for these fields. For more information about configuring integration of {PRODUCT} with {KAFKA_PRODUCT}, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+
+=== Support for sending and receiving Kafka messages in a custom format
+
+When integrating with {KAFKA_PRODUCT}, {PRODUCT} now supports sending and receiving Kafka messages in a custom format. You can define custom event reader and writer classes to translate between Kafka messages and process engine events. For more information about configuring integration of {PRODUCT} with {KAFKA_PRODUCT}, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+
+endif::PAM[]
 
 == {OPENSHIFT}
+
+ifdef::PAM[]
+
+=== Support for AMQ Streams or Apache Kafka on {OPENSHIFT}
+
+You can now integrate your business processes that run on {OPENSHIFT} with Red Hat AMQ Streams or Apache Kafka. For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+
+endif::PAM[]

@@ -8,3 +8,15 @@
 * Layering on https://quarkus.io/[Quarkus] or https://spring.io/projects/spring-boot[Spring Boot] to enable developers to run {KOGITO} microservices on their preferred cloud-native application development stack
 * Automated decision-making capabilities based on rule units to run within defined business constraints
 * Example applications containing various types of {KOGITO} decision microservices on https://quarkus.io/[Quarkus] or https://spring.io/projects/spring-boot[Spring Boot] to help you develop your own applications
+
+== Support for {KOGITO} JVM Quarkus runtime
+
+{PRODUCT} now supports {KOGITO} JVM Quarkus runtime images.
+
+== Support for {KOGITO} builder images for Qarkus and SpringBoot
+
+{PRODUCT} now includes {KOGITO} builder images for Quarkus and SpringBoot.
+
+== Support for {KOGITO} operator on {OPENSHIFT} 4
+
+You can now integrate your business processes that run on {OPENSHIFT} with Red Hat AMQ Streams or Apache Kafka. For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
