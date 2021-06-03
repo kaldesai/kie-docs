@@ -147,10 +147,7 @@ endif::PAM[]
 
 * {PRODUCT} includes {PLANNER_SHORT} 8 as well as {PLANNER_SHORT} 7. {PLANNER_SHORT} 7 is now deprecated and might be removed in a future release. For information about migrating your projects from a previous version of {PLANNER_SHORT}, see Upgrading your Red Hat build of OptaPlanner projects to OptaPlanner 8.
 
-* {PLANNER_SHORT} has added a school time table and vaccination appointment scheduler quick start for {QUARKUS}. For more information, see the following guides:
-** {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-school-timetable-quarkus_{context}[_{PLANNER_QUARKUS_TIMETABLE}_]
-** {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-vaccination_{context}[_{PLANNER_VACCINATION}_]
-
+* {PLANNER_SHORT} has added a school time table and vaccination appointment scheduler quick start for {QUARKUS}.
 * The employee rostering  and vehicle route planning starter applications have been migrated to {QUARKUS}. For more information, see the following guides:
 ** {URL_DEVELOPING_SOLVERS}#assembly-optimizer-running-employee-rostering-openshift[_{RUNNING_ROSTER_FOR_PLANNER_OPENSHIFT}_]
 ** {URL_DEVELOPING_SOLVERS}#assembly-business-optimizer-vrp[_{RUNNING_VRP_FOR_PLANNER}_]
