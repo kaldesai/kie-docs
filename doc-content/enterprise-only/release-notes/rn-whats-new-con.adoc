@@ -36,11 +36,11 @@ You can now use the standalone BPMN editor in readonly mode. For more informatio
 === Support for changing process variable values while updating process variables in {CENTRAL}
 
 {PRODUCT} {ENTERPRISE_VERSION} includes a new *Edit* action to change variable values while updating process variables in {CENTRAL}. You can access the *Edit* action on the *Menu* -> *Manage* -> *Process Instances* -> *Process Variables* page.
-For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#proc-edit-process-variables_business-processes[_\{DESIGNING_BUSINESS_PROCESSES}_].
+For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-designing-business-processes[_{DESIGNING_BUSINESS_PROCESSES}_].
 
 === Support for opening a sub-process in a new editor in {CENTRAL}
 
-{PRODUCT} {ENTERPRISE_VERSION} includes the option to open a sub-process in a new editor in {CENTRAL} from the main business process by clicking the parent and clicking the *Open Sub-process* icon. For more information, see {URL_GETTING_STARTED_CASES}#case-management-creating-subproc-proc[_{GETTING_STARTED_CASES}_].
+{PRODUCT} {ENTERPRISE_VERSION} includes the option to open a sub-process in a new editor in {CENTRAL} from the main business process by clicking the parent and clicking the *Open Sub-process* icon. For more information, see {URL_DEVELOPING_PROCESS_SERVICES}#assembly-getting-started-case-management[_{GETTING_STARTED_CASES}_].
 
 === Support for returning the process variables for synchronous use case execution
 
@@ -123,11 +123,11 @@ For more information about the RuntimeDataService Java API, see {URL_DEVELOPING_
 
 The {PROCESS_ENGINE} persistence database now has additional indexes to improve performance. For more information about persistence in the {PROCESS_ENGINE}, see {URL_DEVELOPING_PROCESS_SERVICES}#persistence-con_process-engine[_{PROCESS_ENGINE_DOC}_].
 
-=== New {KIE_SERVER) system properties for retrying committing transactions
+=== New {KIE_SERVER} system properties for retrying committing transactions
 
 When the {PROCESS_ENGINE_CAP} commits a transaction, sometimes the committing fails because another transaction is being committed at the same time. In this case, the {PROCESS_ENGINE_CAP} needs to retry the transaction.
 
-The following {KIE_SERVER) system properties now control the retrying process:
+The following {KIE_SERVER} system properties now control the retrying process:
 
 * `org.kie.optlock.retries`: How many times the {PROCESS_ENGINE_CAP} retries a transaction before failing permanently. The default value is 5.
 * `org.kie.optlock.delay`: The delay time before the first retry, in milliseconds. The default value is 50.
@@ -148,12 +148,12 @@ endif::PAM[]
 * {PRODUCT} includes {PLANNER_SHORT} 8 as well as {PLANNER_SHORT} 7. {PLANNER_SHORT} 7 is now deprecated and might be removed in a future release. For information about migrating your projects from a previous version of {PLANNER_SHORT}, see Upgrading your Red Hat build of OptaPlanner projects to OptaPlanner 8.
 
 * {PLANNER_SHORT} has added a school time table and vaccination appointment scheduler quick start for {QUARKUS}. For more information, see the following guides:
-** {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-school-timetable-quarkus_{context}[_\{PLANNER_QUARKUS_TIMETABLE}_]
-** {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-vaccination_{context}[_\{PLANNER_VACCINATION}_]
+** {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-school-timetable-quarkus_{context}[_{PLANNER_QUARKUS_TIMETABLE}_]
+** {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-vaccination_{context}[_{PLANNER_VACCINATION}_]
 
 * The employee rostering  and vehicle route planning starter applications have been migrated to {QUARKUS}. For more information, see the following guides:
-** {URL_DEVELOPING_SOLVERS}#assembly-optimizer-running-employee-rostering-openshift[_\{RUNNING_ROSTER_FOR_PLANNER_OPENSHIFT}_]
-** {URL_DEVELOPING_SOLVERS}#assembly-business-optimizer-vrp[_\{RUNNING_VRP_FOR_PLANNER}_]
+** {URL_DEVELOPING_SOLVERS}#assembly-optimizer-running-employee-rostering-openshift[_{RUNNING_ROSTER_FOR_PLANNER_OPENSHIFT}_]
+** {URL_DEVELOPING_SOLVERS}#assembly-business-optimizer-vrp[_{RUNNING_VRP_FOR_PLANNER}_]
 
 * The dinner party examples has been removed.
 * The Constraint Streams API is now richer, faster, and  more stable and provides better error messages.

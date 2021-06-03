@@ -22,7 +22,7 @@ include::{enterprise-dir}/release-notes/rn-deprecated-issues-ref.adoc[leveloffse
 
 include::{enterprise-dir}/release-notes/rn-tech-preview-ref.adoc[leveloffset=+1]
 
-//include::{enterprise-dir}/release-notes/rn-7.11-known-issues-ref.adoc[leveloffset=+1]
+include::{enterprise-dir}/release-notes/rn-7.11-known-issues-ref.adoc[leveloffset=+1]
 
 include::{enterprise-dir}/release-notes/rn-7.11-fixed-issues-ref.adoc[leveloffset=+1]
 
