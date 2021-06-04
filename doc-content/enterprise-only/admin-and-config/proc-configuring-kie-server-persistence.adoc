@@ -1,6 +1,6 @@
 [id='proc-configuring-kie-server-persistence_{context}']
 
-= Configuring {KIE_SERVER} Persistence
+= Configuring {KIE_SERVER} persistence
 
 You can configure the {KIE_SERVER} persistence by passing Hibernate or JPA parameters as system properties.
 
