@@ -55,7 +55,7 @@ The following rule-based test scenario definition expressions are supported by t
 
 [NOTE]
 ====
-An empty cell is skipped from evaluation. To define an empty string, use `=`,`[]`, or `;`. To define a null value, use `null`.
+An empty cell is skipped from the evaluation. To define an empty string, use `=`,`[]`, or `;`. To define a null value, use `null`.
 ====
 
 .Example expressions
