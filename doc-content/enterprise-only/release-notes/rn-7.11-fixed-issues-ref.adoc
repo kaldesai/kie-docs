@@ -23,11 +23,16 @@ endif::[]
 
 == {KIE_SERVER}
 
-* Execution of the `WebServiceWorkItemHandler` running on {EAP} 7.3.5 fails [https://issues.redhat.com/browse/RHPAM-3440[RHPAM-3440]]
+ifdef::PAM[]
+
 * The `/server/containers/instances/{containerId}` REST endpoint returns HTTP `200 - OK` response status code even for the failed scenarios [https://issues.redhat.com/browse/RHPAM-3463[RHPAM-3463]]
 * When you set `org.jbpm.ejb.timer.tx=true` system property, you receive multiple human task email notifications [https://issues.redhat.com/browse/RHPAM-3444[RHPAM-3444]]
 * The `WebServiceWorkItemHandler` execution on {KIE_SERVER}, running on {EAP} 7.3.5 fails with error messages in console [https://issues.redhat.com/browse/RHPAM-3440[RHPAM-3440]]
+
+endif::[]
+
 * If the rules are fired using the default KieSession, the `PrometheusMetricsDroolsListener` fails to enable [https://issues.redhat.com/browse/RHDM-1601[RHDM-1601]]
+* When you build `dmn-drools-quarkus-metrics` or `dmn-drools-springboot-metrics` projects, the build fails and you receive an error with unavailability of containers used for testing [https://issues.redhat.com/browse/RHPAM-3690[RHPAM-3690]]
 
 == DMN designer
 
@@ -41,7 +46,7 @@ ifdef::PAM[]
 
 * Listeners are not ready when a signal is released in a subprocess [https://issues.redhat.com/browse/RHPAM-3484[RHPAM-3484]]
 * In an exception handling subprocess, you cannot abort the main process, you receive an *Invalid session was used for this context* error message [https://issues.redhat.com/browse/RHPAM-3531[RHPAM-3531]]
-* When you set an `org.kie.executor.interval` system property, the retired jobs are executed immediately instead of waiting for the defined interval and you receive an error [https://issues.redhat.com/browse/RHPAM-3503[RHPAM-3503]]
+* When you set an `org.kie.executor.interval` system property, the retried jobs are executed immediately instead of waiting for the defined interval and you receive an error [https://issues.redhat.com/browse/RHPAM-3503[RHPAM-3503]]
 * When you pass a non integer value as an integer in a jaxb mashaller, you do not receive any error [https://issues.redhat.com/browse/RHPAM-3492[RHPAM-3492]]
 * The configuration parameters for `OptimisticLockRetryInterceptor` are now present [https://issues.redhat.com/browse/RHPAM-3490[RHPAM-3490]]
 * A task instance is marked as completed in spite of an `OptimisticLockException` is thrown [https://issues.redhat.com/browse/RHPAM-3487[RHPAM-3487]]

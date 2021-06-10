@@ -72,9 +72,13 @@ The test scenarios designer in {CENTRAL} is now available with the new features 
 
 For more information, see {URL_DEVELOPING_DECISION_SERVICES}#assembly-test-scenarios[_{TESTING_DECISION_SERVICE}_].
 
+ifdef::PAM[]
+
 === New `user` parameter in KIE REST API endpoint
 
 You can now use the new `user` parameter in a KIE REST API endpoint to bypass the enabled authenticated user. The `user` parameter is added for adding or removing the users or groups to a task.
+
+endif::[]
 
 === PMML trusty implementation
 
@@ -189,14 +193,14 @@ endif::PAM[]
 
 === Deployment of {PRODUCT} Spring Boot business applications on {OPENSHIFT}
 
-Documentation about deploying {PRODUCT} Spring Boot business applications on {OPENSHIFT} is now provided.
-
-== {OPENSHIFT}
+Documentation about deploying {PRODUCT} Spring Boot business applications on {OPENSHIFT} is now provided. For more information see, {URL_INTEGRATING}#openshift-springboot-proc_business-applications[_{CREATING_SPRING_BOOT_APPLICATIONS}_].
 
 ifdef::PAM[]
+
+== {OPENSHIFT}
 
 === Support for AMQ Streams or Apache Kafka on {OPENSHIFT}
 
 You can now integrate your business processes that run on {OPENSHIFT} with Red Hat AMQ Streams or Apache Kafka. For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
 
-endif::PAM[]
+endif::[]

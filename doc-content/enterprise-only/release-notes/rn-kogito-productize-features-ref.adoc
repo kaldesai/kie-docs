@@ -17,6 +17,10 @@
 
 {PRODUCT} now includes {KOGITO} builder images for Quarkus and SpringBoot.
 
+ifdef::PAM[]
+
 == Support for {KOGITO} operator on {OPENSHIFT} 4
 
 You can now integrate your business processes that run on {OPENSHIFT} with Red Hat AMQ Streams or Apache Kafka. For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+
+endif::[]
