@@ -13,14 +13,10 @@
 
 {PRODUCT} now supports {KOGITO} JVM Quarkus runtime images.
 
-== Support for {KOGITO} builder images for Qarkus and SpringBoot
+== Support for {KOGITO} builder images for Quarkus and Spring Boot
 
-{PRODUCT} now includes {KOGITO} builder images for Quarkus and SpringBoot.
+{PRODUCT} now includes {KOGITO} builder images for Quarkus and Spring Boot.
 
-ifdef::PAM[]
+== Additional resources
 
-== Support for {KOGITO} operator on {OPENSHIFT} 4
-
-You can now integrate your business processes that run on {OPENSHIFT} with Red Hat AMQ Streams or Apache Kafka. For more information about integration with Red Hat AMQ Streams or Apache Kafka, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
-
-endif::[]
+* https://www.redhat.com/en/topics/cloud-native-apps/why-choose-red-hat-quarkus[Why choose the Red Hat build of Quarkus?]
