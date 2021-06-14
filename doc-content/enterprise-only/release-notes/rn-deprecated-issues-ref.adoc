@@ -18,7 +18,15 @@ The following {PLANNER_SHORT} tooling in {CENTRAL} are part of {PLANNER_SHORT} 7
 
 == Support for JDK 8
 
-Support for JDK 8 is deprecated from {PRODUCT} and might be removed in a future release. Upgrade to JDK 11 and JDK 17 instead.
+Support for JDK 8 is deprecated from {PRODUCT} and might be removed in a future release.
+
+ifdef::PAM[]
+For a complete list of supported JDK configurations, see https://access.redhat.com/articles/3405381[Red Hat Process Automation Manager 7 Supported Configurations].
+endif::PAM[]
+
+ifdef::DM[]
+For a complete list of supported JDK configurations, see https://access.redhat.com/articles/3354301[Red Hat Decision Manager 7 Supported Configurations].
+endif::DM[]
 
 == Legacy `kie-pmml` dependency
 
