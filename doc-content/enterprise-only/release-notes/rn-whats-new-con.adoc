@@ -13,7 +13,7 @@ ifdef::PAM[]
 
 === Time series chart component on a page
 
-It is now possible to use the *Time Series Chart* component to represent any time series data. You can create your own dashboards that can connect to your time series data sets. You can also create, edit, and build a dashboard using a time series chart component. You can export the time series components to Dashbuilder Runtime and retrieve the information from a {KIE_SERVER} or any Prometheus data set.
+It is now possible to use the *Time Series Chart* component to represent any time series data. You can create dashboards that can connect to your time series data sets. You can also create, edit, and build a dashboard using a time series chart component. You can export the time series components to Dashbuilder Runtime and retrieve the information from a {KIE_SERVER} or any Prometheus data set.
 
 For more information, see {URL_MANAGING_SETTINGS}#assembly-creating-custom-pages[_{BUILDING_WIDGETS}_].
 
@@ -159,28 +159,28 @@ endif::PAM[]
 
 * {PRODUCT} includes {PLANNER_SHORT} 8 as well as {PLANNER_SHORT} 7. {PLANNER_SHORT} 7 is now deprecated and might be removed in a future release. For information about migrating your projects from a previous version of {PLANNER_SHORT}, see {URL_DEVELOPING_SOLVERS}#assembly-optimizer-migration-8_{context}[_{PLANNER8_MIGRATION}_].
 
-* {PLANNER_SHORT} has added a school time table and vaccination appointment scheduler quick start for {QUARKUS}. For more information, see {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-quickstarts_{optaplanner-quickstarts}[_{PLANNER} quick start guides_].
+* {PLANNER_SHORT} has added a school timetable and vaccination appointment scheduler quick start for {QUARKUS}. For more information, see {URL_DEVELOPING_SOLVERS}#assembly-optaplanner-quickstarts_{optaplanner-quickstarts}[_{PLANNER} quick start guides_].
 
-* The employee rostering  and vehicle route planning starter applications have been migrated to {QUARKUS}.
+* The employee rostering  and vehicle route planning starter applications have been migrated to the {QUARKUS}.
 * The dinner party example has been removed.
 * The Constraint Streams API is now richer, faster, and  more stable and provides better error messages.
 * ScoreManager now supports score explanations.
 * The SolverManager API now provides the ability to listen to both the best solution events and the solving ended event.
-* {PLANNER_SHORT} is supported on premise and on {OPENSHIFT} 4.x (embedded) with JDK 11 only.
+* {PLANNER_SHORT} is supported on-premise and on {OPENSHIFT} 4.x (embedded) with JDK 11 only.
 
 == Smart Router
 
-You can configure Smart Router (KIE Server Router) for Transport Layer Security (TLS) support to allow HTTPS traffic. In addition, you can disable unsecure HTTP connections to Smart Router. For more information, see the "Configuring Smart Router for TLS Support" section in {URL_INSTALLING_AND_CONFIGURING}#assembly-clustering-eap[_{INSTALLING_ON_EAP_CLUSTER}_]
+You can configure Smart Router (KIE Server Router) for Transport Layer Security (TLS) support to allow HTTPS traffic. In addition, you can disable insecure HTTP connections to Smart Router. For more information, see the "Configuring Smart Router for TLS Support" section in {URL_INSTALLING_AND_CONFIGURING}#assembly-clustering-eap[_{INSTALLING_ON_EAP_CLUSTER}_]
 
 ifdef::PAM[]
 
 === Defaults are provided for configuring the Kafka work item handler
 
-When you configure the Kafka work item handler, which is used for sending Kafka messages using a custom task, you can now skip some fields. {PRODUCT} provides default values for these fields. For more information about configuring integration of {PRODUCT} with {KAFKA_PRODUCT}, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+When you configure the Kafka work item handler, which sends Kafka messages using a custom task, you can now skip some fields. {PRODUCT} provides default values for these fields. For more information about configuring the integration of {PRODUCT} with {KAFKA_PRODUCT}, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
 
 === Support for sending and receiving Kafka messages in a custom format
 
-When integrating with {KAFKA_PRODUCT}, {PRODUCT} now supports sending and receiving Kafka messages in a custom format. You can define custom event reader and writer classes to translate between Kafka messages and process engine events. For more information about configuring integration of {PRODUCT} with {KAFKA_PRODUCT}, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
+When integrating with {KAFKA_PRODUCT}, {PRODUCT} now supports sending and receiving Kafka messages in a custom format. You can define custom event reader and writer classes to translate between Kafka messages and process engine events. For more information about configuring the integration of {PRODUCT} with {KAFKA_PRODUCT}, see {URL_INTEGRATING}#assembly-integrating-amq-streams[_{INTEGRATING_AMQ_STREAMS}_].
 
 endif::PAM[]
 

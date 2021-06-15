@@ -7,7 +7,9 @@
 
 * Layering on https://quarkus.io/[Quarkus] or https://spring.io/projects/spring-boot[Spring Boot] to enable developers to run {KOGITO} microservices on their preferred cloud-native application development stack
 * Automated decision-making capabilities based on rule units to run within defined business constraints
-* Example applications containing various types of {KOGITO} decision microservices on https://quarkus.io/[Quarkus] or https://spring.io/projects/spring-boot[Spring Boot] to help you develop your own applications
+* Example applications containing various types of {KOGITO} decision microservices on https://quarkus.io/[Quarkus] or https://spring.io/projects/spring-boot[Spring Boot] to help you develop your applications
+
+For more information about Quarkus, see https://www.redhat.com/en/topics/cloud-native-apps/why-choose-red-hat-quarkus[Why choose the Red Hat build of Quarkus?].
 
 == Support for {KOGITO} JVM Quarkus runtime
 
@@ -16,7 +18,3 @@
 == Support for {KOGITO} builder images for Quarkus and Spring Boot
 
 {PRODUCT} now includes {KOGITO} builder images for Quarkus and Spring Boot.
-
-== Additional resources
-
-* https://www.redhat.com/en/topics/cloud-native-apps/why-choose-red-hat-quarkus[Why choose the Red Hat build of Quarkus?]

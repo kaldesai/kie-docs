@@ -19,13 +19,13 @@ Workaround: None.
 
 .When an executing model uses an imported inputs and decision nodes, you receive an error message [https://issues.redhat.com/browse/RHDM-1733[RHDM-1733]]
 
-Issue: The test scenario tool is unable to execute any models that use imported inputs and decisions nodes. The auto generated decision table columns reflects the incorrect values.
+Issue: The test scenario tool is unable to execute any models that use imported inputs and decisions nodes. The automatically generated decision table columns reflects the incorrect values.
 
 Workaround: None.
 
-.Method calls does not support template keys [https://issues.redhat.com/browse/RHDM-1729[RHDM-1729]]
+.Method calls do not support template keys [https://issues.redhat.com/browse/RHDM-1729[RHDM-1729]]
 
-Issue: If you remove one of the action call from the Business Rule Language (BRL) action column, the generated DRL file is updated incorrectly.
+Issue: If you remove one of the action calls from the Business Rule Language (BRL) action column, the generated DRL file is updated incorrectly.
 
 Steps to reproduce:
 
@@ -33,23 +33,23 @@ Steps to reproduce:
 . Replace the original content of *LoanApplication* with the [https://issues.redhat.com/secure/attachment/12521425/12521425_LoanApplication.java[LoanApplication.java]].
 . Replace the original content of *Pricing Loans* with the `Pricing loans (1).gdst` file. (This file is attached in the [https://issues.redhat.com/browse/RHDM-1729[RHDM-1729]] issue).
 . Validate `Pricing loans (1).gdst` file.
-. Go to *Columns* tab, select *Action columns*.
-. For *call functions* option, click *Edit*.
+. Go to the *Columns* tab and select *Action columns*.
+. For the *call functions* option, click *Edit*.
 . Remove *Call [application.addExplanation]* and *Call [application.deadline]* and click *Finish*.
 
 Workaround: None.
 
-.The Business Rule Language (BRL) columns does not support the conversion of method call data type [https://issues.redhat.com/browse/RHDM-1696[RHDM-1696]]
+.The Business Rule Language (BRL) columns do not support the conversion of method call data types [https://issues.redhat.com/browse/RHDM-1696[RHDM-1696]]
 
-Issue: When a guided decision table is converted into XLS decision table, the method calls with `String` or `Date` data type arguments are not converted correctly.
+Issue: When a guided decision table is converted into an XLS decision table, the method calls with `String` or `Date` data type arguments are not converted correctly.
 
 Steps to reproduce:
 
 . Import the *Mortgages* sample project.
 . Replace the original content of *LoanApplication* with the [https://issues.redhat.com/secure/attachment/12517646/12517646_LoanApplication.java[LoanApplication.java]].
 . Replace the original content of *Pricing Loans* with the `Pricing loans (1).gdst` file. (This file is attached in the [https://issues.redhat.com/browse/RHDM-1696[RHDM-1696]] issue).
-. Convert the *Pricing Loans* into XLS table.
-. Open the converted XLS table and switch to *Source* tab.
+. Convert the *Pricing Loans* into an XLS table.
+. Open the converted XLS table and switch to the *Source* tab.
 +
 The `addExplanation` method assumes `exp` is a variable instead of constant. The `deadline` method assumes `08-Mar-2021` is a date, but it is a string. Some wrapper modules are needed for converting `String` into `Date`.
 
@@ -124,9 +124,9 @@ Actual result: The open sub-process is the same as the icon used for generating 
 
 Workaround: None.
 
-.A sub-process linked to itself does not perform any action [https://issues.redhat.com/browse/RHPAM-3658[RHPAM-3658]]
+.A sub-process linked to itself do not perform any action [https://issues.redhat.com/browse/RHPAM-3658[RHPAM-3658]]
 
-Issue: When a process is linked to itself which means the process where a reusable sub-process is placed and you click the *Open sub-process*, nothing happens.
+Issue: When a process is linked to itself using the *Called Element* property and you click the *Open sub-process*, nothing happens.
 
 Steps to reproduce:
 
@@ -155,7 +155,7 @@ Steps to reproduce:
 . Set the *Called Element* property to *Process-A* business process.
 . Click the *Open sub-process* icon in the reusable sub-process.
 
-Expected result: The linked process is opened and the breadcrumbs displays the correct project.
+Expected result: The linked process is opened, and the breadcrumbs displays the correct project.
 
 Actual result: The linked process is opened, but the breadcrumbs displays the wrong project.
 
@@ -194,16 +194,16 @@ Actual result: The properties are not parsed and the task from the WID file is n
 
 Workaround: Remove the unrecognized properties from the WID file.
 
-.In BPMN designer, the VSCode workspace with multiple folders breaks the WID resolution [https://issues.redhat.com/browse/RHPAM-3618[RHPAM-3618]]
+.In the BPMN designer, the VSCode workspace with multiple folders breaks the WID resolution [https://issues.redhat.com/browse/RHPAM-3618[RHPAM-3618]]
 
-Issue: In the VSCode workspace, when you use the *Add new Folder to workspace* option, the resolution breaks itself. Multiple folders created in the VSCode workspace breaks the work item definitions.
+Issue: In the VSCode workspace, when you use the *Add New Folder to workspace* option, the resolution breaks itself. Multiple folders created in the VSCode workspace breaks the work item definitions.
 
 Steps to reproduce:
 
 . Create a KJAR project in VSCode extension.
 . Add a WID definition to a global folder located in the root of the workspace or in the directory as a process.
 . Check that the process contains custom tasks in the palette.
-. Use the *Add new Folder to workspace* option.
+. Use the *Add New Folder to workspace* option.
 . Open the BPMN editor and check the palette for custom tasks.
 
 Expected result: When there are multiple folders in the VSCode workspace, custom tasks are resolved in the BPMN designer.
@@ -231,11 +231,11 @@ Actual result: The diagram explorer is empty.
 
 Workaround: If you want to use the *Explore Diagram*, either remove `ServiceTask` and `JMSSendTask` from canvas or install appropriate work item definitions.
 
-.In FireFox, the *Properties* panel expansion shifts the scroll bar [https://issues.redhat.com/browse/RHPAM-3532[RHPAM-3532]]
+.In Firefox, the *Properties* panel expansion shifts the scroll bar [https://issues.redhat.com/browse/RHPAM-3532[RHPAM-3532]]
 
-Issue: If you use the Process Designer with FireFox and you scroll down in the *Properties* panel to check an entire editor, input any strings, or expand the *Properties* panel, the position of the main vertical scroll bar changes.
+Issue: If you use the Process Designer with Firefox and you scroll down in the *Properties* panel to check an entire editor, input any strings, or expand the *Properties* panel, the position of the main vertical scroll bar changes.
 
-NOTE: This issue applies only to FireFox.
+NOTE: This issue applies only to Firefox.
 
 Steps to reproduce:
 
@@ -321,7 +321,7 @@ Steps to reproduce:
 * Check the `dmn` source code and determine whether or not the `inputData` attribute from the decision service is missing.
 * Check the decision service details in the *Properties* panel.
 
-Workaround: The transitive decisions must be a part of the `encapsulatedDecisions` section of the modeled decision service.
+Workaround: The transitive decisions must be part of the `encapsulatedDecisions` section of the modeled decision service.
 
 .DMN editor removes the edges for duplicate decision nodes on canvas [https://issues.redhat.com/browse/RHDM-1714[RHDM-1714]]
 
@@ -335,7 +335,7 @@ Steps to reproduce:
 . Click *Save*.
 . Reopen the project.
 +
-The link from the input node is now connected to the original decision A node A while the duplicated decision node has no links at all.
+The link from the input node is now connected to the original decision node A, while the duplicated decision node has no links at all.
 
 Workaround: Keep a single occurrence of the decision component for each DRD.
 
@@ -356,7 +356,7 @@ Actual result: The DMN editor does not parse any helpful suggestions when you ar
 
 Workaround: None.
 
-.In the DMN editor, the suggestion box parses the results of an addition expression as a list instead of number [https://issues.redhat.com/browse/RHDM-1660[RHDM-1660]]
+.In the DMN editor, the suggestion box parses the results of an addition expression as a list instead of a number [https://issues.redhat.com/browse/RHDM-1660[RHDM-1660]]
 
 Issue: When you parse an addition expression to a literal expression, the DMN editor suggests functions that return list instead of a number.
 
