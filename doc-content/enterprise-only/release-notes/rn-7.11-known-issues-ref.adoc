@@ -440,3 +440,41 @@ Expected result: The DMN editor offers related suggestions when you parse a nega
 Actual result: The DMN editor fails to provide related suggestions when you parse a negated boolean expression.
 
 Workaround: None.
+
+== {KOGITO}
+
+.From given asset, wrong archetype is used to generate project [https://issues.redhat.com/browse/RHPAM-3654[RHPAM-3654]]
+
+Issue: When you upload an asset as a source for KogitoBuild, the {KOGITO} S2I image generates the project using `kogito-quarkus-archetype:1.5.1-SNAPSHOT`. It is expected to use the `kogito-quarkus-dm-archetype:1.5.0.redhat-00001`.
+
+Steps to reproduce:
+
+. Install the {PRODUCT} {KOGITO} operator.
+. Create a KogitoBuild as follows:
++
+[source]
+----
+apiVersion: rhpam.kiegroup.org/v1
+kind: KogitoBuild
+metadata:
+  name: example-quarkus-local
+spec:
+  buildImage: >-
+    registry-proxy.engineering.redhat.com/rh-osbs/rhpam-7-rhpam-kogito-builder-rhel8:7.11.0-1
+  runtimeImage: >-
+    registry-proxy.engineering.redhat.com/rh-osbs/rhpam-7-rhpam-kogito-runtime-jvm-rhel8:7.11.0-3
+  type: LocalSource
+----
+. Upload an asset to the {OPENSHIFT} using Red Hat OpenShift Container client as follows:
++
+[source]
+----
+oc start-build example-quarkus-local-builder --from-file=https://github.com/kiegroup/kogito-examples/blob/stable/dmn-quarkus-example/src/main/resources/Traffic%20Violation.dmn
+----
+. Check the builder log file.
+
+Expected result: When you upload an asset for KogitoBuild, the {KOGITO} S2I image generates the project using `kogito-quarkus-dm-archetype:1.5.0.redhat-00001`.
+
+Actual result: When you upload an asset for KogitoBuild, the {KOGITO} S2I image generates the project using `kogito-quarkus-archetype:1.5.1-SNAPSHOT`.
+
+Workaround: None.
